@@ -16,15 +16,11 @@ DESCRIPTION: searches for books written by the author [S].
 
 NAME: years
 
-SYNOPSIS: python3 books.py years [S] [E]
+SYNOPSIS: python3 books.py years [A] [B]
 
-DESCRIPTION: searches for books written between the years
-	     [S] and [E]. If only one argument is provided,
-	     then [S] is set as that argument and the output
-	     is all books written after the year [S].
-
-NAME: help 
-
-SYNOPSIS: python3 books.py help
-
-DESCRIPTION: provides the contents of usage.txt
+DESCRIPTION: searches for books published between the years
+	     [A] and [B]. If only one argument is provided,
+	     then [A] is set as that argument and the output
+	     is all books written after the year [B]. If no 
+	     arguments are provided, command outputs a list
+	     of all books.
