@@ -1,1 +1,30 @@
-This assignment is due at 11:59pm on Tuesday.
+NAME: title
+
+SYNOPSIS: python3 books.py title [S]
+
+DESCRIPTION: searches for books matching the title [S].
+	     If [S] is not provided, by default the command
+	     outputs a list of all books.
+
+NAME: author 
+
+SYNOPSIS: python3 books.py author [S]
+
+DESCRIPTION: searches for books written by the author [S].
+	     If [S] is not provided, by default the command
+	     outputs a list of all books.
+
+NAME: years
+
+SYNOPSIS: python3 books.py years [S] [E]
+
+DESCRIPTION: searches for books written between the years
+	     [S] and [E]. If only one argument is provided,
+	     then [S] is set as that argument and the output
+	     is all books written after the year [S].
+
+NAME: help 
+
+SYNOPSIS: python3 books.py help
+
+DESCRIPTION: provides the contents of usage.txt
