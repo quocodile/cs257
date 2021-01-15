@@ -3,16 +3,14 @@ NAME: title
 SYNOPSIS: python3 books.py title [S]
 
 DESCRIPTION: searches for books matching the title [S].
-	     If [S] is not provided, by default the command
-	     outputs a list of all books.
+	     If [S] is not provided, print help statement.
 
 NAME: author 
 
 SYNOPSIS: python3 books.py author [S]
 
 DESCRIPTION: searches for books written by the author [S].
-	     If [S] is not provided, by default the command
-	     outputs a list of all books.
+	     If [S] is not provided, print help statement.
 
 NAME: years
 
@@ -21,6 +19,5 @@ SYNOPSIS: python3 books.py years [A] [B]
 DESCRIPTION: searches for books published between the years
 	     [A] and [B]. If only one argument is provided,
 	     then [A] is set as that argument and the output
-	     is all books written after the year [B]. If no 
-	     arguments are provided, command outputs a list
-	     of all books.
+	     is all books written after the year [A]. If no 
+	     arguments are provided, print help statement.
