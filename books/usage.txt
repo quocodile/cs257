@@ -28,4 +28,4 @@ POSITIONAL ARGUMENTS:
 
 OPTIONAL ARGUMENTS:
 	
-	-h, --help	This brings up a usage statement.
+	-h, --help	shows help message and exits
