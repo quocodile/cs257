@@ -6,11 +6,10 @@ Authors: Nacho Rodriguez-Cortes, Quoc Nguyen
 Description: program perfoms search queries on a books.csv file.
 '''
 
-
 def create_parser():
     parser = argparse.ArgumentParser(description="This allows you to query from a books database")
-    parser.add_argument('query_type', choices=['title', 'author', 'years'], nargs=1, help='User must choose a query type')
-    parser.add_argument('query_arguments', nargs='+', help='Values provided as argument for query type')
+    parser.add_argument('query_type', choices=['title', 'author', 'years'], nargs=1, help='specify a query type from the given options')
+    parser.add_argument('query_arguments', nargs='+', metavar=('args'), help='values provided as arguments for query')
     return parser
 
 '''
