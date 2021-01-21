@@ -1,5 +1,6 @@
 '''
 Authors: Nacho Rodriguez-Cortes, Quoc Nguyen
+Revised by Nacho Rodriguez-Cortes, Quoc Nguyen
 Description: program perfoms search queries on a books.csv file.
 '''
 
@@ -34,14 +35,16 @@ def query_by_title(search_string, csv_reader):
     return books
     
 def query_by_author(search_string, csv_reader):
-    authors_books = {} #a dictionary with author names as keys and a list of books as values
+    #a dictionary with author names as keys and a list of books as values
+    authors_books = {}    
     for row in csv_reader:
         author = row[2]
+        title = row[0]
         if search_string.lower() in author.lower():
             if author not in authors_books.keys():
-                authors_books[author] = [row[0]]
+                authors_books[author] = [title]
             else:
-                authors_books[row[2]].append(row[0])
+                authors_books[author].append(title)
     return authors_books
   
 def query_by_years(query_arguments, csv_reader):
@@ -70,33 +73,44 @@ def print_books(books_array):
     for book in books_array:
         print(" * " + book)
 
+def print_books_by_author(authors_books):
+    for author in authors_books.keys():
+        print(author)
+        for book in authors_books[author]:
+            print("    * " + book)
+    
+def print_books_by_years(query_arguments, books):
+    if len(query_arguments) == 3:
+        start_year = query_arguments[1]
+        end_year = query_arguments[2]
+        print("Titles published between ", start_year, " and ", end_year)
+        print_books(books)
+    elif len(query_arguments) == 2:
+        start_year = query_arguments[1]
+        print("Title published after ", start_year)
+        print_books(books) 
+
 def main():
     query_type = get_query_arguments()[0] 
-    title = get_query_arguments()[1]
- 
     with open('books.csv', newline='') as f:
         reader = csv.reader(f)
-        if (query_type == 'title'):
-            title = get_query_arguments()[1]
-            print("All books with the title containing", title)
-            books = query_by_title(title, reader)
-            print_books(books)
-        if (query_type == 'author'):
-            author = get_query_arguments()[1]
-            query_by_author(author, reader)
-        if (query_type == 'years'):
-            query_arguments = get_query_arguments()
-            books = query_by_years(query_arguments, reader)
-            if len(query_arguments) == 3:
-                start_year = query_arguments[1]
-                end_year = query_arguments[2]
-                print("Titles published between ", start_year, " and ", end_year)
+        if len(get_query_arguments()) <= 1:
+            create_parser().print_help()
+        else:
+            if (query_type == 'title'):
+                title = get_query_arguments()[1]
+                print(f"All books with the title containing {title.lower()}")
+                books = query_by_title(title, reader)
                 print_books(books)
-            elif len(query_arguments) == 2:
-                start_year = query_arguments[1]
-                print("Title published after ", start_year)
-                print_books(books) 
-
+            if (query_type == 'author'):
+                author = get_query_arguments()[1]
+                print(f"These are all authors with the name containing '{author.lower()}' alongside their books")
+                authors_books = query_by_author(author, reader)
+                print_books_by_author(authors_books)
+            if (query_type == 'years'):
+                query_arguments = get_query_arguments()
+                books = query_by_years(query_arguments, reader)
+                print_books_by_years(query_arguments, books)
 
 if __name__ == '__main__':
     main()
