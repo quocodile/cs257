@@ -1,0 +1,8 @@
+THINGS YOU DID FABULOUSLY:
+* You created a routine for each of the query types.
+* In general, you had self-documenting method names.
+* You had really helpful comments in your code.
+
+SUGGESTIONS:
+* print_years is a bit of a misnomer as you aren't actually printing years.
+* Your main() routine seems to be doing a lot. Maybe try splitting it into smaller   routines?

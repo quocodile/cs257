@@ -1,0 +1,8 @@
+THINGS YOU DID FANTASTICALLY:
+* You created separate routines for the title, author, and year filters.
+* You made sure to provide a lot of detail in setting the help statement for each argument, and I really appreciated that.
+
+SUGGESTIONS:
+* I think using a uniform naming convention for functions and variables would enhance readability. 
+  For example, either use camel case or underscores to denote names with more than one word.
+* There may be too much happening in the main() function. Maybe split parts of it up into separate routines.

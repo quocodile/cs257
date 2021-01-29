@@ -1,0 +1,6 @@
+WORDS OF PRAISE:
+* You did a FANTASTIC job commenting your code. It is easy to understand what your routines are supposed to do.
+* I love how your title(), author(), and years() subroutine are all 
+SUGGESTIONS:
+* You could alleviate the text in your comments by using self-documenting routine names. For example, the routine name "years" could be changed to "QueryBooksByPublicationYear". 
+* The main() routine is a bit long. A possible way to improve is by dividing some of the stuff into their own separate, smaller routines.
