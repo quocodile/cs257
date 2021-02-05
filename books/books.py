@@ -29,7 +29,7 @@ def get_query_arguments():
 def query_by_title(search_string, csv_reader):
     books = []
     for row in csv_reader:
-       title = row[0]
+       title = row[1]
        if (search_string.lower() in title.lower()):
           books.append(title)
     return books
@@ -38,8 +38,8 @@ def query_by_author(search_string, csv_reader):
     #a dictionary with author names as keys and a list of books as values
     authors_books = {}    
     for row in csv_reader:
-        author = row[2]
-        title = row[0]
+        author = row[0]
+        title = row[1]
         if search_string.lower() in author.lower():
             if author not in authors_books.keys():
                 authors_books[author] = [title]

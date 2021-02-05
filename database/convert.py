@@ -45,7 +45,6 @@ def remove_double_quotes_from_name(name):
   return name
 
 def read_and_write_files():
-
   athletes = open('output_csv_files/athletes.csv', 'w')
   medals = open('output_csv_files/medals.csv', 'w')
   regions = open('output_csv_files/regions.csv', 'w')

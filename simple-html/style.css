@@ -1,0 +1,54 @@
+/* Authored by Quoc Nguyen */
+
+.panel-container {
+  height: 500px;
+  width: 100%;
+  display: inline-block;
+}
+
+.top-panel {
+  background-color: red;  
+  height: 100px;
+  width: 100%;
+  float: left;
+}
+
+.left-panel {
+  background-color: #ffb3b3;
+  height: 400px;
+  width: 20%;
+  float: left;
+}
+
+.right-panel { 
+  background-color: #ffe6e6;
+  height: 400px;
+  width: 80%;
+  float: left;
+  text-align: center;
+}
+
+.options {
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  line-height: 100px;
+  text-align: center;
+  font-family: Impact;
+}
+
+.options:hover {
+  background-color: white;
+  transition: background-color 1s;
+}
+
+#meme_1 {
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  margin-top: 7%;
+}
+
+
+
+
