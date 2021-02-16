@@ -1,0 +1,24 @@
+DESCRIPTION OF DATABASE:
+This dataset contains lots of anime shows along with information such as rating, genre,
+and # episodes. There’s lots of columns and rows, which gives us a lot to work with. 
+It is also conducive to an interesting relational database design.
+
+STORY: An anime fan wants anime recommendations.
+
+IMPLEMENTATION:
+We will take the user's watchlist, find 5-10 animes that match the categories in 
+their watchlist and recommend to them. 
+
+STORY: An anime fan wants to create an anime watchlist.
+
+IMPLEMENTATION:
+
+
+STORY: An anime fan wants to rate anime.
+
+IMPLEMENTATION:
+
+
+STORY: An anime fan wants to find a specific anime in order to see basic info about it. 
+
+IMPLEMENTATION:
