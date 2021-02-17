@@ -1,24 +1,47 @@
+'''
+James Marlin, Kevin Chen, Quoc Nguyen
+'''
+
 DESCRIPTION OF DATABASE:
 This dataset contains lots of anime shows along with information such as rating, genre,
 and # episodes. There’s lots of columns and rows, which gives us a lot to work with. 
 It is also conducive to an interesting relational database design.
 
-STORY: An anime fan wants anime recommendations.
-
-IMPLEMENTATION:
-We will take the user's watchlist, find 5-10 animes that match the categories in 
-their watchlist and recommend to them. 
+LINK TO DATABASE:
+https://www.kaggle.com/CooperUnion/anime-recommendations-database?select=anime.csv
+__________________________________________________________________________
 
 STORY: An anime fan wants to create an anime watchlist.
 
 IMPLEMENTATION:
+A user can access their watchlist by clicking an option on their user 
+icon on the navigation bar. User can add anime to watchlist through a 
+button on the anime's page. This option is not available if anime already 
+in user's watchlist.
+__________________________________________________________________________
 
+STORY: An anime fan wants anime recommendations.
+
+IMPLEMENTATION:
+We will take the user's watchlist, find 5-10 animes that match the genres in 
+their watchlist and recommend them. This will be displayed on the home page 
+after the user logged in. 
+
+___________________________________________________________________________
 
 STORY: An anime fan wants to rate anime.
 
 IMPLEMENTATION:
+A user can rate an anime by giving a star 
+value (1-5) on that anime's page. Users 
+can accompany this rating with a review 
+message.
 
+____________________________________________________________________________
 
 STORY: An anime fan wants to find a specific anime in order to see basic info about it. 
 
 IMPLEMENTATION:
+Users can either select the anime if it is already
+displayed on their home page or they can search for
+it using the search bar and then click on it.
