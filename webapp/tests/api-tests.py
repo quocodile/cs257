@@ -35,9 +35,6 @@ class ServerTester(unittest.TestCase):
     watchlist = [anime_dictionary1, anime_dictionary2, anime_dictionary3]
     self.assertEqual(self.server.get_user_watchlist(user_id), watchlist)
 
-  def test_create_user_watchlist(self):
-    self.assertTrue(self.server.create_user_watchlist(user_id,anime_id))
-
   def test_get_recommendations(self):
     anime_dictionary1 = {'name' : 'Dragon Ball Z', 'episodes' : 291, 'genre' : 'Action, Shonen', 'MAL_rating' : 8.16, 'our_rating' : 0}
     anime_dictionary2 = {'name' : 'Naruto', 'episodes' : 220, 'genre' : 'Action, Shonen', 'MAL_rating' : 7.91, 'our_rating' : 0}
