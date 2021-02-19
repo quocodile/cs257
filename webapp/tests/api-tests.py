@@ -14,7 +14,7 @@ class ServerTester(unittest.TestCase):
   def tearDown(self):
     pass
 
-  def test_get_existing_anime(self):
+  def test_search_anime(self):
     anime_dictionary = {'name' : 'Dragon Ball Z', 'episodes' : 291, 'genre' : 'Action, Shonen', 'MAL_rating' : 8.16, 'our_rating' : 0}
     self.assertEqual(self.server.get_anime('Dragon Ball Z'), anime_dictionary)
 
@@ -39,5 +39,6 @@ class ServerTester(unittest.TestCase):
 
   def test_get_recommendations(self):
     self.assertTrue(self.server.get_recommendations(user_id,genre))
+
   
 
