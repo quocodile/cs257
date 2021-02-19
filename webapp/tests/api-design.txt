@@ -1,0 +1,119 @@
+Database Design:
+
+users
+user_id
+username
+hashed_password
+
+watchlist
+users_id 
+anime_id
+
+animes:
+id
+picture
+name
+# episodes
+genre
+mal_rating
+
+reviews
+review_id
+review_text
+anime_id
+
+user_reviews_link
+user_id
+review_id
+
+our_ratings:
+rating_id
+anime_id
+rating_score
+
+user_ratings_link
+user_id
+rating_id
+
+
+Endpoints:
+
+GET requests
+each anime’s main info page
+REQUEST:  /anime/{anime_title}
+RESPONSE: JSON containing a bunch of information about that anime: # episodes, genre, etc.
+
+Picture -- (blob) the picture of the anime
+Episodes -- (integer) the number of episodes for the anime.
+Genre -- (string) the genre of the anime
+MAL_rating -- (integer) the MAL rating for the anime
+Our_rating -- (integer) the rating of the anime on our site as rated by our users
+Episodes -- (int) the number of episodes for the anime
+
+
+list of animes by genre
+REQUEST: /genre/{genre_type}
+
+RESPONSE: JSON list of dictionaries, each representing an anime. Each dictionary will contain the following fields: 
+
+Picture -- (blob) the picture of the anime
+Name -- (string) the name of the anime
+Rating -- (int) the MAL rating for the anime 
+Episodes -- (int) the number of episodes for the anime
+
+get user’s anime watchlist
+REQUEST: /watchlist/user_name
+
+RESPONSE: JSON list of dictionaries containing the animes inside of it, with each anime containing the following fields:
+
+Picture -- (blob) the picture of the anime
+Name -- (string) the name of the anime
+Rating -- (int) the MAL rating for the anime 
+Episodes -- (int) the number of episodes for the anime
+Genre -- (string) the name of the genre
+
+anime recommendations
+REQUEST: /recommendations/user_name
+
+RESPONSE: JSON list of dictionaries containing the animes inside of it, with each anime with the following fields:
+	
+	Picture -- (blob) the picture of the anime
+Name -- (string) the name of the anime
+Rating -- (int) the MAL rating for the anime 
+Episodes -- (int) the number of episodes for the anime
+	Genre -- (string) the name of the genre
+
+
+searching for anime
+	REQUEST: /search/{search string}
+
+            RESPONSE: JSON list of dictionaries containing anime dictionaries, with each 
+dictionary containing the following fields:
+	
+	Picture -- (blob) the picture of the anime
+Name -- (string) the name of the anime
+Episodes -- (int) the number of episodes for the anime
+
+
+
+
+
+POST requests
+user login
+	REQUEST: /login
+
+	{
+               method: ‘post’,
+               body: {‘username’ : [username], ‘password’ : [password]} 
+   	}
+
+	RESPONSE: a session cookie
+
+add anime to watchlist
+	REQUEST: /add/anime/{user_id}
+
+            RESPONSE: a boolean value True if the anime was added to a watchlist, and False
+ 	otherwise.
+
+
+
