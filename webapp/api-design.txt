@@ -1,15 +1,20 @@
 Database Design:
 
 users
+_________
 user_id
 username
 hashed_password
 
+
 watchlist
+_________
 users_id 
 anime_id
 
-animes:
+
+animes
+________
 id
 picture
 name
@@ -17,26 +22,36 @@ name
 genre
 mal_rating
 
+
 reviews
+________
 review_id
 review_text
 anime_id
 
+
 user_reviews_link
+________
 user_id
 review_id
 
+
 our_ratings:
+_________
 rating_id
 anime_id
 rating_score
 
+
 user_ratings_link
+__________
 user_id
 rating_id
 
 
-Endpoints:
+
+
+ENDPOINTS:
 
 GET requests
 each anime’s main info page
@@ -56,46 +71,45 @@ REQUEST: /genre/{genre_type}
 
 RESPONSE: JSON list of dictionaries, each representing an anime. Each dictionary will contain the following fields: 
 
-Picture -- (blob) the picture of the anime
-Name -- (string) the name of the anime
-Rating -- (int) the MAL rating for the anime 
-Episodes -- (int) the number of episodes for the anime
+	Picture -- (blob) the picture of the anime
+	Name -- (string) the name of the anime
+	Rating -- (int) the MAL rating for the anime 
+	Episodes -- (int) the number of episodes for the anime
+
 
 get user’s anime watchlist
 REQUEST: /watchlist/user_name
 
 RESPONSE: JSON list of dictionaries containing the animes inside of it, with each anime containing the following fields:
 
-Picture -- (blob) the picture of the anime
-Name -- (string) the name of the anime
-Rating -- (int) the MAL rating for the anime 
-Episodes -- (int) the number of episodes for the anime
-Genre -- (string) the name of the genre
+	Picture -- (blob) the picture of the anime
+	Name -- (string) the name of the anime
+	Rating -- (int) the MAL rating for the anime 
+	Episodes -- (int) the number of episodes for the anime
+	Genre -- (string) the name of the genre
+
 
 anime recommendations
 REQUEST: /recommendations/user_name
 
+
 RESPONSE: JSON list of dictionaries containing the animes inside of it, with each anime with the following fields:
 	
 	Picture -- (blob) the picture of the anime
-Name -- (string) the name of the anime
-Rating -- (int) the MAL rating for the anime 
-Episodes -- (int) the number of episodes for the anime
+	Name -- (string) the name of the anime
+	Rating -- (int) the MAL rating for the anime 
+	Episodes -- (int) the number of episodes for the anime
 	Genre -- (string) the name of the genre
 
 
 searching for anime
-	REQUEST: /search/{search string}
+REQUEST: /search/{search string}
 
-            RESPONSE: JSON list of dictionaries containing anime dictionaries, with each 
-dictionary containing the following fields:
-	
+RESPONSE: JSON list of dictionaries containing anime dictionaries, with each dictionary containing the following fields:
+
 	Picture -- (blob) the picture of the anime
-Name -- (string) the name of the anime
-Episodes -- (int) the number of episodes for the anime
-
-
-
+	Name -- (string) the name of the anime
+	Episodes -- (int) the number of episodes for the anime
 
 
 POST requests
