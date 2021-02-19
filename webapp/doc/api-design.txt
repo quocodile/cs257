@@ -50,7 +50,6 @@ rating_id
 
 
 
-
 ENDPOINTS:
 
 GET requests
@@ -111,23 +110,6 @@ RESPONSE: JSON list of dictionaries containing anime dictionaries, with each dic
 	Name -- (string) the name of the anime
 	Episodes -- (int) the number of episodes for the anime
 
-
-POST requests
-user login
-	REQUEST: /login
-
-	{
-               method: ‘post’,
-               body: {‘username’ : [username], ‘password’ : [password]} 
-   	}
-
-	RESPONSE: a session cookie
-
-add anime to watchlist
-	REQUEST: /add/anime/{user_id}
-
-            RESPONSE: a boolean value True if the anime was added to a watchlist, and False
- 	otherwise.
 
 
 
