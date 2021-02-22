@@ -1,0 +1,33 @@
+#navbar {
+  width: 100vw;
+  position: fixed;
+  height: 50px;
+  z-index: 5;
+  top: 0;
+}
+#navbar div {
+  color: white;
+  line-height: 50px;
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  height: 50px;
+}
+
+#search_bar input {
+  margin-top: 7px;
+  width: 90%;
+  height: 35px;
+  color: black;
+}
+#site_id {
+  background-color: black;
+}
+
+#search_bar {
+  background-color: grey;
+}
+
+#user_related {
+  background-color: black;
+}
