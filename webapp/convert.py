@@ -8,6 +8,7 @@ def create_animes_csv(animes):
     """
     anime_csv_file = animes
     duplication_dict = {}
+    id = 1
 
     #open anime.csv
     with open(anime_csv_file, mode ='r') as file:
@@ -22,7 +23,8 @@ def create_animes_csv(animes):
                 if csv_row[0] not in duplication_dict:
                     duplication_dict[csv_row[0]] = ""
                     if csv_row[0] != "anime_id":
-                        anime_writer.writerow([csv_row[0], csv_row[1], csv_row[4], csv_row[4], csv_row[2], csv_row[5]])
+                        anime_writer.writerow([id, csv_row[1], csv_row[4], csv_row[2], csv_row[5]])
+                        id += 1
             print("complete")
 
 def main():
