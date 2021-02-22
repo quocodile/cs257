@@ -1,22 +1,73 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='webapp.css') }}" />
-    <script type="text/javascript" src="{{ url_for('static', filename='webapp.js') }}"></script>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
-    <title>CS 257: Software Design</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>CS 257: Software Design</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+	</script>
 </head>
 
 <body>
-    <h3>Tiny Web App Home Page</h3>
+	<div id="navbar">
+		<div id="site_id">HENTAI HUB</div>
+		<div id="search_bar">
+                    <input type="text" name="" id="">
 
-    <p><button id="cats_button">Cats</button></p>
-    <p><button id="dogs_button">Dogs</button></p>
+                </div>
+		<div id="user_related">USER RELATED</div>
+	</div>
+  <h3>fhads</h3>
+  <h3 id= "animerec">Anime Recommendations</h3>
+      
+ <p id = "animerecbody">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3" style="background-color:yellow;">
+        <div class="card" style="width: 50rem;">
+        <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card with stretched links</h5>
+      </div>
+    </div>
+  </div>
 
-    <ul id="animal_list"></ul>
 
-    <h3>One other page</h3>
-    <p>You can go to <a href="other.html">this other page</a>.</p>
+  <div class="col-sm-3" style="background-color:pink;">
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card with stretched links</h5>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3" style="background-color:red;">
+    <div class="card" style="width: 10rem;">
+      <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card with stretched links</h5>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3" style="background-color:blue;">
+    <div class="card" style="width: 10rem;">
+      <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card with stretched links</h5>
+        </div>
+    </div>
+  </div>
+
+
+ </p>
 </body>
 </html>
+
