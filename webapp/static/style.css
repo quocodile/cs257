@@ -11,23 +11,32 @@
   width: 33.33%;
   float: left;
   text-align: center;
-  height: 50px;
 }
 
-#search_bar input {
-  margin-top: 7px;
-  width: 90%;
-  height: 35px;
-  color: black;
-}
 #site_id {
   background-color: black;
 }
 
 #search_bar {
+  padding-top: 7px;
   background-color: grey;
+  height: 50px;
 }
 
 #user_related {
   background-color: black;
+}
+
+#animerec {
+  margin-right: 150px;
+  margin-left: 80px;
+
+}
+.container img{
+  width:  200px;
+  height: 300px;
+}
+
+button {
+  background-color: lightgrey;
 }
