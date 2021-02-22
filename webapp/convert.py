@@ -13,7 +13,6 @@ def create_animes_csv(animes):
     #open anime.csv
     with open(anime_csv_file, mode ='r') as file:
         csv_file = csv.reader(file)
-
         #write into animeList.csv
         with open('animeList.csv', mode='w') as anime_info:
             anime_writer = csv.writer(anime_info, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -23,12 +22,13 @@ def create_animes_csv(animes):
                 if csv_row[0] not in duplication_dict:
                     duplication_dict[csv_row[0]] = ""
                     if csv_row[0] != "anime_id":
-                        anime_writer.writerow([id, csv_row[1], csv_row[4], csv_row[2], csv_row[5]])
+                        edited_csv_row = csv_row[2].replace(",", "")
+                        anime_writer.writerow([id, csv_row[1], csv_row[4], edited_csv_row, csv_row[5]])
                         id += 1
             print("complete")
 
 def main():
-    create_animes_csv('datasets/anime.csv')
+    create_animes_csv('clean_anime.csv')
     
 if __name__ == "__main__":
     main()
