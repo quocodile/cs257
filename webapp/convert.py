@@ -22,8 +22,9 @@ def create_animes_csv(animes):
                 if csv_row[0] not in duplication_dict:
                     duplication_dict[csv_row[0]] = ""
                     if csv_row[0] != "anime_id":
-                        edited_csv_row = csv_row[2].replace(",", "")
-                        anime_writer.writerow([id, csv_row[1], csv_row[4], edited_csv_row, csv_row[5]])
+                        edited_title = csv_row[1].replace(",", "")
+                        edited_genre = csv_row[2].replace(",", "")
+                        anime_writer.writerow([id, edited_title, csv_row[4], edited_genre, csv_row[5]])
                         id += 1
             print("complete")
 
