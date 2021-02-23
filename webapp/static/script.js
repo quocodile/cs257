@@ -26,6 +26,7 @@ function on_button_1() {
 
     .then(function(anime) {
         anime_1 = anime[0];
+        image_address = anime_1['pic']
         var listBody = '';
         listBody += '<li>' + anime_1['anime_name']
             + ', ' + anime_1['num_episodes']
@@ -34,8 +35,12 @@ function on_button_1() {
             + '</li>\n';
         
         var animeElement = document.getElementById('put_data_here_1');
+        var imageElement = document.getElementById('image_1');
         if (animeElement) {
             animeElement.innerHTML = listBody;
+        }
+        if (imageElement) {
+            imageElement.src = image_address;
         }
     })
 
@@ -53,6 +58,7 @@ function on_button_2() {
 
     .then(function(anime) {
         anime_2 = anime[1]
+        image_address = anime_2['pic']
         var listBody = '';
         listBody += '<li>' + anime_2['anime_name']
             + ', ' + anime_2['num_episodes']
@@ -61,8 +67,12 @@ function on_button_2() {
             + '</li>\n';
         
         var animeElement = document.getElementById('put_data_here_2');
+        var imageElement = document.getElementById('image_2');
         if (animeElement) {
             animeElement.innerHTML = listBody;
+        }
+        if (imageElement) {
+            imageElement.src = image_address;
         }
     })
 
