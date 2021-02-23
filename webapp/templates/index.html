@@ -3,72 +3,68 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>CS 257: Software Design</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
-        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
-        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+  <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
-	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="navbar">
 		<div id="site_id">HENTAI HUB</div>
 		<div id="search_bar">
-    <input type="text" name="" id="" style="width: 90%; height: 35px; color: black;">
-
+    	<input type="text" name="" id="" style="width: 90%; height: 35px; color: black;">
     </div>
 		<div id="user_related">USER RELATED</div>
 	</div>
   <h3>spacing</h3>
   <h3 id= "animerec">Anime Recommendations</h3>
       
- <p id = "animerecbody">
+ <div id = "animerecbody">
     <div class="container-fluid">
-    <div class="row">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card" style="width: 50rem;">
+          <div class="container">
+            <img id="image_1" src='https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg' class="..." alt="EXPIC3"/>
+            <h1 id="put_data_here_1"></h1>
+          </div>
+          <div class="card-body">
+            <button id="button_1" type="button" class="btn btn-outline-primary">Primary</button>
+          </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="container">
+            <img id="image_2" src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3">
+            <h2 id="put_data_here_2"></h2>
+          </div>
+          <div class="card-body">
+            <button id="button_2" type="button" class="btn btn-outline-primary">Primary</button>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="container">
+            <img id="image_3" src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3">
+          </div>
+          <div class="card-body">
+            <button id="button_3" type="button" class="btn btn-outline-primary">Primary</button>
+          </div>
+      </div>
       <div class="col-sm-3">
-        <div class="card" style="width: 50rem;">
         <div class="container">
-      <img src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3"/>
-      <h1 id="put_data_here_1"></h1>
-      </div>
-      <div class="card-body">
-        <button id="button_2" type="button" class="btn btn-outline-primary">Primary</button>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-
-
-  <div class="col-sm-3">
-      <div class="container">
-      <img
-      src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3">
-      <h2 id="put_data_here_2"></h2>
-      </div>
-
-        <div class="card-body">
-          <button id="button_1" type="button" class="btn btn-outline-primary">Primary</button>
+          <img src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3">
         </div>
-  </div>
-
-  <div class="col-sm-3">
-    <div class="container">
-      <img src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3">
-    </div>
-        <div class="card-body">
-          <button id="button_3" type="button" class="btn btn-outline-primary">Primary</button>
-        </div>
-  </div>
-
-  <div class="col-sm-3">
-      <div class="container">
-      <img src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3">
-      </div>
         <div class="card-body">
           <button id="button_4" type="button" class="btn btn-outline-primary">Primary</button>
         </div>
+      </div>
+      </div>
+    </div>
+
+
   </div>
+
+</body>
