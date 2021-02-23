@@ -1,12 +1,13 @@
+import json
 import psycopg2
 import flask
 import json
 from config import database
 from config import user
 from config import password
-from image_related_functions import animes_imagepaths
 
 api = flask.Blueprint('api', __name__)
+animes_imagepaths = json.loads(open('animes_imagepaths.json', 'r').read())  
 
 def cursor_init():
         '''Connects to database and initializes the cursor.'''
@@ -20,7 +21,6 @@ def cursor_init():
 
 @api.route('/anime/')
 def get_anime_by_genre():
-        
         genre = flask.request.args.get('genre', "")
         if genre:
                 query = "SELECT * FROM Animes WHERE genre='" + genre + "' ORDER BY anime_name LIMIT 5"

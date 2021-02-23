@@ -1,4 +1,5 @@
 import os
+import json
 
 def get_animes_imagepaths():
   '''
@@ -17,5 +18,10 @@ def get_animes_imagepaths():
           anime_imagespaths_dictionary[name] = os.path.join(root, name, oops)   
   return anime_imagespaths_dictionary
 
+def put_dictionary_as_json():
+  dictionary = get_animes_imagepaths()
+  json_file = open('animes_imagepaths.json', 'w')
+  json_file.write(json.dumps(dictionary))
 
-animes_imagepaths = get_animes_imagepaths() 
+put_dictionary_as_json()
+
