@@ -1,3 +1,4 @@
+from miscellaneous import find_anime_image
 import flask
 import json
 from config import database
@@ -22,9 +23,9 @@ def get_anime_by_genre():
         
         genre = flask.request.args.get('genre', "")
         if genre:
-                query = "SELECT * FROM Animes WHERE genre='" + genre + "' LIMIT 5"
+                query = "SELECT * FROM Animes WHERE genre='" + genre + "' ORDER BY anime_name LIMIT 5"
         else:
-                query = "SELECT * FROM Animes LIMIT 5"
+                query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
         cursor = cursor_init()
         cursor.execute(query)
         list_of_dictionaries = []
@@ -35,6 +36,7 @@ def get_anime_by_genre():
                 dic['num_episodes'] = row[2]
                 dic['genre'] = row[3]
                 dic['mal_rating'] = row[4]
+                dic['pic'] = find_anime_image(row[1] + ' anime')
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
