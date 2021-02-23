@@ -32,7 +32,7 @@ def get_anime_by_genre():
                 dic = {}
                 dic['anime_id'] = row[0]
                 dic['anime_name'] = row[1]
-                dic['num_episdoes'] = row[2]
+                dic['num_episodes'] = row[2]
                 dic['genre'] = row[3]
                 dic['mal_rating'] = row[4]
                 list_of_dictionaries.append(dic)

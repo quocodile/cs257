@@ -1,5 +1,4 @@
 
-
 window.onload = initialize;
 
 function initialize() {
@@ -8,16 +7,18 @@ function initialize() {
     var button_3 = document.getElementById('button_3');
     var button_4 = document.getElementById('button_4');
 
-    button_1.addEventListener('click',onButton1);
-    button_2.addEventListener('click',onButton2);
-    button_3.addEventListener('click',onButton3);
-    button_4.addEventListener('click',onButton4);
+    button_1.addEventListener('click',onButton1());
+    button_2.addEventListener('click',onButton2());
+    button_3.addEventListener('click',onButton3());
+    button_4.addEventListener('click',onButton4());
 
 }
+
 function getAPIBaseURL() {
     var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
     return baseURL;
 }
+
 function onButton1() {
     var url = getAPIBaseURL() + '/anime/';
 
