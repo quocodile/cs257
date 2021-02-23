@@ -66,7 +66,10 @@ Episodes -- (int) the number of episodes for the anime
 
 
 list of animes by genre
-REQUEST: /genre/{genre_type}
+REQUEST: /anime
+
+OPTIONAL GET PARAMETERS:
+* genre (Optional, default='no genre') -- gets all animes that fit into the given genre
 
 RESPONSE: JSON list of dictionaries, each representing an anime. Each dictionary will contain the following fields: 
 
