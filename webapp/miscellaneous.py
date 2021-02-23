@@ -49,8 +49,15 @@ def change_file_names():
         for oops in files:
           print(f'* {oops}')
 
-
+def find_anime_image(anime_name):
+  for root, dirs, files in os.walk('static/images/'):
+    for name in dirs:
+      if name == anime_name:
+        path = os.path.join(root, name)
+        for roots, dirs, files in os.walk(path):
+          for oops in files:
+            return os.path.join(root, name, oops)
 
 #change_file_names()
-get_all_cover_images()
+#get_all_cover_images()
 
