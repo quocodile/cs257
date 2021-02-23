@@ -2,15 +2,13 @@
 window.onload = initialize;
 
 function initialize() {
-    var button_1 = document.getElementById('button_1');
+    let button_1 = document.getElementById('button_1');
     var button_2 = document.getElementById('button_2');
     var button_3 = document.getElementById('button_3');
     var button_4 = document.getElementById('button_4');
 
-    button_1.addEventListener('click',onButton1());
-    button_2.addEventListener('click',onButton2());
-    button_3.addEventListener('click',onButton3());
-    button_4.addEventListener('click',onButton4());
+    button_1.addEventListener('click',on_button_1);
+    button_2.addEventListener('click',on_button_2);
 
 }
 
@@ -19,7 +17,7 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
-function onButton1() {
+function on_button_1() {
     var url = getAPIBaseURL() + '/anime/';
 
     fetch(url, {method: 'get'})
@@ -46,7 +44,7 @@ function onButton1() {
     });
 }
 
-function onButton2() {
+function on_button_2() {
     var url = getAPIBaseURL() + '/anime/';
 
     fetch(url, {method: 'get'})
@@ -72,3 +70,4 @@ function onButton2() {
         console.log(error);
     });
 }
+
