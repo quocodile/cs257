@@ -1,10 +1,10 @@
-from miscellaneous import find_anime_image
+import psycopg2
 import flask
 import json
 from config import database
 from config import user
 from config import password
-import psycopg2
+from image_related_functions import animes_imagepaths
 
 api = flask.Blueprint('api', __name__)
 
@@ -17,7 +17,7 @@ def cursor_init():
                 print(e)
                 exit()
         return cursor
-                
+
 @api.route('/anime/')
 def get_anime_by_genre():
         
@@ -36,7 +36,10 @@ def get_anime_by_genre():
                 dic['num_episodes'] = row[2]
                 dic['genre'] = row[3]
                 dic['mal_rating'] = row[4]
-                dic['pic'] = find_anime_image(row[1] + ' anime')
+                try:
+                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
+                except Exception as e:
+                  dic['pic'] = ''
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 

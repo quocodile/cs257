@@ -1,0 +1,17 @@
+Anime ID: 3, Title: Gintama°
+Anime ID: 42, Title: Gintama°: Aizome Kaori-hen
+Anime ID: 60, Title: Steins;Gate Movie: Fuka Ryouiki no Déjà vu
+Anime ID: 116, Title: Kaze no Tani no Nausicaä
+Anime ID: 443, Title: Yume-iro Pâtissière
+Anime ID: 528, Title: Les Misérables: Shoujo Cosette
+Anime ID: 715, Title: Ranma ½
+Anime ID: 716, Title: Ranma ½ OVA
+Anime ID: 778, Title: Rozen Maiden: Ouvertüre
+Anime ID: 800, Title: Yume-iro Pâtissière SP Professional
+Anime ID: 847, Title: Ranma ½ Super
+Anime ID: 870, Title: Ranma ½ Specials
+Anime ID: 871, Title: Rozen Maiden: Träumend
+Anime ID: 1026, Title: Ranma ½: Akumu! Shunmin Kou
+Anime ID: 1426, Title: Ranma ½: Kessen Tougenkyou! Hanayome wo Torimodose!
+Anime ID: 1490, Title: Ranma ½: Chou Musabetsu Kessen! Ranma Team vs. Densetsu no Houou
+Anime ID: 1539, Title: Ikoku Meiro no Croisée The Animation
