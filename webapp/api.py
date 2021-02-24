@@ -23,11 +23,13 @@ def cursor_init():
 def get_anime_by_genre():
         genre = flask.request.args.get('genre', "")
         if genre:
-                query = "SELECT * FROM Animes WHERE genre='" + genre + "' ORDER BY anime_name LIMIT 5"
+                query = "SELECT * FROM Animes WHERE genre='%s' ORDER BY anime_name LIMIT 5"
+                cursor = cursor_init()
+                cursor.execute(query, (genre,))
         else:
                 query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
-        cursor = cursor_init()
-        cursor.execute(query)
+                cursor = cursor_init()
+                cursor.execute(query)
         list_of_dictionaries = []
         for row in cursor:
                 dic = {}
