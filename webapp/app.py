@@ -1,11 +1,9 @@
 '''
-    webapp.py
-    Jeff Ondich
-    6 November 2020
+Kevin Chen, James Marlin, Quoc Nguyen
 
-    A tiny Flask web application, including API, to be used
-    as a template for setting up your web app assignment.
+Description: This is main page for website Anime Central. 
 '''
+
 import sys
 import argparse
 import flask

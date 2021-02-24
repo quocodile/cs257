@@ -1,3 +1,6 @@
+/*
+Kevin Chen, James Marlin, Quoc Nguyen
+*/
 
 window.onload = initialize;
 

@@ -1,3 +1,7 @@
+'''
+Kevin Chen, James Marlin, Quoc Nguyen
+'''
+
 import csv 
 
 def create_animes_csv(animes):

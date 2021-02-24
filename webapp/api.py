@@ -1,3 +1,9 @@
+'''
+Kevin Chen, James Marlin, Quoc Nguyen
+
+Description: This is all the api endpoints for website Anime Central. 
+'''
+
 import json
 import psycopg2
 import flask
@@ -21,14 +27,13 @@ def cursor_init():
 
 @api.route('/anime/')
 def get_anime_by_genre():
-        genre = flask.request.args.get('genre', "")
+        genre = flask.request.args.get('genre', '')
+        cursor = cursor_init()
         if genre:
-                query = "SELECT * FROM Animes WHERE genre='%s' ORDER BY anime_name LIMIT 5"
-                cursor = cursor_init()
+                query = "SELECT * FROM Animes WHERE genre=%s ORDER BY anime_name LIMIT 5"
                 cursor.execute(query, (genre,))
         else:
                 query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
-                cursor = cursor_init()
                 cursor.execute(query)
         list_of_dictionaries = []
         for row in cursor:

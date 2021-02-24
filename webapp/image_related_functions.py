@@ -1,3 +1,7 @@
+'''
+Kevin Chen, James Marlin, Quoc Nguyen
+'''
+
 import os
 import json
 
