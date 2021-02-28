@@ -25,6 +25,10 @@ def anime_page():
 def login_page():
   return flask.render_template('login.html')
 
+@app.route('/signup')
+def signup_page():
+  return flask.render_template('signup.html')
+
 # This route supports relative links among your web pages, assuming those pages
 # are stored in the templates/ directory or one of its descendant directories,
 # without requiring you to have specific routes for each page.
