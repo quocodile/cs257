@@ -1,7 +1,7 @@
 CREATE TABLE Users (
     user_id text,
     username text,
-    hashed_password, text
+    hashed_password text
 );
 
 CREATE TABLE Watchlist (
