@@ -1,7 +1,7 @@
 CREATE TABLE Users (
     user_id text,
     username text,
-    hashed_password, text
+    hashed_password text
 );
 
 CREATE TABLE Watchlist (
@@ -26,7 +26,7 @@ CREATE TABLE Reviews (
 CREATE TABLE Our_ratings (
     rating_id text,
     anime_id text,
-    rating_score, text
+    rating_score text
 );
 
 CREATE TABLE User_reviews_link (
