@@ -17,6 +17,14 @@ app.register_blueprint(api.api, url_prefix='/api')
 def home():
     return flask.render_template('index.html')
 
+@app.route('/test')
+def anime_page():
+  return flask.render_template('anime.html')
+
+@app.route('/login')
+def login_page():
+  return flask.render_template('login.html')
+
 # This route supports relative links among your web pages, assuming those pages
 # are stored in the templates/ directory or one of its descendant directories,
 # without requiring you to have specific routes for each page.

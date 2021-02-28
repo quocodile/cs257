@@ -130,3 +130,5 @@ dmypy.json
 
 # config file 
 webapp/config.py
+
+webapp/miscellaneous.py

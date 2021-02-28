@@ -1,0 +1,119 @@
+<!--Kevin Chen, James Marlin, Quoc Nguyen-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>CS 257: Software Design</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+  <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row" style="width: 100vw; position: fixed; z-index: 20;">
+      <div id="nav">
+        <div style="text-align: center;">Anime Central</div>
+        <div style="text-align: center;">Search Bar</div>
+        <div style="text-align: center;">User Related</div>
+      </div>
+    </div>
+    <h1 style="margin-top: 0px; margin-bottom: 25px;">asdfa</h1>
+    <div class="row">
+      <div class="col-lg-4">
+        <img id="anime_image" src="https://www.otakutale.com/wp-content/uploads/2014/12/Haikyuu-Season-1-Visual.jpg" alt="" srcset="">
+      </div>
+      <div class="col-lg-4">
+        <h1>Anime Details</h1>
+      </div>
+      <div class="col-lg-4">
+        <div class="stars">
+          <div id="star_1" style="float: left; font-size: 50px;">
+            &starf;
+          </div>
+          <div id="star_2" style="float: left; font-size: 50px;">
+            &starf;
+          </div>
+          <div id="star_3" style="float: left; font-size: 50px;">
+            &starf;
+          </div>
+          <div id="star_4" style="float: left; font-size: 50px;">
+            &starf;
+          </div>
+          <div id="star_5" style="font-size: 50px;">
+            &starf;
+          </div>
+        </div>
+        <div>
+          <h1>Anime Reviews</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  var star_2 = document.getElementById("star_2");
+  var star_1 = document.getElementById("star_1");
+  star_2.addEventListener('click', change_color);
+
+  function change_color() {
+    if (star_1.style.color == 'gold') {
+      star_1.style.color = "lightgray";
+    }
+    else {
+      star_1.style.color = "gold";
+    }
+  }
+
+</script>
+<style>
+#anime_pic {
+  width: 300px;
+  height: 300px;
+}
+#nav {
+  height: 50px;
+  background-color: black;
+  color: white;
+  line-height: 50px;
+}
+
+#nav div {
+  float: left;  
+  width: 33.3%;
+}
+
+#anime_image {
+  width: 300px;
+  height: 300px;
+}
+
+.stars div {
+  padding: 10px;
+}
+
+
+#star_2:hover {
+  color: gold;
+  cursor: pointer;
+}
+#star_3:hover {
+  color: gold;
+  cursor: pointer;
+}
+
+#star_4:hover {
+  color: gold;
+  cursor: pointer;
+}
+
+#star_5:hover {
+  color: gold;
+  cursor: pointer;
+}
+
+</style>
