@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.1
--- Dumped by pg_dump version 13.1
+-- Dumped from database version 12.5 (Ubuntu 12.5-0ubuntu0.20.04.1)
+-- Dumped by pg_dump version 12.5 (Ubuntu 12.5-0ubuntu0.20.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: animes; Type: TABLE; Schema: public; Owner: -
+-- Name: animes; Type: TABLE; Schema: public; Owner: quocodile
 --
 
 CREATE TABLE public.animes (
@@ -33,8 +33,10 @@ CREATE TABLE public.animes (
 );
 
 
+ALTER TABLE public.animes OWNER TO quocodile;
+
 --
--- Name: our_ratings; Type: TABLE; Schema: public; Owner: -
+-- Name: our_ratings; Type: TABLE; Schema: public; Owner: quocodile
 --
 
 CREATE TABLE public.our_ratings (
@@ -44,8 +46,10 @@ CREATE TABLE public.our_ratings (
 );
 
 
+ALTER TABLE public.our_ratings OWNER TO quocodile;
+
 --
--- Name: reviews; Type: TABLE; Schema: public; Owner: -
+-- Name: reviews; Type: TABLE; Schema: public; Owner: quocodile
 --
 
 CREATE TABLE public.reviews (
@@ -55,8 +59,45 @@ CREATE TABLE public.reviews (
 );
 
 
+ALTER TABLE public.reviews OWNER TO quocodile;
+
 --
--- Name: user_ratings_link; Type: TABLE; Schema: public; Owner: -
+-- Name: user; Type: TABLE; Schema: public; Owner: quocodile
+--
+
+CREATE TABLE public."user" (
+    id integer NOT NULL,
+    username text,
+    password text
+);
+
+
+ALTER TABLE public."user" OWNER TO quocodile;
+
+--
+-- Name: user_id_seq; Type: SEQUENCE; Schema: public; Owner: quocodile
+--
+
+CREATE SEQUENCE public.user_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_id_seq OWNER TO quocodile;
+
+--
+-- Name: user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: quocodile
+--
+
+ALTER SEQUENCE public.user_id_seq OWNED BY public."user".id;
+
+
+--
+-- Name: user_ratings_link; Type: TABLE; Schema: public; Owner: quocodile
 --
 
 CREATE TABLE public.user_ratings_link (
@@ -65,8 +106,10 @@ CREATE TABLE public.user_ratings_link (
 );
 
 
+ALTER TABLE public.user_ratings_link OWNER TO quocodile;
+
 --
--- Name: user_reviews_link; Type: TABLE; Schema: public; Owner: -
+-- Name: user_reviews_link; Type: TABLE; Schema: public; Owner: quocodile
 --
 
 CREATE TABLE public.user_reviews_link (
@@ -75,19 +118,10 @@ CREATE TABLE public.user_reviews_link (
 );
 
 
---
--- Name: users; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.users (
-    user_id text,
-    username text,
-    hashed_password text
-);
-
+ALTER TABLE public.user_reviews_link OWNER TO quocodile;
 
 --
--- Name: watchlist; Type: TABLE; Schema: public; Owner: -
+-- Name: watchlist; Type: TABLE; Schema: public; Owner: quocodile
 --
 
 CREATE TABLE public.watchlist (
@@ -96,8 +130,17 @@ CREATE TABLE public.watchlist (
 );
 
 
+ALTER TABLE public.watchlist OWNER TO quocodile;
+
 --
--- Data for Name: animes; Type: TABLE DATA; Schema: public; Owner: -
+-- Name: user id; Type: DEFAULT; Schema: public; Owner: quocodile
+--
+
+ALTER TABLE ONLY public."user" ALTER COLUMN id SET DEFAULT nextval('public.user_id_seq'::regclass);
+
+
+--
+-- Data for Name: animes; Type: TABLE DATA; Schema: public; Owner: quocodile
 --
 
 COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM stdin;
@@ -10476,7 +10519,7 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 
 
 --
--- Data for Name: our_ratings; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: our_ratings; Type: TABLE DATA; Schema: public; Owner: quocodile
 --
 
 COPY public.our_ratings (rating_id, anime_id, rating_score) FROM stdin;
@@ -10484,7 +10527,7 @@ COPY public.our_ratings (rating_id, anime_id, rating_score) FROM stdin;
 
 
 --
--- Data for Name: reviews; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: reviews; Type: TABLE DATA; Schema: public; Owner: quocodile
 --
 
 COPY public.reviews (review_id, anime_id, review_text) FROM stdin;
@@ -10492,7 +10535,21 @@ COPY public.reviews (review_id, anime_id, review_text) FROM stdin;
 
 
 --
--- Data for Name: user_ratings_link; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: quocodile
+--
+
+COPY public."user" (id, username, password) FROM stdin;
+1	kevin	sha256$ndMiwoHT$d490e62d8c82776d078a3ef4c2cd07be0d6083d34291df42c476670d26faa214
+2	quoc	sha256$MrM2rkBT$b2ec058cf75e613f8edbe9a6841283e47b7f334a19156762d0467cf07e28dd81
+3	1	sha256$rfefmPTt$f7b32f241a388280a30a4135bef37194f656a6a427c94cc8f58a211d42e897ce
+4	2	sha256$7zaj0Utx$fe8c221c34706e23da08b85f122097783f4c2194fffa870177988435a70962ec
+5	50	sha256$xaNSNFuY$72eeb5b19ced6f6c0c858b9dfcf9cb04e7dcfc7ac2783fb618b20c0fdbe74c55
+6	9	sha256$RCMbwvy3$b98dfab3119ab6340a6c6bef54361a93b86656e773d09343787309ba7ef27a5d
+\.
+
+
+--
+-- Data for Name: user_ratings_link; Type: TABLE DATA; Schema: public; Owner: quocodile
 --
 
 COPY public.user_ratings_link (user_id, rating_id) FROM stdin;
@@ -10500,7 +10557,7 @@ COPY public.user_ratings_link (user_id, rating_id) FROM stdin;
 
 
 --
--- Data for Name: user_reviews_link; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: user_reviews_link; Type: TABLE DATA; Schema: public; Owner: quocodile
 --
 
 COPY public.user_reviews_link (user_id, review_id) FROM stdin;
@@ -10508,19 +10565,26 @@ COPY public.user_reviews_link (user_id, review_id) FROM stdin;
 
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.users (user_id, username, hashed_password) FROM stdin;
-\.
-
-
---
--- Data for Name: watchlist; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: watchlist; Type: TABLE DATA; Schema: public; Owner: quocodile
 --
 
 COPY public.watchlist (user_id, anime_id) FROM stdin;
 \.
+
+
+--
+-- Name: user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quocodile
+--
+
+SELECT pg_catalog.setval('public.user_id_seq', 6, true);
+
+
+--
+-- Name: user user_pkey; Type: CONSTRAINT; Schema: public; Owner: quocodile
+--
+
+ALTER TABLE ONLY public."user"
+    ADD CONSTRAINT user_pkey PRIMARY KEY (id);
 
 
 --

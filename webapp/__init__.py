@@ -10,7 +10,7 @@ from flask_login import LoginManager
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://kchen01:password@localhost:5432/Animes"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://quocodile:password@localhost:5432/final_project"
 app.config['SECRET_KEY'] = 'secret-key-goes-here'
 db = SQLAlchemy(app)   
 

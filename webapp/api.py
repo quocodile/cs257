@@ -73,11 +73,12 @@ def login_post():
     # take the user-supplied password, hash it, and compare it to the hashed password in the database
     if not user or not check_password_hash(user.password, password):
         flash('Please check your login details and try again.')
-        return redirect(url_for('api.login')) # if the user doesn't exist or password is wrong, reload the page
+        return redirect('/login') # if the user doesn't exist or password is wrong, reload the page
 
     # if the above check passes, then we know the user has the right credentials
     login_user(user, remember=remember)
-    return redirect(url_for('main.profile'))
+    return "it worked"
+    #return redirect(url_for('main.profile'))
 
 #@api.route('/signup')
 #def signup():
@@ -93,8 +94,7 @@ def signup_post():
 
     if user: # if a user is found, we want to redirect back to signup page so user can try again
         flash('This sign up info is already taken.')
-        return("test")
-        #return redirect(url_for('api.signup'))
+        return flask.render_template('signup.html')
 
     # create a new user with the form data. Hash the password so the plaintext version isn't saved.
     new_user = User(username=username, password=generate_password_hash(password, method='sha256'))
@@ -102,8 +102,7 @@ def signup_post():
     # add the new user to the database
     db.session.add(new_user)
     db.session.commit()
-    return("test")
-    #return redirect(url_for('api.login'))
+    return redirect('/login')
 
 @api.route('/logout')
 @login_required
