@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: animes; Type: TABLE; Schema: public; Owner: kchen01
+-- Name: animes; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.animes (
@@ -33,10 +33,71 @@ CREATE TABLE public.animes (
 );
 
 
-ALTER TABLE public.animes OWNER TO kchen01;
+--
+-- Name: our_ratings; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.our_ratings (
+    rating_id text,
+    anime_id text,
+    rating_score text
+);
+
 
 --
--- Data for Name: animes; Type: TABLE DATA; Schema: public; Owner: kchen01
+-- Name: reviews; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.reviews (
+    review_id text,
+    anime_id text,
+    review_text text
+);
+
+
+--
+-- Name: user_ratings_link; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.user_ratings_link (
+    user_id text,
+    rating_id text
+);
+
+
+--
+-- Name: user_reviews_link; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.user_reviews_link (
+    user_id text,
+    review_id text
+);
+
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.users (
+    user_id text,
+    username text,
+    hashed_password text
+);
+
+
+--
+-- Name: watchlist; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.watchlist (
+    user_id text,
+    anime_id text
+);
+
+
+--
+-- Data for Name: animes; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM stdin;
@@ -10411,6 +10472,54 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 10369	Pico: My Little Summer Story	1	Yaoi	5.21
 10370	Citrus	Unknown	Drama Romance School Yuri	
 10371	Hitorijime My Hero	Unknown	Yaoi	
+\.
+
+
+--
+-- Data for Name: our_ratings; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.our_ratings (rating_id, anime_id, rating_score) FROM stdin;
+\.
+
+
+--
+-- Data for Name: reviews; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.reviews (review_id, anime_id, review_text) FROM stdin;
+\.
+
+
+--
+-- Data for Name: user_ratings_link; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.user_ratings_link (user_id, rating_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: user_reviews_link; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.user_reviews_link (user_id, review_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.users (user_id, username, hashed_password) FROM stdin;
+\.
+
+
+--
+-- Data for Name: watchlist; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.watchlist (user_id, anime_id) FROM stdin;
 \.
 
 
