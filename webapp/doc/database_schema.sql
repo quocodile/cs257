@@ -26,7 +26,7 @@ CREATE TABLE Reviews (
 CREATE TABLE Our_ratings (
     rating_id text,
     anime_id text,
-    rating_score, text
+    rating_score text
 );
 
 CREATE TABLE User_reviews_link (
