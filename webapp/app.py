@@ -7,9 +7,9 @@ Description: This is main page for website Anime Central.
 import sys
 import argparse
 import api
-#tutorial
+import flask
+from __init__ import app
 
-app = Flask(__name__, static_folder='static', template_folder='templates')
 app.register_blueprint(api.api, url_prefix='/api')
 
 # This route delivers the user your site's home page.
