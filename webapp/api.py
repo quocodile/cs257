@@ -15,7 +15,7 @@ from flask import Blueprint, render_template ,redirect, url_for, request, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from __init__ import User
 from __init__ import db
-from flask_login import login_user, logout_user, login_required
+from flask_login import login_user, logout_user, login_required, current_user
 
 api = flask.Blueprint('api', __name__)
 animes_imagepaths = json.loads(open('animes_imagepaths.json', 'r').read())  
@@ -77,7 +77,7 @@ def login_post():
 
     # if the above check passes, then we know the user has the right credentials
     login_user(user, remember=remember)
-    return "it worked"
+    return "it " + current_user.username
     #return redirect(url_for('main.profile'))
 
 #@api.route('/signup')
