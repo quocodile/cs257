@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin
+from config import user, password, database
 
 #import api 
 
@@ -11,7 +12,7 @@ from flask_login import LoginManager, UserMixin
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://quocodile:password@localhost:5432/final_project"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://" + user + ":" + password + "@localhost:5432/" + database
 app.config['SECRET_KEY'] = 'secret-key-goes-here'
 db = SQLAlchemy(app)   
 

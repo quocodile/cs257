@@ -55,12 +55,6 @@ def get_anime_by_genre():
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
-#taken from tutorial NOW auth = api!!!!
-
-#@api.route('/login')
-#def login():
-    #return render_template('login.html')
-
 @api.route('/login', methods=['POST'])
 def login_post():
     username = request.form.get('username')
@@ -79,10 +73,6 @@ def login_post():
     login_user(user, remember=remember)
     return "it " + current_user.username
     #return redirect(url_for('main.profile'))
-
-#@api.route('/signup')
-#def signup():
-    #return render_template('signup.html')
 
 @api.route('/signup', methods=['POST'])
 def signup_post():

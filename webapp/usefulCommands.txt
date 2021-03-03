@@ -1,0 +1,5 @@
+pg_dump --no-owner --no-privileges -U YOURUSERNAME YOURDATABASE > data.sql
+
+\copy authors from 'authors.csv' DELIMITER ',' CSV NULL AS 'NULL'
+
+psql -U username databaseName < data.sql

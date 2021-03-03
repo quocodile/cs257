@@ -29,6 +29,10 @@ def login_page():
 def signup_page():
   return flask.render_template('signup.html')
 
+@app.route('/search')
+def search_results():
+  return flask.render_template('search.html')
+
 # This route supports relative links among your web pages, assuming those pages
 # are stored in the templates/ directory or one of its descendant directories,
 # without requiring you to have specific routes for each page.
