@@ -10545,6 +10545,7 @@ COPY public."user" (id, username, password) FROM stdin;
 4	2	sha256$7zaj0Utx$fe8c221c34706e23da08b85f122097783f4c2194fffa870177988435a70962ec
 5	50	sha256$xaNSNFuY$72eeb5b19ced6f6c0c858b9dfcf9cb04e7dcfc7ac2783fb618b20c0fdbe74c55
 6	9	sha256$RCMbwvy3$b98dfab3119ab6340a6c6bef54361a93b86656e773d09343787309ba7ef27a5d
+7	bill	sha256$WLrnYAMg$15ae0560b68d297cd9309c9135b4adc078ce1b898de267703be578a2574ce30c
 \.
 
 
@@ -10576,7 +10577,7 @@ COPY public.watchlist (user_id, anime_id) FROM stdin;
 -- Name: user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quocodile
 --
 
-SELECT pg_catalog.setval('public.user_id_seq', 6, true);
+SELECT pg_catalog.setval('public.user_id_seq', 7, true);
 
 
 --
