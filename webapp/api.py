@@ -55,6 +55,28 @@ def get_anime_by_genre():
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
+@api.route('/search/<anime_name>')
+def get_anime_results(anime_name):
+        cursor = cursor_init()
+        query = "SELECT * FROM animes WHERE anime_name LIKE " + "'%" + anime_name + "%'" 
+
+        cursor.execute(query)
+        list_of_dictionaries = []
+        for row in cursor:
+                dic = {}
+                dic['anime_id'] = row[0]
+                dic['anime_name'] = row[1]
+                dic['num_episodes'] = row[2]
+                dic['genre'] = row[3]
+                dic['mal_rating'] = row[4]
+                try:
+                  dic['pic'] = 'anime_name'
+                except Exception as e:
+                  dic['pic'] = ''
+                list_of_dictionaries.append(dic)
+                
+        return  json.dumps(list_of_dictionaries)
+
 @api.route('/login', methods=['POST'])
 def login_post():
     username = request.form.get('username')
