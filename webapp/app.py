@@ -33,7 +33,8 @@ def signup_page():
 @app.route('/search', methods=['POST'])
 def search_results():
   search_string = (request.form['search_string'])
-  list_of_dicts = get_anime_results(search_string)
+  anime_name, list_of_dicts = get_anime_results(search_string)
+  anime_name = "'" + anime_name[1:-1] + "'"
   results = []
   anime_html = ""
   for i in range(len(list_of_dicts) - 1):
@@ -44,7 +45,7 @@ def search_results():
     anime_html += "<img style='width: 200px; height: 300px;' src='" + cur_dict['pic'] + "' alt='picture of an anime'/>"
     anime_html += "<p>_____________________</p>"
 
-  return flask.render_template('search.html', results = anime_html)
+  return flask.render_template('search.html', search_word = anime_name, results = anime_html)
 
 # This route supports relative links among your web pages, assuming those pages
 # are stored in the templates/ directory or one of its descendant directories,

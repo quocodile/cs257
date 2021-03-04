@@ -69,7 +69,7 @@ def get_anime_results(anime_name):
                 except Exception as e:
                   dic['pic'] = ''
                 list_of_dictionaries.append(dic)
-        return list_of_dictionaries
+        return anime_name, list_of_dictionaries
 
 @api.route('/login', methods=['POST'])
 def login_post():
