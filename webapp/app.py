@@ -42,6 +42,7 @@ def search_results():
     anime_html += "<p> Anime name: " + cur_dict["anime_name"] + "</p>"
     anime_html += "<p> # episodes: " + cur_dict["num_episodes"] + "</p>"
     anime_html += "<p> Rating: " + cur_dict["mal_rating"] + "</p>"
+    anime_html += "<img style='width: 200px; height: 300px;' src='" + cur_dict['pic'] + "' alt='picture of an anime'/>"
     anime_html += "<p>_____________________</p>"
 
   return flask.render_template('search.html', results = anime_html)

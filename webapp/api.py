@@ -44,9 +44,9 @@ def get_anime_by_genre():
                 dic['genre'] = row[3]
                 dic['mal_rating'] = row[4]
                 try:
-                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
+                  dic['pic'] = animes_imagepaths['../static/no_image/no_image.jpg'] 
                 except Exception as e:
-                  dic['pic'] = ''
+                  dic['pic'] = animes_imagepaths 
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
@@ -65,7 +65,7 @@ def get_anime_results(anime_name):
                 dic['genre'] = row[3]
                 dic['mal_rating'] = row[4]
                 try:
-                  dic['pic'] = 'anime_name'
+                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
                 except Exception as e:
                   dic['pic'] = ''
                 list_of_dictionaries.append(dic)
