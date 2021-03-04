@@ -31,7 +31,8 @@ def signup_page():
 
 @app.route('/search')
 def search_results():
-  return flask.render_template('search.html')
+  test1 = "<h1> blab </h1>"
+  return flask.render_template('search.html', test = test1)
 
 # This route supports relative links among your web pages, assuming those pages
 # are stored in the templates/ directory or one of its descendant directories,

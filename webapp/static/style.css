@@ -51,3 +51,8 @@ button {
 #image_1:hover{
   opacity: 0.5;
 }
+
+#search_header{
+  margin-top: 50px;
+  text-align: center;
+}

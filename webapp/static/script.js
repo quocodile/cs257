@@ -7,17 +7,45 @@ window.onload = initialize;
 function initialize() {
     let button_1 = document.getElementById('button_1');
     var button_2 = document.getElementById('button_2');
-    var button_3 = document.getElementById('button_3');
-    var button_4 = document.getElementById('button_4');
+
+    var search_button = document.getElementById('search_button');
+    var search_bar = document.getElementById('search_bar');
 
     button_1.addEventListener('click',on_button_1);
     button_2.addEventListener('click',on_button_2);
-
+    search_button.addEventListener('click',on_search_button);
+    
 }
-
 function getAPIBaseURL() {
     var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
     return baseURL;
+}
+function on_search_button() {
+    //var data = search_bar.value;
+    var url = getAPIBaseURL() + '/search/Naruto';
+
+    fetch(url, {method: 'get'})
+
+    .then((response) => response.json())
+
+    .then(function(anime) {
+        anime_1 = anime[0];
+        var listBody = '';
+        listBody += '<li>' + anime_1['anime_name']
+            + ', ' + anime_1['num_episodes']
+            + '-' + anime_1['genre']
+            + ', ' + anime_1['mal_rating'];
+            + '</li>\n';
+        
+         var animeElement = document.getElementById('search_results'); 
+         if (animeElement) {
+            animeElement.innerHTML = listBody;
+        }
+        window.location.replace("/search")
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
 }
 
 function on_button_1() {
@@ -46,7 +74,6 @@ function on_button_1() {
             imageElement.src = image_address;
         }
     })
-
     .catch(function(error) {
         console.log(error);
     });
@@ -78,9 +105,46 @@ function on_button_2() {
             imageElement.src = image_address;
         }
     })
-
     .catch(function(error) {
         console.log(error);
     });
 }
+
+// function onAuthorsButtonClicked() {
+//     var url = getAPIBaseURL() + '/search/';
+
+//     // Send the request to the Books API /authors/ endpoint
+//     fetch(url, {method: 'get'})
+
+//     // When the results come back, transform them from a JSON string into
+//     // a Javascript object (in this case, a list of author dictionaries).
+//     .then((response) => response.json())
+
+//     // Once you have your list of author dictionaries, use it to build
+//     // an HTML table displaying the author names and lifespan.
+//     .then(function(authorsList) {
+//         // Build the table body.
+//         var tableBody = '';
+//         for (var k = 0; k < authorsList.length; k++) {
+//             tableBody += '<tr>';
+
+//             tableBody += '<td><a onclick="getAuthor(' + authorsList[k]['id'] + ",'"
+//                             + authorsList[k]['first_name'] + ' ' + authorsList[k]['last_name'] + "')\">"
+//                             + authorsList[k]['last_name'] + ', '
+//                             + authorsList[k]['first_name'] + '</a></td>';
+
+//             tableBody += '<td>' + authorsList[k]['birth_year'] + '-';
+//             if (authorsList[k]['death_year'] != 0) {
+//                 tableBody += authorsList[k]['death_year'];
+//             }
+//             tableBody += '</td>';
+//             tableBody += '</tr>';
+//         }
+
+//         // Put the table body we just built inside the table that's already on the page.
+//         var resultsTableElement = document.getElementById('results_table');
+//         if (resultsTableElement) {
+//             resultsTableElement.innerHTML = tableBody;
+//         }
+//     })
 
