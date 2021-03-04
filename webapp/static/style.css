@@ -43,3 +43,11 @@ Kevin Chen, James Marlin, Quoc Nguyen
 button {
   background-color: lightgrey;
 }
+
+#image_1 {
+  opacity: 1;
+}
+
+#image_1:hover{
+  opacity: 0.5;
+}
