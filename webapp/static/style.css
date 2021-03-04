@@ -21,11 +21,6 @@ Kevin Chen, James Marlin, Quoc Nguyen
   background-color: black;
 }
 
-#search_bar {
-  background-color: grey;
-  height: 50px;
-}
-
 #user_related {
   background-color: black;
 }
@@ -51,8 +46,11 @@ button {
 #image_1:hover{
   opacity: 0.5;
 }
-
-#search_header{
-  margin-top: 50px;
+#search_bar {
+  background-color: grey;
+  height: 55px;
+}
+#search_results{
+  margin-top: 75px;
   text-align: center;
 }

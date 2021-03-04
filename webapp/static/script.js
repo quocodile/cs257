@@ -8,44 +8,13 @@ function initialize() {
     let button_1 = document.getElementById('button_1');
     var button_2 = document.getElementById('button_2');
 
-    var search_button = document.getElementById('search_button');
-    var search_bar = document.getElementById('search_bar');
-
     button_1.addEventListener('click',on_button_1);
     button_2.addEventListener('click',on_button_2);
-    search_button.addEventListener('click',on_search_button);
     
 }
 function getAPIBaseURL() {
     var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
     return baseURL;
-}
-function on_search_button() {
-    //var data = search_bar.value;
-    var url = getAPIBaseURL() + '/search/Naruto';
-
-    fetch(url, {method: 'get'})
-
-    .then((response) => response.json())
-
-    .then(function(anime) {
-        anime_1 = anime[0];
-        var listBody = '';
-        listBody += '<li>' + anime_1['anime_name']
-            + ', ' + anime_1['num_episodes']
-            + '-' + anime_1['genre']
-            + ', ' + anime_1['mal_rating'];
-            + '</li>\n';
-        
-         var animeElement = document.getElementById('search_results'); 
-         if (animeElement) {
-            animeElement.innerHTML = listBody;
-        }
-        window.location.replace("/search")
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
 }
 
 function on_button_1() {

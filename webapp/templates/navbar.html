@@ -14,11 +14,15 @@
 		<div id="site_id">
 			<a style="text-decoration: none; color: white;" href="/">Anime Central</a>
 		</div>
+		
 		<div id="search_bar">
-            <button id = "search_button" style="height: 35px; line-height: 35px;" id="user_related">Search</button>
-			<input type="text" name="" id="search_bar" style="width: 90%; height: 35px; color: black;">
+			<form action="/search" method="post">
+				<input type="text" name= "search_string" style="color: black;>"
+    			<input type= "submit">
+			</form>
 
 		</div>
+
 		<div id="user_related">
 			<a style="text-decoration: none; color: white;" href="/signup">
         			<button style="height: 35px; line-height: 35px;" id="user_related">Signup</button>

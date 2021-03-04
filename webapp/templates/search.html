@@ -1,9 +1,9 @@
 {% extends "navbar.html" %}
 {% block content %}
 
-
-<h1 id = "search_header">Search results for:</h1>
-
-<div id = "search_results_page"> </div>
+<div id = "search_results" 
+    <p>Results:</p>
+    {{results | safe}} 
+</div>
 
 {% endblock %}
