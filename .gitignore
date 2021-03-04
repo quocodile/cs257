@@ -129,6 +129,4 @@ dmypy.json
 .pyre/
 
 # config file 
-webapp/config.py
-
-webapp/miscellaneous.py
+*config.py

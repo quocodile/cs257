@@ -1,22 +1,24 @@
-{% extends "base.html" %}
+{% extends "navbar.html" %}
 
 {% block content %}
 <form method="POST" action="api/signup">
-<div class="column is-4 is-offset-4">
-    <h3 class="title">Sign Up</h3>
-    <div class="box">
-            <div class="field">
-                <div class="control">
-                    <input class="input is-large" type="text" name="username" placeholder="Username" autofocus="">
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <input class="input is-large" type="password" name="password" placeholder="Password">
-                </div>
-            </div>
-
-            <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+<div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div>
+      <h3 style="text-align: center;">Sign Up</h3>
+      <div>
+	<div style="padding: 10px;">
+          <input type="text" name="username" placeholder="Username" autofocus="">
+        </div>
+        </div>
+        <div>
+          <div style="padding: 10px;">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <button style="display: block; margin: auto;">Sign Up</button>
     </div>
 </div>
+</form>
+<style>
+</style>
 {% endblock %}

@@ -16,6 +16,6 @@
 
 # Change these values as appropriate for your postgresql setup.
 database = 'final_project'
-user = 'test'
+user = 'quocodile'
 password = 'password'
 

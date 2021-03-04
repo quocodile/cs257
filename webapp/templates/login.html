@@ -1,29 +1,26 @@
-{% extends "base.html" %}
+{% extends "navbar.html" %}
 
 {% block content %}
 <form method="POST" action="api/login">
-
-<div class="column is-4 is-offset-4">
-    <h3 class="title">Login</h3>
-    <div class="box">
-            <div class="field">
-                <div class="control">
-                    <input class="input is-large" type="username" name="username" placeholder="Your Username" autofocus="">
-                </div>
-            </div>
-
-            <div class="field">
-                <div class="control">
-                    <input class="input is-large" type="password" name="password" placeholder="Your Password">
-                </div>
-            </div>
-            <div class="field">
-                <label class="checkbox">
-                    <input type="checkbox">
-                    Remember me
-                </label>
-            </div>
-            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+  <div style="height: 100vh; weight: 100vw; display: flex; justify-content: center; align-items: center;">
+    <div>
+      <div>
+        <input type="username" name="username" placeholder="Your Username" autofocus="">
+      </div>
     </div>
-</div>
+    <div>
+      <div>
+        <input type="password" name="password" placeholder="Your Password">
+      </div>
+    </div>
+   <div>
+     <label>
+     <input type="checkbox">
+        Remember me
+     </label>
+   </div>
+     <button>Login</button>
+    </div>
+    </div>
+</form>
 {% endblock %}

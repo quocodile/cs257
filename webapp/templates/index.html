@@ -1,34 +1,5 @@
-<!--Kevin Chen, James Marlin, Quoc Nguyen-->
-
-<!DOCTYPE html>
-<html>
-
-<head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<title>CS 257: Software Design</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
-  <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<div id="navbar">
-		<div id="site_id">Anime Central</div>
-		<div id="search_bar">
-    	<input type="text" name="" id="" style="width: 90%; height: 35px; color: black;">
-    </div>
-		<div id="user_related">
-      <a href="/signup">
-        <button id="user_related">Signup</button>
-      </a> 
-      <a href="/login">
-        <button id="user_related">Login</button>
-      </a> 
-    </div>
-	</div>
-  <h3>spacing</h3>
+{% extends "navbar.html" %}
+{% block content %}
   <h3 id= "animerec">Anime Recommendations</h3>
       
  <div id = "animerecbody">
@@ -72,5 +43,4 @@
     </div>
 
   </div>
-
-</body>
+{% endblock %}

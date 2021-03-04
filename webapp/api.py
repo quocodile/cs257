@@ -88,8 +88,7 @@ def login_post():
 
     # if the above check passes, then we know the user has the right credentials
     login_user(user, remember=remember)
-    return "hi " + current_user.username
-    #return redirect(url_for('main.profile'))
+    return redirect('/')
 
 @api.route('/signup', methods=['POST'])
 def signup_post():

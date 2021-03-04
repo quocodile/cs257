@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>CS 257: Software Design</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+	<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="navbar">
+		<div id="site_id">
+			<a style="text-decoration: none; color: white;" href="/">Anime Central</a>
+		</div>
+		<div id="search_bar">
+			<input type="text" name="" id="" style="width: 90%; height: 35px; color: black;">
+		</div>
+		<div id="user_related">
+			<a style="text-decoration: none; color: white;" href="/signup">
+        			<button style="height: 35px; line-height: 35px;" id="user_related">Signup</button>
+			</a> 
+			<a style="text-decoration: none; color: white;" href="/login">
+				<button style="height: 35px; line-height: 35px;" id="user_related">Login</button>
+			</a> 
+		</div>
+	</div>
+        {% block content %}
+	{% endblock %}
+</html>
