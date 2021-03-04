@@ -54,7 +54,7 @@ def get_anime_by_genre():
 def get_anime_results(anime_name):
         cursor = cursor_init()
         anime_name = "%" + anime_name + "%"
-        query = "SELECT * FROM animes WHERE anime_name LIKE %s" 
+        query = "SELECT * FROM animes WHERE LOWER(anime_name) LIKE LOWER(%s)" 
         cursor.execute(query, (anime_name,))
         list_of_dictionaries = []
         for row in cursor:
