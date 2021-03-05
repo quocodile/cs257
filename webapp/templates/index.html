@@ -1,12 +1,13 @@
 {% extends "navbar.html" %}
 {% block content %}
-  <h3 id= "animerec">Anime Recommendations</h3>
+
       
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
 	<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
  <div id = "animerecbody">
-    <div class="container-fluid">
+    <div class="container-fluid" style = "margin-top: 40px;" >
       <div class="row">
+        <h3 id= "animerec">Anime Recommendations</h3>
         <div class="col-sm-3">
           <div class="card" style="width: 50rem;">
           <div class="container">
@@ -42,6 +43,15 @@
         </div>
       </div>
       </div>
+    </div>
+    <div class = "row" style = "margin-left: 15px;">
+      <h2>Action</h2>
+      <div id="genre_action"></div>
+    </div>
+
+    <div class = "row" style = "margin-left: 15px;">
+      <h3>Romance</h3>
+      <div id="genre_romance"></div>
     </div>
 
   </div>

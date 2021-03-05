@@ -10,7 +10,8 @@ function initialize() {
 
     button_1.addEventListener('click',on_button_1);
     button_2.addEventListener('click',on_button_2);
-    
+    get_action();
+    get_romance();
 }
 function getAPIBaseURL() {
     var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
@@ -77,6 +78,68 @@ function on_button_2() {
     .catch(function(error) {
         console.log(error);
     });
+}
+
+function get_action(){
+    var url = getAPIBaseURL() + "/anime?genre=Action";
+
+
+fetch(url, {method: 'get'})
+
+.then((response) => response.json())
+
+.then(jsondata =>   
+    {   
+        var listBody = '';
+        for (var i = 0; i < 10; i++) {
+            anime = jsondata[i]
+            //image_address = anime['pic']
+            listBody += '<li>' + anime['anime_name']
+                + ', ' + anime['mal_rating'];
+                + '</li>\n';
+        }
+
+    var animeElement = document.getElementById('genre_action');
+    console.log(animeElement);
+    if (animeElement) {
+        animeElement.innerHTML = listBody;
+    }
+})
+.catch(function(error) {
+    console.log(error);
+});
+
+}
+
+function get_romance(){
+    var url = getAPIBaseURL() + "/anime?genre=Romance";
+
+
+fetch(url, {method: 'get'})
+
+.then((response) => response.json())
+
+.then(jsondata =>   
+    {   
+        var listBody = '';
+        for (var i = 0; i < 10; i++) {
+            anime = jsondata[i]
+            //image_address = anime['pic']
+            listBody += '<li>' + anime['anime_name']
+                + ', ' + anime['mal_rating'];
+                + '</li>\n';
+        }
+
+    var animeElement = document.getElementById('genre_romance');
+    console.log(animeElement);
+    if (animeElement) {
+        animeElement.innerHTML = listBody;
+    }
+})
+.catch(function(error) {
+    console.log(error);
+});
+
 }
 
 // function onAuthorsButtonClicked() {
