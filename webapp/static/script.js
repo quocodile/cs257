@@ -96,8 +96,8 @@ fetch(url, {method: 'get'})
             image_address = anime['pic']
             listBody += "<div style='margin: 15px;'>"
                 + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
-                + '<h1>' + anime['anime_name'] + '</h1>'
-                + '<h1>' + anime['mal_rating'] + '</h1>'
+                + '<p>' + anime['anime_name'] + '</p>'
+                + '<p>' + anime['mal_rating'] + '</p>'
                 +  '</div>';
         }
 
@@ -128,8 +128,8 @@ fetch(url, {method: 'get'})
             image_address = anime['pic']
             listBody += "<div style='margin: 15px;'>"
                 + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
-                + '<h1>' + anime['anime_name'] + '</h1>'
-                + '<h1>' + anime['mal_rating'] + '</h1>'
+                + '<p>' + anime['anime_name'] + '</p>'
+                + '<p>' + anime['mal_rating'] + '</p>'
                 +  '</div>';
         }
 

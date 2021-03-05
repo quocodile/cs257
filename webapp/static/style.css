@@ -3,7 +3,7 @@ Kevin Chen, James Marlin, Quoc Nguyen
 */
 
 #navbar {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   height: 50px;
   z-index: 5;
@@ -26,7 +26,6 @@ Kevin Chen, James Marlin, Quoc Nguyen
 }
 
 #animerec {
-  margin-right: 150px;
   margin-left: 15px;
 
 }
