@@ -94,7 +94,7 @@ fetch(url, {method: 'get'})
         for (var i = 0; i < 10; i++) {
             anime = jsondata[i]
             image_address = anime['pic']
-            listBody += "<div>"
+            listBody += "<div style='margin: 15px;'>"
                 + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
                 + '<h1>' + anime['anime_name'] + '</h1>'
                 + '<h1>' + anime['mal_rating'] + '</h1>'
@@ -126,7 +126,7 @@ fetch(url, {method: 'get'})
         for (var i = 0; i < 10; i++) {
             anime = jsondata[i]
             image_address = anime['pic']
-            listBody += "<div>"
+            listBody += "<div style='margin: 15px;'>"
                 + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
                 + '<h1>' + anime['anime_name'] + '</h1>'
                 + '<h1>' + anime['mal_rating'] + '</h1>'
