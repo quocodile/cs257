@@ -28,7 +28,7 @@ function on_button_1() {
     .then(function(anime) {
         anime_1 = anime[0];
         image_address = anime_1['pic']
-        var listBody = '';
+        var listBody = "";
         listBody += '<li>' + anime_1['anime_name']
             + ', ' + anime_1['num_episodes']
             + '-' + anime_1['genre']
@@ -93,14 +93,15 @@ fetch(url, {method: 'get'})
         var listBody = '';
         for (var i = 0; i < 10; i++) {
             anime = jsondata[i]
-            //image_address = anime['pic']
-            listBody += '<li>' + anime['anime_name']
-                + ', ' + anime['mal_rating'];
-                + '</li>\n';
+            image_address = anime['pic']
+            listBody += "<div>"
+                + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
+                + '<h1>' + anime['anime_name'] + '</h1>'
+                + '<h1>' + anime['mal_rating'] + '</h1>'
+                +  '</div>';
         }
 
     var animeElement = document.getElementById('genre_action');
-    console.log(animeElement);
     if (animeElement) {
         animeElement.innerHTML = listBody;
     }
@@ -124,10 +125,12 @@ fetch(url, {method: 'get'})
         var listBody = '';
         for (var i = 0; i < 10; i++) {
             anime = jsondata[i]
-            //image_address = anime['pic']
-            listBody += '<li>' + anime['anime_name']
-                + ', ' + anime['mal_rating'];
-                + '</li>\n';
+            image_address = anime['pic']
+            listBody += "<div>"
+                + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
+                + '<h1>' + anime['anime_name'] + '</h1>'
+                + '<h1>' + anime['mal_rating'] + '</h1>'
+                +  '</div>';
         }
 
     var animeElement = document.getElementById('genre_romance');

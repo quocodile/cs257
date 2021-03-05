@@ -31,8 +31,9 @@ def get_anime_by_genre():
         cursor = cursor_init()
         if genre:
                 #genre = "%" + genre + "%"
-                query = "SELECT * FROM Animes WHERE genre=%s ORDER BY mal_rating DESC "
+                query = "SELECT * FROM animes WHERE genre LIKE %s ORDER BY mal_rating DESC "
                 cursor.execute(query, (genre,))
+                return genre
         else:
                 query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
                 cursor.execute(query)
@@ -45,7 +46,7 @@ def get_anime_by_genre():
                 dic['genre'] = row[3]
                 dic['mal_rating'] = row[4]
                 try:
-                  dic['pic'] = animes_imagepaths['../static/no_image/no_image.jpg'] 
+                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
                 except Exception as e:
                   dic['pic'] = animes_imagepaths 
                 list_of_dictionaries.append(dic)
