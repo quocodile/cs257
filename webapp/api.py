@@ -31,9 +31,9 @@ def get_anime_by_genre():
         cursor = cursor_init()
         if genre:
                 #genre = "%" + genre + "%"
-                query = "SELECT * FROM animes WHERE genre LIKE %s ORDER BY mal_rating DESC "
+                #query = "SELECT * FROM animes WHERE genre LIKE %s ORDER BY CAST(mal_rating as DOUBLE PRECISION) DESC "
+                query = "SELECT * FROM animes WHERE genre=%s"
                 cursor.execute(query, (genre,))
-                return genre
         else:
                 query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
                 cursor.execute(query)
