@@ -1,3 +1,7 @@
+AUTHORS: Kevin Chen, James Marlin, Quoc Nguyen
+
+DATA: A dataset consisting of animes that contains the anime's rating, name, # of episodes, etc.
+
 Features that are working:
 
 Search animes by title and display the following: title, # episodes, genre, picture.
