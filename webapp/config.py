@@ -17,5 +17,5 @@
 # Change these values as appropriate for your postgresql setup.
 database = 'Animes'
 user = 'jmarlin3'
-password = 'Solotrey1540644'
+password = 'password'
 
