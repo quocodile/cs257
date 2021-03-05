@@ -1,0 +1,24 @@
+
+Search for anime
+REQUEST: /api/search/{search string}
+
+RESPONSE: JSON list of dictionaries containing anime dictionaries, with each dictionary containing the following fields:
+
+	Picture -- (blob) the picture of the anime
+	Name -- (string) the name of the anime
+	Episodes -- (int) the number of episodes for the anime
+
+________________
+
+Find animes by genre
+REQUEST: /api/anime
+
+OPTIONAL GET PARAMETERS:
+* genre (Optional, default='no genre') -- gets all animes that fit into the given genre
+
+RESPONSE: JSON list of dictionaries, each representing an anime. Each dictionary will contain the following fields: 
+
+	Picture -- (blob) the picture of the anime
+	Name -- (string) the name of the anime
+	Rating -- (int) the MAL rating for the anime 
+	Episodes -- (int) the number of episodes for the anime

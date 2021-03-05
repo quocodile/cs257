@@ -109,6 +109,15 @@ def signup_post():
     db.session.commit()
     return redirect('/login')
 
+@api.route('/help')
+def help():
+        helpFile = open("help.txt", "r")
+        message = ""
+        for row in helpFile:
+                message += "<p>" + row + "</p>"
+
+        return render_template('help.html', message = message)
+
 @api.route('/logout')
 @login_required
 def logout():
