@@ -54,7 +54,7 @@ def get_anime_by_genre():
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
-@api.route('/search/<anime_name>')
+@api.route('/search/<anime_name>', methods=['GET', 'POST'])
 def get_anime_results(anime_name):
         cursor = cursor_init()
         anime_name = "%" + anime_name + "%"
@@ -73,7 +73,10 @@ def get_anime_results(anime_name):
                 except Exception as e:
                   dic['pic'] = ''
                 list_of_dictionaries.append(dic)
-        return anime_name, list_of_dictionaries
+        if request.method == 'POST':
+          return anime_name, list_of_dictionaries
+        elif request.method == 'GET': 
+          return json.dumps(list_of_dictionaries)
 
 @api.route('/login', methods=['POST'])
 def login_post():
