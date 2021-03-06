@@ -145,41 +145,4 @@ fetch(url, {method: 'get'})
 
 }
 
-// function onAuthorsButtonClicked() {
-//     var url = getAPIBaseURL() + '/search/';
-
-//     // Send the request to the Books API /authors/ endpoint
-//     fetch(url, {method: 'get'})
-
-//     // When the results come back, transform them from a JSON string into
-//     // a Javascript object (in this case, a list of author dictionaries).
-//     .then((response) => response.json())
-
-//     // Once you have your list of author dictionaries, use it to build
-//     // an HTML table displaying the author names and lifespan.
-//     .then(function(authorsList) {
-//         // Build the table body.
-//         var tableBody = '';
-//         for (var k = 0; k < authorsList.length; k++) {
-//             tableBody += '<tr>';
-
-//             tableBody += '<td><a onclick="getAuthor(' + authorsList[k]['id'] + ",'"
-//                             + authorsList[k]['first_name'] + ' ' + authorsList[k]['last_name'] + "')\">"
-//                             + authorsList[k]['last_name'] + ', '
-//                             + authorsList[k]['first_name'] + '</a></td>';
-
-//             tableBody += '<td>' + authorsList[k]['birth_year'] + '-';
-//             if (authorsList[k]['death_year'] != 0) {
-//                 tableBody += authorsList[k]['death_year'];
-//             }
-//             tableBody += '</td>';
-//             tableBody += '</tr>';
-//         }
-
-//         // Put the table body we just built inside the table that's already on the page.
-//         var resultsTableElement = document.getElementById('results_table');
-//         if (resultsTableElement) {
-//             resultsTableElement.innerHTML = tableBody;
-//         }
-//     })
 
