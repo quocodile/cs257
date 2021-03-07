@@ -13,7 +13,7 @@ import json
 import psycopg2
 
 api = Blueprint('api', __name__)
-animes_imagepaths = json.loads(open('animes_imagepaths.json', 'r').read())  
+animes_imagepaths = json.loads(open('animes_imagepaths2.json', 'r').read())  
 
 def cursor_init():
         '''Connects to database and initializes the cursor.'''
@@ -50,7 +50,7 @@ def get_anime_by_genre():
                 try:
                   dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
                 except Exception as e:
-                  dic['pic'] = animes_imagepaths 
+                  dic['pic'] = '' 
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
