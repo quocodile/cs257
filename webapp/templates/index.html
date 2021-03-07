@@ -1,48 +1,42 @@
 {% extends "navbar.html" %}
 {% block content %}
-  <h3 id= "animerec">Anime Recommendations</h3>
-      
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
-	<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+
  <div id = "animerecbody">
-    <div class="container-fluid">
+    <div class="container" style = "width: 80%;overflow: auto; margin-top: 40px;" >
+        <h3 id= "animerec">Anime Recommendations</h3>
       <div class="row">
-        <div class="col-sm-3">
-          <div class="card" style="width: 50rem;">
-          <div class="container">
+        <div style="width: 80%; display: flex; justify-content: flex-start">
+        <div style="margin: 15px">
             <img id="image_1" src='https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg' class="..." alt="EXPIC3"/>
-            <h1 id="put_data_here_1"></h1>
-          </div>
-          <div class="card-body">
+            <p id="put_data_here_1"></p>
             <button id="button_1" type="button" class="btn btn-outline-primary">click here</button>
-          </div>
-          </div>
         </div>
-        <div class="col-sm-3">
-          <div class="container">
+        <div style="margin: 15px">
             <img id="image_2" src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3">
-            <h2 id="put_data_here_2"></h2>
-          </div>
+            <p id="put_data_here_2"></p>
           <div class="card-body">
             <button id="button_2" type="button" class="btn btn-outline-primary">click here</button>
           </div>
         </div>
-        <div class="col-sm-3">
-          <div class="container">
+        <div style="margin: 15px">
             <img id="image_3" src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3">
-          </div>
-          <div class="card-body">
-          </div>
       </div>
-      <div class="col-sm-3">
-        <div class="container">
+      <div style="margin: 15px">
           <img src="https://m.media-amazon.com/images/M/MV5BNzQ1MmJjZDUtMmI5OC00ZDk2LThkODQtODgwYmU0MTIzNDhmXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" class="..." alt="EXPIC3">
-        </div>
-        <div class="card-body">
-        </div>
       </div>
       </div>
     </div>
+    </div>
+     <h3 style="margin-left: 200px;">Action</h3>
+    <div class = "row">
+      <div style="margin: auto; width: 80vw; overflow: auto; display: flex; justify-content: flex-start;" id="genre_action"></div>
+    </div>
 
+    <div class = "row">
+      <h3 style="margin-left: 200px">Romance</h3>
+      <div style="margin: auto; width: 80vw; overflow: auto; display: flex; justify-content: flex-start;" id="genre_romance">
+      </div>
+    </div>
+</div>
   </div>
 {% endblock %}

@@ -10,7 +10,8 @@ function initialize() {
 
     button_1.addEventListener('click',on_button_1);
     button_2.addEventListener('click',on_button_2);
-    
+    get_action();
+    get_romance();
 }
 function getAPIBaseURL() {
     var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
@@ -27,7 +28,7 @@ function on_button_1() {
     .then(function(anime) {
         anime_1 = anime[0];
         image_address = anime_1['pic']
-        var listBody = '';
+        var listBody = "";
         listBody += '<li>' + anime_1['anime_name']
             + ', ' + anime_1['num_episodes']
             + '-' + anime_1['genre']
@@ -79,41 +80,69 @@ function on_button_2() {
     });
 }
 
-// function onAuthorsButtonClicked() {
-//     var url = getAPIBaseURL() + '/search/';
+function get_action(){
+    var url = getAPIBaseURL() + "/anime?genre=Action";
 
-//     // Send the request to the Books API /authors/ endpoint
-//     fetch(url, {method: 'get'})
 
-//     // When the results come back, transform them from a JSON string into
-//     // a Javascript object (in this case, a list of author dictionaries).
-//     .then((response) => response.json())
+fetch(url, {method: 'get'})
 
-//     // Once you have your list of author dictionaries, use it to build
-//     // an HTML table displaying the author names and lifespan.
-//     .then(function(authorsList) {
-//         // Build the table body.
-//         var tableBody = '';
-//         for (var k = 0; k < authorsList.length; k++) {
-//             tableBody += '<tr>';
+.then((response) => response.json())
 
-//             tableBody += '<td><a onclick="getAuthor(' + authorsList[k]['id'] + ",'"
-//                             + authorsList[k]['first_name'] + ' ' + authorsList[k]['last_name'] + "')\">"
-//                             + authorsList[k]['last_name'] + ', '
-//                             + authorsList[k]['first_name'] + '</a></td>';
+.then(jsondata =>   
+    {   
+        var listBody = '';
+        for (var i = 0; i < 10; i++) {
+            anime = jsondata[i]
+            image_address = anime['pic']
+            listBody += "<div style='margin: 15px;'>"
+                + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
+                + '<p>' + anime['anime_name'] + '</p>'
+                + '<p>' + anime['mal_rating'] + '</p>'
+                +  '</div>';
+        }
 
-//             tableBody += '<td>' + authorsList[k]['birth_year'] + '-';
-//             if (authorsList[k]['death_year'] != 0) {
-//                 tableBody += authorsList[k]['death_year'];
-//             }
-//             tableBody += '</td>';
-//             tableBody += '</tr>';
-//         }
+    var animeElement = document.getElementById('genre_action');
+    if (animeElement) {
+        animeElement.innerHTML = listBody;
+    }
+})
+.catch(function(error) {
+    console.log(error);
+});
 
-//         // Put the table body we just built inside the table that's already on the page.
-//         var resultsTableElement = document.getElementById('results_table');
-//         if (resultsTableElement) {
-//             resultsTableElement.innerHTML = tableBody;
-//         }
-//     })
+}
+
+function get_romance(){
+    var url = getAPIBaseURL() + "/anime?genre=Romance";
+
+
+fetch(url, {method: 'get'})
+
+.then((response) => response.json())
+
+.then(jsondata =>   
+    {   
+        var listBody = '';
+        for (var i = 0; i < 10; i++) {
+            anime = jsondata[i]
+            image_address = anime['pic']
+            listBody += "<div style='margin: 15px;'>"
+                + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
+                + '<p>' + anime['anime_name'] + '</p>'
+                + '<p>' + anime['mal_rating'] + '</p>'
+                +  '</div>';
+        }
+
+    var animeElement = document.getElementById('genre_romance');
+    console.log(animeElement);
+    if (animeElement) {
+        animeElement.innerHTML = listBody;
+    }
+})
+.catch(function(error) {
+    console.log(error);
+});
+
+}
+
 

@@ -30,8 +30,12 @@ def get_anime_by_genre():
         genre = request.args.get('genre', '')
         cursor = cursor_init()
         if genre:
-                query = "SELECT * FROM Animes WHERE genre=%s ORDER BY anime_name LIMIT 5"
+                genre = "%" + genre + "%"
+                query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 15"
+                #query = "SELECT * FROM animes WHERE genre LIKE %s ORDER BY CAST(mal_rating as DOUBLE PRECISION) DESC LIMIT 15";
+                #query = "SELECT * FROM animes WHERE genre=%s"
                 cursor.execute(query, (genre,))
+                #cursor.execute(query)
         else:
                 query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
                 cursor.execute(query)
@@ -44,13 +48,13 @@ def get_anime_by_genre():
                 dic['genre'] = row[3]
                 dic['mal_rating'] = row[4]
                 try:
-                  dic['pic'] = animes_imagepaths['../static/no_image/no_image.jpg'] 
+                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
                 except Exception as e:
                   dic['pic'] = animes_imagepaths 
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
-@api.route('/search/<anime_name>')
+@api.route('/search/<anime_name>', methods=['GET', 'POST'])
 def get_anime_results(anime_name):
         cursor = cursor_init()
         anime_name = "%" + anime_name + "%"
@@ -69,7 +73,10 @@ def get_anime_results(anime_name):
                 except Exception as e:
                   dic['pic'] = ''
                 list_of_dictionaries.append(dic)
-        return anime_name, list_of_dictionaries
+        if request.method == 'POST':
+          return anime_name, list_of_dictionaries
+        elif request.method == 'GET': 
+          return json.dumps(list_of_dictionaries)
 
 @api.route('/login', methods=['POST'])
 def login_post():
@@ -108,6 +115,15 @@ def signup_post():
     db.session.add(new_user)
     db.session.commit()
     return redirect('/login')
+
+@api.route('/help')
+def help():
+        helpFile = open("help.txt", "r")
+        message = ""
+        for row in helpFile:
+                message += "<p>" + row + "</p>"
+
+        return render_template('help.html', message = message)
 
 @api.route('/logout')
 @login_required
