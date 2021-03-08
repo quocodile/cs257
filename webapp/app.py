@@ -9,6 +9,7 @@ import api
 from api import get_anime_results
 import flask
 from flask import request
+from flask_login import login_required, current_user
 from __init__ import app
 
 app.register_blueprint(api.api, url_prefix='/api')
@@ -32,6 +33,12 @@ def login_page():
 @app.route('/signup')
 def signup_page():
   return flask.render_template('signup.html')
+
+'''Route for profile'''
+@app.route('/profile')
+@login_required
+def profile_page():
+  return flask.render_template('profile.html', name = current_user.username)
 
 '''Route that displays search route'''
 @app.route('/search', methods=['POST'])

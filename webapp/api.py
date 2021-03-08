@@ -98,7 +98,7 @@ def login_post():
 
     # if the above check passes, then we know the user has the right credentials
     login_user(user, remember=remember)
-    return redirect('/')
+    return redirect('/profile')
 
 '''Route that handles signup'''
 @api.route('/signup', methods=['POST'])
@@ -140,4 +140,4 @@ def currentAnime():
 @login_required
 def logout():
     logout_user()
-    return("test")
+    return redirect('/')
