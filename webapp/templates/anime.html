@@ -1,37 +1,19 @@
-<!--Kevin Chen, James Marlin, Quoc Nguyen-->
+{% extends 'navbar.html'%}
 
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <title>CS 257: Software Design</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
-  <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <div class="container-fluid">
-    <div class="row" style="width: 100vw; position: fixed; z-index: 20;">
-      <div id="nav">
-        <div style="text-align: center;">Anime Central</div>
-        <div style="text-align: center;">Search Bar</div>
-        <div style="text-align: center;">User Related</div>
-      </div>
-    </div>
-    <h1 style="margin-top: 0px; margin-bottom: 25px;">asdfa</h1>
+{% block content %}
+<div class="container-fluid" style="margin-top: 75px;">
     <div class="row">
       <div class="col-lg-4">
         <img id="anime_image" src="https://www.otakutale.com/wp-content/uploads/2014/12/Haikyuu-Season-1-Visual.jpg" alt="" srcset="">
       </div>
       <div class="col-lg-4">
-        <h1>Anime Details</h1>
+        <h1>Anime Name</h1>
+        <h3>Overall Rating</h3>
+        <h3>Watchlist Button</h3>
+        <h3>Total # of Episodes</h3>
       </div>
-      <div class="col-lg-4">
-        <div class="stars">
+      <div class="col-lg-4" >
+        <div class="stars" style="display: flex; justify-content: space-around; border: solid black 1px;">
           <div id="star_1" style="float: left; font-size: 50px;">
             &starf;
           </div>
@@ -48,32 +30,25 @@
             &starf;
           </div>
         </div>
-        <div>
-          <h1>Anime Reviews</h1>
+        <div style="border: solid black 1px;">
+          <div style="width: inherit; height: 320px; background-color: pink;">
+            <label for="write_a_review">
+              Write a review
+            </label>
+            <textarea id="write_a_review" style="padding: 10px; height: 250px; width: 100%; resize: none;">
+            </textarea>
+            <button style="margin-top: 15px; width: 100%">
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-<script>
-  var star_2 = document.getElementById("star_2");
-  var star_1 = document.getElementById("star_1");
-  star_2.addEventListener('click', change_color);
-
-  function change_color() {
-    if (star_1.style.color == 'gold') {
-      star_1.style.color = "lightgray";
-    }
-    else {
-      star_1.style.color = "gold";
-    }
-  }
-
-</script>
+</div>
 <style>
 #anime_pic {
   width: 300px;
-  height: 300px;
+  height: 350px;
 }
 #nav {
   height: 50px;
@@ -89,7 +64,7 @@
 
 #anime_image {
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
 .stars div {
@@ -97,6 +72,10 @@
 }
 
 
+#star_1:hover {
+  color: gold;
+  cursor: pointer;
+}
 #star_2:hover {
   color: gold;
   cursor: pointer;
@@ -117,3 +96,4 @@
 }
 
 </style>
+{% endblock %}
