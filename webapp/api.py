@@ -1,7 +1,7 @@
 '''
 Kevin Chen, James Marlin, Quoc Nguyen
 
-Description: This is all the api endpoints for website Anime Central. 
+Description: This is all the api endpoints for Anime Central. 
 '''
 
 from config import database, user, password
@@ -15,8 +15,9 @@ import psycopg2
 api = Blueprint('api', __name__)
 animes_imagepaths = json.loads(open('animes_imagepaths2.json', 'r').read())  
 
+'''Connects to database and initializes the cursor.'''
 def cursor_init():
-        '''Connects to database and initializes the cursor.'''
+        
         try:
                 connection = psycopg2.connect(database=database, user=user, password=password)
                 cursor = connection.cursor()
@@ -24,7 +25,7 @@ def cursor_init():
                 print(e)
                 exit()
         return cursor
-
+'''Returns some default anime information.'''
 @api.route('/anime/')
 def get_anime_by_genre():
         genre = request.args.get('genre', '')
@@ -35,7 +36,6 @@ def get_anime_by_genre():
                 #query = "SELECT * FROM animes WHERE genre LIKE %s ORDER BY CAST(mal_rating as DOUBLE PRECISION) DESC LIMIT 15";
                 #query = "SELECT * FROM animes WHERE genre=%s"
                 cursor.execute(query, (genre,))
-                #cursor.execute(query)
         else:
                 query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
                 cursor.execute(query)
@@ -54,6 +54,7 @@ def get_anime_by_genre():
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
+'''Route that executes a query on the database to search for animes and returns the results.'''
 @api.route('/search/<anime_name>', methods=['GET', 'POST'])
 def get_anime_results(anime_name):
         cursor = cursor_init()
@@ -73,11 +74,14 @@ def get_anime_results(anime_name):
                 except Exception as e:
                   dic['pic'] = ''
                 list_of_dictionaries.append(dic)
+
         if request.method == 'POST':
           return anime_name, list_of_dictionaries
+
         elif request.method == 'GET': 
           return json.dumps(list_of_dictionaries)
 
+'''Route that handles login'''
 @api.route('/login', methods=['POST'])
 def login_post():
     username = request.form.get('username')
@@ -96,6 +100,7 @@ def login_post():
     login_user(user, remember=remember)
     return redirect('/')
 
+'''Route that handles signup'''
 @api.route('/signup', methods=['POST'])
 def signup_post():
     # code to validate and add user to database goes here
@@ -116,14 +121,20 @@ def signup_post():
     db.session.commit()
     return redirect('/login')
 
+'''Route that returns help information'''
 @api.route('/help')
 def help():
         helpFile = open("help.txt", "r")
         message = ""
         for row in helpFile:
                 message += "<p>" + row + "</p>"
-
         return render_template('help.html', message = message)
+
+
+'''Route'''
+@api.route('/currentAnime')
+def currentAnime():
+        return render_template('anime.html')
 
 @api.route('/logout')
 @login_required

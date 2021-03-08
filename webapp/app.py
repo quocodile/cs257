@@ -13,23 +13,27 @@ from __init__ import app
 
 app.register_blueprint(api.api, url_prefix='/api')
 
-# This route delivers the user your site's home page.
+'''Homepage route'''
 @app.route('/')
 def home():
     return flask.render_template('index.html')
 
+'''for testing'''
 @app.route('/test')
 def anime_page():
   return flask.render_template('anime.html')
 
+'''Route for login'''
 @app.route('/login')
 def login_page():
   return flask.render_template('login.html')
 
+'''Route for signup'''
 @app.route('/signup')
 def signup_page():
   return flask.render_template('signup.html')
 
+'''Route that displays search route'''
 @app.route('/search', methods=['POST'])
 def search_results():
   search_string = (request.form['search_string'])
@@ -37,13 +41,16 @@ def search_results():
   anime_name = "'" + anime_name[1:-1] + "'"
   results = []
   anime_html = ""
+
   for i in range(len(list_of_dicts) - 1):
     cur_dict = list_of_dicts[i]
     anime_html += "<p>" + cur_dict["anime_name"] + "</p>"
     anime_html += "<p> # episodes: " + cur_dict["num_episodes"] + "</p>"
     anime_html += "<p> Rating: " + cur_dict["mal_rating"] + "</p>"
+
     if cur_dict['pic']:
       anime_html += "<img style='width: 200px; height: 300px;' src='" + cur_dict['pic'] + "' alt='picture of an anime'/>"
+
     else: 
       anime_html += "<img style='width: 200px; height: 300px;' src='../static/no_image.jpg' alt='picture of an anime'/>"
     anime_html += "<p>_____________________</p>"
