@@ -126,4 +126,13 @@ button {
   margin-left: 15px;
 }
 
+#welcome_message{
+  margin-top: 75px;
+}
+
+#greeting{
+  text-align: left;
+
+}
+
 

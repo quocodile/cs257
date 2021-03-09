@@ -11,7 +11,14 @@
 </head>
 <body>
 	<div id="navbar">
+		
 		<div id="site_id">
+			<div id = "greeting">
+				{% if current_user.is_authenticated %}
+				{{ current_user.username }}
+				{% endif %}
+			</div>
+			
 			<a style="text-decoration: none; color: white;" href="/">Anime Central</a>
 		</div>
 		
@@ -20,16 +27,21 @@
 				<input type="text" name= "search_string" style="height: 30px; color: black;">
                                 <input type= "submit" value="Search" style="height: 40px; line-height: 35px; color: black">
 			</form>
-
 		</div>
-
 		<div id="user_related">
+			{% if current_user.is_authenticated %}
+				<a style="text-decoration: none; color: white;" href="/profile">
+					<button style="height: 35px; line-height: 35px;" id="user_related">Profile</button>
+				</a> 
+			{% else %}
 			<a style="text-decoration: none; color: white;" href="/signup">
         			<button style="height: 35px; line-height: 35px;" id="user_related">Signup</button>
 			</a> 
 			<a style="text-decoration: none; color: white;" href="/login">
 				<button style="height: 35px; line-height: 35px;" id="user_related">Login</button>
 			</a> 
+			{% endif %}
+			
 		</div>
 	</div>
         {% block content %}

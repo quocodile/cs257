@@ -1,12 +1,19 @@
-<h1 class="title">
-    <p>Welcome, {{ name }}! </p>
+{% extends "navbar.html" %}
+{% block content %}
 
-    <p>Here's your watchlist:</p>
+	<div id = "welcome_message">
+		<p>Welcome, {{ name }}! </p>
 
-    <div id="logout_button">
-        <form action="/api/logout">
-            <input type= "submit" value="Logout" style="height: 40px; line-height: 35px; color: black">
-        </form>
+		<p>Here's your watchlist:</p>
+	</div>
 
-    </div>
-</h1>
+	<div id="logout_button">
+		
+		<form action="/api/logout">
+			<input type= "submit" value="Logout" style="height: 40px; line-height: 35px; color: black">
+		</form>
+		
+	</div>
+
+{% endblock %}
+
