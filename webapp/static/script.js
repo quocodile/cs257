@@ -5,7 +5,7 @@ Kevin Chen, James Marlin, Quoc Nguyen
 window.onload = initialize;
 
 function initialize() {
-    let button_1 = document.getElementById('button_1');
+    var button_1 = document.getElementById('button_1');
     var button_2 = document.getElementById('button_2');
 
     button_1.addEventListener('click',on_button_1);
@@ -156,11 +156,6 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
-
-
-
-
-
 function on_button_1() {
     var url = getAPIBaseURL() + '/anime/';
 
@@ -226,73 +221,67 @@ function on_button_2() {
 function get_action(){
     var url = getAPIBaseURL() + "/anime?genre=Action";
 
-
-fetch(url, {method: 'get'})
-
-.then((response) => response.json())
-
-.then(jsondata =>   
-    {   
-        var listBody = '';
-        for (var i = 0; i < 10; i++) {
-            anime = jsondata[i]
-            image_address = anime['pic']
-            anime_url = '/api/current/' + anime['anime_name']
-            listBody += "<div style='margin: 15px;'>"
-                + "<a href='" + anime_url + "'>"
-                + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
-                + "</a>"
-                + '<p>' + anime['anime_name'] + '</p>'
-                + '<p>' + anime['mal_rating'] + '</p>'
-                +  '</div>';
+    fetch(url, {method: 'get'})
+    .then((response) => response.json())
+    .then(jsondata =>   
+        {   
+            var listBody = '';
+            for (var i = 0; i < 10; i++) {
+                anime = jsondata[i]
+                image_address = anime['pic']
+                anime_url = '/api/current/' + anime['anime_name']
+                listBody += "<div style='margin: 15px;'>"
+                         + "<a href='" + anime_url + "'>"
+                         + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
+                         + "</a>"
+                         + '<p>' + anime['anime_name'] + '</p>'
+                         + '<p>' + anime['mal_rating'] + '</p>'
+                         +  '</div>';
         }
 
-    var animeElement = document.getElementById('genre_action');
-    if (animeElement) {
-        animeElement.innerHTML = listBody;
-    }
-})
-.catch(function(error) {
-    console.log(error);
-});
-
+            var animeElement = document.getElementById('genre_action');
+            if (animeElement) {
+                animeElement.innerHTML = listBody;
+            }
+        })
+    .catch(function(error) {
+        console.log(error);
+    });
 }
 
-function get_romance(){
+function get_romance()
+{
     var url = getAPIBaseURL() + "/anime?genre=Romance";
 
-
-fetch(url, {method: 'get'})
-
-.then((response) => response.json())
-
-.then(jsondata =>   
+    fetch(url, {method: 'get'})
+    .then((response) => response.json())
+    .then(jsondata =>   
     {   
         var listBody = '<div class = "romance_menu">';
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 10; i++) 
+        {
             anime = jsondata[i]
             image_address = anime['pic']
             listBody += "<div style='margin: 15px;' class = 'romance_genre_item'>"
-                + "<li class = 'romance_item'>"
-                + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
-                + '<p>' + anime['anime_name'] + '</p>'
-                + '<p>' + anime['mal_rating'] + '</p>'
-                +  "</li>"
-                +  '</div>';
+                     + "<li class = 'romance_item'>"
+                     + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
+                     + '<p>' + anime['anime_name'] + '</p>'
+                     + '<p>' + anime['mal_rating'] + '</p>'
+                     +  "</li>"
+                     +  '</div>';
         }
         listBody += '</div>';
             
-
-    var animeElement = document.getElementById('genre_romance');
-    console.log(animeElement);
-    if (animeElement) {
-        animeElement.innerHTML = listBody;
-    }
-})
-.catch(function(error) {
-    console.log(error);
-});
-
+        var animeElement = document.getElementById('genre_romance');
+        if (animeElement) 
+        {
+            animeElement.innerHTML = listBody;
+        }
+    })
+    .catch(function(error) 
+    {
+        console.log(error);
+    });
 }
 
 
