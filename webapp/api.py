@@ -146,8 +146,6 @@ def currentAnime(title):
           num_episodes = row[2]
           mal_rating = row[4] 
           pic = animes_imagepaths[row[1] + ' anime'] 
-          return pic
-          break
         return render_template('anime.html', pic=pic, anime_name=anime_name, num_episodes=num_episodes, mal_rating=mal_rating)
 
 @api.route('/logout')

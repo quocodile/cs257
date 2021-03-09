@@ -57,7 +57,6 @@ def search_results():
 
     if cur_dict['pic']:
       anime_html += "<img style='width: 200px; height: 300px;' src='" + cur_dict['pic'] + "' alt='picture of an anime'/>"
-
     else: 
       anime_html += "<img style='width: 200px; height: 300px;' src='../static/no_image.jpg' alt='picture of an anime'/>"
     anime_html += "<p>_____________________</p>"

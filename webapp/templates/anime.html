@@ -4,7 +4,7 @@
 <div class="container-fluid" style="margin-top: 75px;">
     <div class="row">
       <div class="col-lg-4">
-        <img id="anime_image" src='{{pic}}' alt="" srcset="">
+        <img id="anime_image" src='/{{pic}}' alt="" srcset="">
       </div>
       <div class="col-lg-4">
         <h1>{{anime_name}}</h1>
@@ -46,6 +46,11 @@
     </div>
 </div>
 <style>
+<script>
+  var image = document.getElementById('anime_image');  
+  var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
+  var request_url = baseURL + '/current/Fullmetal Alchemist: Brotherhood'
+</script>
 #anime_pic {
   width: 300px;
   height: 350px;
