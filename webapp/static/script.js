@@ -60,7 +60,7 @@ function initialize() {
 
         var romancemenuEndOffset = menuRomanceInvisibleSize - paddleMargin;
 
-        // show & hide the paddles
+        // show & hide the paddlesf
         // depending on scroll position
         if (romancemenuPosition <= paddleMargin) {
             $(leftPaddle).addClass("hidden");
