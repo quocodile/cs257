@@ -136,3 +136,33 @@ button {
 }
 
 
+#genre_romance{
+	position: relative;
+	max-width: 500px;
+	height: 100px; 
+	margin: 1em auto;
+	border: 1px solid black;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.romance_menu{
+  height: 120px;
+	background: #f3f3f3;
+	box-sizing: border-box;
+	
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	
+}
+
+.romance_menu .romance_genre_item{
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+  outline: 1px dotted gray;
+  padding: 1em;
+  box-sizing: border-box;
+}
