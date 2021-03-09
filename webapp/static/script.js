@@ -24,9 +24,73 @@ function initialize() {
     // get some relevant size for the paddle triggering point
     var paddleMargin = 20;
 
+
+    var getRomanceSize = function (){
+        return $("#genre_romance").outerWidth();
+    };
+    var romanceWrapperSize = getRomanceSize();
+    $(window).on("resize", function () {
+        romanceWrapperSize = getRomanceSize();
+    });
+    //var romanceVisibleSize = romanceWrapperSize;
+    var romanceitemsLength = $(".romace_genre_item").length;
+
+    var romanceitemSize = $(".romace_genre_item").outerWidth(true); 
+
+    var getromaceMenuSize = function() {
+        return romanceitemsLength * romanceitemSize;
+    }
+
+    var romanceMenuSize = getromaceMenuSize();
+    menuRomanceInvisibleSize = romanceMenuSize - romanceWrapperSize;
+
+
+    // get how much have we scrolled to the left
+    var getRomanceMenuPosition = function () {
+        return $(".romance_menu").scrollLeft();//
+    };
+
+
+        // finally, what happens when we are actually scrolling the menu
+    $(".romance_menu").on("scroll", function () {//
+        // get how much of menu is invisible
+        menuRomanceInvisibleSize = romanceMenuSize - romanceWrapperSize;
+        // get how much have we scrolled so far
+        var romancemenuPosition = getRomanceMenuPosition();
+
+        var romancemenuEndOffset = menuRomanceInvisibleSize - paddleMargin;
+
+        // show & hide the paddles
+        // depending on scroll position
+        if (romancemenuPosition <= paddleMargin) {
+            $(leftPaddle).addClass("hidden");
+            $(rightPaddle).removeClass("hidden");
+        } else if (romancemenuPosition < romancemenuEndOffset) {
+            // show both paddles in the middle
+            $(leftPaddle).removeClass("hidden");
+            $(rightPaddle).removeClass("hidden");
+        } else if (romancemenuPosition >= romancemenuEndOffset) {
+            $(leftPaddle).removeClass("hidden");
+            $(rightPaddle).addClass("hidden");
+        }
+
+    });
+
+     // scroll to left
+     $(rightPaddle).on("click", function () {
+        $(".romance_menu").animate({ scrollLeft: menuRomanceInvisibleSize }, scrollDuration);
+    });
+
+    // scroll to right
+    $(leftPaddle).on("click", function () {
+        $(".romance_menu").animate({ scrollLeft: "0" }, scrollDuration);
+    });
+
+
+
     // get wrapper width
     var getMenuWrapperSize = function () {
-        return $(".menu-wrapper").outerWidth();
+        return $(".menu-wrapper").outerWidth(); //
     };
     var menuWrapperSize = getMenuWrapperSize();
     // the wrapper is responsive
@@ -46,12 +110,12 @@ function initialize() {
 
     // get how much have we scrolled to the left
     var getMenuPosition = function () {
-        return $(".menu").scrollLeft();
+        return $(".menu").scrollLeft();//
     };
 
 
         // finally, what happens when we are actually scrolling the menu
-    $(".menu").on("scroll", function () {
+    $(".menu").on("scroll", function () {//
         // get how much of menu is invisible
         menuInvisibleSize = menuSize - menuWrapperSize;
         // get how much have we scrolled so far
@@ -73,11 +137,6 @@ function initialize() {
             $(rightPaddle).addClass("hidden");
         }
 
-        // print important values
-        $("#print-wrapper-size span").text(menuWrapperSize);
-        $("#print-menu-size span").text(menuSize);
-        $("#print-menu-invisible-size span").text(menuInvisibleSize);
-        $("#print-menu-position span").text(menuPosition);
     });
 
     // scroll to left
@@ -206,16 +265,20 @@ fetch(url, {method: 'get'})
 
 .then(jsondata =>   
     {   
-        var listBody = '';
+        var listBody = '<div class = "romance_menu">';
         for (var i = 0; i < 10; i++) {
             anime = jsondata[i]
             image_address = anime['pic']
-            listBody += "<div style='margin: 15px;'>"
+            listBody += "<div style='margin: 15px;' class = 'romance_genre_item'>"
+                + "<li class = 'romance_item'>"
                 + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
                 + '<p>' + anime['anime_name'] + '</p>'
                 + '<p>' + anime['mal_rating'] + '</p>'
+                +  "</li>"
                 +  '</div>';
         }
+        listBody += '</div>';
+            
 
     var animeElement = document.getElementById('genre_romance');
     console.log(animeElement);
