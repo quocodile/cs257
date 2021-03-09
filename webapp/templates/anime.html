@@ -4,13 +4,13 @@
 <div class="container-fluid" style="margin-top: 75px;">
     <div class="row">
       <div class="col-lg-4">
-        <img id="anime_image" src="https://www.otakutale.com/wp-content/uploads/2014/12/Haikyuu-Season-1-Visual.jpg" alt="" srcset="">
+        <img id="anime_image" src='{{pic}}' alt="" srcset="">
       </div>
       <div class="col-lg-4">
-        <h1>Anime Name</h1>
-        <h3>Overall Rating</h3>
+        <h1>{{anime_name}}</h1>
+        <h3>MyAnimeList Rating: {{mal_rating}}</h3>
         <h3>Watchlist Button</h3>
-        <h3>Total # of Episodes</h3>
+        <h3># of Episodes: {{num_episodes}}</h3>
       </div>
       <div class="col-lg-4" >
         <div class="stars" style="display: flex; justify-content: space-around; border: solid black 1px;">

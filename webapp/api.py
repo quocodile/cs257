@@ -132,9 +132,23 @@ def help():
 
 
 '''Route'''
-@api.route('/currentAnime')
-def currentAnime():
-        return render_template('anime.html')
+@api.route('/current/<title>')
+def currentAnime(title):
+        cursor = cursor_init()
+        if title:
+                query = "SELECT DISTINCT * FROM animes WHERE LOWER(anime_name)=LOWER(%s)"
+                cursor.execute(query, (title,))
+        else:
+                query = "SELECT * FROM Animes WHERE anime_id=1"
+                cursor.execute(query)
+        for row in cursor:
+          anime_name = row[1]
+          num_episodes = row[2]
+          mal_rating = row[4] 
+          pic = animes_imagepaths[row[1] + ' anime'] 
+          return pic
+          break
+        return render_template('anime.html', pic=pic, anime_name=anime_name, num_episodes=num_episodes, mal_rating=mal_rating)
 
 @api.route('/logout')
 @login_required
