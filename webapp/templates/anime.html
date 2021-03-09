@@ -3,14 +3,24 @@
 {% block content %}
 <div class="container" style="width: 80%; margin-top: 75px;">
     <div class="row">
-      <div class="col-lg-4">
+      <div style="height: 420px;" class="col-lg-4">
         <img id="anime_image" src='/{{pic}}' alt="" srcset="">
       </div>
-      <div class="col-lg-4">
-        <h1>{{anime_name}}</h1>
-        <h3>MyAnimeList Rating: {{mal_rating}}</h3>
-        <h3>Watchlist Button</h3>
-        <h3># of Episodes: {{num_episodes}}</h3>
+      <div style="height: 420px;" class="col-lg-4">
+        <h1 id="anime_anime_name">{{anime_name}}</h1>
+        <div style="display: flex; justify-content: flex-start;">
+          <h3 style="font-weight: bold;">MyAnimeList Rating:</h3>
+          <h3 style="margin-left: 5px;">{{mal_rating}}</h3>
+        </div>
+        <div style="display: flex; justify-content: flex-start;">
+          <h3 style="font-weight: bold;">Episodes:</h3>
+          <h3 style="margin-left: 5px;">{{num_episodes}}</h3>
+        </div>
+        <div style="margin-top: 20px;">
+          <button style="text-align: left; padding-left: 5px; height: 30px; width: 130px">
+            Add to watchlist +
+          </button>
+        </div>
       </div>
       <div class="col-lg-4" >
         <div class="stars" style="display: flex; justify-content: space-around; border: solid black 1px;">
@@ -48,11 +58,10 @@
     </div>
 </div>
 <style>
-<script>
-  var image = document.getElementById('anime_image');  
-  var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
-  var request_url = baseURL + '/current/Fullmetal Alchemist: Brotherhood'
-</script>
+#anime_anime_name {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
 #nav {
   height: 50px;
   background-color: black;
