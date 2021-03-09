@@ -48,10 +48,10 @@ def search_results():
   anime_name = "'" + anime_name[1:-1] + "'"
   results = []
   anime_html = ""
-
   for i in range(len(list_of_dicts) - 1):
     cur_dict = list_of_dicts[i]
-    anime_html += "<p>" + cur_dict["anime_name"] + "</p>"
+    anime_html += "<div style='width: 250px; float: left;'>"
+    anime_html += "<p style='height: 50px;'>" + cur_dict["anime_name"] + "</p>"
     anime_html += "<p> # episodes: " + cur_dict["num_episodes"] + "</p>"
     anime_html += "<p> Rating: " + cur_dict["mal_rating"] + "</p>"
 
@@ -61,6 +61,7 @@ def search_results():
     else: 
       anime_html += "<img style='width: 200px; height: 300px;' src='../static/no_image.jpg' alt='picture of an anime'/>"
     anime_html += "<p>_____________________</p>"
+    anime_html += "</div>"
 
   return flask.render_template('search.html', search_word = anime_name, results = anime_html)
 
