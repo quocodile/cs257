@@ -237,8 +237,11 @@ fetch(url, {method: 'get'})
         for (var i = 0; i < 10; i++) {
             anime = jsondata[i]
             image_address = anime['pic']
+            anime_url = '/api/current/' + anime['anime_name']
             listBody += "<div style='margin: 15px;'>"
+                + "<a href='" + anime_url + "'>"
                 + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
+                + "</a>"
                 + '<p>' + anime['anime_name'] + '</p>'
                 + '<p>' + anime['mal_rating'] + '</p>'
                 +  '</div>';

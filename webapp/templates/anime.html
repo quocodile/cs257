@@ -1,7 +1,7 @@
 {% extends 'navbar.html'%}
 
 {% block content %}
-<div class="container-fluid" style="margin-top: 75px;">
+<div class="container" style="width: 80%; margin-top: 75px;">
     <div class="row">
       <div class="col-lg-4">
         <img id="anime_image" src='/{{pic}}' alt="" srcset="">
@@ -31,15 +31,17 @@
           </div>
         </div>
         <div style="border: solid black 1px;">
-          <div style="width: inherit; height: 320px; background-color: pink;">
-            <label for="write_a_review">
-              Write a review
-            </label>
-            <textarea id="write_a_review" style="padding: 10px; height: 250px; width: 100%; resize: none;">
+          <div style="width: inherit; height: 320px;">
+            <p style="margin-top: 5px; text-align: center;">write a review</p>
+            <div style="width: 100%; display: flex; justify-content: center;">
+            <textarea id="write_a_review" style="height: 250px; width: 95%; resize: none;">
             </textarea>
-            <button style="margin-top: 15px; width: 100%">
+            </div>
+            <div style="display: flex; justify-content: center;">
+            <button style="margin-top: 5px; width: 94%">
               Submit
             </button>
+            </div>
           </div>
         </div>
       </div>
@@ -51,10 +53,6 @@
   var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
   var request_url = baseURL + '/current/Fullmetal Alchemist: Brotherhood'
 </script>
-#anime_pic {
-  width: 300px;
-  height: 350px;
-}
 #nav {
   height: 50px;
   background-color: black;
@@ -69,7 +67,7 @@
 
 #anime_image {
   width: 300px;
-  height: 400px;
+  height: 420px;
 }
 
 .stars div {

@@ -54,11 +54,13 @@ def search_results():
     anime_html += "<p style='height: 30px;'>" + cur_dict["anime_name"] + "</p>"
     anime_html += "<p> # episodes: " + cur_dict["num_episodes"] + "</p>"
     anime_html += "<p> Rating: " + cur_dict["mal_rating"] + "</p>"
-
+    anime_url = '/api/current/' + cur_dict["anime_name"]
+    anime_html += "<a href='" + anime_url + "'>"
     if cur_dict['pic']:
       anime_html += "<img style='width: 200px; height: 300px;' src='" + cur_dict['pic'] + "' alt='picture of an anime'/>"
     else: 
       anime_html += "<img style='width: 200px; height: 300px;' src='../static/no_image.jpg' alt='picture of an anime'/>"
+    anime_html += "</a>"
     anime_html += "<p>_____________________</p>"
     anime_html += "</div>"
 
