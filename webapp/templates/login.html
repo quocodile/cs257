@@ -4,8 +4,11 @@
 <form method="POST" action="api/login">
 <div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
     <div>
-      <h3 style="text-align: center;">Log In</h3>
-      <div>
+      <div style = "color:red;">
+        {{error}}
+      </div>
+      <h3 style="text-align: center;">Log In</h3> 
+    <div>
         <div style="padding: 10px">
           <input type="username" name="username" placeholder="Your Username" autofocus="">
         </div>

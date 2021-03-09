@@ -50,8 +50,8 @@ def search_results():
   anime_html = ""
   for i in range(len(list_of_dicts) - 1):
     cur_dict = list_of_dicts[i]
-    anime_html += "<div style='width: 250px; float: left;'>"
-    anime_html += "<p style='height: 50px;'>" + cur_dict["anime_name"] + "</p>"
+    anime_html += "<div style='width: 250px; float: left; margin-top: 20px'>"
+    anime_html += "<p style='height: 30px;'>" + cur_dict["anime_name"] + "</p>"
     anime_html += "<p> # episodes: " + cur_dict["num_episodes"] + "</p>"
     anime_html += "<p> Rating: " + cur_dict["mal_rating"] + "</p>"
 
