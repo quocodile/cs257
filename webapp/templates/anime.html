@@ -16,11 +16,15 @@
           <h3 style="font-weight: bold;">Episodes:</h3>
           <h3 style="margin-left: 5px;">{{num_episodes}}</h3>
         </div>
+        {% if current_user.is_authenticated %}
         <div style="margin-top: 20px;">
-          <button style="text-align: left; padding-left: 5px; height: 30px; width: 130px">
+          <form method='post' action="watchlist/add/{{anime_name}}" >
+          <input type='submit' id="add_to_watchlist" style="text-align: left; padding-left: 5px; height: 30px; width: 130px">
             Add to watchlist +
-          </button>
+          </input>
+          </form>
         </div>
+	{% endif %}
       </div>
       <div class="col-lg-4" >
         <div class="stars" style="display: flex; justify-content: space-around; border: solid black 1px;">

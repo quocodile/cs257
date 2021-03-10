@@ -25,6 +25,22 @@ def cursor_init():
                 print(e)
                 exit()
         return cursor
+
+
+@api.route('current/watchlist/add/<anime_name>', methods=['POST'])
+@login_required
+def add_to_watchlist(anime_name):
+  cursor = cursor_init()
+  select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
+  cursor.execute(select_query, (anime_name,))
+  anime_id = 0
+  for row in cursor:
+    anime_id = row[0] 
+  user_id = current_user.id
+  insert_query = "INSERT INTO watchlist (user_id, anime_id) VALUES ('1', '" + anime_id + "')" 
+  cursor.execute(insert_query)
+  return anime_name
+ 
 '''Returns some default anime information.'''
 @api.route('/anime/')
 def get_anime_by_genre():

@@ -7,7 +7,6 @@ window.onload = initialize;
 function initialize() {
     var button_1 = document.getElementById('button_1');
     var button_2 = document.getElementById('button_2');
-
     button_1.addEventListener('click',on_button_1);
     button_2.addEventListener('click',on_button_2);
     get_action();
@@ -155,6 +154,7 @@ function getAPIBaseURL() {
     var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
     return baseURL;
 }
+
 
 function on_button_1() {
     var url = getAPIBaseURL() + '/anime/';
