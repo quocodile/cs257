@@ -90,8 +90,13 @@ body {
 }
 
 #user_related {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: black;
+  height: 50px;
 }
+ 
 
 #animerec {
   margin-left: 15px;
@@ -104,6 +109,10 @@ body {
 
 button {
   background-color: lightgrey;
+}
+
+#profile_button {
+  background-color: black;
 }
 
 #image_1 {
