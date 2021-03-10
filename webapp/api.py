@@ -30,16 +30,28 @@ def cursor_init():
 @api.route('current/watchlist/add/<anime_name>', methods=['POST'])
 @login_required
 def add_to_watchlist(anime_name):
-  cursor = cursor_init()
-  select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
-  cursor.execute(select_query, (anime_name,))
-  anime_id = 0
-  for row in cursor:
-    anime_id = row[0] 
-  user_id = current_user.id
-  insert_query = "INSERT INTO watchlist (user_id, anime_id) VALUES ('1', '" + anime_id + "')" 
-  cursor.execute(insert_query)
-  return anime_name
+        cursor1 = cursor_init()
+        select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
+        cursor1.execute(select_query, (anime_name,))
+        anime_id = 0
+        for row in cursor1:
+                anime_id = row[0] 
+                user_id = current_user.id
+
+        # manual cursor_init() cuz we need connection2
+        try:
+                connection2 = psycopg2.connect(database=database, user=user, password=password)
+                cursor2 = connection2.cursor()
+        except Exception as e:
+                print(e)
+                exit()
+
+        insert_query = "INSERT INTO watchlist (user_id, anime_id) VALUES (" + str(user_id) + "," + str(anime_id) + ")"
+
+        cursor2.execute(insert_query)
+        connection2.commit()
+        cursor2.close()
+        connection2.close()
  
 '''Returns some default anime information.'''
 @api.route('/anime/')
