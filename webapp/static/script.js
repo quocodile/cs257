@@ -235,7 +235,6 @@ function get_action(){
                          + "<img src='" + image_address + "' style='width:200px;height:300px;'/>"
                          + "</a>"
                          + '<p>' + anime['anime_name'] + '</p>'
-                         + '<p>' + anime['mal_rating'] + '</p>'
                          +  '</div>';
         }
 
