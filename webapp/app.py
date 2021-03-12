@@ -7,7 +7,7 @@ import sys
 import psycopg2
 import argparse
 import api
-from api import get_anime_results
+from api import get_anime_results, get_watchlist
 import flask
 from flask import request
 from flask_login import login_required, current_user
@@ -42,24 +42,9 @@ def signup_page():
 @app.route('/profile')
 @login_required
 def profile_page():
-  connection = psycopg2.connect(database=database, user=user, password=password)
-  cursor = connection.cursor()
-  user_id = str(current_user.id)
-  query = 'SELECT DISTINCT * FROM animes, watchlist WHERE watchlist.user_id=%s '
-  query += 'AND animes.anime_id=watchlist.anime_id' 
-  cursor.execute(query, (user_id,))
-  watchlist = []
-  for row in cursor:
-    dic = {}
-    dic['anime_id'] = row[0]
-    dic['anime_name'] = row[1]
-    dic['num_episodes'] = row[2]
-    dic['genre'] = row[3]
-    try:
-      dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
-    except Exception as e:
-      dic['pic'] = ''
-    watchlist.append(dic)
+
+  watchlist = get_watchlist()
+
   html_content = ""
   for anime in watchlist:
     html_content += "<div style='margin: 10px; float: left; position: relative; display: flex; align-items: center;'>"
@@ -70,7 +55,7 @@ def profile_page():
     html_content += "</div>"
     html_content += "</a>"
     html_content += "</div>"
-  return flask.render_template('profile.html', name = current_user.username, watchlist=html_content)
+  return flask.render_template('profile.html', name = current_user.username, watchlist = html_content)
 
 '''Route that displays search route'''
 @app.route('/search', methods=['POST'])

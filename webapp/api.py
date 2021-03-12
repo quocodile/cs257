@@ -196,10 +196,9 @@ def logout():
     logout_user()
     return redirect('/')
 
-@api.route('/watchlist')
+@api.route('/getwatchlist')
 @login_required
 def get_watchlist():
-  # manual cursor_init() cuz we need connection2
   try:
           connection = psycopg2.connect(database=database, user=user, password=password)
           cursor = connection.cursor()
@@ -219,7 +218,7 @@ def get_watchlist():
             except Exception as e:
               dic['pic'] = ''
             watchlist.append(dic)
-          return json.dumps(watchlist) 
+          return watchlist
   except Exception as e:
           print(e)
           exit()
