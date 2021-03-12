@@ -60,12 +60,16 @@ def profile_page():
     except Exception as e:
       dic['pic'] = ''
     watchlist.append(dic)
-  html_content = "<div style:'display:flex; position: relative; flex-direction: column; align-items: left;'>"
+  html_content = ""
   for anime in watchlist:
-    html_content += "<a href='/api/current/" + anime['anime_name'] + "'>"
+    html_content += "<div style='margin: 10px; float: left; position: relative; display: flex; align-items: center;'>"
+    html_content += "<a style='text-decoration: none;' href='/api/current/" + anime['anime_name'] + "'>"
+    html_content += "<div style='border: 1px solid black; text-decoration: none; width: 200px; height: 300px; position: relative;'>"
+    html_content += "<h3 style='padding: 20px; color: black; position: absolute;'>" + anime['anime_name'] + "</h3>"
     html_content += "<img class='watchlist_anime_image' src='" + anime['pic'] + "' alt='" + anime['anime_name'] + "'/>"
+    html_content += "</div>"
     html_content += "</a>"
-  html_content += '</div>'
+    html_content += "</div>"
   return flask.render_template('profile.html', name = current_user.username, watchlist=html_content)
 
 '''Route that displays search route'''

@@ -1,12 +1,11 @@
 {% extends "navbar.html" %}
 {% block content %}
-
 	<div id = "welcome_message">
 		<p>Welcome, {{ name }}! </p>
 
 		<p>Here's your watchlist:</p>
 	</div>
-        <div id="watchlist">
+        <div id="watchlist" style="">
          {{watchlist | safe}}
         </div>
 
@@ -17,6 +16,5 @@
 		</form>
 		
 	</div>
-
 {% endblock %}
 
