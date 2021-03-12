@@ -74,9 +74,9 @@ def remove_from_watchlist(anime_name):
                 print(e)
                 exit()
 
-        delete_query = "DELETE FROM watchlist WHERE watchlist.user_id = user_id AND watchlist.anime_id = anime_id"
+        delete_query = "DELETE FROM watchlist WHERE watchlist.user_id = '%s' AND watchlist.anime_id = %s"
 
-        cursor2.execute(delete_query)
+        cursor2.execute(delete_query, (user_id, anime_id))
         connection2.commit()
         cursor2.close()
         connection2.close()
