@@ -10,6 +10,7 @@
         <h1 id="anime_anime_name">{{anime_name}}</h1>
         <div style="display: flex; justify-content: flex-start;">
           <h3 style="font-weight: bold;">MyAnimeList Rating:</h3>
+          <h3 style="margin-left: 5px">{{mal_rating}}</h3>
         </div>
         <div id="episode_data_container" style="">
           <h3 style="font-weight: bold;">Episodes:</h3>
@@ -18,7 +19,11 @@
         {% if current_user.is_authenticated %}
         <div style="margin-top: 20px;">
           <form method='post' action="/api/add/{{anime_name}}" >
+          {% if anime_exists == True %}
+          <input type='submit' disabled="true" id="add_to_watchlist" value="Added to watchlist +"/>
+          {% else %}
           <input type='submit' id="add_to_watchlist" value="Add to watchlist +"/>
+          {% endif %}
           </form>
         </div>
 	{% endif %}

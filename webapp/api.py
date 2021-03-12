@@ -176,7 +176,19 @@ def currentAnime(title):
           num_episodes = row[2]
           mal_rating = row[4] 
           pic = animes_imagepaths[row[1] + ' anime'] 
-        return render_template('anime.html', pic=pic, anime_name=anime_name, num_episodes=num_episodes, mal_rating=mal_rating)
+        #query user watchlist
+        try:
+          user_id = current_user.id
+        except Exception as e:
+          user_id = -1
+        query = "SELECT DISTINCT * FROM watchlist, animes WHERE watchlist.user_id='%s' "
+        query += "AND animes.anime_name=%s "
+        query += "AND animes.anime_id=watchlist.anime_id"
+        cursor.execute(query, (user_id, title))
+        anime_exists = False
+        for row in cursor:
+         anime_exists = True
+        return render_template('anime.html', pic=pic, anime_name=anime_name, num_episodes=num_episodes, mal_rating=mal_rating, anime_exists=anime_exists)
 
 @api.route('/logout')
 @login_required

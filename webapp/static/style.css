@@ -277,12 +277,17 @@ button {
 
 /*profile.html*/
 .watchlist_anime_image {
-  border: 5px solid black; 
-  margin: 10px; 
+  border: 1px solid black; 
   width:200px;
-  height:300px
+  height:300px;
+  margin-left: 0px;
+  position: absolute;
 }
 
+.watchlist_anime_image:hover {
+  opacity: 0.3;
+  transition: 500ms opacity;
+}
 /*search.html*/
 .search_anime_image {
   border: 5px solid black;
