@@ -7,11 +7,14 @@ window.onload = initialize;
 function initialize() {
     var button_1 = document.getElementById('button_1');
     var button_2 = document.getElementById('button_2');
+    var scrollleft = document.getElementById('scrollleft');
+
+    scrollright.addEventListener('click',on_button_right);
+    scrollleft.addEventListener('click',on_button_left);
     button_1.addEventListener('click',on_button_1);
     button_2.addEventListener('click',on_button_2);
     get_action();
     get_romance();
-
     // duration of scroll animation
     var scrollDuration = 300;
     // paddles
@@ -61,6 +64,7 @@ function initialize() {
 
         // show & hide the paddlesf
         // depending on scroll position
+        /*
         if (romancemenuPosition <= paddleMargin) {
             $(leftPaddle).addClass("hidden");
             $(rightPaddle).removeClass("hidden");
@@ -72,12 +76,13 @@ function initialize() {
             $(leftPaddle).removeClass("hidden");
             $(rightPaddle).addClass("hidden");
         }
-
+        */
     });
 
      // scroll to left
-     $(rightPaddle).on("click", function () {
-        $(".romance_menu").animate({ scrollLeft: menuRomanceInvisibleSize }, scrollDuration);
+    $(rightPaddle).on("click", function () {
+        //$(".romance_menu").animate({scrollLeft: "100"}, scrollDuration);
+        document.getElementById('.romance_menu').scrollLeft += 20;
     });
 
     // scroll to right
@@ -86,7 +91,7 @@ function initialize() {
     });
 
 
-
+    /*
     // get wrapper width
     var getMenuWrapperSize = function () {
         return $(".menu-wrapper").outerWidth(); //
@@ -124,6 +129,7 @@ function initialize() {
 
         // show & hide the paddles
         // depending on scroll position
+        
         if (menuPosition <= paddleMargin) {
             $(leftPaddle).addClass("hidden");
             $(rightPaddle).removeClass("hidden");
@@ -135,9 +141,10 @@ function initialize() {
             $(leftPaddle).removeClass("hidden");
             $(rightPaddle).addClass("hidden");
         }
-
+        
     });
-
+    */
+    /*
     // scroll to left
     $(rightPaddle).on("click", function () {
         $(".menu").animate({ scrollLeft: menuInvisibleSize }, scrollDuration);
@@ -147,6 +154,7 @@ function initialize() {
     $(leftPaddle).on("click", function () {
         $(".menu").animate({ scrollLeft: "0" }, scrollDuration);
     });
+    */
 }
 
 
@@ -155,6 +163,16 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
+
+function on_button_right(){
+    var scrollright = document.getElementById('genre_romance');
+    scrollright.scrollLeft += 100;
+   
+}
+
+function on_button_left(){
+    scrollleft.scrollLeft -= 100;
+} 
 
 function on_button_1() {
     var url = getAPIBaseURL() + '/anime/';
@@ -256,7 +274,7 @@ function get_romance()
     .then((response) => response.json())
     .then(jsondata =>   
     {   
-        var listBody = '<div class = "romance_menu">';
+        var listBody = '';
         for (var i = 0; i < 10; i++) 
         {
             anime = jsondata[i]
@@ -269,12 +287,12 @@ function get_romance()
                      +  "</li>"
                      +  '</div>';
         }
-        listBody += '</div>';
+        
             
         var animeElement = document.getElementById('genre_romance');
         if (animeElement) 
         {
-            animeElement.innerHTML = listBody;
+            animeElement.innerHTML += listBody;
         }
     })
     .catch(function(error) 
