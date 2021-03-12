@@ -20,9 +20,9 @@
         <div style="margin-top: 20px;">
           <form method='post' action="/api/add/{{anime_name}}" >
           {% if anime_exists == True %}
-          <input type='submit' disabled="true" id="add_to_watchlist" value="Added to watchlist +"/>
+          <input type='submit' disabled="true" id="add_to_watchlist" value="Added to watchlist"/>
           {% else %}
-          <input type='submit' id="add_to_watchlist" value="Add to watchlist +"/>
+          <input type='submit' id="add_to_watchlist" value="Add to watchlist"/>
           {% endif %}
           </form>
         </div>
