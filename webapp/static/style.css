@@ -274,3 +274,18 @@ button {
   display: flex; 
   justify-content: center;
 }
+
+/*profile.html*/
+.watchlist_anime_image {
+  border: 5px solid black; 
+  margin: 10px; 
+  width:200px;
+  height:300px
+}
+
+/*search.html*/
+.search_anime_image {
+  border: 5px solid black;
+  width: 200px; 
+  height: 300px;  
+}

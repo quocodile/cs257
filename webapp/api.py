@@ -27,7 +27,7 @@ def cursor_init():
         return cursor
 
 
-@api.route('current/watchlist/add/<anime_name>', methods=['POST'])
+@api.route('/add/<anime_name>', methods=['POST'])
 @login_required
 def add_to_watchlist(anime_name):
         cursor1 = cursor_init()
@@ -52,6 +52,8 @@ def add_to_watchlist(anime_name):
         connection2.commit()
         cursor2.close()
         connection2.close()
+        anime_name = anime_name.split('/')[-1]
+        return redirect('/api/current/' + anime_name)
  
 '''Returns some default anime information.'''
 @api.route('/anime/')
@@ -181,3 +183,32 @@ def currentAnime(title):
 def logout():
     logout_user()
     return redirect('/')
+
+@api.route('/watchlist')
+@login_required
+def get_watchlist():
+  # manual cursor_init() cuz we need connection2
+  try:
+          connection = psycopg2.connect(database=database, user=user, password=password)
+          cursor = connection.cursor()
+          user_id = str(current_user.id)
+          query = 'SELECT DISTINCT * FROM animes, watchlist WHERE watchlist.user_id=%s '
+          query += 'AND animes.anime_id=watchlist.anime_id' 
+          cursor.execute(query, (user_id,))
+          watchlist = []
+          for row in cursor:
+            dic = {}
+            dic['anime_id'] = row[0]
+            dic['anime_name'] = row[1]
+            dic['num_episodes'] = row[2]
+            dic['genre'] = row[3]
+            try:
+              dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
+            except Exception as e:
+              dic['pic'] = ''
+            watchlist.append(dic)
+          return json.dumps(watchlist) 
+  except Exception as e:
+          print(e)
+          exit()
+

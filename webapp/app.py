@@ -4,6 +4,7 @@ Description: This is main page for website Anime Central.
 '''
 
 import sys
+import psycopg2
 import argparse
 import api
 from api import get_anime_results
@@ -11,6 +12,9 @@ import flask
 from flask import request
 from flask_login import login_required, current_user
 from __init__ import app
+from config import database, user, password
+import json
+animes_imagepaths = json.loads(open('animes_imagepaths2.json', 'r').read())  
 
 app.register_blueprint(api.api, url_prefix='/api')
 
@@ -38,7 +42,31 @@ def signup_page():
 @app.route('/profile')
 @login_required
 def profile_page():
-  return flask.render_template('profile.html', name = current_user.username)
+  connection = psycopg2.connect(database=database, user=user, password=password)
+  cursor = connection.cursor()
+  user_id = str(current_user.id)
+  query = 'SELECT DISTINCT * FROM animes, watchlist WHERE watchlist.user_id=%s '
+  query += 'AND animes.anime_id=watchlist.anime_id' 
+  cursor.execute(query, (user_id,))
+  watchlist = []
+  for row in cursor:
+    dic = {}
+    dic['anime_id'] = row[0]
+    dic['anime_name'] = row[1]
+    dic['num_episodes'] = row[2]
+    dic['genre'] = row[3]
+    try:
+      dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
+    except Exception as e:
+      dic['pic'] = ''
+    watchlist.append(dic)
+  html_content = "<div style:'display:flex; position: relative; flex-direction: column; align-items: left;'>"
+  for anime in watchlist:
+    html_content += "<a href='/api/current/" + anime['anime_name'] + "'>"
+    html_content += "<img class='watchlist_anime_image' src='" + anime['pic'] + "' alt='" + anime['anime_name'] + "'/>"
+    html_content += "</a>"
+  html_content += '</div>'
+  return flask.render_template('profile.html', name = current_user.username, watchlist=html_content)
 
 '''Route that displays search route'''
 @app.route('/search', methods=['POST'])
@@ -57,9 +85,9 @@ def search_results():
     anime_url = '/api/current/' + cur_dict["anime_name"]
     anime_html += "<a href='" + anime_url + "'>"
     if cur_dict['pic']:
-      anime_html += "<img style='width: 200px; height: 300px;' src='" + cur_dict['pic'] + "' alt='picture of an anime'/>"
+      anime_html += "<img class='search_anime_image' src='" + cur_dict['pic'] + "' alt='picture of an anime'/>"
     else: 
-      anime_html += "<img style='width: 200px; height: 300px;' src='../static/no_image.jpg' alt='picture of an anime'/>"
+      anime_html += "<img class='search_anime_image' src='../static/no_image.jpg' alt='picture of an anime'/>"
     anime_html += "</a>"
     anime_html += "<p>_____________________</p>"
     anime_html += "</div>"
