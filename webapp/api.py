@@ -17,69 +17,49 @@ animes_imagepaths = json.loads(open('animes_imagepaths2.json', 'r').read())
 
 '''Connects to database and initializes the cursor.'''
 def cursor_init():
-        
         try:
                 connection = psycopg2.connect(database=database, user=user, password=password)
                 cursor = connection.cursor()
         except Exception as e:
                 print(e)
                 exit()
-        return cursor
+        return connection, cursor
 
-
+'''Route that adds an anime to user's watchlist'''
 @api.route('/add/<anime_name>', methods=['POST'])
 @login_required
 def add_to_watchlist(anime_name):
-        cursor1 = cursor_init()
+        connection, cursor = cursor_init()
         select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
-        cursor1.execute(select_query, (anime_name,))
+        cursor.execute(select_query, (anime_name,))
         anime_id = 0
-        for row in cursor1:
+        for row in cursor:
                 anime_id = row[0] 
                 user_id = current_user.id
-
-        # manual cursor_init() cuz we need connection2
-        try:
-                connection2 = psycopg2.connect(database=database, user=user, password=password)
-                cursor2 = connection2.cursor()
-        except Exception as e:
-                print(e)
-                exit()
-
         insert_query = "INSERT INTO watchlist (user_id, anime_id) VALUES (" + str(user_id) + "," + str(anime_id) + ")"
-
-        cursor2.execute(insert_query)
-        connection2.commit()
-        cursor2.close()
-        connection2.close()
+        cursor.execute(insert_query)
+        connection.commit()
+        cursor.close()
+        connection.close()
         anime_name = anime_name.split('/')[-1]
         return redirect('/api/current/' + anime_name)
 
+'''Route that removes an anime from user's watchlist'''
 @api.route('/remove/<anime_name>', methods=['POST'])
 @login_required
 def remove_from_watchlist(anime_name):
-        cursor1 = cursor_init()
+        connection, cursor = cursor_init()
         select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
-        cursor1.execute(select_query, (anime_name,))
+        cursor.execute(select_query, (anime_name,))
         anime_id = 0
-        for row in cursor1:
+        for row in cursor:
                 anime_id = row[0] 
                 user_id = current_user.id
-
-        # manual cursor_init() cuz we need connection2
-        try:
-                connection2 = psycopg2.connect(database=database, user=user, password=password)
-                cursor2 = connection2.cursor()
-        except Exception as e:
-                print(e)
-                exit()
-
         delete_query = "DELETE FROM watchlist WHERE watchlist.user_id = '%s' AND watchlist.anime_id = %s"
-
-        cursor2.execute(delete_query, (user_id, anime_id))
-        connection2.commit()
-        cursor2.close()
-        connection2.close()
+        cursor.execute(delete_query, (user_id, anime_id))
+        connection.commit()
+        cursor.close()
+        connection.close()
         anime_name = anime_name.split('/')[-1]
         return redirect('/api/current/' + anime_name)
  
@@ -87,7 +67,7 @@ def remove_from_watchlist(anime_name):
 @api.route('/anime/')
 def get_anime_by_genre():
         genre = request.args.get('genre', '')
-        cursor = cursor_init()
+        connection, cursor = cursor_init()
         if genre:
                 genre = "%" + genre + "%"
                 query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 15"
@@ -115,7 +95,7 @@ def get_anime_by_genre():
 '''Route that executes a query on the database to search for animes and returns the results.'''
 @api.route('/search/<anime_name>', methods=['GET', 'POST'])
 def get_anime_results(anime_name):
-        cursor = cursor_init()
+        connection, cursor = cursor_init()
         anime_name = "%" + anime_name + "%"
         query = "SELECT DISTINCT * FROM animes WHERE LOWER(anime_name) LIKE LOWER(%s)" 
         cursor.execute(query, (anime_name,))
@@ -189,10 +169,10 @@ def help():
         return render_template('help.html', message = message)
 
 
-'''Route'''
+'''Route user can go to to see detailed info about an anime'''
 @api.route('/current/<title>')
 def currentAnime(title):
-        cursor = cursor_init()
+        connection, cursor = cursor_init()
         if title:
                 query = "SELECT DISTINCT * FROM animes WHERE LOWER(anime_name)=LOWER(%s)"
                 cursor.execute(query, (title,))
@@ -221,15 +201,18 @@ def currentAnime(title):
         query += 'AND animes.anime_name=%s '
         query += 'AND animes.anime_id=reviews.anime_id LIMIT 10'
         cursor.execute(query, (anime_name,))
-        reviews_html = "<div style='display: flex; flex-direction: column;'"
-        for row in cursor:
-           username = row[0]
-           text = row[1]
-           reviews_html += "<div style='margin-bottom: 20px'>"
-           reviews_html += "<h3 style='min-height: 30px; border: 1px solid black; margin-bottom: 0; padding-left: 10px; background-color: #F6CEF5'>" + username + "</h3>" 
-           reviews_html += "<h4 style='padding-left: 10px; padding-top: 5px; border: 1px solid black; margin-top: 0; min-height: 50px; background-color: white'>" + text + "</h4>"
-           reviews_html += "</div>"
-        reviews_html += "</div>"
+        if cursor.rowcount == 0:
+          reviews_html = "<div>No comments have been written for this anime yet.</div>"
+        else: 
+          reviews_html = "<div style='display: flex; flex-direction: column;'"
+          for row in cursor:
+             username = row[0]
+             text = row[1]
+             reviews_html += "<div style='margin-bottom: 20px'>"
+             reviews_html += "<h3 class='review_username' style=''>" + username + "</h3>" 
+             reviews_html += "<h4 class='review_text' style=''>" + text + "</h4>"
+             reviews_html += "</div>"
+          reviews_html += "</div>"
         return render_template('anime.html', pic=pic, anime_name=anime_name, num_episodes=num_episodes, mal_rating=mal_rating, anime_exists=anime_exists, reviews_html=reviews_html)
 
 @api.route('/logout')
@@ -266,14 +249,14 @@ def get_watchlist():
           exit()
 
 @api.route('/add/review', methods=['POST'])
+@login_required
 def add_review_text():
   try:
+    connection, cursor = cursor_init()
     review_data = request.json
     review_text = review_data['review_text']
     anime_name = review_data['anime_name']
     user_id = current_user.id
-    connection = psycopg2.connect(database=database, user=user, password=password)
-    cursor = connection.cursor()
     query = "SELECT DISTINCT * FROM animes WHERE anime_name=%s LIMIT 1"
     cursor.execute(query, (anime_name,))
     for row in cursor:

@@ -25,11 +25,11 @@
         
           {% if anime_exists == True %}
           <form method='post' action="/api/remove/{{anime_name}}"> 
-            <input type='submit' id="watchlist_button" value="Remove from watchlist"/>
+            <input type='submit' id="watchlist_button" value="Remove from watchlist" style="padding: 5px;"/>
           </form>
           {% else %}
           <form method='post' action="/api/add/{{anime_name}}" >
-            <input type='submit' id="watchlist_button" value="Add to watchlist"/>
+            <input type='submit' id="watchlist_button" value="Add to watchlist" style="padding: 5px;"/>
         </form>
          {% endif %}
         </div>

@@ -23,11 +23,6 @@ app.register_blueprint(api.api, url_prefix='/api')
 def home():
     return flask.render_template('index.html')
 
-'''for testing'''
-@app.route('/test')
-def anime_page():
-  return flask.render_template('anime.html')
-
 '''Route for login'''
 @app.route('/login')
 def login_page():
