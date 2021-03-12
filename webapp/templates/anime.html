@@ -1,5 +1,9 @@
 {% extends 'navbar.html'%}
 
+{% block javascript_import %}
+<script type="text/javascript" src="{{ url_for('static', filename='anime_page.js') }}"></script>
+{% endblock %}
+ 
 {% block content %}
 <div class="container" style="width: 80%; margin-top: 75px;">
     <div class="row">
@@ -27,12 +31,10 @@
           <form method='post' action="/api/add/{{anime_name}}" >
             <input type='submit' id="watchlist_button" value="Add to watchlist"/>
         </form>
-          {% endif %}
-          
+         {% endif %}
         </div>
-	{% endif %}
       </div>
-      <div class="col-lg-4" >
+      <div class="col-lg-4" style="height: 500px">
         <div id="stars_container">
           <div class="stars" id="star_1">
             &starf;
@@ -57,12 +59,17 @@
               </textarea>
             </div>
             <div id="review_container_bottom">
-              <button id="submit_review">
+              <button id="submit_review_btn">
                 Submit
               </button>
             </div>
         </div>
+        {% endif %}
       </div>
+    </div>
+    <div class="row">
+      <h2>Reviews</h2>
+      {{reviews_html | safe}}
     </div>
 </div>
 {% endblock %}

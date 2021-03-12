@@ -216,7 +216,21 @@ def currentAnime(title):
         anime_exists = False
         for row in cursor:
          anime_exists = True
-        return render_template('anime.html', pic=pic, anime_name=anime_name, num_episodes=num_episodes, mal_rating=mal_rating, anime_exists=anime_exists)
+        query = 'SELECT DISTINCT username, review_text FROM animes, reviews, "user" '
+        query += 'WHERE CAST("user".id as TEXT)=reviews.user_id '
+        query += 'AND animes.anime_name=%s '
+        query += 'AND animes.anime_id=reviews.anime_id LIMIT 10'
+        cursor.execute(query, (anime_name,))
+        reviews_html = "<div style='display: flex; flex-direction: column;'"
+        for row in cursor:
+           username = row[0]
+           text = row[1]
+           reviews_html += "<div style='margin-bottom: 20px'>"
+           reviews_html += "<h3 style='min-height: 30px; border: 1px solid black; margin-bottom: 0; padding-left: 10px; background-color: #F6CEF5'>" + username + "</h3>" 
+           reviews_html += "<h4 style='padding-left: 10px; padding-top: 5px; border: 1px solid black; margin-top: 0; min-height: 50px; background-color: white'>" + text + "</h4>"
+           reviews_html += "</div>"
+        reviews_html += "</div>"
+        return render_template('anime.html', pic=pic, anime_name=anime_name, num_episodes=num_episodes, mal_rating=mal_rating, anime_exists=anime_exists, reviews_html=reviews_html)
 
 @api.route('/logout')
 @login_required
@@ -250,4 +264,26 @@ def get_watchlist():
   except Exception as e:
           print(e)
           exit()
+
+@api.route('/add/review', methods=['POST'])
+def add_review_text():
+  try:
+    review_data = request.json
+    review_text = review_data['review_text']
+    anime_name = review_data['anime_name']
+    user_id = current_user.id
+    connection = psycopg2.connect(database=database, user=user, password=password)
+    cursor = connection.cursor()
+    query = "SELECT DISTINCT * FROM animes WHERE anime_name=%s LIMIT 1"
+    cursor.execute(query, (anime_name,))
+    for row in cursor:
+      anime_id = row[0]
+      break
+    query = "INSERT INTO reviews (user_id, anime_id, review_text) VALUES (%s, %s, %s)"
+    cursor.execute(query, (user_id, anime_id, review_text))
+    connection.commit()
+    return json.dumps(True); 
+  except Exception as e:
+    return json.dumps(False);
+
 
