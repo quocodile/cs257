@@ -54,6 +54,34 @@ def add_to_watchlist(anime_name):
         connection2.close()
         anime_name = anime_name.split('/')[-1]
         return redirect('/api/current/' + anime_name)
+
+@api.route('/remove/<anime_name>', methods=['POST'])
+@login_required
+def remove_from_watchlist(anime_name):
+        cursor1 = cursor_init()
+        select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
+        cursor1.execute(select_query, (anime_name,))
+        anime_id = 0
+        for row in cursor1:
+                anime_id = row[0] 
+                user_id = current_user.id
+
+        # manual cursor_init() cuz we need connection2
+        try:
+                connection2 = psycopg2.connect(database=database, user=user, password=password)
+                cursor2 = connection2.cursor()
+        except Exception as e:
+                print(e)
+                exit()
+
+        delete_query = "DELETE FROM watchlist WHERE watchlist.user_id = user_id AND watchlist.anime_id = anime_id"
+
+        cursor2.execute(delete_query)
+        connection2.commit()
+        cursor2.close()
+        connection2.close()
+        anime_name = anime_name.split('/')[-1]
+        return redirect('/api/current/' + anime_name)
  
 '''Returns some default anime information.'''
 @api.route('/anime/')
