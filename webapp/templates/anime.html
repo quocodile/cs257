@@ -1,34 +1,37 @@
 {% extends 'navbar.html'%}
 
-{% block javascript_import %}
-<script type="text/javascript" src="{{ url_for('static', filename='anime_page.js') }}"></script>
+{% block import %}
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='anime.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='anime.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
 {% endblock %}
  
 {% block content %}
 <div class="container" style="width: 80%; margin-top: 75px;">
     <div class="row">
       <div class="col-lg-4">
-        <img id="anime_image" src='/{{pic}}' alt="{{pic}}" srcset="">
+        <img id="anime_image" src='/{{ anime_data[0] }}' alt="{{ anime_data[0] }}" srcset="">
       </div>
       <div style="height: 420px;" class="col-lg-4">
-        <h1 id="anime_anime_name">{{anime_name}}</h1>
+        <h1 id="anime_anime_name">{{ anime_data[1] }}</h1>
         <div style="display: flex; justify-content: flex-start;">
           <h3 style="font-weight: bold;">MyAnimeList Rating:</h3>
-          <h3 style="margin-left: 5px">{{mal_rating}}</h3>
+          <h3 style="margin-left: 5px">{{ anime_data[-1] }}</h3>
         </div>
         <div id="episode_data_container" style="">
           <h3 style="font-weight: bold;">Episodes:</h3>
-          <h3 style="margin-left: 5px;">{{num_episodes}}</h3>
+          <h3 style="margin-left: 5px;">{{ anime_data[2] }}</h3>
         </div>
         {% if current_user.is_authenticated %}
         <div style="margin-top: 20px;">
         
           {% if anime_exists == True %}
-          <form method='post' action="/api/remove/{{anime_name}}"> 
+          <form method='post' action="/api/remove/{{ anime_data[1] }}"> 
             <input type='submit' id="watchlist_button" value="Remove from watchlist" style="padding: 5px;"/>
           </form>
           {% else %}
-          <form method='post' action="/api/add/{{anime_name}}" >
+          <form method='post' action="/api/add/{{ anime_data[1] }}" >
             <input type='submit' id="watchlist_button" value="Add to watchlist" style="padding: 5px;"/>
         </form>
          {% endif %}

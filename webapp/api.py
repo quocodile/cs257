@@ -138,10 +138,9 @@ def login_post():
     login_user(user, remember=remember)
     return redirect('/profile')
 
-'''Route that handles signup'''
+'''Route that facilitates user signup'''
 @api.route('/signup', methods=['POST'])
 def signup_post():
-    # code to validate and add user to database goes here
     username = request.form.get('username')
     password = request.form.get('password')
     
@@ -204,16 +203,17 @@ def currentAnime(title):
         if cursor.rowcount == 0:
           reviews_html = "<div>No comments have been written for this anime yet.</div>"
         else: 
-          reviews_html = "<div style='display: flex; flex-direction: column;'"
+          reviews_html = "<div id='reviews_container'"
           for row in cursor:
              username = row[0]
              text = row[1]
              reviews_html += "<div style='margin-bottom: 20px'>"
-             reviews_html += "<h3 class='review_username' style=''>" + username + "</h3>" 
-             reviews_html += "<h4 class='review_text' style=''>" + text + "</h4>"
+             reviews_html += "<h3 class='review_username'>" + username + "</h3>" 
+             reviews_html += "<h4 class='review_text'>" + text + "</h4>"
              reviews_html += "</div>"
           reviews_html += "</div>"
-        return render_template('anime.html', pic=pic, anime_name=anime_name, num_episodes=num_episodes, mal_rating=mal_rating, anime_exists=anime_exists, reviews_html=reviews_html)
+        anime_data = (pic, anime_name, num_episodes, mal_rating)
+        return render_template('anime.html', anime_data=anime_data, anime_exists=anime_exists, reviews_html=reviews_html)
 
 @api.route('/logout')
 @login_required
@@ -221,12 +221,10 @@ def logout():
     logout_user()
     return redirect('/')
 
-@api.route('/getwatchlist')
 @login_required
 def get_watchlist():
   try:
-          connection = psycopg2.connect(database=database, user=user, password=password)
-          cursor = connection.cursor()
+          connection, cursor = cursor_init()
           user_id = str(current_user.id)
           query = 'SELECT DISTINCT * FROM animes, watchlist WHERE watchlist.user_id=%s '
           query += 'AND animes.anime_id=watchlist.anime_id' 

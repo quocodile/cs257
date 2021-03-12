@@ -42,13 +42,15 @@ def profile_page():
 
   html_content = ""
   for anime in watchlist:
-    html_content += "<div style='margin: 10px; float: left; position: relative; display: flex; align-items: center;'>"
-    html_content += "<a style='text-decoration: none;' href='/api/current/" + anime['anime_name'] + "'>"
-    html_content += "<div style='border: 1px solid black; text-decoration: none; width: 200px; height: 300px; position: relative;'>"
-    html_content += "<h3 style='padding: 20px; color: black; position: absolute;'>" + anime['anime_name'] + "</h3>"
-    html_content += "<img class='watchlist_anime_image' src='" + anime['pic'] + "' alt='" + anime['anime_name'] + "'/>"
-    html_content += "</div>"
-    html_content += "</a>"
+    anime_name = anime['anime_name']
+    path_to_image = anime['pic']
+    html_content += "<div class='watchlist_anime_container'>"
+    html_content += "  <a style='text-decoration: none;' href='/api/current/" + anime_name + "'>"
+    html_content += "    <div class='watchlist_anime'>"
+    html_content += "      <h3>" + anime_name + "</h3>"
+    html_content += "      <img src='" + path_to_image + "' alt='" + anime_name + "'/>"
+    html_content += "    </div>"
+    html_content += "  </a>"
     html_content += "</div>"
   return flask.render_template('profile.html', name = current_user.username, watchlist = html_content)
 
@@ -69,9 +71,9 @@ def search_results():
     anime_url = '/api/current/' + cur_dict["anime_name"]
     anime_html += "<a href='" + anime_url + "'>"
     if cur_dict['pic']:
-      anime_html += "<img class='search_anime_image' src='" + cur_dict['pic'] + "' alt='picture of an anime'/>"
+      anime_html += "<img class='search_anime_image' src='" + cur_dict['pic'] + "' alt=" + cur_dict["anime_name"] + "/>"
     else: 
-      anime_html += "<img class='search_anime_image' src='../static/no_image.jpg' alt='picture of an anime'/>"
+      anime_html += "<img class='search_anime_image' src='../static/no_image.jpg' alt=" + cur_dict["anime_name"] + "/>"
     anime_html += "</a>"
     anime_html += "<p>_____________________</p>"
     anime_html += "</div>"

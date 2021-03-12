@@ -2,8 +2,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<title>CS 257: Software Design</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
-        {% block javascript_import %}
+        {% block import %}
         {% endblock %}
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -11,23 +10,21 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div  class="container-fluid" style="background-color: black;">
+	<div  class="container-fluid">
 		<div class="row" style="background-color: black;">
 			<div class="col-sm-1"></div>
-			<div class="col-sm-2" style="height: 50px;">
-				<a id="site_id" href="/">Anime Central</a>
+			<div id="site_id_container" class="col-sm-2">
+				<a href="/">Anime Central</a>
 			</div>
-			<div class="col-sm-5 p-0" style="height: 50px; ">
-				<div id="search_container">
+			<div class="col-sm-5" id="search_container" style="">
 				<form action="/search" method="post">
 					<input id="search_bar" type="text" name= "search_string" style="">
                                 	<input id="search_btn" type= "submit" value="Search">
 				</form>
-				</div>
 			</div>
 			<div class="col-sm-3 p-0" style="height: 50px;">
-				{% if current_user.is_authenticated %}
 				<div id="user_related" >
+				{% if current_user.is_authenticated %}
 					<div id = "greeting">{{ name }}</div>
 					<a id="profile_link" href="/profile">
 						<button id="profile_btn">Profile</button>
@@ -37,17 +34,15 @@
 							<input type= "submit" value="Logout" style="">
 						</form>
 					</div>
-				</div>
 				{% else %}
-				<div>
 				<a id="signup_link" href="/signup">
         				<button>Signup</button>
 				</a> 
-				<a style="text-decoration: none; color: white;" href="/login">
-					<button style="height: 35px; line-height: 35px; background-color: black;">Login</button>
+				<a id="login_link" href="/login">
+					<button style="">Login</button>
 				</a> 
-				</div>
 				{% endif %}
+				</div>
 			</div>
 		</div>
 	</div>

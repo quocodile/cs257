@@ -1,7 +1,8 @@
 {% extends "navbar.html" %}
 
-{% block javascript_import %}
+{% block import %}
 <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
 {% endblock %}
 
 {% block content %}
@@ -36,7 +37,7 @@
       </div>
   
       <h3>Romance</h3>
-t     <div class = "row">
+      <div class = "row">
         <div class="genre_container" id="genre_romance">
         </div>
         
