@@ -107,6 +107,8 @@ body {
   line-height: 50px; 
   text-decoration: none; 
   color: white;
+  letter-spacing: 4px;
+  font-family: Fantasy;
 }
 
 #search_type {
@@ -181,11 +183,11 @@ button {
   margin-right: 5px;
 }
 
-#genre_action  {
+.genre_container {
   border: 1px solid black;
 }
 
-#genre_action img {
+.genre_container img {
   border: 5px solid black;
 }
 
