@@ -152,7 +152,7 @@ def signup_post():
 
     if user: # if a user is found, we want to redirect back to signup page so user can try again
         flash('This sign up info is already taken.')
-        return render_template('signup.html')
+        return redirect('/signup')
 
     # create a new user with the form data. Hash the password so the plaintext version isn't saved.
     new_user = User(username=username, password=generate_password_hash(password, method='sha256'))
