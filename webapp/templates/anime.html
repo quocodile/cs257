@@ -11,17 +11,17 @@
 <div class="container" style="width: 80%; margin-top: 75px;">
     <div class="row">
       <div class="col-lg-4">
-        <img id="anime_image" src='/{{ anime_data[0] }}' alt="{{ anime_data[0] }}" srcset="">
+        <img id="anime_image" src='/{{ anime_data[0] }}' alt="{{ anime_data[1] }}" srcset="">
       </div>
-      <div style="height: 420px;" class="col-lg-4">
-        <h1 id="anime_anime_name">{{ anime_data[1] }}</h1>
-        <div style="display: flex; justify-content: flex-start;">
-          <h3 style="font-weight: bold;">MyAnimeList Rating:</h3>
-          <h3 style="margin-left: 5px">{{ anime_data[-1] }}</h3>
+      <div id="anime_data" class="col-lg-4">
+        <h1>{{ anime_data[1] }}</h1>
+        <div style="rating_data_container">
+          <h3 class="data_header">MyAnimeList Rating:</h3>
+          <h3 class="data_value">{{ anime_data[-1] }}</h3>
         </div>
-        <div id="episode_data_container" style="">
-          <h3 style="font-weight: bold;">Episodes:</h3>
-          <h3 style="margin-left: 5px;">{{ anime_data[2] }}</h3>
+        <div id="episode_data_container">
+          <h3 class="data_header">Episodes:</h3>
+          <h3 class="data_value">{{ anime_data[2] }}</h3>
         </div>
         {% if current_user.is_authenticated %}
         <div style="margin-top: 20px;">

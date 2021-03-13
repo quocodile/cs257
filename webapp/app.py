@@ -7,14 +7,14 @@ import sys
 import psycopg2
 import argparse
 import api
-from api import get_anime_results, get_watchlist
 import flask
+from api import get_search_results, get_watchlist
 from flask import request
 from flask_login import login_required, current_user
 from __init__ import app
 from config import database, user, password
 import json
-animes_imagepaths = json.loads(open('animes_imagepaths2.json', 'r').read())  
+animes_imagepaths = json.loads(open('animes_imagepaths.json', 'r').read())  
 
 app.register_blueprint(api.api, url_prefix='/api')
 
@@ -37,9 +37,7 @@ def signup_page():
 @app.route('/profile')
 @login_required
 def profile_page():
-
   watchlist = get_watchlist()
-
   html_content = ""
   for anime in watchlist:
     anime_name = anime['anime_name']
@@ -58,34 +56,27 @@ def profile_page():
 @app.route('/search', methods=['POST'])
 def search_results():
   search_string = (request.form['search_string'])
-  anime_name, list_of_dicts = get_anime_results(search_string)
-  anime_name = "'" + anime_name[1:-1] + "'"
-  results = []
+  search_type = request.form['search_type']
+  search_word, search_results = get_search_results(search_string, search_type)
+  search_word = "'" + search_word + "'"
   anime_html = ""
-  for i in range(len(list_of_dicts) - 1):
-    cur_dict = list_of_dicts[i]
-    anime_html += "<div style='width: 250px; float: left; margin-top: 20px'>"
-    anime_html += "<p style='height: 30px;'>" + cur_dict["anime_name"] + "</p>"
-    anime_html += "<p> # episodes: " + cur_dict["num_episodes"] + "</p>"
-    anime_html += "<p> Rating: " + cur_dict["mal_rating"] + "</p>"
-    anime_url = '/api/current/' + cur_dict["anime_name"]
-    anime_html += "<a href='" + anime_url + "'>"
-    if cur_dict['pic']:
-      anime_html += "<img class='search_anime_image' src='" + cur_dict['pic'] + "' alt=" + cur_dict["anime_name"] + "/>"
-    else: 
-      anime_html += "<img class='search_anime_image' src='../static/no_image.jpg' alt=" + cur_dict["anime_name"] + "/>"
-    anime_html += "</a>"
-    anime_html += "<p>_____________________</p>"
+  for anime in search_results:
+    anime_name = anime["anime_name"]
+    num_episodes = anime["num_episodes"]
+    mal_rating = anime["mal_rating"]
+    img_path = anime["pic"]
+    anime_url = '/api/current/' + anime_name
+    #contains the search results content in html form that will be rendered in search.html
+    anime_html += "<div class='search_result'>"
+    anime_html += "  <p style='height: 30px;'>" + anime_name + "</p>"
+    anime_html += "  <p> # episodes: " + num_episodes + "</p>"
+    anime_html += "  <p> Rating: " + mal_rating + "</p>"
+    anime_html += "  <a href='" + anime_url + "'>"
+    anime_html += "    <img class='search_anime_image' src='" + img_path + "' alt='" + anime_name + "'/>"
+    anime_html += "  </a>"
+    anime_html += "  <p>_____________________</p>"
     anime_html += "</div>"
-
-  return flask.render_template('search.html', search_word = anime_name, results = anime_html)
-
-# This route supports relative links among your web pages, assuming those pages
-# are stored in the templates/ directory or one of its descendant directories,
-# without requiring you to have specific routes for each page.
-@app.route('/<path:path>')
-def shared_header_catchall(path):
-    return flask.render_template(path)
+  return flask.render_template('search.html', search_word = search_word, results = anime_html)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A tiny Flask application, including API')

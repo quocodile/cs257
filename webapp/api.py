@@ -13,7 +13,7 @@ import json
 import psycopg2
 
 api = Blueprint('api', __name__)
-animes_imagepaths = json.loads(open('animes_imagepaths2.json', 'r').read())  
+animes_imagepaths = json.loads(open('animes_imagepaths.json', 'r').read())  
 
 '''Connects to database and initializes the cursor.'''
 def cursor_init():
@@ -93,29 +93,33 @@ def get_anime_by_genre():
         return json.dumps(list_of_dictionaries)
 
 '''Route that executes a query on the database to search for animes and returns the results.'''
-@api.route('/search/<anime_name>', methods=['GET', 'POST'])
-def get_anime_results(anime_name):
-        connection, cursor = cursor_init()
-        anime_name = "%" + anime_name + "%"
-        query = "SELECT DISTINCT * FROM animes WHERE LOWER(anime_name) LIKE LOWER(%s)" 
-        cursor.execute(query, (anime_name,))
-        list_of_dictionaries = []
-        for row in cursor:
-                dic = {}
-                dic['anime_id'] = row[0]
-                dic['anime_name'] = row[1]
-                dic['num_episodes'] = row[2]
-                dic['genre'] = row[3]
-                dic['mal_rating'] = row[4]
-                try:
-                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
-                except Exception as e:
-                  dic['pic'] = ''
-                list_of_dictionaries.append(dic)
-
+@api.route('/search/<search_type>/<search_string>', methods=['GET', 'POST'])
+def get_search_results(search_string, search_type):
+        connection, cursor = cursor_init() 
         if request.method == 'POST':
-          return anime_name, list_of_dictionaries
-
+          if search_type == 'title':
+            anime_name = "%" + search_string + "%"
+            query = "SELECT DISTINCT * FROM animes WHERE LOWER(anime_name) LIKE LOWER(%s)" 
+            cursor.execute(query, (anime_name,))
+          elif search_type == 'genre':
+            genre_name = "%" + search_string + "%"
+            query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s)" 
+            query += " ORDER BY mal_rating DESC"
+            cursor.execute(query, (genre_name,))
+          list_of_dictionaries = []
+          for row in cursor:
+            dic = {}
+            dic['anime_id'] = row[0]
+            dic['anime_name'] = row[1]
+            dic['num_episodes'] = row[2]
+            dic['genre'] = row[3]
+            dic['mal_rating'] = row[4]
+            try:
+              dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
+            except: 
+              dic['pic'] = ''
+            list_of_dictionaries.append(dic)
+          return search_string, list_of_dictionaries 
         elif request.method == 'GET': 
           return json.dumps(list_of_dictionaries)
 
@@ -182,7 +186,10 @@ def currentAnime(title):
           anime_name = row[1]
           num_episodes = row[2]
           mal_rating = row[4] 
-          pic = animes_imagepaths[row[1] + ' anime'] 
+          try:
+            pic = animes_imagepaths[row[1] + ' anime'] 
+          except Exception as e:
+            pic = ''
         #query user watchlist
         try:
           user_id = current_user.id

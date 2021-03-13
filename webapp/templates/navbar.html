@@ -18,7 +18,11 @@
 			</div>
 			<div class="col-sm-5" id="search_container" style="">
 				<form action="/search" method="post">
-					<input id="search_bar" type="text" name= "search_string" style="">
+                                        <select name="search_type" id="search_type">
+						<option value="title" style="background-color: pink; color: black;">title</option>	
+						<option value="genre">genre</option>
+					</select>
+					<input id="search_bar" type="text" name= "search_string">
                                 	<input id="search_btn" type= "submit" value="Search">
 				</form>
 			</div>
@@ -27,7 +31,7 @@
 				{% if current_user.is_authenticated %}
 					<div id = "greeting">{{ name }}</div>
 					<a id="profile_link" href="/profile">
-						<button id="profile_btn">Profile</button>
+						<button id="profile_btn">Watchlist</button>
 					</a> 
 					<div id="logout_btn">
 						<form action="/api/logout">

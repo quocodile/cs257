@@ -1,13 +1,31 @@
 /*anime.html*/
-#anime_anime_name {
-  font-family: 'Courier New', monospace;
-  font-weight: bold;
-}
 
 #anime_image {
   width: 300px;
   height: 390px;
   border: 2px solid black;
+}
+
+#anime_data {
+  height: 420px;
+}
+
+#anime_data h1 {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+.data_header {
+  font-weight: bold;
+}
+
+.data_value {
+  margin-left: 5px
+}
+
+#rating_data_container {
+  display: flex; 
+  justify-content: flex-start;
 }
 
 #episode_data_container {

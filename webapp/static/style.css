@@ -109,6 +109,10 @@ body {
   color: white;
 }
 
+#search_type {
+  height: 35px;
+}
+
 #user_related {
   display: flex;
   align-items: center;
@@ -149,6 +153,7 @@ button {
   height: 35px; 
   min-width: 200px;
   color: black;
+  padding-left: 5px;
 }
 
 #search_btn {
