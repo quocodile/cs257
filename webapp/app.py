@@ -68,9 +68,7 @@ def search_results():
     anime_url = '/api/current/' + anime_name
     #contains the search results content in html form that will be rendered in search.html
     anime_html += "<div class='search_result'>"
-    anime_html += "  <p style='height: 30px;'>" + anime_name + "</p>"
-    anime_html += "  <p> # episodes: " + num_episodes + "</p>"
-    anime_html += "  <p> Rating: " + mal_rating + "</p>"
+    anime_html += "  <p style='margin-left: 20px; width: 200px; height: 50px;'>" + anime_name + "</p>"
     anime_html += "  <a href='" + anime_url + "'>"
     anime_html += "    <img class='search_anime_image' src='" + img_path + "' alt='" + anime_name + "'/>"
     anime_html += "  </a>"

@@ -164,10 +164,11 @@ button {
   color: black;
 }
 
-#search_results{
+#search_results_container{
   margin-top: 75px;
   text-align: center;
 }
+
 #help{
   margin-top: 75px;
   margin-left: 15px;
@@ -292,4 +293,8 @@ button {
   border: 5px solid black;
   width: 200px; 
   height: 300px;  
+}
+
+.search_result {
+  text-align: center;
 }
