@@ -5,12 +5,41 @@ Kevin Chen, James Marlin, Quoc Nguyen
 window.onload = initialize;
 
 function initialize() {
-    var scrollleft = document.getElementById('scrollleft');
-    var scrollright = document.getElementById('action_button_right');
+    var action_button_left = document.getElementById('action_button_left');
+    var action_button_right = document.getElementById('action_button_right');
+
+    var horror_button_left = document.getElementById('horror_button_left');
+    var horror_button_right = document.getElementById('horror_button_right');
+
+    var shounen_button_left = document.getElementById('shounen_button_left');
+    var shounen_button_right = document.getElementById('shounen_button_right');
+
+    var drama_button_left = document.getElementById('drama_button_left');
+    var drama_button_right = document.getElementById('drama_button_right');
+
+    var romance_button_left = document.getElementById('romance_button_left');
+    var romance_button_right = document.getElementById('romance_button_right');
+
     var rightPaddle = document.getElementsByClassName("right-paddle");
     var leftPaddle = document.getElementsByClassName("left-paddle");
-    scrollright.addEventListener('click',on_button_right);
-    scrollleft.addEventListener('click',on_button_left);
+
+
+
+    action_button_right.addEventListener('click',on_button_right_action);
+    action_button_left.addEventListener('click',on_button_left_action);
+
+    horror_button_right.addEventListener('click',on_button_right_horror);
+    horror_button_left.addEventListener('click',on_button_left_horror);
+
+    shounen_button_right.addEventListener('click',on_button_right_shounen);
+    shounen_button_left.addEventListener('click',on_button_left_shounen);
+
+    drama_button_right.addEventListener('click',on_button_right_drama);
+    drama_button_left.addEventListener('click',on_button_left_drama);
+
+    romance_button_right.addEventListener('click',on_button_right_romance);
+    romance_button_left.addEventListener('click',on_button_left_romance);
+    
 
     get_genre("action");
     get_genre("romance");
@@ -19,21 +48,59 @@ function initialize() {
     get_genre("drama");
 }
 
-
 function getAPIBaseURL() {
     var baseURL = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/api';
     return baseURL;
 }
 
-
-function on_button_right(){
+function on_button_right_action(){
     var action_button_right = document.getElementById("genre_action");
-    action_button_right.scrollLeft += 100;
+    action_button_right.scrollLeft += 180;
 }
 
-function on_button_left(){
+function on_button_left_action(){
     var scrollleft = document.getElementById('genre_action');
-    scrollleft.scrollLeft -= 100;
+    scrollleft.scrollLeft -= 180;
+} 
+
+function on_button_right_horror(){
+    var horror_button_right = document.getElementById("genre_horror");
+    horror_button_right.scrollLeft += 180;
+}
+
+function on_button_left_horror(){
+    var horror_button_left = document.getElementById('genre_horror');
+    horror_button_left.scrollLeft -= 180;
+} 
+
+function on_button_right_shounen(){
+    var shounen_button_right = document.getElementById("genre_shounen");
+    shounen_button_right.scrollLeft += 180;
+}
+
+function on_button_left_shounen(){
+    var shounen_button_left = document.getElementById('genre_shounen');
+    shounen_button_left.scrollLeft -= 180;
+} 
+
+function on_button_right_drama(){
+    var drama_button_right = document.getElementById("genre_drama");
+    drama_button_right.scrollLeft += 180;
+}
+
+function on_button_left_drama(){
+    var drama_button_left = document.getElementById('genre_drama');
+    drama_button_left.scrollLeft -= 180;
+} 
+
+function on_button_right_romance(){
+    var romance_button_right = document.getElementById("genre_romance");
+    romance_button_right.scrollLeft += 180;
+}
+
+function on_button_left_romance(){
+    var romance_button_left = document.getElementById('genre_romance');
+    romance_button_left.scrollLeft -= 180;
 } 
 
 function get_genre(genre) {
