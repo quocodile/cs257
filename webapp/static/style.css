@@ -216,15 +216,25 @@ button {
 }
 
 .rightpaddle {
-	position: absolute;
-	top: 990;
-	bottom: 500;
-  height: 360px;
+  height: 428px;
 	width: 50px;
+  float: right;
 }
 
+.leftpaddle {
+  height: 428px;
+	width: 50px;
+  float: left;
+}
 
 /*index.html*/
+.box_container {
+  border: 0px solid white;
+  width: 1000px;
+  margin: 10px;
+  
+}
+
 .genre_container {
   margin: auto;
   overflow: auto;
