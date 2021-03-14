@@ -6,10 +6,12 @@ window.onload = initialize;
 
 function initialize() {
     var scrollleft = document.getElementById('scrollleft');
+    var scrollright = document.getElementById('action_button_right');
     var rightPaddle = document.getElementsByClassName("right-paddle");
     var leftPaddle = document.getElementsByClassName("left-paddle");
     scrollright.addEventListener('click',on_button_right);
     scrollleft.addEventListener('click',on_button_left);
+
     get_genre("action");
     get_genre("romance");
     get_genre("shounen");
@@ -25,8 +27,8 @@ function getAPIBaseURL() {
 
 
 function on_button_right(){
-    var scrollright = document.getElementById('genre_action');
-    scrollright.scrollLeft += 100;
+    var action_button_right = document.getElementById("genre_action");
+    action_button_right.scrollLeft += 100;
 }
 
 function on_button_left(){
