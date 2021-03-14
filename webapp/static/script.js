@@ -25,11 +25,12 @@ function getAPIBaseURL() {
 
 
 function on_button_right(){
-    var scrollright = document.getElementById('genre_romance');
+    var scrollright = document.getElementById('genre_action');
     scrollright.scrollLeft += 100;
 }
 
 function on_button_left(){
+    var scrollleft = document.getElementById('genre_action');
     scrollleft.scrollLeft -= 100;
 } 
 
