@@ -190,7 +190,6 @@ def currentAnime(title):
             pic = animes_imagepaths[row[1] + ' anime'] 
           except Exception as e:
             pic = ''
-        return json.dumps(anime_name)
         #query user watchlist
         try:
           user_id = current_user.id
