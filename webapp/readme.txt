@@ -9,7 +9,6 @@ STATUS:
 
 Functional Features...
 - Search anime by title or genre.
-  
 - Write a review for an anime.
 - Add/remove anime from watchlist
 - Signup/Login

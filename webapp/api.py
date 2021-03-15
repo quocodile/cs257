@@ -42,7 +42,7 @@ def add_to_watchlist(anime_name):
         cursor.close()
         connection.close()
         anime_name = anime_name.split('/')[-1]
-        return redirect('/api/current/' + anime_name)
+        return redirect('/current/' + anime_name)
 
 '''Route that removes an anime from user's watchlist'''
 @api.route('/remove/<anime_name>', methods=['POST'])
@@ -61,37 +61,8 @@ def remove_from_watchlist(anime_name):
         cursor.close()
         connection.close()
         anime_name = anime_name.split('/')[-1]
-        return redirect('/api/current/' + anime_name)
+        return redirect('/current/' + anime_name)
  
-'''Returns some default anime information.'''
-@api.route('/anime/')
-def get_anime_by_genre():
-        genre = request.args.get('genre', '')
-        connection, cursor = cursor_init()
-        if genre:
-                genre = "%" + genre + "%"
-                query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 15"
-                #query = "SELECT * FROM animes WHERE genre LIKE %s ORDER BY CAST(mal_rating as DOUBLE PRECISION) DESC LIMIT 15";
-                #query = "SELECT * FROM animes WHERE genre=%s"
-                cursor.execute(query, (genre,))
-        else:
-                query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
-                cursor.execute(query)
-        list_of_dictionaries = []
-        for row in cursor:
-                dic = {}
-                dic['anime_id'] = row[0]
-                dic['anime_name'] = row[1]
-                dic['num_episodes'] = row[2]
-                dic['genre'] = row[3]
-                dic['mal_rating'] = row[4]
-                try:
-                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
-                except Exception as e:
-                  dic['pic'] = '' 
-                list_of_dictionaries.append(dic)
-        return json.dumps(list_of_dictionaries)
-
 '''Route that executes a query on the database to search for animes and returns the results.'''
 @api.route('/search/<search_type>/<search_string>', methods=['GET', 'POST'])
 def get_search_results(search_string, search_type):
@@ -135,8 +106,8 @@ def login_post():
     # check if the user actually exists
     # take the user-supplied password, hash it, and compare it to the hashed password in the database
     if not user or not check_password_hash(user.password, password):
-        flash('Please check your login details and try again.')
-        return redirect('/login') # if the user doesn't exist or password is wrong, reload the page
+        error = "Please check your login details and try again."
+        return render_template('login.html', error = error) # if the user doesn't exist or password is wrong, reload the page
 
     # if the above check passes, then we know the user has the right credentials
     login_user(user, remember=remember)
@@ -151,8 +122,8 @@ def signup_post():
     user = User.query.filter_by(username=username).first() # if this returns a user, then the email already exists in database
 
     if user: # if a user is found, we want to redirect back to signup page so user can try again
-        flash('This sign up info is already taken.')
-        return redirect('/signup')
+        error = "This sign up info is already taken."
+        return render_template('signup.html', error = error)
 
     # create a new user with the form data. Hash the password so the plaintext version isn't saved.
     new_user = User(username=username, password=generate_password_hash(password, method='sha256'))
@@ -170,57 +141,6 @@ def help():
         for row in helpFile:
                 message += "<p>" + row + "</p>"
         return render_template('help.html', message = message)
-
-
-'''Route user can go to to see detailed info about an anime'''
-@api.route('/current/<title>')
-def currentAnime(title):
-        connection, cursor = cursor_init()
-        if title:
-                query = "SELECT DISTINCT * FROM animes WHERE LOWER(anime_name)=LOWER(%s)"
-                cursor.execute(query, (title,))
-        else:
-                query = "SELECT * FROM Animes WHERE anime_id=1"
-                cursor.execute(query)
-        for row in cursor:
-          anime_name = row[1]
-          num_episodes = row[2]
-          mal_rating = row[4] 
-          try:
-            pic = animes_imagepaths[row[1] + ' anime'] 
-          except Exception as e:
-            pic = ''
-        #query user watchlist
-        try:
-          user_id = current_user.id
-        except Exception as e:
-          user_id = -1
-        query = "SELECT DISTINCT * FROM watchlist, animes WHERE watchlist.user_id='%s' "
-        query += "AND animes.anime_name=%s "
-        query += "AND animes.anime_id=watchlist.anime_id"
-        cursor.execute(query, (user_id, title))
-        anime_exists = False
-        for row in cursor:
-         anime_exists = True
-        query = 'SELECT DISTINCT username, review_text FROM animes, reviews, "user" '
-        query += 'WHERE CAST("user".id as TEXT)=reviews.user_id '
-        query += 'AND animes.anime_name=%s '
-        query += 'AND animes.anime_id=reviews.anime_id LIMIT 10'
-        cursor.execute(query, (anime_name,))
-        if cursor.rowcount == 0:
-          reviews_html = "<div>No comments have been written for this anime yet.</div>"
-        else: 
-          reviews_html = "<div id='reviews_container'"
-          for row in cursor:
-             username = row[0]
-             text = row[1]
-             reviews_html += "<div style='margin-bottom: 20px'>"
-             reviews_html += "<h3 class='review_username'>" + username + "</h3>" 
-             reviews_html += "<h4 class='review_text'>" + text + "</h4>"
-             reviews_html += "</div>"
-          reviews_html += "</div>"
-        anime_data = (pic, anime_name, num_episodes, mal_rating)
-        return render_template('anime.html', anime_data=anime_data, anime_exists=anime_exists, reviews_html=reviews_html)
 
 @api.route('/logout')
 @login_required
@@ -271,7 +191,36 @@ def add_review_text():
     cursor.execute(query, (user_id, anime_id, review_text))
     connection.commit()
     return json.dumps(True); 
+
   except Exception as e:
     return json.dumps(False);
 
+'''Returns some default anime information.'''
+@api.route('/anime/')
+def get_anime_by_genre():
+        genre = request.args.get('genre', '')
+        connection, cursor = cursor_init()
+        if genre:
+                genre = "%" + genre + "%"
+                query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 15"
+                #query = "SELECT * FROM animes WHERE genre LIKE %s ORDER BY CAST(mal_rating as DOUBLE PRECISION) DESC LIMIT 15";
+                #query = "SELECT * FROM animes WHERE genre=%s"
+                cursor.execute(query, (genre,))
+        else:
+                query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
+                cursor.execute(query)
+        list_of_dictionaries = []
+        for row in cursor:
+                dic = {}
+                dic['anime_id'] = row[0]
+                dic['anime_name'] = row[1]
+                dic['num_episodes'] = row[2]
+                dic['genre'] = row[3]
+                dic['mal_rating'] = row[4]
+                try:
+                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
+                except Exception as e:
+                  dic['pic'] = '' 
+                list_of_dictionaries.append(dic)
+        return json.dumps(list_of_dictionaries)
 

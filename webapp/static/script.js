@@ -123,7 +123,7 @@ function get_genre(genre) {
           type_genre_item = genre + '_genre_item'
           image_address = anime['pic']
           alt_text = anime['anime_name'] + " image"
-          anime_url = '/api/current/' + anime['anime_name']
+          anime_url = '/current/' + anime['anime_name']
           animes_html += "<div style='margin: 15px;' class = '" + type_genre_item + "'>"
                       + "  <div class = '" + type_item_class +  "' >"
                       + "    <a href='" + anime_url + "'>"
