@@ -1,4 +1,15 @@
 /*search.html*/
+#search_results_container{
+  margin-top: 75px;
+  text-align: center;
+}
+
+.search_anime_image {
+  border: 5px solid black;
+  width: 200px; 
+  height: 300px;  
+}
+
 .search_result {
   width: 250px; 
   float: left; 

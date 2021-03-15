@@ -20,9 +20,6 @@ function initialize() {
     var romance_button_left = document.getElementById('romance_button_left');
     var romance_button_right = document.getElementById('romance_button_right');
 
-    var kids_button_left = document.getElementById('kids_button_left');
-    var kids_button_right = document.getElementById('kids_button_right');
-
     var adventure_button_left = document.getElementById('adventure_button_left');
     var adventure_button_right = document.getElementById('adventure_button_right');
 
@@ -44,9 +41,6 @@ function initialize() {
     romance_button_right.addEventListener('click',on_button_right_romance);
     romance_button_left.addEventListener('click',on_button_left_romance);
     
-    kids_button_right.addEventListener('click',on_button_right_kids);
-    kids_button_left.addEventListener('click',on_button_left_kids);
-
     adventure_button_right.addEventListener('click',on_button_right_adventure);
     adventure_button_left.addEventListener('click',on_button_left_adventure);
 
@@ -58,7 +52,6 @@ function initialize() {
     get_genre("shounen");
     get_genre("horror");
     get_genre("drama");
-    get_genre("kids");
     get_genre("adventure");
     get_genre("comedy");
 }
@@ -108,14 +101,6 @@ function on_button_right_romance(){
 function on_button_left_romance(){
     on_button_left("romance");
 } 
-
-function on_button_right_kids() {
-  on_button_right("kids");
-}
-
-function on_button_left_kids() {
-  on_button_left("kids");
-}
 
 function on_button_right_adventure() {
   on_button_right("adventure");

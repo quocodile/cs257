@@ -2,129 +2,26 @@
 Kevin Chen, James Marlin, Quoc Nguyen
 */
 
+/*index.html*/
+
 body {
-	margin: 3em;
+  margin: 3em;
 }
 
 * {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #all_genres h2 {
   font-weight: bold;	
 } 
 
-.hidden {
-	display: none;
-}
-
-.print {
-	margin: auto;
-	max-width: 500px;
-}
-
-.print .span{
-  display: inline-block;
-  width: 100px;
-}
-
-/*navbar.html*/
-#signup_link {
-  text-decoration: none; 
-  color: black;
-}
-
-#signup_link button {
-  height: 35px; 
-  line-height: 35px; 
-  background-color: lightgrey;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 5px;
-  margin-right: 5px;
-}
-
-#login_link {
-  text-decoration: none; 
-  color: black;
-}
-
-#login_link button {
-  height: 35px; 
-  line-height: 35px; 
-  background-color: black;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 5px;
-  margin-left: 5px;
-  background-color: lightgrey;
-}
-
-#profile_link {
-  text-decoration: none;
-   color: white;
-}
-
-#profile_btn {
-  height: 35px; 
-  line-height: 35px;
-  background-color: lightgrey;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: black;
-  border-radius: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-#navbar {
-  position: fixed;
-  height: 50px;
-  z-index: 5;
-  top: 0;
-}
-
-#logout_btn input {
-  height: 35px; 
-  line-height: 35px; 
-  color: black;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 5px;
-  margin-left: 5px;
-}
-
-#site_id_container {
-  display: flex; 
-  justify-content: center; 
-  height: 50px;  
-}
-
-#site_id_container a {
-  line-height: 50px; 
-  text-decoration: none; 
-  color: white;
-  letter-spacing: 4px;
-  font-family: Fantasy;
-}
-
-#search_type {
-  height: 35px;
-}
-
-#user_related {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  height: 50px;
-}
-
 #animerec {
   margin-left: 15px;
 
 }
+
 .container img{
   width:  200px;
   height: 300px;
@@ -132,39 +29,6 @@ body {
 
 button {
   background-color: lightgrey;
-}
-
-#image_1 {
-  opacity: 1;
-}
-
-#image_1:hover{
-  opacity: 0.5;
-}
-
-#search_container {
-  display: flex; 
-  justify-content: center; 
-  padding: 5px; 
-  height: 50px;
-}
-
-#search_bar {
-  height: 35px; 
-  min-width: 200px;
-  color: black;
-  padding-left: 5px;
-}
-
-#search_btn {
-  height: 38px; 
-  line-height: 35px; 
-  color: black;
-}
-
-#search_results_container{
-  margin-top: 75px;
-  text-align: center;
 }
 
 #help{
@@ -176,14 +40,6 @@ button {
   margin-top: 75px;
 }
 
-#greeting{
-  text-align: left;
-  color: white;
-  margin-right: 5px;
-}
-
-
-/*index.html*/
 .left-paddle {
 	left: 0;
 }
@@ -238,13 +94,6 @@ button {
   border: 1px solid black;
 }
 
-/*search.html*/
-.search_anime_image {
-  border: 5px solid black;
-  width: 200px; 
-  height: 300px;  
-}
 
-.search_result {
-  text-align: center;
-}
+
+

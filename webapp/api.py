@@ -15,28 +15,60 @@ import psycopg2
 api = Blueprint('api', __name__)
 animes_imagepaths = json.loads(open('animes_imagepaths.json', 'r').read())  
 
-'''Connects to database and initializes the cursor.'''
+def get_anime_id(anime_name):
+   '''Given an anime name, find the anime id for it as designated in the database's animes table'''
+   connection, cursor = cursor_init()
+   select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
+   cursor.execute(select_query, (anime_name,))
+   for row in cursor:
+     anime_id = row[0] 
+     return anime_id
+  
 def cursor_init():
-        try:
-                connection = psycopg2.connect(database=database, user=user, password=password)
-                cursor = connection.cursor()
-        except Exception as e:
-                print(e)
-                exit()
-        return connection, cursor
+    '''Connects to database and initializes the cursor.'''
+    try:
+      connection = psycopg2.connect(database=database, user=user, password=password)
+      cursor = connection.cursor()
+      return connection, cursor
+    except Exception as e:
+      print(e)
+      exit()
 
-'''Route that adds an anime to user's watchlist'''
+def get_watchlist():
+  '''This function is called to query the database for animes within a user's watchlist'''
+  try:
+    connection, cursor = cursor_init()
+    user_id = str(current_user.id)
+    query = 'SELECT DISTINCT * FROM animes, watchlist '
+    query += 'WHERE watchlist.user_id=%s '
+    query += 'AND animes.anime_id=watchlist.anime_id' 
+    cursor.execute(query, (user_id,))
+    watchlist = []
+    for row in cursor:
+      dic = {}
+      dic['anime_id'] = row[0]
+      dic['anime_name'] = row[1]
+      dic['num_episodes'] = row[2]
+      dic['genre'] = row[3]
+      try:
+        dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
+      except Exception as e:
+        dic['pic'] = ''
+      watchlist.append(dic)
+    return watchlist
+  except Exception as e:
+    print(e)
+    exit()
+
 @api.route('/add/<anime_name>', methods=['POST'])
 @login_required
 def add_to_watchlist(anime_name):
+        '''Route that adds an anime to user's watchlist'''
         connection, cursor = cursor_init()
-        select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
-        cursor.execute(select_query, (anime_name,))
-        anime_id = 0
-        for row in cursor:
-                anime_id = str(row[0])
-                user_id = str(current_user.id)
-        insert_query = "INSERT INTO watchlist (user_id, anime_id) VALUES (" + user_id + "," + anime_id + ")"
+        anime_id = get_anime_id(anime_name)
+        user_id = str(current_user.id)
+        insert_query = "INSERT INTO watchlist (user_id, anime_id) "
+        insert_query += "VALUES (" + user_id + "," + anime_id + ")"
         cursor.execute(insert_query)
         connection.commit()
         cursor.close()
@@ -44,17 +76,13 @@ def add_to_watchlist(anime_name):
         anime_name = anime_name.split('/')[-1]
         return redirect('/current/' + anime_name)
 
-'''Route that removes an anime from user's watchlist'''
 @api.route('/remove/<anime_name>', methods=['POST'])
 @login_required
 def remove_from_watchlist(anime_name):
+        '''Route that removes an anime from user's watchlist'''
         connection, cursor = cursor_init()
-        select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
-        cursor.execute(select_query, (anime_name,))
-        anime_id = 0
-        for row in cursor:
-                anime_id = row[0] 
-                user_id = current_user.id
+        anime_id = get_anime_id(anime_name)
+        user_id = current_user.id
         delete_query = "DELETE FROM watchlist WHERE watchlist.user_id = '%s' AND watchlist.anime_id = %s"
         cursor.execute(delete_query, (user_id, anime_id))
         connection.commit()
@@ -63,18 +91,14 @@ def remove_from_watchlist(anime_name):
         anime_name = anime_name.split('/')[-1]
         return redirect('/current/' + anime_name)
  
-'''Returns some default anime information.'''
 @api.route('/anime/')
 def get_anime_by_genre():
+        '''Returns animes that fall within the specified genre'''
         genre = request.args.get('genre', '')
         connection, cursor = cursor_init()
-        if genre:
-                genre = "%" + genre + "%"
-                query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 50"
-                cursor.execute(query, (genre,))
-        else:
-                query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 50"
-                cursor.execute(query)
+        genre = "%" + genre + "%"
+        query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 50"
+        cursor.execute(query, (genre,))
         list_of_dictionaries = []
         for row in cursor:
                 dic = {}
@@ -90,9 +114,9 @@ def get_anime_by_genre():
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
-'''Route that executes a query on the database to search for animes and returns the results.'''
 @api.route('/search/<search_type>/<search_string>', methods=['GET', 'POST'])
 def get_search_results(search_string, search_type):
+        '''Route that executes a query on the database to search for animes and returns the results.'''
         connection, cursor = cursor_init() 
         if search_type == 'title':
           anime_name = "%" + search_string + "%"
@@ -121,9 +145,9 @@ def get_search_results(search_string, search_type):
         elif request.method == 'GET': 
           return json.dumps(list_of_dictionaries)
 
-'''Route that handles login'''
 @api.route('/login', methods=['POST'])
 def login_post():
+    '''Route that handles login'''
     username = request.form.get('username')
     password = request.form.get('password')
     remember = True if request.form.get('remember') else False
@@ -134,15 +158,15 @@ def login_post():
     # take the user-supplied password, hash it, and compare it to the hashed password in the database
     if not user or not check_password_hash(user.password, password):
         error = "Please check your login details and try again."
-        return render_template('login.html', error = error) # if the user doesn't exist or password is wrong, reload the page
+        return render_template('login.html', error = error) 
 
     # if the above check passes, then we know the user has the right credentials
     login_user(user, remember=remember)
     return redirect('/profile')
 
-'''Route that facilitates user signup'''
 @api.route('/signup', methods=['POST'])
 def signup_post():
+    '''Route that facilitates user signup'''
     username = request.form.get('username')
     password = request.form.get('password')
     
@@ -160,9 +184,9 @@ def signup_post():
     db.session.commit()
     return redirect('/login')
 
-'''Route that returns help information'''
 @api.route('/help')
 def help():
+        '''Route that returns help information'''
         helpFile = open("help.txt", "r")
         message = ""
         for row in helpFile:
@@ -175,34 +199,11 @@ def logout():
     logout_user()
     return redirect('/')
 
-@login_required
-def get_watchlist():
-  try:
-          connection, cursor = cursor_init()
-          user_id = str(current_user.id)
-          query = 'SELECT DISTINCT * FROM animes, watchlist WHERE watchlist.user_id=%s '
-          query += 'AND animes.anime_id=watchlist.anime_id' 
-          cursor.execute(query, (user_id,))
-          watchlist = []
-          for row in cursor:
-            dic = {}
-            dic['anime_id'] = row[0]
-            dic['anime_name'] = row[1]
-            dic['num_episodes'] = row[2]
-            dic['genre'] = row[3]
-            try:
-              dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
-            except Exception as e:
-              dic['pic'] = ''
-            watchlist.append(dic)
-          return watchlist
-  except Exception as e:
-          print(e)
-          exit()
 
 @api.route('/add/review', methods=['POST'])
 @login_required
 def add_review_text():
+  '''This endpoint is used to insert a review for an anime into the database'''
   try:
     connection, cursor = cursor_init()
     review_data = request.json
@@ -218,7 +219,6 @@ def add_review_text():
     cursor.execute(query, (user_id, anime_id, review_text))
     connection.commit()
     return json.dumps(True); 
-
   except Exception as e:
     return json.dumps(False);
 

@@ -6,6 +6,7 @@
         {% endblock %}
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='navbar.css') }}"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -19,7 +20,7 @@
 			<div class="col-sm-5" id="search_container" style="">
 				<form action="/search" method="post">
                                         <select name="search_type" id="search_type">
-						<option value="title" style="background-color: pink; color: black;">title</option>	
+						<option value="title">title</option>	
 						<option value="genre">genre</option>
 					</select>
 					<input id="search_bar" type="text" name= "search_string">
@@ -33,7 +34,7 @@
 						{{ current_user.username }}
 					</div>
 					<a id="profile_link" href="/profile">
-						<button id="profile_btn">Profile</button>
+						<button>Profile</button>
 					</a> 
 					<div id="logout_btn">
 						<form action="/api/logout">

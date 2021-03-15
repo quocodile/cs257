@@ -9896,7 +9896,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 71	Hotaru no Haka	1	Drama Historical	8.58
 72	Kuroko no Basket 2nd Season	25	Comedy School Shounen Sports	8.58
 73	Major S5	25	Comedy Drama Romance Sports	8.58
-74	One Piece	Unknown	Action Adventure Comedy Drama Fantasy Shounen Super Power	8.58
 65	Gintama Movie: Shinyaku Benizakura-hen	1	Action Comedy Historical Parody Samurai Sci-Fi Shounen	8.59
 66	Hellsing Ultimate	10	Action Horror Military Seinen Supernatural Vampire	8.59
 67	Kiseijuu: Sei no Kakuritsu	24	Action Drama Horror Psychological Sci-Fi Seinen	8.59
@@ -10028,6 +10027,8 @@ COPY public."user" (id, username, password) FROM stdin;
 21	oompa	sha256$Lc57pSDD$314c608edb6207b2fd83820578ac8ad7b0b58b1fe162485b5abff597436a3575
 22	wreck	sha256$uPkE9UVL$4e939bec99ffec5675e36dc3248442f85d0396d6092ea23bca1c20b555622139
 23	clock	sha256$L3cfknrs$e833b6c44e77f8d0abf562447e91fe6b34512dca6d728f8a036f586bd15ba21c
+24	bacon	sha256$KY6Br5CF$507e66b75d02de89330ec2e0bd8e7c783f261f0e7f5ceb0fa929de5b78fd6e1d
+25	twerk	sha256$vajdz2Ww$7b88f6dd272c05297c7dbd424e073fc3f0a8b1d5b4117ff151bd4c4af7a0ead1
 \.
 
 
@@ -10067,7 +10068,7 @@ COPY public.watchlist (user_id, anime_id) FROM stdin;
 -- Name: user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quocodile
 --
 
-SELECT pg_catalog.setval('public.user_id_seq', 23, true);
+SELECT pg_catalog.setval('public.user_id_seq', 25, true);
 
 
 --

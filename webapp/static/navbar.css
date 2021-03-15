@@ -1,0 +1,124 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#signup_link {
+  text-decoration: none; 
+  color: black;
+}
+
+#signup_link button {
+  height: 35px; 
+  line-height: 35px; 
+  background-color: lightgrey;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+#login_link {
+  text-decoration: none; 
+  color: black;
+}
+
+#login_link button {
+  height: 35px; 
+  line-height: 35px; 
+  background-color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  background-color: lightgrey;
+}
+
+#profile_link {
+  text-decoration: none;
+   color: white;
+}
+
+#profile_link button {
+  height: 35px; 
+  line-height: 35px;
+  background-color: lightgrey;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#navbar {
+  position: fixed;
+  height: 50px;
+  z-index: 5;
+  top: 0;
+}
+
+#logout_btn input {
+  height: 35px; 
+  line-height: 35px; 
+  color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+#site_id_container {
+  display: flex; 
+  justify-content: center; 
+  height: 50px;  
+}
+
+#site_id_container a {
+  line-height: 50px; 
+  text-decoration: none; 
+  color: white;
+  letter-spacing: 4px;
+  font-family: Fantasy;
+}
+
+#search_type {
+  height: 35px;
+}
+
+#user_related {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 50px;
+}
+
+#search_container {
+  display: flex; 
+  justify-content: center; 
+  padding: 5px; 
+  height: 50px;
+}
+
+#search_bar {
+  height: 35px; 
+  min-width: 200px;
+  color: black;
+  padding-left: 5px;
+}
+
+#search_btn {
+  height: 38px; 
+  line-height: 35px; 
+  color: black;
+}
+
+
+#greeting{
+  text-align: left;
+  color: white;
+  margin-right: 5px;
+}
