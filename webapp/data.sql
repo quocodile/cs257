@@ -172,7 +172,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9685	Sushi Azarashi	30	Comedy	3
 7996	Hakuchuu Meikyuu	1	Dementia	3.02
 7545	Bulsajo Robot Phoenix King	1	Action Mecha Shounen Space	3.11
-7963	Gra-P &amp; Rodeo: Band wo P	1	Comedy Music	3.11
 8821	Miraesonyeon Kunta Beomyuda 5000 Nyeon	1	Action Adventure Mecha Shounen	3.17
 8599	Kuripuri*Kuripura	1	Comedy	3.2
 9534	Shuugou no Kangae	1	Dementia Kids	3.21
@@ -236,7 +235,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7313	Super Kid	1	Action Adventure Sci-Fi	3.56
 7950	Gold Pencil And Alien Boy	1	Adventure Kids Space	3.56
 8293	Juicy Jungle	1	Music Sci-Fi	3.56
-7704	Deniroo&#039;s Circus	1	Comedy	3.57
 8621	Kyouryoku Boukuusen	1	Action Historical Military	3.57
 9560	Son Gokuu War and the Stars	1	Action Adventure Space	3.57
 9709	Takarakuji x Rope	5	Comedy Slice of Life	3.57
@@ -269,7 +267,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8366	Kamiusagi Rope 2 Specials	4	Comedy Slice of Life	3.67
 8929	Nar Doma Manner Movie	1	Comedy	3.67
 9070	Ojarumaru: Wasureta Mori no Hinata	1	Adventure Comedy Fantasy Kids Slice of Life	3.67
-9340	Run &amp; Roll	1	Dementia	3.67
 9665	Sugar Bunnies Fleur Specials	2	Kids	3.67
 9693	Taabou no Ganbaru Sengen	1	Kids	3.67
 10078	Yuke! Shouei-kun	6	Comedy	3.67
@@ -299,7 +296,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9553	Sol	1	Dementia Music	3.77
 7297	Koumon-teki Juuku Ketsujiru Juke	1	Comedy Dementia Music	3.78
 8405	Kareshi wa Hammerhead Shark	Unknown	Comedy Kids Slice of Life	3.78
-8847	Momon&#039;s Sand Witch Bangai-hen: Tanu no Kyuujitsu	1	Comedy Kids	3.78
 7790	Eunhajeonseol Tera	1	Action Adventure Sci-Fi Shounen Space	3.79
 8540	Kojin Toshi	1	Dementia	3.79
 8693	Majin Sentai Death Ranger: Ubawareta Pudding!	1	Action Comedy	3.79
@@ -312,7 +308,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7794	Fafa Movie	2	Slice of Life	3.81
 9322	Robo to Shoujo (Kari): Oshirase Gekijou (Kari)	5	Comedy Sci-Fi	3.81
 7295	Pupa	12	Fantasy Horror Psychological	3.82
-9181	Patty &amp; Jimmy no Kimikoso Superstar	1	Kids Sports	3.82
 9839	Toute wa Sono Kotae	1	Music Supernatural	3.82
 9843	Treasure Gaust	5	Game	3.82
 9875	Uchuu Neko: Mardock no Bouken	4	Adventure Comedy Space	3.82
@@ -344,7 +339,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8034	Haruko no Bouken	1	Dementia	3.9
 7285	Mahou Shoujo? Naria☆Girls	12	Magic	3.91
 7830	Funny Pets 2nd Season	12	Comedy	3.92
-7962	Gra-P &amp; Rodeo 2nd Season	Unknown	Comedy Music	3.92
 8309	Kabi Usagi: Hikouki	1	Comedy	3.92
 8960	New Tokyo Ondo	1	Dementia	3.92
 8622	Kyouryou Pikora	1	Adventure Kids	3.93
@@ -381,10 +375,8 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9040	Nyanpuku Nyaruma	Unknown	Comedy	4
 9116	Ookami Shounen Ken (Movie)	1	Adventure Kids	4
 9148	Otoshidama	1	Kids Music	4
-9161	Paboo &amp; Mojies	52	Kids	4
 9189	Peeping Life x Kaijuu Sakaba Kaiji: Kaijuu-tachi ga Iru Tokoro	10	Comedy Slice of Life Supernatural	4
 9362	Saitama-ken Zaijuu Fujiyama Osamu 33-sai Mushoku (NEET).: Fujilog Nyuumon-hen Specials	4	Comedy	4
-9701	Taeng-gu &amp; Ulasyong	26	Action Comedy Mecha	4
 9738	Tekusuke Monogatari	1	Historical	4
 9799	Tobidashi wa Abunaizo! Mushi Mushi Mura no Koutsuu Anzen	1	Drama Kids	4
 9922	Usalullaby	1	Dementia	4
@@ -564,7 +556,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9679	Super Samchongsa	1	Action Mecha Shounen Space	4.33
 9752	Tensai? Dr. Hamax	12	Comedy	4.33
 10035	Yamiyo no Jidaigeki (OVA)	2	Historical Horror	4.33
-10125	Zombie Clay Animation: I&#039;m Stuck!!	4	Comedy Horror	4.33
 7248	Roots Search: Shokushin Buttai X	1	Horror Sci-Fi	4.34
 7247	Taa-chan no Kaitei Ryokou	1	Adventure	4.35
 9158	Ozmafia!! Special	1	Historical School Shoujo	4.35
@@ -656,7 +647,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8514	Kkomaeosa Ttori	1	Action Adventure Drama Fantasy Historical Magic Shounen	4.5
 8532	Kochira Tamago Outou Negaimasu	1	Comedy School	4.5
 8628	La Vilaine LuLu	13	Comedy	4.5
-8925	Nanocore: NG Scenes - Nano&#039;s Daily Life	2	Comedy Sci-Fi	4.5
 8926	Nanoha	1	Drama Historical Kids	4.5
 8984	Ningen no Uta	1	Drama Kids	4.5
 9043	Obaachan no Takaramono	1	Kids Music	4.5
@@ -681,7 +671,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8546	Kokuen	1	Drama Music	4.52
 9793	Time for Christmas	1	Music	4.52
 7219	Yami no Kioku Yume no Inei	1	Dementia	4.53
-7655	CoCO &amp; NiCO	39	Comedy Kids	4.53
 8506	Kitsutsuki: The Ten Hole Stories	1	Dementia	4.53
 9502	Shiroishi no Yousei Pichi	3	Fantasy Historical Kids	4.53
 9700	Taekwon Dongja Maruchi Arachi	1	Action	4.53
@@ -906,7 +895,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7149	Petit Manga	1	Dementia	4.8
 7150	Sushi Police	13	Comedy Police	4.8
 7151	Tairiki Tarou no Mucha Shuugyou	1	Action	4.8
-7152	Yokoo&#039;s 3 Animation Films	3	Psychological Romance	4.8
 7153	Zawazawa	1		4.8
 7356	Agukaru: Play with Ibaraki-hen Episode 0	1	Magic Slice of Life Supernatural	4.8
 7360	Ahiru no Pekkle no Hihou wo Sagase	1	Adventure Fantasy Kids	4.8
@@ -927,7 +915,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7142	Ramen Tenshi Pretty Menma	1	Comedy Magic Parody	4.82
 7643	Chouon Senshi Borgman: Madnight☆Gigs!	1	Action Demons Music Sci-Fi Shounen	4.82
 7845	Futari Zamurai Homare no Kawakiri	1	Drama Historical Samurai	4.82
-8846	Momon&#039;s Sand Witch	8	Comedy Kids	4.82
 7139	Fashion	1	Comedy Dementia	4.83
 7140	Fue	1	Dementia	4.83
 7141	Henkei Sakuhin Dai 1-ban	1	Dementia	4.83
@@ -1020,7 +1007,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9317	Risu no Panache	1	Kids	4.92
 9509	Shooting Hero	1	Kids Music Sports	4.92
 7095	Anygedybudybombom	1	Music	4.93
-7096	Ketsuekigata-kun! Featuring Yuri &amp; Nasuno	1	Comedy	4.93
 7097	Makura no Danshi	12	Shoujo	4.93
 7098	Oshiri Kajiri Mushi	1	Comedy Music	4.93
 7099	Sayokyoku	1	Comedy Dementia	4.93
@@ -1072,7 +1058,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7071	Hana	1	Comedy	5
 7072	Ichigeki Sacchuu!! Hoihoi-san: Legacy	1	Comedy Sci-Fi	5
 7073	Kitte no Gensou	1	Comedy	5
-7329	&quot;Aesop&quot; no Ohanashi yori: Ushi to Kaeru Yokubatta Inu	1	Kids	5
 7347	Acerola-chan	3	Comedy	5
 7366	Ai to Shi	1	Action	5
 7382	Akuei to Gacchinpo The Movie: Chelsea no Gyakushuu/Akuei to Mahou no Hammer	1	Comedy Kids Magic	5
@@ -1097,7 +1082,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8194	Hyoutan Suzume	1	Fantasy	5
 8201	Ichimai no Etegami	1	Drama Kids	5
 8343	Kaiketsu Zorori Movie: Uchuu no Yuusha-tachi	1	Adventure Comedy	5
-8358	Kamaishi no &quot;Kiseki&quot;: Inochi wo Mamoru Tokubetsu Jugyou	1	Drama	5
 8397	Kappa no Suribachi	1	Fantasy Kids	5
 8419	Katta-kun Monogatari	1	Adventure Kids	5
 8472	Kiki to Lala no Hakuchouza no Ohimesama	1	Kids	5
@@ -1107,7 +1091,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8770	Meiji Ishin wo Tsukuriageta Hitobito	1	Drama Historical Kids Samurai	5
 8801	Mina no Bousai Mura Dzukuri	1	Drama Kids	5
 8817	Minna Tomodachi	1	Comedy Fantasy Kids	5
-8848	Momon&#039;s Sand Witch Episode 0	1	Comedy Kids	5
 8870	Mori no Ratio	Unknown	Adventure Fantasy Kids	5
 8894	Nae Ireumeun Dokgotak	1	Sports	5
 8908	Nanbo no Monjai! 2: Yankee Gurentai	1	Action Comedy	5
@@ -1178,7 +1161,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8858	Money Wars: Nerawareta Waterfront Keikaku	1	Seinen	5.05
 9107	Oniku Daisuki! Zeushi-kun 2nd Season	6	Comedy	5.05
 9127	Osaru no Monkichi no Kin no Ono Gin no Ono	1	Kids	5.05
-7034	&quot;0&quot;	1	Music	5.06
 7035	3-Nen D-Gumi Glass no Kamen	13	Comedy Parody School	5.06
 7036	Akuma no Kairozu	1	Dementia	5.06
 7037	Kiseichuu no Ichiya	1	Dementia Horror	5.06
@@ -1194,7 +1176,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8845	Momoiro no Crayon	1	Drama Kids	5.06
 9233	Piroppo	23	Comedy	5.06
 9570	Sore Ike! Anpanman: Anpanman to Happy Otanjoubi	1	Comedy Fantasy Kids	5.06
-9614	Sore Ike! Anpanman: Sing! Dance! Everybody&#039;s Christmas	1	Comedy Fantasy Kids Super Power	5.06
 7018	Yoru no Hi	1	Psychological	5.07
 7024	Peaceful Times (F02) Petit Film	1	Music	5.07
 7028	Aru Zombie Shoujo no Sainan	1	Action Horror	5.07
@@ -1224,7 +1205,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9280	PS3® no Tsukai Kata: feat.Peeping Life	6	Comedy Slice of Life	5.08
 9281	Pulsar	1	Dementia Music	5.08
 9759	Tetsujin 28-gou: Tanjou-hen	1	Adventure Mecha Sci-Fi Shounen	5.08
-9764	The Adventures of Hello Kitty &amp; Friends	52	Fantasy Kids	5.08
 10054	Yawarakame♥	26	Comedy Kids	5.08
 7013	Beluga	1	Dementia Horror	5.09
 7014	Kitte no Nai Okurimono	1	Kids Music	5.09
@@ -1246,7 +1226,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7010	Tousan no Tsukutta Uta	1	Fantasy Music	5.1
 7011	Waanabi.jk	2	Comedy School Slice of Life	5.1
 7012	Yasashii Fue Tori Ishi	1	Dementia	5.1
-7706	Dennou Sentai Voogie&#039;s★Angel: Forever and Ever	1	Action Comedy Drama Mecha Sci-Fi	5.1
 7984	Haedori Daemoheom	1	Adventure Drama Military	5.1
 8006	Hana no Zundamaru	8	Comedy Martial Arts Parody	5.1
 9042	Nyuru Nyuru!! Kakusen-kun 2nd Season	13	Comedy	5.1
@@ -1394,13 +1373,11 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7554	Butazuka	13	Slice of Life	5.2
 7622	Chikyuu wo Mitsumete	1	Sci-Fi Space	5.2
 7763	Easy Cooking Animation: Seishun no Shokutaku	25	Comedy	5.2
-8040	Hawaiian Rock&#039;n Roll	1	Kids Music	5.2
 8235	Inui-san!	Unknown	Comedy Shoujo	5.2
 8372	Kamiusagi Rope x au Collaboration	Unknown	Comedy Slice of Life	5.2
 8421	Kattobase! Dreamers: Carp Tanjou Monogatari	1	Sports	5.2
 9232	Pipi Tobenai Hotaru	1	Drama Fantasy	5.2
 9624	Sore Ike! Anpanman: Yakisobapanman to Black Sabotenman	1	Comedy Fantasy Kids	5.2
-9763	That&#039;s Hanakappa Musical: Pan to Gohan Docchi nano!?	1	Comedy Kids Music	5.2
 9866	TWD Express Rolling Takeoff	1	Adventure Sci-Fi	5.2
 6914	Kyutai Panic Adventure!	1	Action Martial Arts Shounen Super Power	5.21
 6921	0:08	1	Dementia	5.21
@@ -1469,7 +1446,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7361	Ahiru no Pekkle no Minikui Ahiru no Ko	1	Fantasy Kids	5.25
 7391	Alice in Dreamland	1	Adventure Fantasy	5.25
 7408	Anime Roukyoku Kikou Shimizu no Jirochouden	30	Comedy Drama Historical	5.25
-7705	Dennou Sentai Voogie&#039;s★Angel Gaiden: Susume! Super★Angels!	2	Action Comedy Mecha Parody Sci-Fi	5.25
 7739	Dosukoi! Wanpaku Dohyou	1	Drama Sports	5.25
 7771	Ehon Yose	50	Historical Horror Kids	5.25
 7912	Gensei Shugoshin P-hyoro Ikka OVA	3	Adventure Fantasy Shoujo	5.25
@@ -1521,7 +1497,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 10092	Yumemi Douji	1	Drama	5.27
 6853	Deva Zan	1	Action Fantasy	5.28
 6854	Ghost	1	Dementia	5.28
-6855	Hal &amp; Bons	5	Comedy Slice of Life	5.28
 6856	Jubilee	1	Dementia Music	5.28
 6858	Kitakaze Kozou no Kantarou	1	Music Samurai	5.28
 6859	Makyuu Senjou	2	Action Sci-Fi	5.28
@@ -1572,7 +1547,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8146	His Lipstick	1	Comedy Kids	5.31
 8469	Kikansha Yaemon: D51 no Daibouken	1	Fantasy Kids	5.31
 9083	Okane wa Mawaru: Kurashi to Kinyuu	1	Slice of Life	5.31
-9265	Pororo&#039;s English Show	13	Kids Music	5.31
 9900	Ultraman M78 Gekijou: Love and Peace	1	Comedy Kids Parody Sci-Fi Space Super Power	5.31
 6834	Gulliver Funtouki	1	Adventure	5.32
 6835	Kogane no Hana	1	Action Adventure Fantasy Historical	5.32
@@ -1603,7 +1577,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8707	Malta no Bouken	12	Kids Slice of Life	5.33
 8882	Mugen Senki Portriss	52	Action Mecha Sci-Fi Shounen	5.33
 8923	Nanocore 2nd Season	Unknown	Action Sci-Fi	5.33
-9029	Notteke Explet&#039;s	26	Kids	5.33
 9219	Piano Specials	4	Drama Music Romance Shoujo Slice of Life	5.33
 9385	Saru Getchu Movie: Ougon no Pipo Helmet - Ukki Battle	1	Adventure Comedy Shounen	5.33
 9494	Shiritori Mambo	1	Kids Music	5.33
@@ -1670,7 +1643,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6787	Futon	1	Dementia	5.37
 6789	Hone Hone Rock	1	Kids Music	5.37
 6790	Jikuu Bouken Nuumamonjaa	1	Action Comedy Fantasy	5.37
-6791	Love &amp; Gift	1	Slice of Life	5.37
 6792	Maze	1		5.37
 6793	Mirakururun Grand Purin!	1	Kids Music	5.37
 6794	Nekketsu Uchuujin	1	Comedy Sci-Fi	5.37
@@ -1730,7 +1702,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6760	Saboten ga Nikui	1	Comedy Kids Music	5.4
 6761	Taiko no Tatsujin: 15 Shuunenkinen Short Animation	1	Game	5.4
 6762	TOTO Green Challenge	1	Slice of Life	5.4
-6763	Wanna-Be&#039;s	1	Action Comedy Sports	5.4
 7373	Ajjishin da Tsunami wa? Jibun no Inochi wa Jibun de Mamoru	1	Drama Kids	5.4
 7393	Aloha! Youkai Watch: Rakuen Hawaii de Geragerapou!!	Unknown	Kids Slice of Life Supernatural	5.4
 7513	Boku wa Kimi wo Warawanai	1	Music	5.4
@@ -1807,7 +1778,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6713	Happy Weekend	1	Kids Music	5.45
 6714	Kangaroo no Tanjoubi	1	Adventure	5.45
 6715	Kumo ga Haretara	1	Music	5.45
-6716	Lightning Trap: Leina &amp; Laika	1	Action Sci-Fi	5.45
 6717	Master of Torque 2	1	Action Sci-Fi	5.45
 6718	Mushiba Tetsudou	1	Adventure Fantasy Kids	5.45
 6719	Mutant Turtles: Choujin Densetsu-hen	2	Action Adventure Comedy Sci-Fi Super Power	5.45
@@ -1824,7 +1794,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6704	Ijime: Ikenie no Kyoushitsu	1	Drama Shoujo	5.46
 6705	Keitai Shoujo	6	Comedy Drama Romance School	5.46
 6706	LolitA☆Strawberry in Summer	1	Music	5.46
-6707	Luigi&#039;s Toy Adventure	1	Adventure	5.46
 6708	Many Things SD Gundam	2	Comedy Mecha Parody	5.46
 6709	Violence Jack: Harlem Bomber-hen	1	Action Drama Horror	5.46
 6710	Yami no Shihosha Judge	1	Horror Seinen Supernatural	5.46
@@ -1860,7 +1829,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6692	Oshiri Kajiri Mushi (TV) 3rd Season	10	Comedy Kids	5.48
 6693	Princess Army: Wedding★Combat	2	Action Martial Arts Romance Shoujo	5.48
 6694	Sun Set Sun	1	Music	5.48
-6530	Marine Dreamin&#039;	1	Music	5.63
 6695	Wagamama High Spec	12	Comedy School	5.48
 7354	Agigongryong Doolie (Movie)	1	Kids	5.48
 7390	Alexandros no Ketsudan	1	Historical	5.48
@@ -1885,7 +1853,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6665	Saiko Robot Kombock	25	Mecha Sci-Fi	5.5
 6666	Samurai Spirits: Haten Gouma no Shou	1	Adventure Historical Samurai Shounen	5.5
 6667	Sentou Yousei Shoujo Tasukete! Mave-chan	1	Comedy Parody Sci-Fi Shounen Super Power	5.5
-6668	The Tales of Rien Village #1: &quot;Toilet ni Ittokiya&quot;	1	Fantasy	5.5
 6669	Tobacco to Hai	1	Adventure	5.5
 6670	Venus Project: Climax	6	Action Music	5.5
 6671	Zekkyou Gakkyuu	3	Shoujo Supernatural	5.5
@@ -1920,7 +1887,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9571	Sore Ike! Anpanman: Anpanman to Kaizoku Lobster	1	Adventure Fantasy Kids	5.5
 9601	Sore Ike! Anpanman: Minami no Umi wo Sukue!	1	Comedy Fantasy Kids	5.5
 9782	The Primitives: Bongo and Grunge	52	Comedy	5.5
-9789	Tick &amp; Tack	10	Fantasy Kids	5.5
 9963	Washimo 3rd Season	44	Comedy Kids School Sci-Fi Slice of Life	5.5
 6655	Insomniac	1	Music	5.51
 6656	Kämpfer Picture Drama	1	Comedy	5.51
@@ -1979,12 +1945,10 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6616	And And	1	Music	5.55
 6617	Choujin Locke Special	1	Action Sci-Fi Super Power	5.55
 6618	Hizumu Realism	1	Dementia Music	5.55
-6619	Kid&#039;s Castle	1	Comedy	5.55
 6620	Koguma no Koro-chan	1	Kids	5.55
 6621	Loups=Garous Picture Drama	1	Mystery Sci-Fi	5.55
 6622	Message Song	1	Music	5.55
 6623	Mushi no Tameiki	1	Music	5.55
-6625	New Hal &amp; Bons	9	Comedy Slice of Life	5.55
 6626	Osu	1	Slice of Life	5.55
 6628	Space Travelers The Animation	1	Sci-Fi Space	5.55
 6629	Television	1	Horror	5.55
@@ -2067,7 +2031,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6573	Nihonichi Momotarou	1	Fantasy	5.59
 6574	Prayers	2	Sci-Fi	5.59
 6575	Shounen Jack to Mahoutsukai	1	Adventure Fantasy	5.59
-6576	Sparrow&#039;s Hotel	12	Comedy	5.59
 6577	Sugio: Mori de Koi wo Shite	3	Comedy	5.59
 6578	Toyama Kankou Anime Project	6	Historical Slice of Life	5.59
 6579	Virus: Virus Buster Serge	12	Action Adventure Mecha Police Sci-Fi	5.59
@@ -2079,7 +2042,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9028	Notari Matsutarou	10	Sports	5.59
 9349	Ryuuichi Manga Gekijou Onbu Obake	52	Supernatural	5.59
 9625	Sore Ike! Anpanman: Yomigaere Bananajima	1	Adventure Comedy Fantasy Kids Super Power	5.59
-6554	Meiji x Kokosake &amp; anohana Receipt Oubo Campaign	2	Drama	5.6
 6558	Amon Saga	1	Action Adventure Fantasy	5.6
 6559	Atama wa Tsukaiyou. Card mo Tsukaiyou.	1	Comedy	5.6
 6560	Bavi Stock	2	Action Adventure Fantasy Sci-Fi	5.6
@@ -2092,7 +2054,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6568	Wake Up	1	Music	5.6
 7453	Azumi Mamma★Mia	60	Comedy Kids	5.6
 7867	Ganbare! Bokura no Hit and Run	1	School Sports	5.6
-7961	Gra-P &amp; Rodeo	61	Comedy Music	5.6
 8538	Koha Ginjiro	3	Action Drama School Shounen	5.6
 8656	Lolling Seutajeu	26	Kids Sports	5.6
 8891	My Melody no Akazukin	1	Fantasy Kids	5.6
@@ -2124,7 +2085,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9343	Ruri-iro Princess	2	Romance Shoujo	5.61
 9598	Sore Ike! Anpanman: Kyouryuu Nosshii no Daibouken	1	Comedy Fantasy Kids	5.61
 9656	Stray Sheep: Poe no Chicchana Daibouken	12	Comedy Kids	5.61
-6536	Angel&#039;s Feather	2	Drama Fantasy Romance Sci-Fi Shoujo Shounen Ai Supernatural	5.62
 6537	Boku wa Konomama Kaeranai	1	Drama Romance Shounen Ai	5.62
 6538	Bologee Story	1	Drama Romance	5.62
 6539	Choboraunyopomi Gekijou Dai Ni Maku Ai Mai Mii: Mousou Catastrophe Special	1	Comedy Slice of Life	5.62
@@ -2132,7 +2092,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6541	Kipling Jr.	1	Comedy	5.62
 6542	RS Keikaku: Rebirth Storage	1	Mecha	5.62
 6543	Sono Mukou no Mukougawa	1	Music	5.62
-6544	Uchuu Kyoudai: Apo&#039;s Dream	1	Comedy Sci-Fi Space	5.62
 6545	Urarochi Diamond	1	Adventure	5.62
 6547	Anitore! EX	12	Comedy Sports	5.62
 7538	Break-Age	1	Adventure Mecha Sci-Fi Shounen	5.62
@@ -2147,7 +2106,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6526	Bernard-jou Iwaku.	12	Comedy School	5.63
 6527	Kimi wa Tomodachi	1	Adventure Fantasy Music	5.63
 6528	Kinniku Banzuke: Kongou-kun no Daibouken!	3	Action Shounen Sports	5.63
-6529	Kokoro ga Sakebitagatterunda. x Sony Hi-Res &quot;Walkman&quot; and Headphone	1	Drama	5.63
 6531	Neon The Animation	6	Comedy Historical Mecha Police Slice of Life	5.63
 6532	Obake no Dokurou	1	Kids Supernatural	5.63
 6533	Pan de Peace!	13	Comedy School Slice of Life	5.63
@@ -2185,7 +2143,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8468	Kikansha Yaemon	1	Fantasy Kids	5.64
 8575	Kougyou Aika Volley Boys	2	Comedy School Seinen Sports	5.64
 8580	Kubbe Kort Animasjon	24	Fantasy	5.64
-8838	Mobile Suit Gundam-san: Hiyoko day&#039;s Ichisuisei Hiyoko to Fushigi na Ofuda	1	Comedy Mecha Parody	5.64
 9069	Ojarumaru: Mangetsu Road Kiki Ippatsu - Tama ni wa Maro mo Daibouken	1	Adventure Comedy Fantasy Kids Slice of Life	5.64
 9153	Ousama no Shippo	1	Fantasy	5.64
 9341	Running Boy: Star Soldier no Himitsu	1	Sci-Fi Space	5.64
@@ -2222,7 +2179,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9407	Sekai Douwa Anime Zenshuu	10	Adventure Fantasy Kids	5.66
 6478	Anime Tenchou Movie	1	Action Parody	5.67
 6479	Barom One	13	Action Sci-Fi Shounen Supernatural	5.67
-6480	Be-Boy Kidnapp&#039;n Idol	1	Drama Shounen Ai	5.67
 6481	Eien no Aselia	2	Adventure Drama Fantasy	5.67
 6482	I Love Sky	1	Comedy Kids	5.67
 6483	InaDan Movie x Mameshiba Collab CM	2	Comedy Kids Sports	5.67
@@ -2236,13 +2192,10 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6491	Riki-Oh 2: Horobi no Ko	1	Action Martial Arts Seinen Super Power	5.67
 6492	Stay the Same	1	Kids Music	5.67
 6493	Tokyo Juushouden	3	Action Adventure Shounen Supernatural	5.67
-7346	AAA de Ikou!!: Yuuna &amp; Akiko	1	Comedy	5.67
 7396	Ama Gli Animali	1	Kids	5.67
 7401	Angel ga Tonda Hi	1	Comedy Slice of Life	5.67
 7425	Araiguma Rascal Specials	2	Drama Slice of Life	5.67
 7677	Cyborg 009: Call of Justice 2	1	Action Adventure Mecha Sci-Fi Shounen	5.67
-7711	Doctor Mambo &amp; Kaitou Jibako: Uchuu yori Ai wo Komete!!	1	Adventure Fantasy Kids Mystery Sci-Fi	5.67
-7724	Don&#039;t You Wish You Were Here?	1	Dementia	5.67
 7726	Donbe Monogatari	1	Kids	5.67
 7743	Doubutsu Dai Yakyuu Sen	1	Sports	5.67
 7916	Ghost Messenger Movie	1	Action Fantasy	5.67
@@ -2298,7 +2251,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6474	Shinjuku Shin-chan Patrol: Warui Otona ni Ki wo Tsukete	1	Kids	5.68
 6475	Sora wa Koko ni Aru	1	Music	5.68
 6476	Sotsugyou M: Ore-tachi no Carnival	2	Drama School	5.68
-6477	Violence Jack: Hell&#039;s Wind-hen	1	Action Drama Horror	5.68
 7422	Apache Yakyuugun	26	Action School Sports	5.68
 7536	Boyfriend	1	Romance Shoujo Sports	5.68
 7744	Doubutsu Kankyou Kaigi	20	Kids	5.68
@@ -2308,7 +2260,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9651	Stitch! Perfect Memory	1	Adventure Comedy Kids Sci-Fi	5.68
 10366	Ice	3	Action Military Sci-Fi Shoujo Ai Yuri	5.68
 6442	Dead Heat	1	Action Mecha Sci-Fi Sports	5.69
-6451	Dennou Sentai Voogie&#039;s★Angel	3	Action Drama Mecha Military Sci-Fi	5.69
 6452	Fushigi na Kusuri	1	Slice of Life	5.69
 6453	Gundress	1	Action Mecha Sci-Fi	5.69
 6454	Hagane Orchestra	12	Adventure Comedy	5.69
@@ -2318,7 +2269,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6458	Peeping Life: The Perfect Emotion	10	Comedy Slice of Life	5.69
 6460	Transformers: Robot Masters	2	Mecha	5.69
 8742	Marin to Yamato: Fushigi na Nichiyoubi	1	Kids	5.69
-9583	Sore Ike! Anpanman: Franken-Robo-kun&#039;s Surprised Christmas	1	Comedy Fantasy Kids Super Power	5.69
 6416	Crash!	3	Comedy Shoujo	5.7
 6440	Ai Mai! Moe Can Change!	1	Comedy Sci-Fi	5.7
 6441	Big Order (TV)	10	Action Shounen Super Power	5.7
@@ -2364,14 +2314,12 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9226	Pinch to Punch	156	Comedy	5.71
 9588	Sore Ike! Anpanman: Horrorman to Hora Horako	1	Comedy Fantasy Kids	5.71
 9951	Wankorobee	26	Comedy Fantasy Kids	5.71
-9975	What&#039;s Michael?	1	Comedy	5.71
 6409	Lost Forest	1	Music	5.72
 6414	Bamboo Blade: Fanfu-Fufe-Fo	2	Comedy Parody	5.72
 6415	Christmas	1	Music Supernatural	5.72
 6417	Kyoto Animation: Ajisai-hen	1	Magic	5.72
 6418	Kyoufu no Bio Ningen Saishuu Kyoushi	1	Action Adventure Comedy School Supernatural	5.72
 6419	Mahou no Pen	1	Historical	5.72
-6420	Marine Bloomin&#039;	1	Music	5.72
 6421	Pareo wa Emerald	1	Music	5.72
 6422	Q Transformers: Kaette Kita Convoy no Nazo	13	Mecha Parody Slice of Life	5.72
 6423	R20: Ginga Kuukou	1	Sci-Fi	5.72
@@ -2385,7 +2333,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 10365	Fujimi 2-choume Koukyougakudan	1	Drama Music Psychological Romance Slice of Life Yaoi	5.72
 6406	Kai Doh Maru	1	Action Fantasy Historical Magic	5.73
 6407	Kyoto Animation: Hassou-hen	1	Fantasy	5.73
-6408	Lance N&#039; Masques	12	Fantasy	5.73
 6410	Minarai Diva	10	Music	5.73
 6411	Moonrakers	1	Drama Sci-Fi Space	5.73
 6412	Oosouji	1	Music	5.73
@@ -2393,7 +2340,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7464	Bad Badtz-Maru no Ore no Pochi wa Sekaiichi	1	Kids	5.73
 8297	Junkers Come Here: Memories of You	1	Drama Slice of Life	5.73
 8452	Kero Kero Keroppi no Tomodachi wa Mahoutsukai	1	Kids Magic	5.73
-9100	Onegai My Melody: Yuu &amp; Ai	1	Comedy Fantasy	5.73
 9999	Xevious	1	Action Adventure Sci-Fi Space	5.73
 6397	B Who I Want 2 B	1	Music	5.74
 6398	Bulg-eunmae	1	Martial Arts Super Power	5.74
@@ -2416,10 +2362,8 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6388	Gekkou Shokudou	1	Music	5.75
 6389	It Girl	1	Music	5.75
 6390	Life no Color	1	Music School	5.75
-6391	Marie &amp; Gali Special	1	Comedy	5.75
 6392	Minions x Godzilla x Toho Cinema Collaboration Tokubetsu Eizou	1	Comedy	5.75
 6393	Mugen Senshi Valis	1	Action Adventure Fantasy	5.75
-6394	Onna Senshi Efe &amp; Jira: Gude no Monshou	1	Adventure Fantasy	5.75
 6395	Toilet no Kamisama	1	Music	5.75
 6396	Wasure-boshi	1	Fantasy Music	5.75
 7405	Anime Douyou	Unknown	Kids Music	5.75
@@ -2451,7 +2395,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9772	The Legend of Huainanzi	26	Adventure Fantasy Historical	5.75
 9796	Tobe! Pegasus Kokoro no Goal ni Shoot	1	School Sports	5.75
 10075	Yowamushi Chinsengumi	1	Comedy Kids	5.75
-6376	Aesop&#039;s World	26	Kids	5.76
 6378	Channel 5.5 2nd Season	4	Comedy Parody	5.76
 6379	Hana to Mogura	1	Comedy	5.76
 6380	Macross Fufonfia	20	Comedy Parody	5.76
@@ -2515,7 +2458,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6335	Ariel Deluxe	2	Action Comedy Mecha Sci-Fi	5.79
 6336	Around	1	Slice of Life	5.79
 6337	Bavel no Hon	1	Kids	5.79
-6338	Chains &amp; Rings	1	Fantasy Music	5.79
 6339	Dimension Loop	1	Sci-Fi	5.79
 6340	Endride	24	Adventure Fantasy	5.79
 6341	Hietsuki Bushi	1	Fantasy Music Sci-Fi	5.79
@@ -2567,12 +2509,10 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9523	Shounen Ninja Kaze no Fujimaru: Nazo no Arabiya Ningyou	1	Action Adventure Samurai Shounen	5.8
 9593	Sore Ike! Anpanman: Kieta Jam Ojisan	1	Adventure Fantasy Kids	5.8
 6298	Alexander Senki	13	Action Adventure Fantasy Historical Sci-Fi Supernatural	5.81
-6299	Boku no Imouto wa &quot;Osaka Okan&quot;: Haishin Gentei Osaka Okan.	1	Comedy	5.81
 6300	Canvas: Sepia-iro no Motif	2	Comedy Romance Slice of Life	5.81
 6301	Cyborg 009: The Reopening	1	Action Adventure Mecha Sci-Fi Shounen	5.81
 6302	Evidence	1	Music	5.81
 6303	Hacka Doll	2	Fantasy	5.81
-6304	I&#039;m Here with You	1	Kids Music	5.81
 6305	Iczer-Girl Iczelion	2	Action Adventure Sci-Fi	5.81
 6306	Ishikeri	1	Comedy	5.81
 6307	Joseito	1	Drama School Slice of Life	5.81
@@ -2737,7 +2677,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6215	Wizardry	1	Action Adventure Fantasy	5.88
 7537	Brave Fire S0.9	1	Mecha Sci-Fi	5.88
 7565	Cello Hiki no Gauche (OVA)	1	Drama Fantasy Music	5.88
-7691	Damen&#039;s Walker	12	Comedy Romance	5.88
 8292	Judo-bu Monogatari	2	School Sports	5.88
 8337	Kaibutsu-kun: Demon no Ken	1	Comedy Horror Kids Shounen	5.88
 8667	Maabou no Shounen Koukuu Tsuwamono	1	Historical	5.88
@@ -2903,7 +2842,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9994	X Bomber	25	Action Adventure Kids Mecha Sci-Fi Space	5.94
 6079	Choboraunyopomi Gekijou Dai Ni Maku Ai Mai Mii: Mousou Catastrophe	12	Comedy Slice of Life	5.95
 6087	11eyes Picture Drama	13	Comedy	5.95
-6088	Blade &amp; Soul Specials	7	Comedy	5.95
 6089	Bloodivores	12	Action Supernatural Vampire	5.95
 6093	Handsome Girl	1	Romance Shoujo	5.95
 6094	Juusenki L-Gaim II: Farewell My Lovely + Pentagona Doors	1	Action Adventure Drama Mecha Sci-Fi Shounen Space	5.95
@@ -2917,7 +2855,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7849	Fuusen no Doratarou	13	Kids	5.95
 8738	Manga Nippon Mukashibanashi	12	Historical	5.95
 9734	Tatakae!! Ramenman (Movie)	1	Action Adventure Martial Arts Shounen	5.95
-6078	Boku no Imouto wa &quot;Osaka Okan&quot;	12	Comedy	5.96
 6080	Dark Side Cat	6	Action	5.96
 6081	Erementar Gerad: Aozora no Senki	1	Music	5.96
 6082	Fake Doll	1	Music	5.96
@@ -2929,7 +2866,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9003	Nobara no Julie	13	Adventure Drama Historical Music	5.96
 9241	Pochacco no Jack to Mame no Ki	1	Fantasy Kids	5.96
 9279	Project HAL	3	Action Mecha	5.96
-9497	Shiritsu Tantai: Toki Shouzou Trouble Note - Hard &amp; Loose	1	Action Mystery	5.96
 6065	Ame to Shoujo to Watashi no Tegami	1	Shoujo	5.97
 6066	Bab Mook Ja	1	Slice of Life	5.97
 6067	Fushigi na Somera-chan	12	Comedy Magic Slice of Life	5.97
@@ -2938,7 +2874,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6070	Kiitarou Shounen no Youkai Enikki	12	Comedy Supernatural	5.97
 6071	Kikyuu	1	Music	5.97
 6072	Long Riders Recap	1	Comedy Shounen Slice of Life Sports	5.97
-6073	Marie &amp; Gali Episode Zero	1	Comedy	5.97
 6074	Mobile Suit SD Gundam Mk V	3	Comedy Mecha Parody Sci-Fi	5.97
 6075	Mother: Saigo no Shoujo Eve	1	Adventure Drama Sci-Fi	5.97
 6076	Refrain Blue	3	Drama Romance	5.97
@@ -2946,9 +2881,7 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6083	Hatsune Miku: Hiyashite Narasou Okashi no Ii Oto	1	Music	5.97
 7415	Anpanman to Hajime yo! Iro Kazu Katachi Wakarukana Iro Katachi	1	Kids	5.97
 9730	Tao Hua Yuan Ji	1	Fantasy Historical	5.97
-10025	Yakushiji Ryouko no Kaiki Jikenbo: Hamachou Voice &amp; Fiction	1	Mystery Police Supernatural	5.97
 6049	Beast Saga	38	Action Kids Sci-Fi Shounen	5.98
-6050	Boku no Imouto wa &quot;Osaka Okan&quot;: Uchi no Oniichan wa Tokyo Rule	1	Comedy	5.98
 6051	Boku wa Kuma	1	Kids Music Slice of Life	5.98
 6052	Crazy for It	1	Dementia Music	5.98
 6053	Donyatsu Specials	2	Comedy Sci-Fi Seinen	5.98
@@ -2995,7 +2928,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 6029	The Epic Of ZektBach	1	Action Fantasy Supernatural	6
 6055	Gakuen Handsome: Legend of Sexy	2	Comedy Music	6
 7420	AOTU Shijie	Unknown	Action Adventure Fantasy Sci-Fi	6
-7444	Atashin&#039;chi 3D Movie: Jounetsu no Chou Chounouryoku Haha Dai Bousou	1	Comedy	6
 7447	Audition	1	Music	6
 7473	Bakusou Circuit Roman Twin	1	Sports	6
 7501	Bit the Cupid	48	Comedy	6
@@ -3011,11 +2943,9 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7627	Chinyuuki: Tarou to Yukai na Nakama-tachi	3	Comedy	6
 7630	Choco to Watashi	1	Kids Music	6
 7634	Chokin no Susume	1	Comedy	6
-7635	Chotto Ugoku!? &quot;Futeneko&quot;	1	Comedy	6
 7642	Choujuu Kishin Dancougar: Juusenki-tai Songs	1	Action Mecha Sci-Fi Shounen	6
 7662	Colorful Ninja Iromaki	1	Fantasy	6
 7670	Cooking Papa Christmas Special	1	Comedy Slice of Life	6
-7707	DigiGirl Pop!: Strawberry &amp; Pop Mix Flavor	26	Comedy Sci-Fi	6
 7710	Dochamon Junior 2	Unknown	Comedy Kids	6
 7741	Doteraman	20	Comedy Sci-Fi	6
 7799	Fight Da!! Pyuta	26	Action Comedy Sci-Fi Shounen	6
@@ -3157,12 +3087,10 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5978	Kokoro Toshokan: Communication Clips	1	Comedy Drama Slice of Life	6.03
 5979	Mahou Shoujo Nante Mou Ii Desukara.	12	Comedy Magic	6.03
 5980	Petit Eva: Evangelion@School	24	Comedy Parody School	6.03
-5981	Puzzle &amp; Dragons Cross	Unknown	Game Kids	6.03
 5982	Shihaisha no Tasogare	1	Action Demons Drama Horror Sci-Fi Shoujo Supernatural	6.03
 8345	Kaitei Daisensou: Ai no 20000 Miles	1	Action Adventure	6.03
 8607	KutsuDaru.	48	Fantasy Kids School Slice of Life	6.03
 5947	Angel Cop	6	Action Police Sci-Fi	6.04
-5948	Aquarian Age: Saga II - Don&#039;t Forget Me...	1	Action Drama Super Power	6.04
 5949	Babyshiba	6	Comedy	6.04
 5950	Birth	1	Action Adventure Comedy Sci-Fi	6.04
 5951	Bouken! Iczer 3	6	Action Adventure Sci-Fi	6.04
@@ -3228,10 +3156,8 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5917	Mahou no Star Magical Emi: Semishigure	1	Comedy Magic Shoujo	6.06
 5919	Marginal Prince: Gekkeiju no Ouji-tachi	13	Romance School Shounen Ai	6.06
 5920	Maria†Holic: Run Run Riru Ran Ran Rara	1	Comedy Music	6.06
-5921	Ninja &amp; Soldier	1	Psychological	6.06
 5922	Nobiro Nobiro Daisuki na Ki	1	Fantasy Music	6.06
 5923	Osiris no Tenbin	10	Drama Supernatural Thriller	6.06
-5924	Puzzle &amp; Dragons CM	2	Game School	6.06
 5925	Saa Ikou! Tamagotchi	12	Kids	6.06
 5926	Seihou Tenshi Angel Links	13	Action Adventure Comedy Drama Romance Sci-Fi Space	6.06
 5927	Shijin no Shougai	1	Drama Fantasy Psychological	6.06
@@ -3246,7 +3172,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9085	Okon Joururi	1	Drama Fantasy Historical	6.06
 9477	Shin Shounan Bakusouzoku Arakure Knight	2	Adventure	6.06
 9485	Shinken Seminar Koukou Kouza	1	School Shounen	6.06
-9791	Tiger &amp; Bunny: Too Many Cooks Spoil the Broth	1	Action Comedy Mystery Super Power	6.06
 10130	Zouressha ga Yatte Kita	1	Adventure	6.06
 5890	Ai to Ken no Camelot: Mangaka Marina Time Slip Jiken	1	Adventure Comedy Fantasy	6.07
 5891	Antinotice	1	Music	6.07
@@ -3261,7 +3186,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5900	Oreca Battle	51	Game	6.07
 5901	Strobe Light	1	Music	6.07
 5902	Taisei Kensetsu: Shin Doha Kokusai Kuukou	1	Drama	6.07
-5903	Tomorrow&#039;s Song	1	Music	6.07
 5904	Ultraman USA	1	Action Adventure Sci-Fi	6.07
 5905	Wake Up Girl Zoo!	10	Comedy	6.07
 7690	Dame Oyaji	26	Comedy	6.07
@@ -3304,7 +3228,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 10364	Yebisu Celebrities 1st	1	Yaoi	6.08
 5852	Backkom	52	Comedy Kids	6.09
 5853	Chime	1	Music	6.09
-5854	Dr. Slump Movie 11: Dr. Mashirito &amp; Abale-chan	1	Comedy Sci-Fi Shounen	6.09
 5855	Geisters: Fractions of the Earth	26	Action Sci-Fi	6.09
 5856	Himitsu no Akko-chan (Movie)	1	Magic School Shoujo	6.09
 5857	Mai no Mahou to Katei no Hi	1	Drama Magic	6.09
@@ -3370,7 +3293,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5820	Legend of Crystania OVA	3	Action Adventure Fantasy Magic Supernatural	6.11
 5821	Lily C.A.T.	1	Horror Sci-Fi Space	6.11
 5822	Mangirl!: Asobu Henshuu Girl	1	Comedy Slice of Life	6.11
-3762	Je T&#039;aime	1	Sci-Fi	6.79
 5823	Ojisan to Marshmallow Special	1	Comedy	6.11
 5824	Pia Carrot e Youkoso!!: Sayaka no Koi Monogatari	1	Comedy Romance	6.11
 5825	Shin SOS Dai Tokyo Tankentai	1	Adventure	6.11
@@ -3412,13 +3334,11 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9524	Shounen Santa no Daibouken!	24	Adventure Fantasy Shounen	6.12
 9949	Wan Wan Chuushingura	1	Action Adventure Drama Fantasy	6.12
 5764	Marginal Prince: Gekkeiju no Ouji-tachi - Tokyo Merry-Go-Round	1	Romance School Shounen Ai	6.13
-5773	&quot;Eiji&quot;	1	Comedy Drama Sports	6.13
 5774	Bohemian Rhapsody	1	Music Sci-Fi Space	6.13
 5775	Fake Style	1	Music	6.13
 5776	Fantasista Stella	3	Shounen Sports	6.13
 5777	Hello Kitty no Fushigi no Kuni no Alice	1	Fantasy Kids	6.13
 5778	Houseki no Kuni	1	Fantasy Sci-Fi Seinen	6.13
-5779	I&#039;&#039;s	2	Drama Romance	6.13
 5780	Mahoutsukai Jiji	1	Fantasy Magic Music	6.13
 5781	Majokko Shimai no Yoyo to Nene Movie Extra: Hatsukoi - Mikako Komatsu	1	Music	6.13
 5782	Mighty Orbots	13	Adventure Comedy Mecha Sci-Fi	6.13
@@ -3442,7 +3362,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8612	Kyojin no Hoshi (Movie)	1	Drama Sports	6.13
 8868	Mori no Ongakukai	1	Comedy	6.13
 8878	Mr. Pen Pen	1	Comedy Kids Shoujo	6.13
-9013	Norabbits&#039; Minutes	5	Comedy Fantasy Kids	6.13
 9309	Revbahaf Wang-gug Jaegeon-soelgi	26	Comedy Drama Shoujo	6.13
 9934	Vampiyan Kids Specials	3	Comedy Fantasy Kids	6.13
 9953	Wansa-kun	26	Comedy	6.13
@@ -3478,7 +3397,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8729	Manga Kodomo Bunko	51	Drama Fantasy Kids	6.14
 9396	Sazae-san: Dawn to Ikka de Hawaii Ryokou	1	Comedy Slice of Life	6.14
 9401	Seikimatsu Leader Gaiden Takeshi!	1	Comedy School Shounen	6.14
-9977	What&#039;s Michael? 2	1	Comedy	6.14
 5721	Mahou Shoujo Lyrical Nanoha ViVid: Special Program	1	Action Magic	6.15
 5727	Atagoal wa Neko no Mori	1	Kids	6.15
 5728	Bacterial Contamination	1	Dementia Horror Music	6.15
@@ -3488,7 +3406,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5732	Gunparade Orchestra OVA	3	Mecha	6.15
 5733	Hajimari no Boukensha-tachi: Legend of Crystania	1	Action Adventure Fantasy Magic Supernatural	6.15
 5734	Mahou no Tenshi Creamy Mami: Lovely Serenade	1	Music	6.15
-5735	Marie &amp; Gali ver. 2.0	30	Comedy	6.15
 5736	Mitsu x Mitsu Drops	2	Drama Romance School Shoujo	6.15
 5737	Mitsuwano	1	Slice of Life	6.15
 5738	Nessa no Haou Gandalla	26	Adventure Drama Fantasy Horror Magic Music Sci-Fi Supernatural	6.15
@@ -3546,7 +3463,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5707	Soliton no Akuma	1	Drama Military Sci-Fi	6.17
 5708	Space☆Dandy Picture Drama	2	Comedy Sci-Fi Space	6.17
 5709	Stitch!: Zutto Saikou no Tomodachi Special	1	Adventure Comedy Kids	6.17
-5710	Suzy&#039;s Zoo: Daisuki! Witzy - Happy Birthday	1	Kids	6.17
 5712	The Choujo	1	Comedy Sci-Fi Super Power	6.17
 5713	Wakusei Robo Danguard Ace: Uchuu Daikaisen	1	Mecha Sci-Fi	6.17
 5723	Mori no Andou	1	Comedy	6.17
@@ -3627,9 +3543,7 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5668	Vocaloid China Project Senden Animation	5	Fantasy Music	6.19
 5669	Wooser no Sono Higurashi: Ken to Pants to Wooser to	1	Comedy Fantasy Slice of Life	6.19
 5670	Zeonic Toyota Special Movie	2	Cars	6.19
-7479	Batsu &amp; Terry	1	Comedy Drama School Shounen Sports	6.19
 7679	Cybot Robocchi	39	Comedy Sci-Fi	6.19
-7750	Dr. Slump: Arale-chan &#039;92 Oshougatsu Special	3	Comedy Sci-Fi Shounen Shounen	6.19
 8319	Kachikachi Yama no Shouboutai	1	Comedy	6.19
 8480	Kimama ni Idol	1	Music	6.19
 8836	Mobile Suit Gundam-san (ONA)	15	Comedy Mecha Parody	6.19
@@ -3720,7 +3634,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5592	Piece	1	Music	6.22
 5593	Sacred Seven: Shirogane no Tsubasa Picture Drama	2	Action Comedy School Sci-Fi Super Power	6.22
 5594	Time Bokan Series: Zenderman	52	Action Adventure Comedy Mecha Sci-Fi Super Power	6.22
-5595	Visions of Frank: Short Films by Japan&#039;s Most Audacious Animators	9	Dementia	6.22
 7930	Ginga Tetsudou 999: Shounen no Tabidachi to Wakare	1	Adventure Drama Sci-Fi Space	6.22
 8283	Jiok	1	Drama Fantasy Horror	6.22
 8338	Kaibutsu-kun: Kaibutsu Land e no Shoutai	1	Comedy Horror Kids Shounen	6.22
@@ -3733,13 +3646,11 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9877	Uchuu Shounen Soran	96	Action Adventure Sci-Fi	6.22
 5563	Baymax	1	Drama Music Sci-Fi Slice of Life	6.23
 5564	Black Bullet: Tenchuu＊Girls	1	Fantasy	6.23
-5565	Dragon&#039;s Heaven	1	Action Adventure Fantasy Mecha Sci-Fi	6.23
 5566	DRAMAtical Murder OVA: Data_xx_Transitory	1	Drama Psychological Sci-Fi Shounen Ai	6.23
 5567	Duel Masters Movie 3: Honoo no Kizuna XX	1	Game Shounen	6.23
 5568	Gakkou no Kaidan Recaps	2	Horror Mystery Supernatural	6.23
 5569	Gun-dou Musashi	26	Adventure Fantasy Samurai	6.23
 5570	Gunslinger Stratos: The Animation	12	Action Sci-Fi	6.23
-5571	Luck &amp; Logic	12	Action Fantasy	6.23
 5572	Mahoutsukai Chappy	39	Adventure Kids Magic	6.23
 5573	Majuu Sensen	3	Action Fantasy	6.23
 5574	Master of Epic: The Animation Age	12	Comedy Fantasy Game	6.23
@@ -3795,7 +3706,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5495	Aquarian Age: Sign for Evolution	13	Action Adventure Fantasy Music Romance Sci-Fi Shounen Super Power Supernatural	6.25
 5496	Ark	1	Action Fantasy Mecha Military Sci-Fi Supernatural	6.25
 5497	Assemble Insert	2	Comedy Police Sci-Fi	6.25
-5498	Blade &amp; Soul	13	Action Adventure Fantasy Martial Arts	6.25
 5499	Boku Otaryman.	1	Comedy Seinen Slice of Life	6.25
 5500	Dragon Age: Blood Mage no Seisen	1	Action Fantasy	6.25
 5501	Eien no Filena	6	Adventure Drama Fantasy	6.25
@@ -3822,7 +3732,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5522	Shima Shima Tora no Shimajirou	726	Adventure Comedy Fantasy Kids Magic	6.25
 5523	Shisha no Sho	1	Drama Supernatural	6.25
 5524	Stitch!: Zutto Saikou no Tomodachi	29	Adventure Comedy Kids	6.25
-5525	Tiger &amp; Bunny Pilot	1	Action Comedy Super Power	6.25
 5526	Tokyo Disney Resort: Yume ga Kanau Basho	1	Slice of Life	6.25
 5527	Towa no Kizuna	1	Music	6.25
 5528	Urban Square: Kouhaku no Tsuigeki	1	Action Mystery Seinen	6.25
@@ -4181,7 +4090,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5280	Street Fighter: Aratanaru Kizuna	1	Action Adventure Shounen	6.34
 5281	Submarine 707R	2	Action Adventure Military Sci-Fi	6.34
 5282	Tamayura: More Aggressive Picture Drama	1	Comedy Drama	6.34
-5284	Tiger &amp; Bunny Recaps	2	Action Comedy Mystery Super Power	6.34
 5285	Touken Ranbu: Hanamaru	12	Action Comedy Drama Fantasy Historical Slice of Life	6.34
 5286	Uchuu no Senshi	6	Mecha Military Sci-Fi Shounen Space	6.34
 5287	UN-GO: Inga Nikki	10	Parody	6.34
@@ -4212,7 +4120,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5234	Sanrio Anime Sekai Meisaku Gekijou	13	Adventure Fantasy Kids	6.35
 5235	Sazae-san	Unknown	Comedy Slice of Life	6.35
 5236	Short Peace Opening	1	Fantasy Sci-Fi Supernatural	6.35
-5237	Suzy&#039;s Zoo: Daisuki! Witzy	25	Kids	6.35
 5238	Taifuu no Noruda	1	Drama School Sci-Fi Supernatural	6.35
 5239	Tetsuwan Atom: Atom Tanjou no Himitsu	1	Drama Mecha Sci-Fi	6.35
 5240	Time Bokan 2000: Kaitou Kiramekiman	26	Action Adventure Comedy Mecha Sci-Fi	6.35
@@ -4239,11 +4146,9 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5192	Blue Gender: The Warrior	1	Adventure Drama Horror Mecha Military Romance Sci-Fi Space	6.36
 5193	Ganbare Goemon	23	Comedy Shounen	6.36
 5194	Genei wo Kakeru Taiyou: Fumikomenai Kokoro	1	Magic	6.36
-5195	Glass no Kantai: La Legende du Vent de l&#039;Univers Specials	2	Adventure Sci-Fi	6.36
 5196	Guskou Budori no Denki (2012)	1	Drama Fantasy Kids Slice of Life	6.36
 5197	Highschool Aurabuster: Hikari no Mezame	3	Drama Fantasy Super Power	6.36
 5198	Hoshi no Ko Chobin	26	Adventure Sci-Fi	6.36
-5199	Ikoku Meiro no Croisée: Yune &amp; Alice	7	Historical Seinen Slice of Life	6.36
 5200	Kaze no Tairiku	1	Action Adventure Fantasy Supernatural	6.36
 5201	Kuusou no Sora Tobu Kikaitachi	1	Historical	6.36
 5202	Machine Hayabusa	21	Action Cars Shounen Sports	6.36
@@ -4336,7 +4241,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5149	Shiranpuri (Movie)	1	Drama School	6.38
 5150	Sora wo Kakeru Shoujo Picture Drama	9	Adventure Comedy Sci-Fi Space	6.38
 5151	Taiko no Tatsujin	26	Game	6.38
-5152	Tekkamen wo Oe: &quot;d&#039;Artagnan Monogatari&quot; yori	1	Action Historical	6.38
 5153	Tenshi Nanka ja Nai	1	Comedy Drama	6.38
 5154	Transformers Superlink	51	Adventure Mecha Sci-Fi Shounen	6.38
 5155	Uchuu Kaizoku Mito no Daibouken: Futari no Joou-sama	13	Action Comedy Sci-Fi	6.38
@@ -4371,7 +4275,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5104	Duel Masters Movie 2: Lunatic God Saga	1	Action Adventure Comedy Shounen	6.39
 5105	Future Card Buddyfight DDD	Unknown	Game	6.39
 5106	Gegege no Kitarou: Youkai Tokkyuu! Maboroshi no Kisha	1	Adventure Comedy Fantasy Horror Supernatural	6.39
-5107	H. P. Lovecraft&#039;s The Dunwich Horror and Other Stories	1	Horror	6.39
 5108	Jikuu Tantei Genshi-kun	39	Adventure Comedy Fantasy Mystery Sci-Fi Shounen	6.39
 5109	Kaze wo Nuke!	1	Sports	6.39
 5111	Kujibiki♥Unbalance	12	Comedy Romance School	6.39
@@ -4392,7 +4295,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5068	Duel Masters Zero	25	Action Kids	6.4
 5069	Gakkyuu Ou Yamazaki	53	Comedy	6.4
 5070	Genesis Climber Mospeada: Love Live Alive	1	Action Mecha Music	6.4
-5071	Ginga Ojousama Densetsu Yuna: Shin&#039;en no Fairy	3	Action Adventure Comedy Magic Mecha Sci-Fi	6.4
 5072	Hanamaru Youchien Special Preview	1	Comedy School	6.4
 5073	Hello Kitty no Alps no Shoujo Heidi	1	Kids	6.4
 5074	Hidamari Sketch Recap	1	Comedy School Slice of Life	6.4
@@ -4430,7 +4332,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9134	Osomatsu-kun: Iyami wa Hitori Kaze no Naka	1	Comedy Historical	6.4
 9251	Ponsuke no Udekurabe	1	Action	6.4
 9252	Ponta to Ensoku	1	Adventure Drama	6.4
-9336	Rose O&#039;Neill Kewpie	26	Comedy	6.4
 9352	Sabaku no Kuni no Oujosama	1	Adventure Fantasy	6.4
 9655	Straw-saurus Neo	1	Adventure Fantasy Kids Sci-Fi	6.4
 9826	Tongari Boushi no Memole: Marielle no Housekibako	1	Fantasy Magic Shoujo	6.4
@@ -4472,7 +4373,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5003	Buddy Go!	3	Comedy Romance Shoujo	6.42
 5004	Code Geass: Hangyaku no Lelouch R2: Flash Specials	9	Parody	6.42
 5005	Dr. Slump Movie 08: Arale-chan Hoyoyo!! Tasuketa Same ni Tsurerarete...	1	Comedy Sci-Fi Shounen	6.42
-5007	Gin&#039;iro no Olynsis: Tokito	12	Adventure Drama Mecha Romance	6.42
 5008	Ginga Hyouryuu Vifam: Kieta 12-nin	1	Action Adventure Mecha Sci-Fi	6.42
 5009	Ginga Kikoutai Majestic Prince: Mirai e no Tsubasa	1	Action Mecha School Sci-Fi Seinen Space	6.42
 5010	Great Mazinger tai Getter Robo	1	Action Mecha Sci-Fi	6.42
@@ -4481,7 +4381,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5013	Himitsu no Akko-chan 2	61	Magic School Shoujo	6.42
 5014	K-On!: Ura-On!	7	Comedy	6.42
 5015	Kinnikuman: New York Kiki Ippatsu!	1	Action Comedy Shounen Sports	6.42
-5016	Kitty&#039;s Paradise	16	Fantasy Kids	6.42
 5017	Kuusen Madoushi Kouhosei no Kyoukan OVA	1	Action Drama Fantasy Magic School	6.42
 5018	Kyomu Senshi Miroku	6	Action Demons Fantasy Historical Samurai Sci-Fi Supernatural	6.42
 5019	Licca-chan Fushigi na Fushigi na Yunia Monogatari	2	Adventure Kids	6.42
@@ -4496,7 +4395,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 5028	Sasurai no Taiyou	26	Drama Music	6.42
 5029	Sekkou Boys	12	Comedy Music	6.42
 5030	Shoujo-tachi wa Kouya wo Mezasu OVA	1	School	6.42
-5031	Sister Princess: Re Pure Character&#039;s	12	Drama Romance	6.42
 5032	Soushin Shoujo Matoi	12	Magic Supernatural	6.42
 5033	Survival	1	Dementia Drama Music Psychological School Supernatural	6.42
 5034	Tetsuwan Atom: Ivan no Wakusei - Robot to Ningen no Yuujou	1	Action Mecha Sci-Fi Shounen Super Power	6.42
@@ -4551,7 +4449,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9630	Sore Ike! Anpanman: Yuurei Sen wo Yattsukero!!	1	Comedy Fantasy Kids	6.43
 10112	Zero Tester	38	Action Adventure Mecha Sci-Fi	6.43
 10363	Kachou no Koi	1	Comedy Romance Yaoi	6.43
-4950	009-1: R&amp;B	1	Action Sci-Fi Seinen	6.44
 4951	Amefuri Kozou	1	Fantasy Supernatural	6.44
 4952	Arve Rezzle: Kikaijikake no Yousei-tachi	1	Action Drama Mystery Sci-Fi Thriller	6.44
 4953	Boukyaku no Senritsu	24	Adventure Fantasy Horror Mecha Psychological Sci-Fi Shounen Space Supernatural	6.44
@@ -4580,7 +4477,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7559	Captain	1	Shounen Sports	6.44
 7639	Choubakumatsu Shounen Seiki Takamaru	2	Action Comedy Fantasy	6.44
 7777	Eiyuu Banka Koushi-den	1	Adventure Drama Historical Romance	6.44
-7783	Elmer no Bouken: My Father&#039;s Dragon	1	Adventure Fantasy Kids	6.44
 7808	Forza! Hidemaru	26	Sports	6.44
 7999	Hal no Fue	1	Adventure Kids	6.44
 8032	Harisu no Kaze	70	Comedy School	6.44
@@ -4626,7 +4522,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7438	Ashita Kirarin	1	Drama Kids	6.45
 8450	Kero Kero Keroppi no Sora wo Tobetara	1	Adventure Kids	6.45
 8558	Konpeki no Kantai: Sourai Kaihatsu Monogatari	1	Historical Military	6.45
-10120	Ziggy: Soreyuke! R&amp;R Band	1	Adventure Music Mystery	6.45
 4889	Akuma-kun	42	Adventure Fantasy Horror Magic Supernatural	6.46
 4890	Bakuon!! OVA	2	Cars Seinen Slice of Life Sports	6.46
 4891	Battle Spirits: Double Drive	Unknown	Action Kids	6.46
@@ -4702,7 +4597,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4833	B-Densetsu! Battle Bedaman Enkon	51	Adventure Comedy Kids Shounen	6.48
 4834	Black Jack: Dr. Pinoko no Mori no Bouken	1	Comedy	6.48
 4836	Cluster Edge	25	Action Fantasy Military Sci-Fi	6.48
-4837	Dog Days&#039;&#039;: Gravure Talk	4	Comedy Fantasy	6.48
 4838	Dr. Slump Movie 06: Arale-chan N-cha! Penguin Mura wa Hare Nochi Hare	1	Comedy Sci-Fi Shounen	6.48
 4839	Gegege no Kitarou: Nippon Bakuretsu	1	Action Fantasy Horror Kids Shounen Supernatural	6.48
 4840	Ghost in the Shell: Arise - Logicoma Specials	4	Mecha Sci-Fi	6.48
@@ -4712,9 +4606,7 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4844	Machine Robo: Revenge of Chronos	47	Action Mecha Sci-Fi	6.48
 4845	Mahou no Mako-chan	48	Fantasy Magic Romance Shoujo	6.48
 4846	Manga Nippon Mukashibanashi (1976)	1471	Fantasy Historical	6.48
-4847	Marie &amp; Gali	40	Comedy	6.48
 4848	Nanako SOS	39	Comedy Parody Romance Super Power	6.48
-4849	NG Knight Ramune &amp; 40 EX: Biku Biku Triangle Ai no Arashi Daisakusen	3	Adventure Comedy Fantasy Mecha Shounen	6.48
 4850	Nozomi Witches	3	Romance Sports	6.48
 4851	Ojarumaru	Unknown	Adventure Comedy Fantasy	6.48
 4852	Ozanari Dungeon: Kaze no Tou	3	Action Adventure Comedy Fantasy	6.48
@@ -4740,7 +4632,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4779	Kara no Kyoukai: Manner Movies	7	Action Comedy	6.49
 4795	A-Ko The Versus	2	Action Adventure Comedy Romance Sci-Fi Super Power	6.49
 4796	Akage no Anne Specials	2	Drama Historical Kids Shoujo Slice of Life	6.49
-4797	Arata naru Sekai: World&#039;s/Start/Load/End	1	Sci-Fi	6.49
 4798	Attack No.1: Namida no Sekai Senshuken	1	Drama Shoujo Sports	6.49
 4799	Boukensha: The Man Was from Spain	26	Adventure Historical	6.49
 4800	Catman Series II	8	Comedy Fantasy Slice of Life	6.49
@@ -4752,7 +4643,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4806	Geneshaft	13	Adventure Mecha Sci-Fi Space	6.49
 4807	Geobreeders: File-X Chibi Neko Dakkan	3	Adventure Comedy Shounen Supernatural	6.49
 4808	Guskou Budori no Denki	1	Drama	6.49
-4809	Gyakuten Saiban: Sono &quot;Shinjitsu&quot; Igi Ari!	24	Comedy Drama Mystery Police	6.49
 4810	Haou Daikei Ryuu Knight: Adeu Legend Final	1	Adventure Comedy Fantasy Mecha Parody	6.49
 4811	Happy Seven: The TV Manga	13	Comedy Fantasy	6.49
 4812	Himesama Goyoujin	12	Comedy	6.49
@@ -4770,7 +4660,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4824	Pokemon: Utae Meloetta - Rinka no Mi wo Sagase!	1	Adventure Comedy Fantasy Kids	6.49
 4825	Recorder to Randoseru Mi☆ Special	1	Comedy School Seinen Slice of Life	6.49
 4826	Shouwa Monogatari (Movie)	1	Drama Historical	6.49
-4827	Sketchbook: Full Color&#039;s Picture Drama	6	Comedy Slice of Life	6.49
 4828	Space Fantasia 2001 Nights	1	Drama Sci-Fi Seinen Space	6.49
 4829	Space☆Dandy 2nd Season Picture Drama	3	Comedy Sci-Fi Space	6.49
 4830	Zetsumetsu Kigu Shoujo: Amazing Twins	2	Magic Slice of Life	6.49
@@ -4795,7 +4684,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4769	Choujuushin Gravion	13	Action Comedy Mecha Sci-Fi Shounen	6.5
 4770	Classroom☆Crisis Special	1	School Sci-Fi	6.5
 4771	Duel Masters Cross Shock	50	Action Adventure Comedy Shounen	6.5
-4772	Escha &amp; Logy no Atelier: Tasogare no Sora no Renkinjutsushi	12	Fantasy	6.5
 4773	Final Fantasy: The Spirits Within	1	Sci-Fi	6.5
 4774	Gag Manga Biyori: Jump Festa 2002 Special	1	Comedy	6.5
 4775	Galilei Donna	11	Action Adventure Sci-Fi	6.5
@@ -4814,7 +4702,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4790	Toshi wo Totta Wani	1	Drama	6.5
 4791	Wanpaku Ouji no Orochi Taiji	1	Adventure	6.5
 4792	Yagami-kun no Katei no Jijou	3	Comedy	6.5
-4793	Yoshinaga-san&#039;chi no Gargoyle Specials	5	Adventure Comedy Fantasy	6.5
 4794	Yurumates	1	Comedy Seinen Slice of Life	6.5
 7404	Anime Document: München e no Michi	16	Sports	6.5
 7424	Aqua Kids	26	Adventure Kids	6.5
@@ -4828,7 +4715,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7858	Gamba to Kawauso no Bouken	1	Adventure Kids	6.5
 7949	Gokyoudai Monogatari	32	Comedy	6.5
 8004	Hana no Kakarichou	25	Comedy Seinen Slice of Life	6.5
-8147	Histoire d&#039;Etty	1	Kids Slice of Life	6.5
 8152	Hitotsu no Hana	1	Drama Historical Kids	6.5
 8317	Kachikachi Yama (1940)	1	Fantasy	6.5
 8406	Kariage-kun	59	Comedy Seinen Slice of Life	6.5
@@ -4838,7 +4724,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8609	Kuwagata Tsumami	84	Comedy	6.5
 8623	Kyouryuu Wakusei	60	Adventure Fantasy Historical Sci-Fi	6.5
 8624	Kyoushitsu wa Obake ga Ippai/Boku wa Yuusha da zo	1	Fantasy Kids Supernatural	6.5
-8655	Liv &amp; Bell	3	Adventure Kids	6.5
 8663	Lulin Da Maoxian	1	Adventure Fantasy	6.5
 8701	Makiba no Shoujo Katori Specials	2	Adventure Drama Historical Slice of Life	6.5
 8719	Manga Aesop Monogatari (TV)	52	Comedy Fantasy Kids	6.5
@@ -4896,7 +4781,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4702	Ginga Hyouryuu Vifam: Keito no Kioku - Namida no Dakkai Sakusen	1	Action Adventure Mecha Sci-Fi	6.52
 4703	Harukanaru Toki no Naka de: Hachiyou Shou Specials	8	Fantasy Historical Magic Romance Shoujo Supernatural	6.52
 4704	Hello Harinezumi: Satsui no Ryoubun	1	Drama Mystery Psychological Seinen	6.52
-4705	I&#039;ll/CKBC	2	Action School Shounen Sports	6.52
 4706	Just Awake	1	Action Music Sci-Fi	6.52
 4708	Kita e.: Diamond Dust Drops Special	1	Drama Slice of Life	6.52
 4709	Kite Liberator	1	Action Drama Sci-Fi	6.52
@@ -4913,7 +4797,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4721	Sekai Meisaku Douwa: Oyayubi Hime	1	Fantasy Kids	6.52
 4722	Soukou Kihei Votoms Recaps	4	Action Drama Mecha Military Sci-Fi	6.52
 4723	Tanken Driland	37	Adventure Fantasy	6.52
-4724	The iDOLM@STER Million Live! &quot;Dreaming!&quot; Animation PV	1	Music	6.52
 4725	TO	2	Action Sci-Fi	6.52
 4726	To Heart 2 Special	1	Drama Romance School	6.52
 4727	Torajima no Miime	2	Slice of Life	6.52
@@ -5040,7 +4923,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4619	Sakura Taisen: Katsudou Shashin	1	Adventure Mecha Sci-Fi Shounen	6.55
 4620	Saru Getchu: On Air	26	Adventure Comedy Fantasy Kids Romance Shounen	6.55
 4621	Sentimental Journey	12	Drama Romance Shoujo	6.55
-4622	Soukou Kihei Votoms: Vol.2 Highlights of the &#039;A.T. Votoms&#039;	1	Action Drama Mecha Military Sci-Fi	6.55
 4623	Souten no Ken Specials	4	Action Historical Martial Arts Shounen	6.55
 4624	Tactical Roar	13	Comedy Military Romance Sci-Fi	6.55
 4625	Tottoko Hamtarou OVA 4: Hamuchanzu no Mezase! Hamuhamu Kin Medal - Hashire! Hashire! Daisakusen	1	Adventure Comedy Kids	6.55
@@ -5058,7 +4940,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9907	Umigame to Shounen	1	Drama Historical	6.55
 10115	Zettai Zetsumei Dangerous Jiisan (2004)	51	Comedy Kids	6.55
 4560	Bakukyuu Renpatsu! Super Bedaman	18	Adventure Game	6.56
-4561	Cookin&#039; Idol Ai! Mai! Main!	305	Comedy Kids	6.56
 4562	Coppelion	13	Action Sci-Fi Seinen	6.56
 4563	Doraemon: Nobita to Mirai Note	1	Adventure Fantasy Kids Sci-Fi Shounen	6.56
 4564	Dr. Slump Movie 07: Arale-chan N-cha! Penguin Mura yori Ai wo Komete	1	Comedy Sci-Fi Shounen	6.56
@@ -5078,7 +4959,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4578	Panda no Daibouken	1	Adventure	6.56
 4579	Panda-Z: The Robonimation	30	Action Comedy Kids Mecha Parody Sci-Fi Shounen	6.56
 4580	Pokemon XY SP: Road to Kalos	1	Action Adventure Comedy Fantasy Kids	6.56
-4581	Pokemon XY: New Year&#039;s Eve 2014 Super Mega Special	1	Action Adventure Comedy Fantasy Kids	6.56
 4582	Rinne no Lagrange: Kamogawa Memoria	1	Action Comedy Mecha Sci-Fi	6.56
 4583	SD Gundam Sangokuden Brave Battle Warriors	51	Action Historical Mecha	6.56
 4584	Shirogane no Ishi: Argevollen	24	Action Mecha	6.56
@@ -5101,7 +4981,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9239	Play Ball 2nd	13	Action Shounen Sports	6.56
 9901	Ultraman: Chou Toushi Gekiden - Suisei Senjin Tsuifon Toujou	1	Action Sci-Fi Shounen Space Super Power	6.56
 9952	Wanpaku Tanteidan	35	Action Mystery	6.56
-4491	Chi&#039;s Sweet Home (2016)	Unknown	Slice of Life	6.57
 4518	Pokemon: Pikachu no Summer Bridge Story	1	Adventure Comedy Fantasy Kids	6.57
 4525	The iDOLM@STER Cinderella Girls: Special Program	1	Comedy Music	6.57
 4531	Boku wa Imouto ni Koi wo Suru	1	Romance Shoujo	6.57
@@ -5145,7 +5024,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9117	Ookami Shounen Ken: Arabia no Kaijin - Ma no Iwa no Kettou	1	Adventure Kids	6.57
 9151	Ougon Senshi Gold Lightan	52	Mecha Sci-Fi	6.57
 9443	Shiawase no Ouji	1	Kids	6.57
-9769	The Deer&#039;s Bell	1	Kids	6.57
 9833	Totsugeki! Pappara-tai	25	Action Comedy Romance	6.57
 9954	Wansa-kun OVA	1	Comedy Kids	6.57
 4456	Chousoku Henkei Gyrozetter	51	Action Cars Mecha Shounen	6.58
@@ -5199,15 +5077,12 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4446	12-sai.	8	Romance School Shoujo	6.59
 4447	Anata wo Zutto Aishiteru	1	Adventure Kids	6.59
 4448	Argento Soma Special	1	Action Mecha Sci-Fi	6.59
-4449	Atashin&#039;chi Movie	1	Comedy	6.59
 4450	Avengers Confidential: Black Widow to Punisher	1	Action Sci-Fi Seinen	6.59
-4451	Bakusou Kyoudai Let&#039;s &amp; Go Special	1	Adventure Cars Shounen Sports	6.59
 4452	Boys Be...	13	Comedy Romance Shounen Slice of Life	6.59
 4453	Catman Series III	6	Comedy Fantasy Slice of Life	6.59
 4454	Chiisana Viking Vickie	78	Adventure Comedy Historical Kids	6.59
 4455	Chou Kuse ni Narisou	39	Comedy Romance School Shoujo Slice of Life	6.59
 4457	Cyborg 009: Chou Ginga Densetsu	1	Action Sci-Fi Space	6.59
-4458	Doraemon: It&#039;s Autumn!	1	Adventure Comedy Fantasy Kids Shounen	6.59
 4459	Gakkatsu!	25	Comedy School	6.59
 4460	Gatchaman	3	Action Adventure Martial Arts Sci-Fi Shounen Super Power	6.59
 4461	Girls und Panzer: Shoukai Shimasu!	2	Military School	6.59
@@ -5225,7 +5100,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4473	Ningyo	1	Fantasy	6.59
 4474	Nurse Witch Komugi-chan Magikarte Special	1	Comedy Magic Parody	6.59
 4475	Pika Don	1	Drama Historical	6.59
-4476	Pokemon: Pikachu Kore Nan no Kagi?	1	Adventure Comedy Fantasy Kids	6.59
 4477	Rockman Hoshi ni Negai wo	3	Action Adventure Sci-Fi	6.59
 4478	Saint Seiya Omega	97	Action Adventure Fantasy Shounen	6.59
 4479	Sakura Taisen: Le Nouveau Paris	3	Adventure Mecha Sci-Fi Shounen	6.59
@@ -5235,7 +5109,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4483	Umi no Triton	27	Adventure Fantasy Shounen	6.59
 4484	Utopia	1	Music	6.59
 4485	Zoids Fuzors	26	Adventure Mecha Sci-Fi Shounen	6.59
-8117	Hidari no O&#039;Clock!!	2	Drama	6.59
 4413	Amnesia OVA	1	Fantasy Shoujo	6.6
 4414	Android Ana Maico 2010	24	Comedy Drama Sci-Fi Seinen	6.6
 4415	Chou Supercar Gattiger	25	Action Cars Sci-Fi	6.6
@@ -5257,10 +5130,8 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4432	Pucca (2008)	13	Action Comedy Parody Romance	6.6
 4433	Rokudenashi Blues 1993	1	Action Comedy Drama School Shounen Sports	6.6
 4434	Saint October	26	Adventure Fantasy	6.6
-4435	Shakugan no Shana: Shana &amp; Yuuji no Naze Nani Shana! Nandemo Shitsumon-bako!	1	Comedy Fantasy Supernatural	6.6
 4436	Shin Hikari Shinwa: Palutena no Kagami	3	Adventure Comedy Fantasy	6.6
 4437	Sono Hanabira ni Kuchizuke wo: Risa x Miya Gekijou	10	Comedy Romance School Shoujo Ai Slice of Life	6.6
-4438	Soukou Kihei Votoms: Vol.1 Stories of the &#039;A.T. Votoms&#039;	1	Action Drama Mecha Military Sci-Fi	6.6
 4439	Stella Jogakuin Koutou-ka C³-bu	13	Military School Sports	6.6
 4440	Street Fighter Alpha: Generations	1	Adventure Shounen	6.6
 4441	Taichi Senjimon	39	Action Adventure Fantasy Magic	6.6
@@ -5339,7 +5210,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4376	Rokudenashi Blues	1	Comedy Drama School Shounen Sports	6.62
 4377	Saiyuuki	1	Adventure	6.62
 4378	Sensou no Tsukurikata	1	Drama Kids	6.62
-4379	Shin Megami Tensei Devil Children: Light &amp; Dark	52	Action Adventure Demons Fantasy Game Kids Magic Sci-Fi Supernatural	6.62
 4380	Shin Minashigo Hutch	26	Adventure Comedy Drama	6.62
 4381	Shiritsu Araiso Koutougakkou Seitokai Shikkoubu	2	Comedy Shounen Ai Sports	6.62
 4382	Sojunghan Nal-ui Kkum	1	Comedy Drama Romance	6.62
@@ -5358,7 +5228,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4299	Gakuen Handsome The Animation	1	Comedy Parody School Shounen Ai	6.63
 4323	Amagi Brilliant Park: Wakuwaku Mini Theater - Rakugaki Backstage	7	Comedy	6.63
 4325	Blossom	1	Music	6.63
-4326	Doraemon: It&#039;s Summer!	1	Adventure Comedy Fantasy Kids Shounen	6.63
 4327	Fudanshi Koukou Seikatsu	12	Comedy School Shoujo Slice of Life	6.63
 4328	Futari wa Precure: Splash☆Star Maji★Doki♥ Theater	1	Action Comedy Fantasy Magic Shoujo	6.63
 4329	Gakkou no Kowai Uwasa: Hanako-san ga Kita!!	35	Horror	6.63
@@ -5368,7 +5237,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4333	Gundam Neo Experience 0087: Green Divers	1	Adventure Mecha Space	6.63
 4334	Hamelin no Violin Hiki: The Movie	1	Adventure Comedy Fantasy	6.63
 4335	Inugami-san to Nekoyama-san Special	1	Comedy School Shoujo Ai	6.63
-4337	Joshikousei: Girl&#039;s High Specials	3	Comedy Slice of Life	6.63
 4338	Kagaku Ninja-tai Gatchaman F	48	Action Adventure Sci-Fi Shounen	6.63
 4339	Kinnikuman (1984)	1	Action Comedy Shounen Sports	6.63
 4340	Kiteretsu Daihyakka	331	Comedy Drama Slice of Life	6.63
@@ -5401,7 +5269,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4293	Dokkiri Doctor	26	Comedy Slice of Life	6.64
 4294	Dynamic Super Robots Soushingekki	3	Action Mecha Sci-Fi Shounen	6.64
 4295	Etotama Specials	6	Action Comedy Fantasy	6.64
-4296	eX-Driver: Nina &amp; Rei Danger Zone	1	Action Cars Sci-Fi	6.64
 4297	Fatal Fury: Legend of the Hungry Wolf	1	Action Adventure Drama Martial Arts Romance Shounen	6.64
 4298	Futakoi	13	Comedy Romance School	6.64
 4300	Gokujou!! Mecha Mote Iinchou Second Collection	51	Comedy Romance School Shoujo	6.64
@@ -5413,7 +5280,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4306	Kyoukai no Kanata: Idol Saiban! Mayoi Nagara mo Kimi wo Sabaku Tami	5	Comedy	6.64
 4307	Last Exile: Ginyoku no Fam Movie - Over the Wishes	1	Action Adventure Sci-Fi	6.64
 4308	Legend of Regios	3	Magic	6.64
-4309	Mobile Suit SD Gundam&#039;s Counterattack	2	Comedy Mecha Parody	6.64
 4310	Muteki Robo Trider G7	50	Comedy Mecha Sci-Fi Space	6.64
 4311	Onigamiden	1	Action Demons Supernatural	6.64
 4312	Paul no Miracle Daisakusen	51	Action Adventure Kids	6.64
@@ -5424,7 +5290,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4317	Tenshi no Shippo Chu!	11	Fantasy Magic Romance	6.64
 4318	Tezuka Osamu Monogatari: Boku wa Son Gokuu	1	Adventure	6.64
 4319	Tokyo ESP	12	Action Comedy Sci-Fi Shounen Super Power Supernatural	6.64
-4320	Trickster: Edogawa Ranpo &quot;Shounen Tanteidan&quot; yori	24	Mystery	6.64
 4321	Wakakusa no Yon Shimai	26	Drama Historical Slice of Life	6.64
 4322	Yume de Aetara (TV)	16	Comedy Drama Romance Seinen Slice of Life	6.64
 8074	Hello Kitty no Nemureru Mori no Bijo	1	Fantasy Kids	6.64
@@ -5446,7 +5311,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4254	Cheung gong chat hou	1	Kids	6.65
 4255	Choujin Locke	1	Action Sci-Fi Super Power	6.65
 4256	Dirty Pair no Ooshoubu: Nolandia no Nazo	1	Action Adventure Comedy Police Sci-Fi	6.65
-4257	Eden&#039;s Bowy	26	Action Adventure Fantasy Romance Sci-Fi	6.65
 4258	Examurai Sengoku	24	Action Martial Arts Samurai Sci-Fi	6.65
 4259	Fushigiboshi no☆Futagohime Gyu! Recap	1	Comedy Magic Shoujo	6.65
 4260	Gall Force 2: Destruction	1	Action Military Sci-Fi Space	6.65
@@ -5520,7 +5384,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4189	Burenai Ai de	1	Music	6.67
 4191	Comic Party Revolution OVA	4	Comedy	6.67
 4192	Crying Freeman	6	Action Drama Martial Arts Police Romance Seinen	6.67
-4193	Doraemon: It&#039;s Spring!	1	Adventure Comedy Fantasy Kids Shounen	6.67
 4194	Futatsu no Kurumi	1	Drama	6.67
 4195	Ginga Tetsudou 999: Jikuu wo Koeta Energy no Tabi	5	Adventure Drama Sci-Fi	6.67
 4196	Happy Happy Clover	13	Comedy Fantasy Kids Shoujo	6.67
@@ -5531,7 +5394,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4201	Nekojiru Gekijou Jirujiru Original	27	Action Comedy	6.67
 4202	Nintama Rantarou Movie	1	Comedy Shounen	6.67
 4203	Nurarihyon no Mago: Jump Super Anime Tour Special	1	Action Demons Shounen Sports Supernatural	6.67
-4204	Pokemon XY&amp;Z: Subete no Nazo wo Tokiakase!	1	Action Adventure Fantasy Kids	6.67
 4205	Pucca (2006)	26	Comedy Parody Romance	6.67
 4206	RahXephon Specials	2	Action Drama Mecha Music Mystery Romance Sci-Fi	6.67
 4208	Ryuuseiki Gakusaver	6	Action Comedy Mecha Parody School Sci-Fi Space	6.67
@@ -5555,7 +5417,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7980	Gutchonpa Omoshiro Hanashi	5	Kids	6.67
 8089	Hello Kitty no Tomatta Big Ben	1	Fantasy Kids	6.67
 8262	Japonese	1	Comedy	6.67
-8426	Kazu &amp; Yasu Hero Tanjou	1	Drama Sports	6.67
 8467	Kikansha Sensei	1	Comedy School Slice of Life	6.67
 8536	Kogitsune no Shouboutai	1	Drama Fantasy Kids	6.67
 8720	Manga Doushite Monogatari	100	Adventure Comedy Kids	6.67
@@ -5571,7 +5432,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9304	Ranpou	21	Comedy Parody School	6.67
 9437	Shi Wan Ge Leng Xiaohua	12	Comedy Parody	6.67
 9481	Shin-chan no Sanrinsha	1	Historical Kids	6.67
-9715	Tama &amp; Friends: Uchi no Tama Shirimasenka?	Unknown	Adventure Kids	6.67
 9724	Tanoshii Bunmeishi: Tetsu Monogatari	1	Historical Slice of Life	6.67
 9777	The Monkey King Conquers the Demon	1	Adventure	6.67
 9810	Toko-chan Chokkin	3	Adventure Historical Kids Slice of Life	6.67
@@ -5635,7 +5495,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4112	Candy Candy: Haru no Yobigoe	1	Drama Shoujo Slice of Life	6.69
 4113	Final Approach	13	Comedy Drama Romance Slice of Life	6.69
 4114	Girls und Panzer: Nihon Senshadou Renmei News	2	Comedy	6.69
-4115	Glass no Kantai: La Legende du Vent de l&#039;Univers	24	Adventure Sci-Fi	6.69
 4116	Guitar wo Motta Shounen: Kikaider vs. Inazuman	1	Sci-Fi Shounen	6.69
 4117	Jumping	1	Adventure	6.69
 4118	Jungle Taitei	52	Adventure Kids Shounen	6.69
@@ -5672,7 +5531,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 4090	Gall Force 1: Eternal Story	1	Action Adventure Mecha Military Sci-Fi Space	6.7
 4091	Hana no Mahoutsukai Mary Bell	50	Adventure Fantasy Magic Shoujo	6.7
 4092	Narue no Sekai	12	Comedy Romance Sci-Fi	6.7
-4093	NG Knight Ramune &amp; 40 DX: Wakuwaku Jikuu - Honoo no Daisousasen	3	Adventure Comedy Fantasy Shounen	6.7
 4094	Ojisan to Marshmallow	12	Comedy Slice of Life	6.7
 4095	Onkyo Seimeitai Noiseman	1	Action Fantasy Sci-Fi	6.7
 4096	Otogi Juushi Akazukin OVA	1	Adventure Comedy Fantasy Magic	6.7
@@ -5791,7 +5649,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3974	Buzzer Beater	13	Shounen Sports	6.73
 3975	Dagashi Kashi	12	Comedy Shounen Slice of Life	6.73
 3976	DNA² OVA	3	Comedy Drama Sci-Fi	6.73
-3977	Dr. Slump Movie 02: &quot;Hoyoyo!&quot; Uchuu Daibouken	1	Comedy Sci-Fi Shounen	6.73
 3978	Element Hunters	39	Sci-Fi Shounen	6.73
 3979	Fusha no Sha	1	Adventure Historical Martial Arts Samurai Supernatural	6.73
 3980	Ghost in the Shell: Stand Alone Complex - Tachikoma no Hibi Fan Disc	3	Comedy Mecha Sci-Fi	6.73
@@ -5837,11 +5694,9 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3939	.hack//Liminality	4	Game Mystery Sci-Fi	6.74
 3940	3 Choume no Tama: Uchi no Tama Shirimasenka?	35	Adventure	6.74
 3941	Amazing Nuts!	4	Adventure Music Police Romance Sci-Fi	6.74
-3942	Bakusou Kyoudai Let&#039;s &amp; Go MAX	51	Cars Shounen Sports	6.74
 3943	Blue Dragon: Tenkai no Shichi Ryuu	51	Adventure Comedy Fantasy Supernatural	6.74
 3944	Coyote Ragtime Show	12	Action Adventure Comedy Mecha Sci-Fi Shounen	6.74
 3945	Dokonjou Gaeru	103	Comedy Slice of Life	6.74
-3946	Doraemon: It&#039;s Winter!	1	Adventure Comedy Fantasy Kids Shounen	6.74
 3947	Doraemon: Treasure of the Shinugumi Mountain	1	Adventure Comedy Fantasy Kids Shounen	6.74
 3948	Fluximation	14	Music	6.74
 3949	Gasaraki	25	Drama Mecha Military Psychological Supernatural	6.74
@@ -5872,9 +5727,7 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3902	Akage no Anne: Green Gables e no Michi	1	Adventure Historical Shoujo Slice of Life	6.75
 3903	Canaan: Minorikawa Report 201X Shanghai	1	Action Seinen	6.75
 3904	Choujuushin Gravion Zwei	12	Adventure Comedy Mecha Sci-Fi Shounen	6.75
-3905	Doraemon: It&#039;s New Year!	1	Comedy Kids Sci-Fi Shounen	6.75
 3906	Dragon Ball GT: Goku Gaiden! Yuuki no Akashi wa Suushinchuu	1	Action Adventure Comedy Fantasy Martial Arts Shounen Super Power	6.75
-3907	E&#039;s Otherwise	26	Adventure Comedy Drama Military Sci-Fi Shounen Supernatural	6.75
 3908	Fatal Fury: The Motion Picture	1	Action Adventure Drama Martial Arts Romance Shounen	6.75
 3909	Gakumon!: Ookami Shoujo wa Kujikenai	3	Comedy School Shounen	6.75
 3910	Ganso Tensai Bakabon	103	Comedy Slice of Life	6.75
@@ -5883,7 +5736,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3913	Gun Frontier	13	Action Adventure Drama Historical Sci-Fi Seinen	6.75
 3914	Hakugei Densetsu	26	Adventure Sci-Fi	6.75
 3915	Haou Taikei Ryuu Knight	52	Action Adventure Fantasy Mecha	6.75
-3916	Hikyou Tanken Fam &amp; Ihrlie	4	Action Adventure Comedy Fantasy Magic	6.75
 3917	Jetter Mars	27	Action Drama Mecha Sci-Fi	6.75
 3918	Koihime†Musou OVA	1	Comedy Fantasy School	6.75
 3919	Line Offline: Salaryman	114	Comedy	6.75
@@ -5894,7 +5746,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3924	Nanaka 6/17	12	Comedy Drama Romance Shounen Slice of Life	6.75
 3925	Persona 4 the Golden Animation	12	Adventure Mystery School Sci-Fi Super Power Supernatural	6.75
 3926	Pokemon XY: Hakai no Mayu to Diancie	1	Adventure Fantasy Kids	6.75
-3927	Pokemon: Ash&#039;s Journey	1	Fantasy Kids	6.75
 3928	Princess Tutu Recaps	3	Comedy Magic Romance Shoujo	6.75
 3929	Ranpo Kitan: Game of Laplace	11	Mystery	6.75
 3930	Shadow Skill (1996)	3	Adventure Drama Fantasy Shounen	6.75
@@ -6204,7 +6055,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3636	Ai Monogatari: 9 Love Stories	1	Drama Romance	6.82
 3637	Akuma no Riddle	12	Action School Shoujo Ai	6.82
 3638	Araiguma Rascal	52	Drama Historical Slice of Life	6.82
-3639	Bakusou Kyoudai Let&#039;s &amp; Go!! WGP Bousou Mini Yonku Daitsuiseki	1	Adventure Cars Shounen Sports	6.82
 3640	Beet the Vandel Buster Excellion	25	Adventure Fantasy Shounen Supernatural	6.82
 3641	Black Jack ONA	12	Drama	6.82
 3642	Crayon Shin-chan Manatsu no Yoru ni Ora Sanjou! Arashi wo Yobu Den-O vs. Shin-O 60-bu Special!!	1	Action Comedy Kids Shounen Super Power	6.82
@@ -6304,7 +6154,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3594	Tottoko Hamtarou Movie 1: Ham-Ham Land Daibouken	1	Adventure Comedy Kids	6.84
 3595	Tsukumo	1	Historical Supernatural	6.84
 3596	Weiß Kreuz	25	Action Drama Shounen	6.84
-3597	Working&#039;!! Announcement Specials	2	Comedy	6.84
 7754	Dr. Slump: Arale-chan Specials	2	Comedy Sci-Fi Shounen	6.84
 8444	Kero Kero Keroppi no Kero Kero House no Himitsu	1	Fantasy Kids	6.84
 9008	Non-tan to Issho	263	Kids	6.84
@@ -6349,7 +6198,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3507	Anime 80-nichikan Sekai Isshuu	26	Adventure Historical Kids Romance	6.86
 3508	Anne no Nikki: Anne Frank Monogatari	1	Drama Historical	6.86
 3509	Arad Senki: Slap Up Party	26	Action Adventure Comedy Fantasy	6.86
-3510	Bakusou Kyoudai Let&#039;s &amp; Go	51	Adventure Cars Shounen Sports	6.86
 3511	Chibi☆Devi!	75	Fantasy Shoujo Supernatural	6.86
 3512	Cluster Edge Specials	3	Action Fantasy Military Sci-Fi	6.86
 3513	Crayon Shin-chan Movie 20: Arashi wo Yobu! Ora to Uchuu no Princess	1	Comedy Kids Shounen	6.86
@@ -6364,7 +6212,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3522	Kikou Senki Dragonar	48	Adventure Mecha Sci-Fi Shounen Space	6.86
 3523	Mirai Robo Daltanias	47	Comedy Mecha Shounen Space	6.86
 3524	Nisoku Hokou	1	Music	6.86
-3525	Persona 4 the Animation: A Brief Lesson on Izanagi &amp; Izanami	1	School	6.86
 3526	Piyoko ni Omakase pyo!	8	Comedy Sci-Fi Shounen	6.86
 3527	Pokemon: Pikachu no Natsuyasumi	1	Comedy Fantasy Kids	6.86
 3528	Pretty Rhythm: Aurora Dream - Prism Shougekijou	51	Comedy Shoujo	6.86
@@ -6396,7 +6243,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3485	Hoshizora no Violin	1	Historical Slice of Life	6.87
 3486	Juusenki L-Gaim	54	Action Adventure Drama Mecha Sci-Fi Shounen Space	6.87
 3487	Log Horizon Recap	1	Action Adventure Fantasy Magic Shounen	6.87
-3488	Love Live! School Idol Project: μ&#039;s →NEXT LoveLive! 2014 - Endless Parade Makuai Drama	3	Comedy	6.87
 3489	Mahoutsukai ni Taisetsu na Koto	12	Drama Magic Shounen Slice of Life	6.87
 3490	Mobile Suit Gundam Unicorn: Episode EX - 100 Years of Solitude	1	Drama Mecha Military	6.87
 3491	Moyashimon: Kin Gekijou Deluxe	4	Comedy	6.87
@@ -6411,14 +6257,12 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3500	Teekyuu 5	12	Comedy Shounen Sports	6.87
 3501	The☆Doraemons: Dokidoki Kikansha Daibakusou!	1	Adventure Comedy Fantasy Kids Sci-Fi Shounen	6.87
 3502	Tokusou Kihei Dorvack	36	Action Mecha Sci-Fi	6.87
-3503	Viper&#039;s Creed	12	Action Military Sci-Fi	6.87
 3504	Yuusha Raideen	50	Action Adventure Mecha Sci-Fi Shounen	6.87
 8727	Manga Ijin Monogatari	46	Historical	6.87
 3449	Blood-C: Special Edition	2	Action Horror School Supernatural Vampire	6.88
 3450	Blue Drop: Tenshi-tachi no Gikyoku	13	Drama Sci-Fi Shoujo Ai	6.88
 3451	Captain Tsubasa: Ayaushi! Zen Nihon Jr.	1	Action Shounen Sports	6.88
 3452	Di Gi Charat Ohanami Special	4	Comedy	6.88
-3453	Dog Days&#039; Specials	13	Action Adventure Fantasy Magic	6.88
 3454	Dragon Drive	38	Action Adventure Comedy Fantasy School Sci-Fi Shounen	6.88
 3455	Dragon Quest: Dai no Daibouken (1991)	1	Adventure Demons Fantasy Magic Shounen	6.88
 3456	Eureka Seven AO	24	Action Adventure Drama Mecha Sci-Fi	6.88
@@ -6448,7 +6292,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3422	Captain Tsubasa: Asu ni Mukatte Hashire!	1	Action Shounen Sports	6.89
 3423	Dokidoki! Precure	49	Action Fantasy Magic Shoujo	6.89
 3424	Dragon Ball Z Movie 02: Kono Yo de Ichiban Tsuyoi Yatsu	1	Adventure Comedy Fantasy Sci-Fi Shounen	6.89
-3425	Eat-Man &#039;98	12	Action Adventure Sci-Fi Shounen Super Power	6.89
 3426	Eyeshield 21: Jump Festa 2005 Special	1	Action Comedy Shounen Sports	6.89
 3427	Fatal Fury 2: The New Battle	1	Action Adventure Drama Martial Arts Shounen	6.89
 3428	Go! Princess Precure Movie: Go! Go!! Gouka 3-bondate!!!	1	Fantasy Kids Magic Shoujo	6.89
@@ -6480,7 +6323,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3393	Akai Koudan Zillion	31	Action Adventure Military Sci-Fi Shounen	6.9
 3394	Cardfight!! Vanguard G	48	Action Game Shounen	6.9
 3395	Corrector Yui	52	Adventure Comedy Magic Sci-Fi	6.9
-3396	Doraemon&#039;s Time Capsule for 2001	1	Adventure Comedy Kids Sci-Fi Shounen	6.9
 3397	Doujin Work	12	Comedy Slice of Life	6.9
 3398	Ganbare! Kickers	23	Comedy Drama Shounen Sports	6.9
 3399	Gate Keepers 21	6	Action Drama Mecha Sci-Fi Shounen	6.9
@@ -6505,7 +6347,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3418	Soukou Kihei Votoms: Big Battle	1	Action Drama Mecha Military Sci-Fi	6.9
 3419	Uchuu Koukyoushi Maetel: Ginga Tetsudou 999 Gaiden	13	Drama Sci-Fi Space	6.9
 3420	Wangpai Yushi	39	Comedy Fantasy School Shounen Supernatural	6.9
-3421	Yoshinaga-san&#039;chi no Gargoyle	13	Comedy Fantasy Slice of Life	6.9
 3438	Pokemon Best Wishes! Season 2: Decolora Adventure - Dent to Takeshi! Gyarados no Gekirin!!	1	Action Adventure Comedy Fantasy Kids	6.9
 7389	Aladdin to Mahou no Lamp no Koutsuu Anzen	1	Drama Fantasy Kids	6.9
 7657	Cofun Gal no Coffy (TV)	12	Comedy Parody	6.9
@@ -6590,7 +6431,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3298	Blade of the Immortal	13	Action Adventure Historical Samurai Supernatural	6.93
 3299	Chou Denji Robo Combattler V	54	Adventure Mecha Sci-Fi Shounen	6.93
 3300	Dokidoki! Precure Movie: Mana Kekkon!!? Mirai ni Tsunagu Kibou no Dress	1	Fantasy Kids Magic Shoujo	6.93
-3301	Dorami &amp; Doraemons: Space Land&#039;s Critical Event	1	Adventure Comedy Fantasy Kids Sci-Fi Shounen	6.93
 3302	Dragon Ball Z Movie 01: Ora no Gohan wo Kaese!!	1	Adventure Comedy Fantasy Sci-Fi Shounen	6.93
 3303	Dragon Crisis!	12	Action Magic Romance School Seinen Supernatural	6.93
 3304	F	31	Cars Shounen Sports	6.93
@@ -6663,7 +6503,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3253	Kinnikuman II Sei	51	Action Comedy Martial Arts Sci-Fi Shounen Sports	6.95
 3254	Lamune	12	Drama Romance Slice of Life	6.95
 3255	Mahoutsukai Tai!	13	Comedy Magic Romance Sci-Fi	6.95
-3256	Mobile Suit Gundam: The 08th MS Team - Miller&#039;s Report	1	Drama Mecha Military Romance Sci-Fi	6.95
 3257	Naruto Movie 3: Dai Koufun! Mikazuki Jima no Animaru Panikku Dattebayo!	1	Action Adventure	6.95
 3258	Naruto: The Cross Roads	1	Action Adventure Comedy Shounen	6.95
 3259	Peace Maker Kurogane Special	1	Action Comedy Drama Historical Samurai Shounen	6.95
@@ -6739,7 +6578,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3177	Choujikuu Seiki Orguss 02	6	Action Adventure Mecha Romance Sci-Fi Shounen	6.98
 3178	Da Yu Hai Tang	1	Adventure Supernatural	6.98
 3179	Dokkoida	12	Action Adventure Comedy Parody Sci-Fi Shounen	6.98
-3180	Dorami &amp; Doraemons: Robot School&#039;s Seven Mysteries	1	Fantasy	6.98
 3181	Futari wa Precure: Max Heart Movie 1	1	Comedy Fantasy Magic Shoujo	6.98
 3182	Futsuu no Joshikousei ga [Locodol] Yattemita.	12	Comedy Seinen	6.98
 3183	Future Card Buddyfight 100	50	Game	6.98
@@ -6791,7 +6629,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3169	Uchuusen Sagittarius	77	Adventure Sci-Fi	6.99
 3170	UFO Princess Valkyrie 4: Toki to Yume to Ginga no Utage	2	Comedy Romance Sci-Fi	6.99
 3171	Urusei Yatsura Movie 4: Lum The Forever	1	Action Adventure Comedy Drama Romance Sci-Fi	6.99
-3172	VS Knight Lamune &amp; 40 Fire	26	Comedy Fantasy Mecha Shounen	6.99
 3173	Wakakusa no Charlotte	30	Drama Historical Kids Shoujo Slice of Life	6.99
 10352	Haru wo Daite Ita	2	Drama Romance Yaoi	6.99
 3103	Sword Art Online: Extra Edition	1	Action Adventure Fantasy Game Romance	7
@@ -6898,7 +6735,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3081	Coo: Tooi Umi kara Kita Coo	1	Adventure Drama Mystery Slice of Life	7.01
 3082	Crusher Joe: The Movie	1	Action Adventure Sci-Fi Space	7.01
 3083	Fate/Prototype	1	Action Fantasy Magic Romance Shounen Supernatural	7.01
-3084	Flag Director&#039;s Edition: Issenman no Kufura no Kiroku	1	Action	7.01
 3085	Ginga Tetsudou 999: Eien no Tabibito Emeraldas	1	Sci-Fi Space	7.01
 3086	Ginga Tetsudou Monogatari: Wasurerareta Toki no Wakusei	4	Drama Sci-Fi Space	7.01
 3087	Gyouten Ningen Batsealer	52	Action Adventure Fantasy Magic	7.01
@@ -6918,7 +6754,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3101	Seigi wo Aisuru Mono Gekkou Kamen	39	Action Mystery	7.01
 3102	Sirius no Densetsu	1	Drama Fantasy Romance	7.01
 3104	Thermae Romae Specials	2	Comedy Historical Seinen	7.01
-3105	Touch 3: Kimi ga Toorisugita Ato ni - Don&#039;t Pass Me By	1	Drama School Sports	7.01
 3106	UFO Princess Valkyrie: Special	1	Comedy Romance Sci-Fi	7.01
 3107	Urusei Yatsura: Haru da Tobidase!	2	Action Adventure Comedy Drama Romance Sci-Fi	7.01
 3108	Wakaba*Girl	13	Comedy School Slice of Life	7.01
@@ -6964,7 +6799,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 10350	Kirepapa.	2	Comedy Drama Romance Yaoi	7.02
 3011	Accel World: Infinite∞Burst	1	Action Game Romance School Sci-Fi	7.03
 3012	Arslan Senki	6	Action Adventure Drama Fantasy Historical	7.03
-3013	Baka to Test to Shoukanjuu: Matsuri - Sentaku ni Yotte Tenkai ga Kawaru &quot;LIPS Eizou&quot;	1	Comedy Parody	7.03
 3014	Code:Breaker	13	Action Comedy School Shounen Super Power Supernatural	7.03
 3015	Dragon Ball Movie 2: Majinjou no Nemuri Hime	1	Action Adventure Comedy Fantasy Sci-Fi Shounen Super Power	7.03
 3016	Dwaejiui Wang	1	Drama Psychological Seinen Thriller	7.03
@@ -7010,7 +6844,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2982	Kindaichi Shounen no Jikenbo: Kuromajutsu Satsujin Jiken-hen	2	Mystery Shounen	7.04
 2983	Kogepan	10	Comedy	7.04
 2984	Kowarekake no Orgel Special	1	Drama Music Sci-Fi Seinen Slice of Life	7.04
-2985	Lupin III: Ai no Da Capo - Fujiko&#039;s Unlucky Days	1	Action Adventure Comedy Shounen	7.04
 2986	Macross Flash Back 2012	1	Drama Mecha Military Sci-Fi	7.04
 2987	Mahoutsukai Precure!	48	Action Fantasy Magic School Shoujo Slice of Life	7.04
 2988	Manie-Manie: Meikyuu Monogatari	3	Adventure Fantasy Horror Sci-Fi Supernatural	7.04
@@ -7036,7 +6869,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 3008	Vexille: 2077 Nihon Sakoku	1	Action Military Sci-Fi	7.04
 3009	Wake Up Girls!	12	Drama Music	7.04
 3010	Zone of the Enders: Dolores I	26	Action Adventure Comedy Mecha Military Sci-Fi Space	7.04
-3032	Pokemon Omega Ruby &amp; Alpha Sapphire: Mega Special Animation	1	Action Adventure Fantasy Kids	7.04
 2932	A-Channel: +A-Channel	11	Comedy School Seinen Slice of Life	7.05
 2933	Ai no Senshi Rainbowman	22	Action Adventure Mecha Sci-Fi	7.05
 2934	Animation Seisaku Shinkou Kuromi-chan 2	1	Comedy Drama Parody	7.05
@@ -7049,7 +6881,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2941	Dragon Half	2	Comedy Fantasy Parody	7.05
 2943	Heisei Inu Monogatari Bow	40	Adventure Comedy	7.05
 2944	Ikkyuu-san	296	Comedy Historical Kids	7.05
-2945	It&#039;s a Rumic World: 50th Anniversary Weekly★Shonen Sunday	1	Comedy Sci-Fi	7.05
 2946	Kannazuki no Miko	12	Drama Magic Mecha Romance Shoujo Ai Shounen Supernatural	7.05
 2947	Kimi ga Nozomu Eien: Next Season	4	Drama Romance	7.05
 2948	Live On Cardliver Kakeru	51	Fantasy Game	7.05
@@ -7057,8 +6888,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2950	Mashin Eiyuuden Wataru 2	46	Adventure Comedy Mecha	7.05
 2951	Minami no Niji no Lucy	50	Adventure Drama Slice of Life	7.05
 2952	Ore no Imouto ga Konnani Kawaii Wake ga Nai.: SD Chara ni Yoru Short Movie	13	Comedy	7.05
-2953	Pokemon the Movie XY&amp;Z: Volcanion to Karakuri no Magiana	1	Adventure Fantasy Kids	7.05
-2954	Pokemon XY&amp;Z Specials	2	Action Adventure Comedy Fantasy Kids	7.05
 2955	Pokemon: Celebi Toki wo Koeta Deai	1	Adventure Comedy Drama Fantasy Kids	7.05
 2956	Queen Emeraldas	4	Action Adventure Sci-Fi	7.05
 2957	Saint Seiya: Jashin Eris	1	Adventure Sci-Fi Shounen	7.05
@@ -7073,7 +6902,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8401	Karaoke Senshi Mike-tarou	20	Kids Music	7.05
 8527	Kochira Katsushikaku Kameari Kouenmae Hashutsujo: Ryoutsu no Asakusa Rinyuuaru Daisakusen!! - Aa Om	1	Comedy Police	7.05
 8633	Larva 2nd Season	34	Comedy	7.05
-2897	&quot;Bungaku Shoujo&quot; Kyou no Oyatsu: Hatsukoi	1	Comedy Fantasy School	7.06
 2898	.hack//Roots	26	Adventure Drama Fantasy Game Sci-Fi	7.06
 2899	A-Channel	12	Comedy School Seinen Slice of Life	7.06
 2900	Beet the Vandel Buster	52	Adventure Fantasy Shounen Supernatural	7.06
@@ -7109,7 +6937,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2931	Zombie-Loan	11	Action Horror Shounen Supernatural	7.06
 8043	Hayan Ma-eum Baeggu	13	Adventure	7.06
 10349	Hyakujitsu no Bara	2	Drama Yaoi	7.06
-2868	Bakusou Kyoudai Let&#039;s &amp; Go WGP	51	Cars Shounen Sports	7.07
 2869	Black★Rock Shooter (TV)	8	Action Drama School Slice of Life	7.07
 2870	Blassreiter	24	Action Sci-Fi	7.07
 2871	Buddy Complex: Daremo Shiranai Ashita e	1	Action Mecha Sci-Fi	7.07
@@ -7158,7 +6985,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2851	Hashire Melos!	1	Action Adventure Historical	7.08
 2852	Kurozuka	12	Action Drama Historical Horror Romance Sci-Fi Vampire	7.08
 2853	Lupin III: Lupin Ansatsu Shirei	1	Action Adventure Comedy Shounen	7.08
-2854	Mermaid&#039;s Scar	1	Drama Fantasy Horror Mystery	7.08
 2855	Nissan Serena x One Piece 3D: Mugiwara Chase - Sennyuu!! Sauzando Sanii-gou	1	Comedy Fantasy Shounen	7.08
 2856	Pita Ten	26	Comedy Fantasy Kids Romance School Shounen	7.08
 2857	Saibi	1	Drama Psychological Thriller	7.08
@@ -7195,7 +7021,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2816	Gokukoku no Brynhildr	13	Drama Mystery Sci-Fi Seinen	7.09
 2817	Heart Realize	1	Music	7.09
 2818	Hitsugi no Chaika OVA	1	Action Adventure Comedy Fantasy Shounen	7.09
-2819	Honoo no Alpenrose: Judy &amp; Randy	20	Drama Historical Romance Shoujo	7.09
 2820	Hoshi no Oujisama Petit Prince	39	Adventure	7.09
 2821	Jinzou Ningen Kikaider The Animation	13	Action Drama Mecha Sci-Fi Shounen	7.09
 2822	Kaitou Joker 3rd Season	13	Adventure Comedy Mystery Shounen	7.09
@@ -7219,7 +7044,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9066	Ojamanga Yamada-kun (Movie)	1	Comedy Slice of Life	7.09
 9774	The Marshmallow Times	52	Slice of Life	7.09
 9858	Tsushima Maru: Sayounara Okinawa	1	Historical	7.09
-2774	Asura Cryin&#039;	13	Action Mecha Supernatural	7.1
 2775	Chobits: Chibits	1	Comedy Romance	7.1
 2776	Code Geass: Hangyaku no Lelouch Picture Drama	9	Comedy School Slice of Life	7.1
 2777	Densetsu Kyojin Ideon	39	Drama Mecha Sci-Fi Space	7.1
@@ -7238,7 +7062,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2790	Nana Recaps	3	Comedy Drama Music Romance Shoujo Slice of Life	7.1
 2791	Otogizoushi	26	Adventure Drama Fantasy Historical	7.1
 2792	Pokemon Advanced Generation: Rekkuu no Houmonsha Deoxys	1	Action Adventure Comedy Fantasy Kids Sci-Fi	7.1
-2793	Pokemon Diamond &amp; Pearl: Giratina to Sora no Hanataba Sheimi	1	Action Adventure Fantasy Kids	7.1
 2794	Prince of Tennis: The Band of Princes Film Kick the Future	1	Action Music	7.1
 2795	Ranma ½: DoCo Music Video	1	Comedy Martial Arts Music Slice of Life	7.1
 2796	Shingetsutan Tsukihime	12	Action Horror Mystery Romance Super Power Supernatural Vampire	7.1
@@ -7257,7 +7080,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2740	Binan Koukou Chikyuu Bouei-bu LOVE!	12	Comedy Magic School Slice of Life	7.11
 2741	Chibi Maruko-chan: Watashi no Suki na Uta	1	Comedy Slice of Life	7.11
 2742	Chihayafuru 2: Waga Mi Yo ni Furu Nagame Seshi Ma ni	1	Comedy Josei Slice of Life	7.11
-2743	Dae Jang Geum: Jang Geum&#039;s Dream 2	26	Adventure Comedy Historical	7.11
 2744	Deltora Quest	65	Adventure Fantasy Kids	7.11
 2745	Dr. Slump	74	Comedy Sci-Fi Shounen Slice of Life	7.11
 2746	Dragon Ball Z Movie 10: Kiken na Futari! Super Senshi wa Nemurenai	1	Action Adventure Comedy Demons Fantasy Martial Arts Shounen Super Power	7.11
@@ -7310,7 +7132,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2723	Maihime	1	Drama Historical Romance	7.12
 2724	Mobile Suit Gundam MS IGLOO: Apocalypse 0079	3	Mecha Military Sci-Fi Space	7.12
 2725	Mushrambo	32	Adventure Drama Fantasy Sci-Fi Shounen	7.12
-2726	NG Knight Ramune &amp; 40	38	Adventure Comedy Fantasy Mecha Shounen	7.12
 2727	Nijiiro Hotaru: Eien no Natsuyasumi	1	Fantasy Romance Slice of Life	7.12
 2728	Ochame na Futago: Claire Gakuin Monogatari	26	Comedy Historical Kids School Shoujo Slice of Life	7.12
 2729	Rurouni Kenshin: Review Special	1	Action Comedy Samurai Shounen	7.12
@@ -7319,7 +7140,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2733	Stop!! Hibari-kun!	35	Comedy	7.12
 2734	Switch	2	Action Mystery Police	7.12
 2735	Ura Tegamibachi	25	Comedy	7.12
-2736	Yu☆Gi☆Oh! 5D&#039;s: Shinkasuru Kettou! Stardust vs. Red Demon&#039;s	1	Fantasy Game Sci-Fi	7.12
 2737	Yume no Crayon Oukoku	70	Adventure Comedy Fantasy Shoujo	7.12
 7413	Ano Hi Bokura wa Senjou de: Shounenhei no Kokuhaku	1	Historical	7.12
 8819	Miracle Psychicer Seizan	5	Action Adventure Fantasy	7.12
@@ -7342,7 +7162,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2690	Monochrome Factor	24	Action Shounen Ai Supernatural	7.13
 2691	Ochamegami Monogatari: Korokoro Pollon	46	Comedy Magic Parody	7.13
 2692	Pandane to Tamago-hime	1	Adventure Fantasy	7.13
-2693	Pokemon Diamond &amp; Pearl: Genei no Hasha Zoroark	1	Action Adventure Fantasy Kids	7.13
 2694	Prince of Tennis: Mini Theater	3	Comedy	7.13
 2695	Ranma ½: Tendou-ke no Oyobidenai Yatsura!	1	Comedy Martial Arts Slice of Life	7.13
 2697	Saint Seiya: Kamigami no Atsuki Tatakai	1	Adventure Sci-Fi Shounen	7.13
@@ -7352,7 +7171,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2703	Virtua Fighter	35	Action Adventure Comedy Martial Arts Shounen	7.13
 2704	Yamato Takeru	37	Action Adventure Fantasy Magic Mecha Sci-Fi Shounen Space	7.13
 2714	Houkago no Ouji-sama	5	Comedy School Shounen Sports	7.13
-2722	Love Live! School Idol Project: μ&#039;s →NEXT LoveLive! 2014 - Endless Parade Encore Animation	1	Comedy	7.13
 2730	Scryed Alteration I: Tao	1	Action Adventure Sci-Fi Shounen Super Power	7.13
 7541	Bucket de Gohan	20	Comedy	7.13
 8860	Monkey Turn V	25	Action Drama Sports	7.13
@@ -7362,7 +7180,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9397	Scarecrowman	26	Fantasy Kids	7.13
 9719	Tamagotchi! x Himitsukessha Taka no Tsume	1	Comedy Parody	7.13
 9846	Tsuideni Tonchinkan	43	Comedy	7.13
-9976	What&#039;s Michael? (TV)	45	Comedy	7.13
 2581	Koro-sensei Q!	1	Comedy Shounen	7.14
 2642	.hack//Sign	26	Adventure Fantasy Game Magic Mystery Sci-Fi	7.14
 2643	30th Gundam Perfect Mission	1	Mecha Sci-Fi	7.14
@@ -7389,14 +7206,12 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2664	Onegai! Samia Don	78	Comedy Fantasy Kids Magic Slice of Life	7.14
 2665	Onegai☆Twins: Natsu wa Owaranai	1	Comedy Drama Romance	7.14
 2666	Papa to Odorou	16	Comedy	7.14
-2667	Pokemon Diamond &amp; Pearl: Arceus Choukoku no Jikuu e	1	Action Adventure Comedy Drama Fantasy Kids	7.14
 2668	Pokemon: Mewtwo! Ware wa Koko ni Ari	1	Action Adventure Comedy Drama Fantasy Kids	7.14
 2669	Ryuusei no Rockman Tribe	21	Adventure	7.14
 2670	Seihou Bukyou Outlaw Star Pilot	1	Action Sci-Fi Space	7.14
 2671	Terra Formars	13	Action Drama Horror Sci-Fi Seinen Space	7.14
 2672	Toaru Kagaku no Railgun S: Motto Marutto Railgun	2	Comedy	7.14
 2673	Toaru Majutsu no Index-tan II	2	Comedy Parody	7.14
-2698	Shin Atashin&#039;chi	26	Comedy Slice of Life	7.14
 7509	Boku no Boukuugou	1	Drama Historical Kids	7.14
 7702	Deko Boko Friends	Unknown	Comedy Kids	7.14
 8120	High School Mystery: Gakuen Nanafushigi	41	Horror Mystery	7.14
@@ -7450,7 +7265,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2569	Daisougen no Chiisana Tenshi: Bush Baby	40	Adventure Drama	7.16
 2570	Digimon Tamers: Bousou Digimon Tokkyuu	1	Adventure Comedy Sci-Fi Shounen	7.16
 2571	Dirty Pair: Lovely Angels yori Ai wo Komete	2	Action Adventure Comedy Police Sci-Fi	7.16
-2572	Dog Days&#039;&#039;	12	Action Adventure Fantasy Magic	7.16
 2573	Gamba no Bouken	26	Adventure Kids	7.16
 2574	Gensoumaden Saiyuuki: Kibou no Zaika	1	Adventure Fantasy	7.16
 2575	Giant Gorg	26	Adventure Mecha Sci-Fi	7.16
@@ -7491,7 +7305,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2534	Aikatsu Stars!	Unknown	Music School Shoujo Slice of Life	7.17
 2535	Anne Happy♪	12	Comedy School Slice of Life	7.17
 2536	Area 88 (TV)	12	Action Drama Military Romance Shounen	7.17
-2537	B&#039;T X	25	Adventure Mecha Sci-Fi Shounen	7.17
 2538	Chuunibyou demo Koi ga Shitai! Ren Specials	7	Comedy	7.17
 2539	Future Card Buddyfight	64	Game	7.17
 2540	Geragera Boes Monogatari	52	Comedy Kids	7.17
@@ -7503,7 +7316,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2546	Magic Tree House	1	Adventure Magic	7.17
 2547	Mahou Shoujo Ikusei Keikaku	12	Action Fantasy Supernatural Thriller	7.17
 2548	Naruto Movie 1: Dai Katsugeki!! Yuki Hime Shinobu Houjou Dattebayo!	1	Adventure Comedy Drama Historical Shounen Supernatural	7.17
-2549	Pokemon Diamond &amp; Pearl Specials	2	Action Comedy Fantasy Kids	7.17
 2550	Precure All Stars DX the Dance Live♥: Miracle Dance Stage e Youkoso	1	Fantasy Magic Music Shoujo	7.17
 2551	Senyuu. Specials	4	Action Comedy Fantasy Shounen	7.17
 2552	Show By Rock!!	12	Comedy Music	7.17
@@ -7617,7 +7429,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2462	Pokemon Advanced Generation	192	Action Adventure Comedy Fantasy Kids	7.2
 2463	PopoloCrois	26	Adventure Fantasy	7.2
 2312	Momokuri	26	Comedy Romance Slice of Life	7.25
-2464	PriPara Movie: Mi~nna no Akogare♪ Let&#039;s Go☆Prix Paris	1	Music School Shoujo Slice of Life	7.2
 2465	Reikenzan: Hoshikuzu-tachi no Utage	12	Comedy Fantasy Magic	7.2
 2466	Sakura Trick	12	Comedy Romance School Seinen Shoujo Ai Slice of Life	7.2
 2467	Sousei no Aquarion	26	Action Mecha Romance Sci-Fi Super Power Supernatural	7.2
@@ -7639,7 +7450,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2410	Aki no Kanade	1	Music School Slice of Life	7.21
 2411	Appleseed (Movie)	1	Action Drama Mecha Military Police Sci-Fi Shounen	7.21
 2412	Bleach: Memories in the Rain	1	Action Adventure Drama Shounen Supernatural	7.21
-2413	Cat&#039;s Eye	73	Action Adventure Comedy Mystery Romance	7.21
 2414	Chikyuu Bouei Kigyou Dai-Guard	26	Adventure Comedy Mecha Military Sci-Fi	7.21
 2415	Dog Days	13	Action Adventure Fantasy Magic	7.21
 2416	Eikoku Koi Monogatari Emma: Intermission	1	Drama Historical Romance Seinen Slice of Life	7.21
@@ -7669,7 +7479,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2440	Yu☆Gi☆Oh! Duel Monsters: Battle City Special	1	Adventure Fantasy Game Shounen	7.21
 2441	Yuusha Shirei Dagwon	48	Action Adventure Martial Arts Mecha School Super Power	7.21
 2444	Battle Spirits: Sword Eyes Gekitouden	21	Shounen	7.21
-2523	Pokemon Generations	18	Action Adventure Fantasy Game Kids	7.21
 2377	Uchuu Kyoudai: Number Zero	1	Comedy Sci-Fi Seinen Slice of Life Space	7.22
 2382	A-Channel+smile	2	Comedy School Seinen Slice of Life	7.22
 2383	Aku no Hana	13	Drama Psychological Romance School	7.22
@@ -7703,7 +7512,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7955	Gongitsune	1	Adventure	7.22
 8227	Indie Anibox: Selma Danbaekjil Coffee	1	Comedy Drama Romance Samurai Sci-Fi	7.22
 9802	Tobidasu PriPara: Mi~nna de Mezase! Idol☆Grand Prix	1	Music School Shoujo Slice of Life	7.22
-2349	Pokemon Sun &amp; Moon	Unknown	Action Game Kids School	7.23
 2359	Asura	1	Drama Historical	7.23
 2360	Bokura wa Minna Kawaisou Specials	14	Comedy	7.23
 2361	Concrete Revolutio: Choujin Gensou - The Last Song	11	Action Demons Drama Fantasy Mystery Sci-Fi Super Power Supernatural	7.23
@@ -7719,7 +7527,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2371	Maison Ikkoku: Ikkokujima Nanpa Shimatsuki	1	Comedy Drama Romance	7.23
 2372	Mobile Suit Gundam Seed C.E.73: Stargazer	3	Mecha Military Sci-Fi Space	7.23
 2373	Oda Nobuna no Yabou Soushuuhen	1	Comedy Historical Romance	7.23
-2374	Pokemon Diamond &amp; Pearl	191	Action Adventure Comedy Fantasy Kids	7.23
 2375	Sansha Sanyou	12	Comedy School Slice of Life	7.23
 2376	Tamayura	4	Comedy Drama Slice of Life	7.23
 2378	Ushio to Tora	10	Action Comedy Horror	7.23
@@ -7732,7 +7539,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2329	Black★Rock Shooter (OVA)	1	Action Drama School Slice of Life	7.24
 2330	Bosco Daibouken	26	Adventure Fantasy Kids	7.24
 2331	Code Geass: Boukoku no Akito 3 - Kagayaku Mono Ten yori Otsu Picture Drama	1	Comedy Military	7.24
-2332	Dae Jang Geum: Jang Geum&#039;s Dream	26	Adventure Comedy Historical	7.24
 2333	Dantalian no Shoka: Ibarahime	1	Action Historical Mystery	7.24
 2334	Dragon Ball Z Movie 05: Tobikkiri no Saikyou tai Saikyou	1	Adventure Comedy Fantasy Sci-Fi Shounen	7.24
 2335	Final Fantasy VII: On the Way to a Smile - Episode: Denzel	1	Action Fantasy Super Power	7.24
@@ -7792,7 +7598,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2324	Shakugan no Shana III (Final) Specials	2	Comedy Parody	7.25
 2325	Shakugan no Shana Movie Special	1	Adventure Comedy Fantasy Parody	7.25
 2326	Shin Hakkenden	26	Action Adventure Martial Arts Sci-Fi	7.25
-2328	Tales of Symphonia The Animation: Tethe&#039;alla-hen Specials	4	Comedy	7.25
 7488	Bero-dashi Chonma	1	Historical Kids	7.25
 7595	Chibikko Kamu no Bouken	1	Adventure Kids	7.25
 8002	Hana Ichi Monme	3	Adventure Kids	7.25
@@ -7894,7 +7699,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2206	Lady Georgie	45	Drama Historical Romance Shoujo	7.28
 2207	Lupin III: Tenshi no Tactics - Yume no Kakera wa Koroshi no Kaori	1	Action Adventure Comedy Shounen	7.28
 2208	Miracle☆Girls	51	Drama Magic Shoujo	7.28
-2209	Naruto Shippuuden: Shippuu! &quot;Konoha Gakuen&quot; Den	1	Comedy	7.28
 2210	Nasu: Suitcase no Wataridori	1	Drama Seinen Sports	7.28
 2211	Nerawareta Gakuen	1	Romance School Sci-Fi	7.28
 2212	Onmyou Taisenki	52	Adventure Fantasy Shounen Supernatural	7.28
@@ -7915,7 +7719,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2158	Ano Natsu de Matteru: Bokutachi wa Koukou Saigo no Natsu wo Sugoshinagara Ano Natsu de Matteiru.	1	Comedy Drama Romance Sci-Fi Slice of Life	7.29
 2159	Aoharu x Kikanjuu	12	Action Comedy Shounen Sports	7.29
 2160	Aoi Hana	11	Romance Shoujo Ai Slice of Life	7.29
-2161	B&#039;T X Neo	14	Action Adventure Shounen	7.29
 2162	Black Cat Special	1	Action Comedy Shounen	7.29
 2163	Black Jack (TV): Hizouban Specials	2	Adventure	7.29
 2164	Black★Rock Shooter	1	Action Music	7.29
@@ -7949,14 +7752,12 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2192	Yu☆Gi☆Oh!	27	Action Comedy Fantasy Game Shounen	7.29
 2193	Yume-iro Pâtissière: Mune Kyun Tropical Island!	1	Kids School Shoujo	7.29
 7371	AIUEO Anime Sekai no Douwa: Aesop Monogatari Anime Series	26	Adventure Fantasy Kids	7.29
-8331	Kagerou Daze: In a Day&#039;s	1	Comedy Magic Romance Sci-Fi Slice of Life Supernatural	7.29
 8526	Kochira Katsushikaku Kameari Kouenmae Hashutsujo: Ryou-san to Chyuuken Rakkii Monogatari - Kameari D	1	Comedy Police	7.29
 8915	Naniwa Yuukyouden: Chou Gokudou! Yoru no Bat wa Manrui-hen	1	Action Comedy	7.29
 2133	Andersen Douwa: Ningyohime	1	Fantasy Romance Shoujo	7.3
 2134	Anime Sanjuushi	52	Adventure Drama Historical Romance	7.3
 2135	Battle Spirits: Shounen Gekiha Dan	50	Action Game Shounen	7.3
 2136	Danball Senki W	58	Action Kids Mecha	7.3
-2137	Detective Conan OVA 08: High School Girl Detective Sonoko Suzuki&#039;s Case Files	1	Comedy Mystery Police Shounen	7.3
 2139	Gunslinger Girl: Il Teatrino	13	Action Drama Military Sci-Fi	7.3
 2140	Hatenkou Yuugi	10	Adventure Comedy Drama Fantasy Romance Shoujo	7.3
 2141	HeatGuy J Special	1	Action Adventure Mecha Police Sci-Fi	7.3
@@ -7981,7 +7782,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 10007	Xiao Men Shen	1	Comedy Fantasy	7.3
 2108	Blood Lad: Wagahai wa Neko de wa Nai	1	Action Comedy Demons Seinen Supernatural Vampire	7.31
 2110	Detective Conan OVA 03: Conan and Heiji and the Vanished Boy	1	Adventure Comedy Mystery Police Shounen	7.31
-2111	Dragon Nest: Warriors&#039; Dawn	1	Action Adventure Fantasy Magic	7.31
 2112	Gensoumaden Saiyuuki OVA	2	Adventure Shounen Supernatural	7.31
 2113	Ghost in the Shell: Stand Alone Complex - Tachikoma na Hibi	26	Comedy Mecha Sci-Fi	7.31
 2114	Ginga Densetsu Weed	26	Adventure Drama Shounen	7.31
@@ -8012,7 +7812,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2078	Bakuman.: Deraman.	2	Comedy School Shounen	7.32
 2079	Chuunibyou demo Koi ga Shitai! Lite	6	Comedy School	7.32
 2080	Di Gi Charat Nyo	104	Comedy Fantasy Sci-Fi	7.32
-2081	Dog Days&#039;	13	Action Adventure Fantasy Magic	7.32
 2082	Doraemon Movie 03: Nobita no Daimakyou	1	Adventure	7.32
 2083	El Cazador de la Bruja	26	Adventure Drama Mystery	7.32
 2084	Flanders no Inu Boku no Patrasche	26	Drama Historical	7.32
@@ -8039,7 +7838,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2106	The iDOLM@STER Shiny Festa	3	Comedy Drama Music	7.32
 2107	Young Black Jack	12	Drama Historical Seinen	7.32
 2109	Boku no Hero Academia: Jump Festa 2016 Special	1	Action Comedy School Shounen Super Power	7.32
-9206	Penguin&#039;s Memory: Shiawase Monogatari	1	Drama Military Seinen	7.32
 2035	11-nin Iru!	1	Action Adventure Drama Mystery Romance Sci-Fi Shoujo Space	7.33
 2036	Amagami SS+ Plus Specials	6	Romance	7.33
 2037	Aoharu x Kikanjuu: Kemono-tachi no Senjou da na!	1	Action Comedy Shounen	7.33
@@ -8078,7 +7876,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2071	Smile Precure!	48	Action Fantasy Magic Shoujo	7.33
 2072	Uchuu Senkan Yamato III	25	Action Adventure Drama Military Sci-Fi Space	7.33
 2104	Soukyuu no Fafner: Dead Aggressor - Exodus Special	1	Action Drama Mecha Military Sci-Fi	7.33
-7330	&quot;Eiyuu&quot; Kaitai	1	Fantasy Super Power	7.33
 8208	Ijiwaru Baasan	39	Comedy Slice of Life	7.33
 8250	Itazura Tenshi Chippo-chan	240	Comedy Kids	7.33
 8274	Jigoku no Soubee	1	Comedy Demons Drama Kids	7.33
@@ -8091,7 +7888,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8949	Neko no Kuni no Kenpou	1	Historical	7.33
 8953	Neko wa Ikite Iru	1	Drama Historical Kids	7.33
 9228	Pink Lady Monogatari: Eikou no Tenshitachi Recaps	2	Drama Music Slice of Life	7.33
-9337	Rouge: Lady&#039;s Comic Video	2	Drama Josei Romance	7.33
 9372	Sanchoume no Yuuhi	27	Comedy Slice of Life	7.33
 9528	Shouta no Sushi: Kokoro ni Hibiku Shari no Aji	1	Shounen	7.33
 9555	Somei-ka no Hi no Youjin: Bouka no Tebiki Katei-hen	1	Drama Kids	7.33
@@ -8105,7 +7901,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2004	Densetsu no Yuusha Da Garn	46	Mecha Sci-Fi Shounen	7.34
 2005	Doraemon Movie 30: Nobita no Ningyo Daikaisen	1	Adventure Comedy Fantasy Kids Shounen	7.34
 2006	Doraemon Movie 32: Nobita to Kiseki no Shima - Animal Adventure	1	Adventure Comedy Fantasy Kids Shounen	7.34
-2007	Figure 17: Tsubasa &amp; Hikaru	13	Sci-Fi Slice of Life	7.34
 2008	Fuujin Monogatari	13	Drama Fantasy School Slice of Life Supernatural	7.34
 2009	GJ-bu@	1	Comedy School Slice of Life	7.34
 2010	Great Mazinger	56	Action Mecha Sci-Fi Shounen	7.34
@@ -8126,7 +7921,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 2025	One Piece Recap	1	Action Adventure Comedy Fantasy Shounen Super Power	7.34
 2026	One Piece: Yume no Soccer Ou!	1	Comedy Fantasy Shounen Sports	7.34
 2027	Ou Dorobou Jing	13	Adventure Comedy Fantasy Sci-Fi Shounen	7.34
-2028	Pokemon Diamond &amp; Pearl: Dialga vs. Palkia vs. Darkrai	1	Action Adventure Comedy Drama Fantasy Kids	7.34
 2029	Sei Juushi Bismarck	51	Action Mecha Sci-Fi Space	7.34
 2030	Sidonia no Kishi Movie	1	Action Mecha Sci-Fi Seinen Space	7.34
 2031	Tactics	25	Comedy Drama Fantasy Mystery Shounen Super Power	7.34
@@ -8184,8 +7978,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1945	Karneval (TV)	13	Action Fantasy Mystery Sci-Fi Shoujo	7.36
 1947	Kotoura-san	12	Comedy Drama Romance School	7.36
 1949	Kyouran Kazoku Nikki	26	Comedy Sci-Fi	7.36
-1950	Le Chevalier D&#039;Eon	24	Historical Magic Mystery Seinen Supernatural	7.36
-1951	Love Hina: Motoko no Sentaku Koi ka Ken... &quot;Naku na&quot;	1	Drama Romance Slice of Life	7.36
 1952	Mai-Otome Zwei	4	Action Magic	7.36
 1953	Masuda Kousuke Gekijou Gag Manga Biyori 3	12	Comedy	7.36
 1954	Mobile Suit Gundam Seed Destiny	50	Action Drama Mecha Military Romance Sci-Fi Space	7.36
@@ -8209,7 +8001,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1907	Chibi Maruko-chan (1995)	Unknown	Comedy Kids School Slice of Life	7.37
 1908	Chiisana Ahiru no Ooki na Ai no Monogatari: Ahiru no Kwak	52	Adventure Comedy Drama Fantasy Kids	7.37
 1909	Detective Conan OVA 01: Conan vs. Kid vs. Yaiba	1	Adventure Comedy Mystery Shounen	7.37
-1910	Detective Conan OVA 05: The Target is Kogoro! The Detective Boys&#039; Secret Investigation	1	Adventure Comedy Mystery Police Shounen	7.37
 1911	Digimon Adventure 02	50	Action Adventure Comedy Drama Fantasy Kids	7.37
 1912	Doraemon Movie 12: Nobita no Dorabian Nights	1	Adventure Comedy Fantasy Kids Shounen	7.37
 1913	Fushigi Yuugi OVA 2	6	Adventure Drama Fantasy Historical Martial Arts Romance Shoujo	7.37
@@ -8242,7 +8033,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1877	Bakemonogatari Recap	1	Mystery Romance Supernatural	7.38
 1878	Black Jack the Movie	1	Drama	7.38
 1879	Detective Conan OVA 07: A Challenge from Agasa! Agasa vs. Conan and the Detective Boys	1	Adventure Comedy Mystery Police Shounen	7.38
-1880	Doraemon: Nobita&#039;s the Night Before a Wedding	1	Fantasy	7.38
 1881	Gakuen Utopia Manabi Straight!	12	Comedy School Slice of Life	7.38
 1882	Gun x Sword	26	Action Adventure Drama Mecha Sci-Fi Shounen	7.38
 1883	Hiiro no Kakera Dai Ni Shou	13	Fantasy Romance Shoujo Supernatural	7.38
@@ -8269,7 +8059,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1948	Kuroko no Basket Movie 3: Winter Cup Soushuuhen - Tobira no Mukou	1	Comedy Shounen Sports	7.38
 1844	After War Gundam X	39	Adventure Drama Mecha Sci-Fi Space	7.39
 1845	Air Movie	1	Drama Romance Supernatural	7.39
-1846	Atashin&#039;chi	330	Comedy Slice of Life	7.39
 1847	Bishoujo Senshi Sailor Moon: Sailor Stars - Hero Club	3	Adventure Comedy Drama Fantasy Magic Romance Shoujo	7.39
 1848	Doraemon Movie 17: Nobita to Ginga Express	1	Fantasy	7.39
 1849	Doraemon: 2112-nen Doraemon Tanjou	1	Comedy Fantasy Kids	7.39
@@ -8516,7 +8305,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1606	Afro Samurai: Resurrection	1	Action Adventure Samurai	7.46
 1607	Cardcaptor Sakura: Leave It to Kero-chan	1	Comedy	7.46
 1608	Chiisana Pengin: Lolo no Bouken	3	Adventure Drama Fantasy Kids Slice of Life	7.46
-1609	Dogs: Bullets &amp; Carnage	4	Action Seinen	7.46
 1610	Doraemon Movie 07: Nobita to Tetsujin Heidan	1	Adventure Comedy Fantasy Kids Shounen	7.46
 1611	Doraemon Movie 15: Nobita to Mugen Sankenshi	1	Adventure Fantasy Kids Sci-Fi Shounen	7.46
 1612	Final Fantasy VII: Last Order	1	Action Adventure Drama Fantasy Sci-Fi	7.46
@@ -8531,7 +8319,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1621	Mobile Suit Gundam Seed Special Edition	3	Action Mecha Military Sci-Fi Space	7.46
 1622	Nekojiru-sou	1	Comedy Dementia Psychological	7.46
 1623	One Piece Movie 7: Karakuri-jou no Mecha Kyohei	1	Adventure Comedy Fantasy Shounen	7.46
-1624	Pokemon: Maboroshi no Pokemon Lugia Bakutan	1	Adventure Comedy Drama Fantasy Kids	7.46
 1625	Prince of Tennis: Pairpuri	8	Comedy Drama Shounen Sports	7.46
 1626	Rec	9	Comedy Drama Romance	7.46
 1627	Rurouni Kenshin Recap	1	Action Adventure Comedy Historical Romance Samurai	7.46
@@ -8549,7 +8336,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1549	Sengoku Basara Two: Ryuko Itadaki no Chikai! Atsuki Mirai e Kakeru Tamashii!!	1	Action Historical Samurai	7.47
 1560	Air in Summer	2	Comedy Drama Historical Romance Supernatural	7.47
 1561	Appleseed Saga Ex Machina	1	Action Mecha Military Sci-Fi	7.47
-1562	Asura Cryin&#039; 2	13	Action Mecha Supernatural	7.47
 1563	Cross Ange: Tenshi to Ryuu no Rondo	25	Action Mecha Sci-Fi	7.47
 1564	D-Frag! OVA	1	Comedy Game Seinen	7.47
 1565	Detective Conan Magic File 5: Niigata - Tokyo Omiyage Capriccio	1	Adventure Comedy Mystery Police Shounen	7.47
@@ -8580,7 +8366,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1590	Prince of Tennis: The Two Samurai The First Game	1	Action Shounen Sports	7.47
 1591	Saiyuuki Gaiden: Tokubetsu-hen - Kouga no Shou	1	Adventure Drama Fantasy Shoujo	7.47
 1592	Shinrei Tantei Yakumo	13	Horror Mystery Shoujo Supernatural	7.47
-1593	Sketchbook: Full Color&#039;s	13	Comedy Slice of Life	7.47
 1594	Slam Dunk (Movie)	1	Comedy Drama School Shounen Slice of Life Sports	7.47
 1595	Slayers Special	3	Adventure Comedy Fantasy Magic Shounen Supernatural	7.47
 1596	Space Pirate Captain Herlock: Outside Legend - The Endless Odyssey	13	Action Adventure Drama Sci-Fi Seinen Space	7.47
@@ -8659,7 +8444,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1466	Another: The Other - Inga	1	Horror Mystery Thriller	7.5
 1467	Bartender	11	Drama Seinen Slice of Life	7.5
 1468	Cheburashka	1	Comedy	7.5
-1469	Chi&#039;s Sweet Home OVA	1	Comedy Kids Slice of Life	7.5
 1470	Cinderella Monogatari	26	Adventure Fantasy Kids Romance	7.5
 1471	Dotto Koni-chan	26	Comedy	7.5
 1472	Fullmetal Alchemist: The Sacred Star of Milos	1	Action Adventure Comedy Drama Fantasy Magic Military Shounen	7.5
@@ -8723,7 +8507,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1451	Maria-sama ga Miteru: Haru Specials	6	Drama Romance School Shoujo Shoujo Ai Slice of Life	7.51
 1452	Mirai Nikki	1	Action Shounen Supernatural	7.51
 1453	Moonlight Mile 2nd Season: Touch Down	14	Adventure Drama Sci-Fi Space	7.51
-1454	Neon Genesis Evangelion: Death &amp; Rebirth	1	Drama Mecha Psychological Sci-Fi	7.51
 1455	Oban Star-Racers	26	Adventure Mecha Sci-Fi Shounen	7.51
 1456	Papa no Iukoto wo Kikinasai!	12	Comedy Romance Slice of Life	7.51
 1457	Raiyantsuuri no Uta	1	Drama Historical	7.51
@@ -8762,7 +8545,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1432	Tales of Zestiria: Doushi no Yoake	1	Fantasy	7.52
 1433	Tenchi Muyou! in Love	1	Action Comedy Romance School Sci-Fi Shounen Space	7.52
 1434	Tokyo Ghoul √A	12	Action Drama Horror Mystery Psychological Seinen Supernatural	7.52
-1435	Yu☆Gi☆Oh! 5D&#039;s	154	Action Game Shounen	7.52
 1436	Yuuki Yuuna wa Yuusha de Aru	12	Drama Fantasy Magic Slice of Life	7.52
 1389	Aoki Densetsu Shoot!	58	Action Comedy Drama Romance School Shounen Sports	7.53
 1390	Ashita no Joe 2 (Movie)	1	Drama Sports	7.53
@@ -8783,7 +8565,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1405	Whistle!	39	School Shounen Sports	7.53
 1406	Yomigaeru Sora: Rescue Wings	12	Drama Military Seinen	7.53
 1407	Yu☆Gi☆Oh!: The Dark Side of Dimensions	1	Adventure Game Shounen	7.53
-1365	&quot;Bungaku Shoujo&quot; Memoire	3	Drama Romance School	7.54
 1366	Bobobo-bo Bo-bobo	76	Adventure Comedy Sci-Fi Shounen	7.54
 1367	Bokura ga Ita	26	Drama Romance Shoujo Slice of Life	7.54
 1368	Chou Denji Machine Voltes V	40	Action Adventure Drama Mecha Sci-Fi Shounen	7.54
@@ -8804,7 +8585,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1383	Shigurui	12	Action Drama Historical Martial Arts Samurai Seinen	7.54
 1384	Super Lovers	10	Comedy Drama Romance Shounen Ai Slice of Life	7.54
 1385	Tamayura: More Aggressive	12	Comedy Drama Slice of Life	7.54
-1386	Tiger &amp; Bunny Movie 1: The Beginning	1	Action Comedy Mystery Super Power	7.54
 1387	Toradora!: Bentou no Gokui	1	Comedy Romance School Slice of Life	7.54
 1388	Wangan Midnight	26	Action Cars Seinen Sports	7.54
 1333	AKB0048	13	Music Sci-Fi	7.55
@@ -8843,7 +8623,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1307	Carnival Phantasm EX Season	1	Comedy Supernatural	7.56
 1308	Charlotte: Tsuyoi Monotachi	1	School Super Power	7.56
 1309	City Hunter: The Secret Service	1	Action Comedy Mystery Shounen	7.56
-1310	Detective Conan OVA 06: Follow the Vanished Diamond! Conan &amp; Heiji vs. Kid!	1	Comedy Mystery Police Shounen	7.56
 1311	Doraemon Movie 26: Nobita no Kyouryuu 2006	1	Adventure Comedy Kids	7.56
 1312	Genshiken Nidaime	13	Comedy Parody Slice of Life	7.56
 1313	Gokinjo Monogatari	50	Comedy Drama Romance Slice of Life	7.56
@@ -8887,7 +8666,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1301	Shashinkan	1	Drama Historical Slice of Life	7.57
 1302	Super GALS! Kotobuki Ran	52	Comedy Shoujo Slice of Life	7.57
 1303	The Big O	26	Action Mecha Mystery Psychological Sci-Fi	7.57
-1304	Top wo Nerae! &amp; Top wo Nerae 2! Gattai Movie!!	2	Comedy Mecha Shounen	7.57
 1305	Yu☆Gi☆Oh! Duel Monsters	224	Adventure Game Shounen	7.57
 8177	Hua Jianghu Zhi Ling Zhu	41	Action Drama Fantasy Historical Martial Arts	7.57
 9254	Poppoya-san: Nonki Ekichou	1	Kids	7.57
@@ -8990,7 +8768,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1205	Seto no Hanayome OVA Specials	2	Comedy Parody School	7.61
 1206	Shugo Chara!	51	Comedy Magic School Shoujo	7.61
 1207	Snow Halation	1	Music	7.61
-1208	Tokyo Ghoul: &quot;Pinto&quot;	1	Action Drama Horror Mystery Psychological Supernatural	7.61
 1209	Urusei Yatsura OVA	11	Adventure Comedy Sci-Fi	7.61
 1210	Yahari Ore no Seishun Love Comedy wa Machigatteiru. OVA	1	Comedy Romance School	7.61
 1211	Yozakura Quartet: Hana no Uta	13	Action Comedy Magic Shounen Super Power Supernatural	7.61
@@ -9019,7 +8796,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1187	Yozakura Quartet: Tsuki ni Naku	3	Action Comedy Magic Shounen Super Power Supernatural	7.62
 1188	Yuusha Keisatsu J-Decker	48	Action Adventure Mecha Police Sci-Fi	7.62
 1142	Sayonara Zetsubou Sensei Special	1	Comedy Mystery Parody	7.63
-1146	&quot;Bungaku Shoujo&quot; Movie	1	Drama Mystery Romance School	7.63
 1147	Amaama to Inazuma	12	Comedy Seinen Slice of Life	7.63
 1148	Angel Beats!: Another Epilogue	1	Drama School Supernatural	7.63
 1149	Hakuouki Reimeiroku	12	Action Drama Historical Josei Samurai Supernatural	7.63
@@ -9031,7 +8807,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1155	Mardock Scramble: The First Compression	1	Action Psychological Sci-Fi	7.63
 1156	Patalliro!	49	Adventure Comedy Romance Shoujo Shounen Ai	7.63
 1157	Perrine Monogatari	53	Drama Historical Shoujo Slice of Life	7.63
-1158	Prince of Tennis: Atobe&#039;s Gift	1	Comedy Shounen Sports	7.63
 1159	Rokka no Yuusha	12	Action Adventure Fantasy Magic Mystery	7.63
 1160	Saki Achiga-hen: Episode of Side-A Specials	4	Game School Slice of Life	7.63
 1161	Suzumiya Haruhi-chan no Yuuutsu	25	Comedy Parody	7.63
@@ -9053,7 +8828,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1135	Kaitou Saint Tail	43	Adventure Magic Romance Shoujo	7.64
 1136	Little Busters!	26	Comedy Drama School Slice of Life Supernatural	7.64
 1137	Marmalade Boy	76	Comedy Drama Romance Shoujo	7.64
-1138	Ningen Shikkaku: Director&#039;s Cut-ban	1	Drama Historical Psychological Seinen	7.64
 1139	Omoide Poroporo	1	Drama Romance Slice of Life	7.64
 1140	R.O.D the TV	26	Action Adventure Comedy Drama Sci-Fi Super Power	7.64
 1141	Saint☆Oniisan	2	Comedy Seinen Slice of Life	7.64
@@ -9120,7 +8894,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1074	Mitsudomoe Special	1	Comedy School Slice of Life	7.67
 1075	New Prince of Tennis	13	Action Comedy Shounen Sports	7.67
 1076	Sakamoto desu ga?	12	Comedy School Seinen	7.67
-1077	Tales of Symphonia The Animation: Tethe&#039;alla-hen	4	Action Adventure Fantasy Magic Martial Arts Shounen	7.67
 1078	Tatakae! Chou Robot Seimeitai Transformers	98	Adventure Mecha Sci-Fi Shounen	7.67
 1079	Tsubasa Chronicle	26	Action Adventure Fantasy Magic Romance Shounen Supernatural	7.67
 7518	Boku wa Sugu ni Nigetanda: Higashi Nihon Daishinsai kara Mananda Koto	1	Drama Kids	7.67
@@ -9209,7 +8982,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 1006	Shounen Onmyouji	26	Action Demons Fantasy Historical Magic Shoujo Supernatural	7.71
 1007	Sukitte Ii na yo.	13	Romance School Shoujo	7.71
 1008	Toaru Majutsu no Index: Endymion no Kiseki	1	Action Magic Sci-Fi Super Power	7.71
-1009	Tokyo Ghoul: &quot;Jack&quot;	1	Action Drama Horror School Seinen Supernatural	7.71
 1010	Ushio to Tora (TV)	26	Action Adventure Comedy Demons Shounen Supernatural	7.71
 8691	Mahoutsukai Precure! Movie	1	Action Fantasy Magic School Shoujo Slice of Life	7.71
 956	Diamond no Ace OVA	3	Comedy School Shounen Sports	7.72
@@ -9281,7 +9053,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 920	Kino no Tabi: The Beautiful World - Tou no Kuni	1	Adventure Fantasy Psychological	7.75
 921	Kono Danshi Ningyo Hiroimashita.	1	Fantasy Shounen Ai	7.75
 922	Kuroko no Basket: Baka ja Katenai no yo!	1	Comedy School Shounen Sports	7.75
-923	Kyoukai no Kanata Movie: I&#039;ll Be Here - Kako-hen	1	Action Fantasy Supernatural	7.75
 924	Mahoujin Guru Guru	45	Adventure Comedy Fantasy Magic Shounen	7.75
 925	One Piece: Heart of Gold	1	Action Adventure Comedy Drama Fantasy Shounen	7.75
 926	Shingeki no Kyojin Movie 2: Jiyuu no Tsubasa	1	Action Drama Fantasy Shounen Super Power	7.75
@@ -9341,7 +9112,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 859	Higashi no Eden Movie II: Paradise Lost	1	Action Comedy Drama Mystery Romance Thriller	7.78
 860	Jungle wa Itsumo Hare nochi Guu Final	7	Comedy Slice of Life	7.78
 861	Kyoukai no Kanata: Shinonome	1	Fantasy Slice of Life Supernatural	7.78
-862	Lupin III: Episode 0 &quot;First Contact&quot;	1	Action Adventure Comedy Mystery Shounen	7.78
 863	Minami-ke Tadaima	13	Comedy School Slice of Life	7.78
 864	Momo e no Tegami	1	Drama Supernatural	7.78
 865	Nurarihyon no Mago	24	Action Demons Shounen Supernatural	7.78
@@ -9401,7 +9171,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 810	Kimagure Orange☆Road: Ano Hi ni Kaeritai	1	Comedy Drama Romance Shounen Slice of Life	7.81
 811	Kono Subarashii Sekai ni Shukufuku wo! OVA	1	Comedy Fantasy	7.81
 813	Minami-ke	13	Comedy School Slice of Life	7.81
-814	Mobile Suit Gundam: Char&#039;s Counterattack	1	Drama Mecha Military Sci-Fi Space	7.81
 815	Naruto	220	Action Comedy Martial Arts Shounen Super Power	7.81
 816	New Game!	12	Comedy Slice of Life	7.81
 817	Shigatsu wa Kimi no Uso: Moments	1	Music Shounen	7.81
@@ -9410,7 +9179,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 784	Bokurano	24	Drama Mecha Psychological Sci-Fi	7.82
 785	Bounen no Xamdou	26	Action Military Sci-Fi	7.82
 786	Break Blade 6: Doukoku no Toride	1	Action Mecha Military Shounen	7.82
-787	Detective Conan: Conan vs. Kid - Shark &amp; Jewel	1	Adventure Comedy Kids Mystery Police Shounen	7.82
 788	Dragon Ball Z Special 2: Zetsubou e no Hankou!! Nokosareta Chousenshi - Gohan to Trunks	1	Adventure Drama Fantasy Shounen	7.82
 789	Hakkenden: Touhou Hakken Ibun 2nd Season	13	Action Fantasy Shoujo Supernatural	7.82
 790	Hidamari Sketch x 365 Specials	3	Comedy School Slice of Life	7.82
@@ -9426,7 +9194,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 800	Yume-iro Pâtissière SP Professional	13	Shoujo Slice of Life	7.82
 812	Kubikiri Cycle: Aoiro Savant to Zaregototsukai	8	Action Drama Mystery Supernatural	7.82
 771	Baka to Test to Shoukanjuu	13	Comedy Romance School Super Power	7.83
-772	Chi&#039;s Sweet Home	104	Comedy Slice of Life	7.83
 773	Densetsu no Yuusha no Densetsu	24	Action Adventure Fantasy Magic Shounen	7.83
 774	Ichigo Mashimaro OVA	3	Comedy School Slice of Life	7.83
 775	Kingsglaive: Final Fantasy XV	1	Action	7.83
@@ -9547,7 +9314,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 652	Aoi Bungaku Series	12	Drama Historical Psychological Seinen Thriller	7.9
 653	Arashi no Yoru ni	1	Adventure Comedy Drama Fantasy	7.9
 654	Bokura wa Minna Kawaisou	12	Comedy Romance School Slice of Life	7.9
-655	Chi&#039;s Sweet Home: Atarashii Ouchi	104	Comedy Kids Slice of Life	7.9
 656	Densetsu Kyojin Ideon: Hatsudou-hen	1	Drama Mecha Sci-Fi Space	7.9
 657	Ginga Tetsudou 999	113	Adventure Drama Sci-Fi Space	7.9
 658	Hana yori Dango	51	Drama Romance School Shoujo	7.9
@@ -9557,7 +9323,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 662	Ie Naki Ko	51	Adventure Drama Historical Kids Slice of Life	7.9
 663	Michiko to Hatchin	22	Action Adventure	7.9
 664	New Initial D Movie: Legend 2 - Tousou	1	Cars Seinen Sports	7.9
-665	Persona 3 the Movie 2: Midsummer Knight&#039;s Dream	1	Action Fantasy Seinen Supernatural	7.9
 666	Sexy Commando Gaiden: Sugoiyo!! Masaru-san	48	Comedy Martial Arts School Shounen	7.9
 667	Tegamibachi Reverse	25	Adventure Fantasy Shounen Supernatural	7.9
 9950	Wanghu Sim Cheong	1	Fantasy	7.9
@@ -9565,18 +9330,15 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 643	Berserk: Ougon Jidai-hen I - Haou no Tamago	1	Action Adventure Demons Fantasy Military Seinen Supernatural	7.91
 644	Capeta	52	Cars Shounen Sports	7.91
 645	Charlotte	13	Drama School Super Power	7.91
-646	City Hunter &#039;91	13	Action Comedy Mystery Shounen	7.91
 647	Kino no Tabi: Nanika wo Suru Tame ni - Life Goes On.	1	Adventure Drama Fantasy	7.91
 648	Lupin the IIIrd: Jigen Daisuke no Bohyou	1	Action Adventure Comedy Drama Seinen	7.91
 649	Master Keaton OVA	15	Adventure Mystery	7.91
-651	Pokemon XY&amp;Z	47	Action Adventure Comedy Fantasy Kids	7.91
 629	Akatsuki no Yona OVA	3	Action Comedy Fantasy Shoujo	7.92
 630	Ao no Exorcist	25	Action Demons Fantasy Shounen Supernatural	7.92
 631	Claymore	26	Action Adventure Demons Fantasy Shounen Super Power Supernatural	7.92
 634	Golden Time	24	Comedy Romance Seinen	7.92
 635	Hadashi no Gen	1	Drama Historical	7.92
 636	Jinrui wa Suitai Shimashita	12	Comedy Fantasy Seinen	7.92
-637	Kyoukai no Kanata Movie: I&#039;ll Be Here - Kako-hen - Yakusoku no Kizuna	1	Music	7.92
 638	Little Witch Academia: Mahoujikake no Parade	1	Adventure Comedy Fantasy Magic School	7.92
 639	Lucky☆Star: Original na Visual to Animation	1	Comedy Parody School Slice of Life	7.92
 640	New Initial D Movie: Legend 1 - Kakusei	1	Action Cars Seinen Sports	7.92
@@ -9603,7 +9365,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 625	Slayers Try	26	Adventure Comedy Demons Fantasy Magic Shounen	7.93
 626	Transformers the Movie	1	Action Mecha	7.93
 627	Uchuu Senkan Yamato 2199: Hoshimeguru Hakobune	1	Action Drama Military Sci-Fi Space	7.93
-628	Wolf&#039;s Rain	26	Action Adventure Drama Fantasy Mystery Sci-Fi	7.93
 8682	Magical Suite Prism Nana	7	Magic	7.93
 591	Break Blade 3: Kyoujin no Ato	1	Action Fantasy Mecha Military Shounen	7.94
 592	Danshi Koukousei no Nichijou Specials	6	Comedy School Shounen Slice of Life	7.94
@@ -9681,7 +9442,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 539	Neko no Ongaeshi	1	Adventure Drama Fantasy	7.98
 540	Seihou Bukyou Outlaw Star	24	Action Adventure Comedy Sci-Fi Space	7.98
 541	White Album 2	13	Drama Music Romance Slice of Life	7.98
-542	Working&#039;!!	13	Comedy Slice of Life	7.98
 523	Bishoujo Senshi Sailor Moon: Sailor Stars	34	Adventure Comedy Drama Fantasy Magic Romance Shoujo	7.99
 524	Break Blade 4: Sanka no Chi	1	Action Fantasy Mecha Military Shounen	7.99
 525	Hanasaku Iroha: Home Sweet Home	1	Comedy Drama Slice of Life	7.99
@@ -9728,8 +9488,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 9398	Science Anime: Choudendou Monogatari	1	Historical Kids	8
 9456	Shimajirou to Ehon no Kuni	1	Action Comedy Fantasy Kids	8
 9557	Son Gokuu no Hi no Youjin	1	Drama Fantasy Kids	8
-9657	Subarashii Sekai Ryokou: Alaska no Tabi &quot;Daigo Hyougaki&quot;	2	Adventure Sci-Fi	8
-9658	Subarashii Sekai Ryokou: New York Tabi &quot;Computopia Seireki Nisennen no Monogatari&quot;	2	Sci-Fi	8
 9959	Wareware no Heya	1		8
 10064	Yong Zhe Da Mao Xian	26	Adventure Fantasy	8
 10071	Youkaiden Nekome Kozou	25	Adventure Horror Psychological Seinen Supernatural	8
@@ -9743,7 +9501,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 507	Kokoro Connect	13	Comedy Drama Romance School Slice of Life Supernatural	8.01
 508	Saiyuuki Gaiden	3	Action Adventure Drama Fantasy Shoujo	8.01
 509	Shirokuma Cafe	50	Comedy Josei Slice of Life	8.01
-510	Tiger &amp; Bunny Movie 2: The Rising	1	Action Comedy Mystery Super Power	8.01
 511	Zan Sayonara Zetsubou Sensei	13	Comedy Parody School	8.01
 492	Akachan to Boku	35	Comedy Drama Shoujo	8.02
 493	Clannad: After Story - Mou Hitotsu no Sekai Kyou-hen	1	Drama Romance School	8.02
@@ -9839,7 +9596,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 407	Ginga Eiyuu Densetsu Gaiden: Rasen Meikyuu	28	Drama Military Sci-Fi Space	8.1
 408	Hyouge Mono	39	Historical Samurai Seinen	8.1
 409	Karigurashi no Arrietty	1	Fantasy	8.1
-410	Mahou Shoujo Lyrical Nanoha A&#039;s	13	Action Comedy Drama Magic Super Power	8.1
 411	Rurouni Kenshin: Meiji Kenkaku Romantan - Seisou-hen	2	Drama Historical Romance Samurai Shounen	8.1
 412	Tanaka-kun wa Itsumo Kedaruge	12	Comedy School Slice of Life	8.1
 632	Detective Conan: Episode One - Chiisaku Natta Meitantei	1	Adventure Comedy Mystery Police Shounen	8.1
@@ -9863,7 +9619,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 391	Initial D Second Stage	13	Action Cars Drama Seinen Sports	8.12
 392	Noragami Aragoto OVA	2	Action Adventure Shounen	8.12
 393	Stand By Me Doraemon	1	Comedy Kids Sci-Fi Shounen	8.12
-394	Tiger &amp; Bunny	25	Action Comedy Mystery Super Power	8.12
 395	Yahari Ore no Seishun Love Comedy wa Machigatteiru.	13	Comedy Drama Romance School	8.12
 372	Aria The OVA: Arietta	1	Fantasy Sci-Fi Shounen Slice of Life	8.13
 373	Detective Conan Movie 15: Quarter of Silence	1	Adventure Comedy Mystery Police Shounen	8.13
@@ -9875,7 +9630,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 379	Mobile Suit Gundam: The 08th MS Team	12	Adventure Drama Mecha Military Romance Sci-Fi	8.13
 380	Omae Umasou da na	1	Action Adventure Fantasy Kids	8.13
 381	Ushio to Tora (TV) 2nd Season	13	Comedy Demons Shounen Supernatural	8.13
-382	Wolf&#039;s Rain OVA	4	Adventure Drama Psychological Sci-Fi Supernatural	8.13
 364	Akagami no Shirayuki-hime 2nd Season	12	Drama Fantasy Romance Shoujo	8.14
 365	Clannad: Mou Hitotsu no Sekai Tomoyo-hen	1	Drama Romance School Slice of Life	8.14
 366	Ginga Nagareboshi Gin	21	Action Adventure Drama Shounen	8.14
@@ -9887,7 +9641,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 8555	Kono Sekai no Katasumi ni	1	Drama Historical	8.14
 9215	Petit Petit Muse	26	Cars Horror Kids	8.14
 353	Akira	1	Action Adventure Horror Military Sci-Fi Supernatural	8.15
-354	Black Lagoon: Roberta&#039;s Blood Trail	5	Action Seinen	8.15
 355	Durarara!!x2 Shou	12	Action Mystery Supernatural	8.15
 356	Gintama: Jump Festa 2015 Special	1	Action Comedy Historical Parody Samurai Shounen	8.15
 357	High☆Speed!: Free! Starting Days	1	School Slice of Life Sports	8.15
@@ -10080,14 +9833,12 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 187	Ghost in the Shell	1	Action Mecha Police Psychological Sci-Fi Seinen	8.34
 188	K-On! Movie	1	Comedy Music Slice of Life	8.34
 189	Kuroko no Basket: Saikou no Present Desu	1	Action School Shounen Sports	8.34
-190	Mahou Shoujo Lyrical Nanoha: The Movie 2nd A&#039;s	1	Action Comedy Drama Magic Super Power	8.34
 191	Sennen Joyuu	1	Action Adventure Drama Fantasy Historical Romance	8.34
 192	Steins;Gate: Kyoukaimenjou no Missing Link - Divide By Zero	1	Sci-Fi Thriller	8.34
 193	xxxHOLiC Kei	13	Comedy Drama Mystery Psychological Supernatural	8.34
 180	Bakuman.	25	Comedy Romance Shounen	8.35
 181	Danshi Koukousei no Nichijou	12	Comedy School Shounen Slice of Life	8.35
 182	Kotonoha no Niwa	1	Drama Psychological Romance Slice of Life	8.35
-183	Kyoukai no Kanata Movie: I&#039;ll Be Here - Mirai-hen	1	Fantasy Slice of Life Supernatural	8.35
 184	Major S4	26	Comedy Drama Shounen Sports	8.35
 185	Omoide no Marnie	1	Drama Mystery Psychological	8.35
 174	Boku no Hero Academia	13	Action Comedy School Shounen Super Power	8.36
@@ -10279,8 +10030,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 15	Haikyuu!! Second Season	25	Comedy Drama School Shounen Sports	8.93
 16	Sen to Chihiro no Kamikakushi	1	Adventure Drama Supernatural	8.93
 14	Code Geass: Hangyaku no Lelouch R2	25	Action Drama Mecha Military Sci-Fi Super Power	8.98
-8788	Mienu Me ni Kanjita Kumotoriyama no Asahi	1	Drama Kids	9
-8826	Mirai ni Mukete: Bousai wo Kangaeru	1	Drama	9
 9078	Okaachan Gomen ne	1	Historical Kids	9
 9382	Santa-san wa Dai Isogashi	1	Fantasy Kids	9
 9425	Shaka no Shougai	1	Historical	9
@@ -10293,7 +10042,6 @@ COPY public.animes (anime_id, anime_name, num_episodes, genre, mal_rating) FROM 
 7	Hunter x Hunter (2011)	148	Action Adventure Shounen Super Power	9.13
 6	Haikyuu!!: Karasuno Koukou VS Shiratorizawa Gakuen Koukou	10	Comedy Drama School Shounen Sports	9.15
 4	Steins;Gate	24	Sci-Fi Thriller	9.17
-10026	Yakusoku: Africa Mizu to Midori	1	Drama Kids	9.25
 2	Fullmetal Alchemist: Brotherhood	64	Action Adventure Drama Fantasy Magic Military Shounen	9.26
 8334	Kahei no Umi	1	Historical	9.33
 1	Kimi no Na wa.	1	Drama Romance School Supernatural	9.37
@@ -10326,6 +10074,9 @@ COPY public.reviews (user_id, anime_id, review_text) FROM stdin;
 12	24	              Bruh
 12	2	              This is a test comment.
 19	1281	              I really like this anime.
+12	30	              submitted a comment
+12	24	              people say it's pretty good\n
+12	476	              cheese\n
 \.
 
 
@@ -10342,6 +10093,10 @@ COPY public."user" (id, username, password) FROM stdin;
 17	lol	sha256$H4GsONQi$94f3ed79bbe642f8e354e2e14567b6de4b7ab6b0b4be5a9ec1b0e1259ea79d23
 18	taco	sha256$4syHisxF$08e65c452f18b88029244f741870186a1ab3c2dadf7b7be50fb1724ffc9dd049
 19	user	sha256$8BWrSjBe$d6ec181b508dcd7479e8590406ed7dc18c93b462f2622936f4b46acece193900
+20	new	sha256$jL4iT9En$67a1ba541c437848bb9e205b0b1e8b86aeac347c1d4f37d3b8180b0eddf69bd4
+21	oompa	sha256$Lc57pSDD$314c608edb6207b2fd83820578ac8ad7b0b58b1fe162485b5abff597436a3575
+22	wreck	sha256$uPkE9UVL$4e939bec99ffec5675e36dc3248442f85d0396d6092ea23bca1c20b555622139
+23	clock	sha256$L3cfknrs$e833b6c44e77f8d0abf562447e91fe6b34512dca6d728f8a036f586bd15ba21c
 \.
 
 
@@ -10366,14 +10121,14 @@ COPY public.user_reviews_link (user_id, review_id) FROM stdin;
 --
 
 COPY public.watchlist (user_id, anime_id) FROM stdin;
-12	14
 12	819
-12	24
-12	9
-12	7
-12	2550
-12	1772
-12	30
+12	31
+12	33
+12	39
+12	12
+12	36
+12	13
+12	14
 \.
 
 
@@ -10381,7 +10136,7 @@ COPY public.watchlist (user_id, anime_id) FROM stdin;
 -- Name: user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: quocodile
 --
 
-SELECT pg_catalog.setval('public.user_id_seq', 19, true);
+SELECT pg_catalog.setval('public.user_id_seq', 23, true);
 
 
 --
