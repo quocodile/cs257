@@ -15,15 +15,6 @@ import psycopg2
 api = Blueprint('api', __name__)
 animes_imagepaths = json.loads(open('animes_imagepaths.json', 'r').read())  
 
-def get_anime_id(anime_name):
-   '''Given an anime name, find the anime id for it as designated in the database's animes table'''
-   connection, cursor = cursor_init()
-   select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
-   cursor.execute(select_query, (anime_name,))
-   for row in cursor:
-     anime_id = row[0] 
-     return anime_id
-  
 def cursor_init():
     '''Connects to database and initializes the cursor.'''
     try:
@@ -34,6 +25,15 @@ def cursor_init():
       print(e)
       exit()
 
+def get_anime_id(anime_name):
+   '''Given an anime name, find the anime id for it as designated in the database's animes table'''
+   connection, cursor = cursor_init()
+   select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
+   cursor.execute(select_query, (anime_name,))
+   for row in cursor:
+     anime_id = row[0] 
+     return anime_id
+  
 def get_watchlist():
   '''This function is called to query the database for animes within a user's watchlist'''
   try:
@@ -166,7 +166,10 @@ def login_post():
 
 @api.route('/signup', methods=['POST'])
 def signup_post():
-    '''Route that facilitates user signup'''
+    '''
+    Route that creates a user account if none 
+    with the same username already exist
+    '''
     username = request.form.get('username')
     password = request.form.get('password')
     
