@@ -29,9 +29,11 @@
 			<div class="col-sm-3 p-0" style="height: 50px;">
 				<div id="user_related" >
 				{% if current_user.is_authenticated %}
-					<div id = "greeting">{{ name }}</div>
+					<div id = "greeting">
+						{{ current_user.username }}
+					</div>
 					<a id="profile_link" href="/profile">
-						<button id="profile_btn">Watchlist</button>
+						<button id="profile_btn">Profile</button>
 					</a> 
 					<div id="logout_btn">
 						<form action="/api/logout">
