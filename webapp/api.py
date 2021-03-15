@@ -34,9 +34,9 @@ def add_to_watchlist(anime_name):
         cursor.execute(select_query, (anime_name,))
         anime_id = 0
         for row in cursor:
-                anime_id = row[0] 
-                user_id = current_user.id
-        insert_query = "INSERT INTO watchlist (user_id, anime_id) VALUES (" + str(user_id) + "," + str(anime_id) + ")"
+                anime_id = str(row[0])
+                user_id = str(current_user.id)
+        insert_query = "INSERT INTO watchlist (user_id, anime_id) VALUES (" + user_id + "," + anime_id + ")"
         cursor.execute(insert_query)
         connection.commit()
         cursor.close()
@@ -70,10 +70,10 @@ def get_anime_by_genre():
         connection, cursor = cursor_init()
         if genre:
                 genre = "%" + genre + "%"
-                query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 15"
+                query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 50"
                 cursor.execute(query, (genre,))
         else:
-                query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
+                query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 50"
                 cursor.execute(query)
         list_of_dictionaries = []
         for row in cursor:

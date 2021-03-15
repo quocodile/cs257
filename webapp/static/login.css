@@ -1,0 +1,28 @@
+#login_container {
+  width: 100vw; 
+  height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+}
+
+#login_container h3 {
+  text-align: center;
+}
+ 
+#error {
+  color: red;
+}
+
+#login_button {
+  text-align: center;
+}
+
+#remember_me {
+  text-align: center; 
+}
+
+
+
+

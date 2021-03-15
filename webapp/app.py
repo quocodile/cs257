@@ -106,7 +106,8 @@ def currentAnime(title):
         anime_exists = False
         for row in cursor:
          anime_exists = True
-        query = 'SELECT DISTINCT username, review_text FROM animes, reviews, "user" '
+        query = 'SELECT DISTINCT username, review_text '
+        query += 'FROM animes, reviews, "user" '
         query += 'WHERE CAST("user".id as TEXT)=reviews.user_id '
         query += 'AND animes.anime_name=%s '
         query += 'AND animes.anime_id=reviews.anime_id LIMIT 10'

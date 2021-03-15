@@ -54,54 +54,58 @@ function getAPIBaseURL() {
 }
 
 function on_button_right_action(){
-    $("#genre_action").animate({scrollLeft: '+=235px'}, 300);
+    on_button_right("action");
 }
 
 function on_button_left_action(){
-    $("#genre_action").animate({scrollLeft: '-=235px'}, 300);
+    on_button_left("action");
 } 
 
 function on_button_right_horror(){
-    $("#genre_horror").animate({scrollLeft: '+=235px'}, 300);
+    on_button_right("horror");
 }
 
 function on_button_left_horror(){
-    $("#genre_horror").animate({scrollLeft: '-=235px'}, 300);
+    on_button_left("horror");
 } 
 
 function on_button_right_shounen(){
-    $("#genre_shounen").animate({scrollLeft: '+=235px'}, 300);
+    on_button_right("shounen");
 }
 
 function on_button_left_shounen(){
-    $("#genre_shounen").animate({scrollLeft: '-=235px'}, 300);
+    on_button_left("shounen");
 } 
 
 function on_button_right_drama(){
-    $("#genre_drama").animate({scrollLeft: '+=235px'}, 300);
+    on_button_right("drama");
 }
 
 function on_button_left_drama(){
-    $("#genre_drama").animate({scrollLeft: '-=235px'}, 300);
+    on_button_left("drama");
 } 
 
 function on_button_right_romance(){
-    $("#genre_romance").animate({scrollLeft: '+=235px'}, 300);
+    on_button_right("romance");
 }
 
 
 function on_button_left_romance(){
-    $("#genre_romance").animate({scrollLeft: '-=235px'}, 300);
+    on_button_left("romance");
 } 
 
 function on_button_left(genre) {
-    var button_left = document.getElementById(genre);
-    button_left.scrollLeft -= 250;
+    var button_left = $("#genre_" + genre);
+    var distance_scroll = $(".genre_container")[0].offsetWidth; 
+    distance_scroll_left = "-=" + distance_scroll + "px";
+    button_left.animate({scrollLeft: distance_scroll_left }, 300);
 }
 
 function on_button_right(genre) {
-    var button_right = document.getElementById(genre);
-    button_right.scrollLeft += 250;
+    var button_right = $("#genre_" + genre);
+    var distance_scroll = $(".genre_container")[0].offsetWidth; 
+    distance_scroll_right = "+=" + distance_scroll + "px";
+    button_right.animate({scrollLeft: distance_scroll_right}, 300);
 }
 
 function get_genre(genre) {
@@ -112,7 +116,7 @@ function get_genre(genre) {
   .then((response) => response.json())
   .then(jsondata => {   
       var animes_html = '';
-      for (var i = 0; i < 15; i++) 
+      for (var i = 0; i < 50; i++) 
       {
           anime = jsondata[i]
           type_item_class = genre + '_item'

@@ -1,37 +1,38 @@
 {% block import %}
 <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}"/>
 {% endblock %}
 
 {% extends "navbar.html" %}
 
 {% block content %}
-<form method="POST" action="api/login">
-<div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
-    <div>
-      <div style = "color:red;">
-        {{error}}
-      </div>
-      <h3 style="text-align: center;">Log In</h3> 
-    <div>
-        <div style="padding: 10px">
-          <input type="username" name="username" placeholder="Your Username" autofocus="">
-        </div>
-      </div>
+<div id="login_container">
+  <div id="error">
+      {{error}}
+  </div>
+  <form method="POST" action="/api/login">
       <div>
-        <div style="padding: 10px">
-          <input type="password" name="password" placeholder="Your Password">
+        <h3>Log In</h3> 
+      <div>
+          <div style="padding: 10px">
+            <input type="username" name="username" placeholder="Your Username" autofocus="">
+          </div>
         </div>
-      </div>
-      <div style="text-align:center;">
-        <label>
-        <input type="checkbox">
-         Remember me
-        </label>
-      </div>
-      <div style="width: inherit; text-align:center;">
-        <button>Login</button>
-      </div>
-    </div>
-</form>
+        <div>
+          <div style="padding: 10px">
+            <input type="password" name="password" placeholder="Your Password">
+          </div>
+        </div>
+        <div id="remember_me">
+          <label>
+          <input type="checkbox">
+           Remember me
+          </label>
+        </div>
+        <div id="login_button">
+          <button>Login</button>
+        </div>
+  </form>
+</div>
 {% endblock %}
