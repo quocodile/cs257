@@ -1,24 +1,62 @@
 
 Search for anime
-REQUEST: /api/search/{search string}
+REQUEST: /api/search/<search_type>/<search_string>
+
+GET parameters: 
+	search_type -- either title or genre
+	search_string -- the string used to search
 
 RESPONSE: JSON list of dictionaries containing anime dictionaries, with each dictionary containing the following fields:
 
-	Picture -- (blob) the picture of the anime
-	Name -- (string) the name of the anime
-	Episodes -- (int) the number of episodes for the anime
+	id -- (string) the id for the anime
+	picture -- (blob) the picture of the anime
+	name -- (string) the name of the anime
+	# episodes -- (string) the number of episodes for the anime
+	genre -- (string) the genre of the anime
+	mal_rating -- (string) the rating of the anime on MyAnimeList
 
 ________________
 
-Find animes by genre
-REQUEST: /api/anime
+Add to watchlist
+REQUEST: /api/add/<anime_name>
 
-OPTIONAL GET PARAMETERS:
-* genre (Optional, default='no genre') -- gets all animes that fit into the given genre
+GET parameters: 
+	anime_name: name of the anime to be added
 
-RESPONSE: JSON list of dictionaries, each representing an anime. Each dictionary will contain the following fields: 
 
-	Picture -- (blob) the picture of the anime
-	Name -- (string) the name of the anime
-	Rating -- (int) the MAL rating for the anime 
-	Episodes -- (int) the number of episodes for the anime
+RESPONSE: Redirect to that anime's page
+
+________________
+
+Remove from watchlist
+REQUEST: /api/remove/<anime_name>
+
+GET parameters: 
+	anime_name: name of the anime to be removed
+
+RESPONSE: Redirect to that anime's page
+
+________________
+Login user
+REQUEST: /api/login
+
+RESPONSE: Redirect to that user's page
+
+________________
+
+Signup 
+REQUEST: /api/signup
+
+RESPONSE: Redirect to the login page
+
+________________
+
+Logout user
+REQUEST: /api/logout
+RESPONSE: Redirect to the home page
+
+________________
+
+Add review
+REQUEST: /api/add/review
+RESPONSE: Indication that the review has been successfully added to the database
