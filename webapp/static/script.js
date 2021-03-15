@@ -54,48 +54,44 @@ function getAPIBaseURL() {
 }
 
 function on_button_right_action(){
-    var action_button_right = document.getElementById("genre_action");
-    action_button_right.scrollLeft += 180;
+    $("#genre_action").animate({scrollLeft: '+=235px'}, 300);
 }
 
 function on_button_left_action(){
-    on_button_left("genre_action");
+    $("#genre_action").animate({scrollLeft: '-=235px'}, 300);
 } 
 
 function on_button_right_horror(){
-    var horror_button_right = document.getElementById("genre_horror");
-    horror_button_right.scrollLeft += 180;
+    $("#genre_horror").animate({scrollLeft: '+=235px'}, 300);
 }
 
 function on_button_left_horror(){
-    on_button_left("genre_horror");
+    $("#genre_horror").animate({scrollLeft: '-=235px'}, 300);
 } 
 
 function on_button_right_shounen(){
-    var shounen_button_right = document.getElementById("genre_shounen");
-    shounen_button_right.scrollLeft += 180;
+    $("#genre_shounen").animate({scrollLeft: '+=235px'}, 300);
 }
 
 function on_button_left_shounen(){
-    on_button_left("genre_shounen");
+    $("#genre_shounen").animate({scrollLeft: '-=235px'}, 300);
 } 
 
 function on_button_right_drama(){
-    var drama_button_right = document.getElementById("genre_drama");
-    drama_button_right.scrollLeft += 180;
+    $("#genre_drama").animate({scrollLeft: '+=235px'}, 300);
 }
 
 function on_button_left_drama(){
-    on_button_left("genre_drama");
+    $("#genre_drama").animate({scrollLeft: '-=235px'}, 300);
 } 
 
 function on_button_right_romance(){
-    on_button_right("genre_romance");
+    $("#genre_romance").animate({scrollLeft: '+=235px'}, 300);
 }
 
 
 function on_button_left_romance(){
-    $("#genre_romance").animate({scrollLeft: '100px'}, 5000);
+    $("#genre_romance").animate({scrollLeft: '-=235px'}, 300);
 } 
 
 function on_button_left(genre) {
@@ -116,7 +112,7 @@ function get_genre(genre) {
   .then((response) => response.json())
   .then(jsondata => {   
       var animes_html = '';
-      for (var i = 0; i < 10; i++) 
+      for (var i = 0; i < 15; i++) 
       {
           anime = jsondata[i]
           type_item_class = genre + '_item'
