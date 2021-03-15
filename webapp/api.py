@@ -63,6 +63,33 @@ def remove_from_watchlist(anime_name):
         anime_name = anime_name.split('/')[-1]
         return redirect('/current/' + anime_name)
  
+'''Returns some default anime information.'''
+@api.route('/anime/')
+def get_anime_by_genre():
+        genre = request.args.get('genre', '')
+        connection, cursor = cursor_init()
+        if genre:
+                genre = "%" + genre + "%"
+                query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 15"
+                cursor.execute(query, (genre,))
+        else:
+                query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
+                cursor.execute(query)
+        list_of_dictionaries = []
+        for row in cursor:
+                dic = {}
+                dic['anime_id'] = row[0]
+                dic['anime_name'] = row[1]
+                dic['num_episodes'] = row[2]
+                dic['genre'] = row[3]
+                dic['mal_rating'] = row[4]
+                try:
+                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
+                except Exception as e:
+                  dic['pic'] = '' 
+                list_of_dictionaries.append(dic)
+        return json.dumps(list_of_dictionaries)
+
 '''Route that executes a query on the database to search for animes and returns the results.'''
 @api.route('/search/<search_type>/<search_string>', methods=['GET', 'POST'])
 def get_search_results(search_string, search_type):
