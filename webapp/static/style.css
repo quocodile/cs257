@@ -11,12 +11,7 @@ body {
 	margin: 0;
 }
 
-.left-paddle {
-	left: 0;
-}
-.right-paddle {
-	right: 0;
-}
+
 .hidden {
 	display: none;
 }
@@ -184,12 +179,13 @@ button {
   margin-right: 5px;
 }
 
-.genre_container {
-  border: 1px solid black;
-}
 
-.genre_container img {
-  border: 5px solid black;
+/*index.html*/
+.left-paddle {
+	left: 0;
+}
+.right-paddle {
+	right: 0;
 }
 
 .rightpaddle {
@@ -226,7 +222,13 @@ button {
   transition: 250ms color, 250ms background-color, 250ms font-size;
 }
 
-/*index.html*/
+.genre_container {
+  border: 1px solid black;
+}
+
+.genre_container img {
+  border: 5px solid black;
+}
 
 .genre_container {
   margin: auto;
