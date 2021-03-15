@@ -1,3 +1,40 @@
 #welcome_message p {
   text-align: center;
 }
+
+.watchlist_anime_container {
+  margin: 10px;
+  float: left;
+  position: relative;
+}
+
+.watchlist_anime {
+  border: 1px solid black; 
+  text-decoration: none; 
+  width: 200px; 
+  height: 300px; 
+  position: relative;
+}
+
+.watchlist_anime h3 {
+  padding: 20px; 
+  color: black; 
+  position: absolute;
+}
+
+.watchlist_anime img {
+  border: 1px solid black; 
+  width:200px;
+  height:300px;
+  margin-left: 0px;
+  position: absolute;
+}
+
+.watchlist_anime img:hover {
+  opacity: 0.3;
+  transition: 500ms opacity;
+}
+
+#submit_review_btn {
+  width: 95%;
+}

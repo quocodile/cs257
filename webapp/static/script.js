@@ -20,10 +20,14 @@ function initialize() {
     var romance_button_left = document.getElementById('romance_button_left');
     var romance_button_right = document.getElementById('romance_button_right');
 
-    var rightPaddle = document.getElementsByClassName("right-paddle");
-    var leftPaddle = document.getElementsByClassName("left-paddle");
+    var kids_button_left = document.getElementById('kids_button_left');
+    var kids_button_right = document.getElementById('kids_button_right');
 
+    var adventure_button_left = document.getElementById('adventure_button_left');
+    var adventure_button_right = document.getElementById('adventure_button_right');
 
+    var comedy_button_left = document.getElementById('comedy_button_left');
+    var comedy_button_right = document.getElementById('comedy_button_right');
 
     action_button_right.addEventListener('click',on_button_right_action);
     action_button_left.addEventListener('click',on_button_left_action);
@@ -40,12 +44,23 @@ function initialize() {
     romance_button_right.addEventListener('click',on_button_right_romance);
     romance_button_left.addEventListener('click',on_button_left_romance);
     
+    kids_button_right.addEventListener('click',on_button_right_kids);
+    kids_button_left.addEventListener('click',on_button_left_kids);
+
+    adventure_button_right.addEventListener('click',on_button_right_adventure);
+    adventure_button_left.addEventListener('click',on_button_left_adventure);
+
+    comedy_button_right.addEventListener('click',on_button_right_comedy);
+    comedy_button_left.addEventListener('click',on_button_left_comedy);
 
     get_genre("action");
     get_genre("romance");
     get_genre("shounen");
     get_genre("horror");
     get_genre("drama");
+    get_genre("kids");
+    get_genre("adventure");
+    get_genre("comedy");
 }
 
 function getAPIBaseURL() {
@@ -93,6 +108,30 @@ function on_button_right_romance(){
 function on_button_left_romance(){
     on_button_left("romance");
 } 
+
+function on_button_right_kids() {
+  on_button_right("kids");
+}
+
+function on_button_left_kids() {
+  on_button_left("kids");
+}
+
+function on_button_right_adventure() {
+  on_button_right("adventure");
+}
+
+function on_button_left_adventure() {
+  on_button_left("adventure");
+}
+
+function on_button_right_comedy() {
+  on_button_right("comedy");
+}
+
+function on_button_left_comedy() {
+  on_button_left("comedy");
+}
 
 function on_button_left(genre) {
     var button_left = $("#genre_" + genre);

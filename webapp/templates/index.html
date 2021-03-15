@@ -6,9 +6,9 @@
 
 {% block content %}
 
-<div id  = "animerecbody">
+<div id  = "all_genres">
   <div class="container" style = "width: 80%;overflow: auto;">
-      <h3 id= "animerec">Anime by Genre:</h3>
+      <h2>Top Anime by Genre</h2>
       <h3>Action</h3>
       <div class = "row">
         <button class="rightpaddle" id = "action_button_right"> > </button>
@@ -38,9 +38,28 @@
       <div class = "row">
         <button class="rightpaddle" id = "romance_button_right">></button>
         <button class="leftpaddle" id = "romance_button_left"> < </button>
-        <div class="genre_container" id="genre_romance">
-        </div>
+        <div class="genre_container" id="genre_romance"></div>
+      </div>
 
+      <h3>Kids</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "kids_button_right">></button>
+        <button class="leftpaddle" id = "kids_button_left"> < </button>
+        <div class="genre_container" id="genre_kids"></div>
+      </div>
+
+      <h3>Adventure</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "adventure_button_right">></button>
+        <button class="leftpaddle" id = "adventure_button_left"> < </button>
+        <div class="genre_container" id="genre_adventure"></div>
+      </div>
+
+      <h3>Comedy</h3>
+      <div class = "row">
+        <button class="rightpaddle" id = "comedy_button_right">></button>
+        <button class="leftpaddle" id = "comedy_button_left"> < </button>
+        <div class="genre_container" id="genre_comedy"></div>
       </div>
   </div>
 </div>

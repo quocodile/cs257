@@ -11,9 +11,9 @@ body {
 	margin: 0;
 }
 
-.animerecbody {
-  background-color: grey;
-}
+#all_genres h2 {
+  font-weight: bold;	
+} 
 
 .hidden {
 	display: none;
@@ -225,10 +225,6 @@ button {
   transition: 250ms color, 250ms background-color, 250ms font-size;
 }
 
-.genre_container {
-  border: 1px solid black;
-}
-
 .genre_container img {
   border: 5px solid black;
 }
@@ -239,45 +235,9 @@ button {
   display: flex;
   justify-content: flex-start;
   height: 402px;
+  border: 1px solid black;
 }
 
-/*profile.html*/
-.watchlist_anime_container {
-  margin: 10px;
-  float: left;
-  position: relative;
-}
-
-.watchlist_anime {
-  border: 1px solid black; 
-  text-decoration: none; 
-  width: 200px; 
-  height: 300px; 
-  position: relative;
-}
-
-.watchlist_anime h3 {
-  padding: 20px; 
-  color: black; 
-  position: absolute;
-}
-
-.watchlist_anime img {
-  border: 1px solid black; 
-  width:200px;
-  height:300px;
-  margin-left: 0px;
-  position: absolute;
-}
-
-.watchlist_anime img:hover {
-  opacity: 0.3;
-  transition: 500ms opacity;
-}
-
-#submit_review_btn {
-  width: 95%;
-}
 /*search.html*/
 .search_anime_image {
   border: 5px solid black;
