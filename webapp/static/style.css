@@ -11,6 +11,9 @@ body {
 	margin: 0;
 }
 
+.animerecbody {
+  background-color: grey;
+}
 
 .hidden {
 	display: none;
