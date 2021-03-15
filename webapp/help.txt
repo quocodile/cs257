@@ -1,9 +1,12 @@
 
 List the top 50 anime in each genre
+-
 REQUEST: /api/anime
  	
 	GET PARAMETERS:
 	genre -- (string) an anime genre
+
+-
 
 RESPONSE: JSON list containing anime dictionaries, with each dictionary containing the following fields:
 
@@ -15,11 +18,12 @@ RESPONSE: JSON list containing anime dictionaries, with each dictionary containi
 __________________
 
 Search for anime
-REQUEST: /api/search/<search_type>/<search_string>
+-
+REQUEST: /api/search/search_type/search_string
 
 	search_type -- either title or genre
 	search_string -- the string used to search
-___________________
+-
 
 RESPONSE: JSON list of dictionaries containing anime dictionaries, with each dictionary containing the following fields:
 
@@ -31,19 +35,22 @@ RESPONSE: JSON list of dictionaries containing anime dictionaries, with each dic
 ________________
 
 Add to watchlist
+-
 REQUEST: /api/add/<anime_name>
 
 	anime_name: name of the anime to be added
-
+-
 
 RESPONSE: Redirect to that anime's page
 
 ________________
 
 Remove from watchlist
+-
 REQUEST: /api/remove/<anime_name>
 
 	anime_name: name of the anime to be removed
+-
 
 RESPONSE: Redirect to that anime's page
 
@@ -51,14 +58,12 @@ ________________
 
 Login user
 REQUEST: /api/login
-
 RESPONSE: Redirect to that user's page
 
 ________________
 
 Signup 
 REQUEST: /api/signup
-
 RESPONSE: Redirect to the login page
 
 ________________

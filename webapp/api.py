@@ -15,8 +15,8 @@ import psycopg2
 api = Blueprint('api', __name__)
 animes_imagepaths = json.loads(open('animes_imagepaths.json', 'r').read())  
 
+'''Connects to database and initializes the cursor.'''
 def cursor_init():
-    '''Connects to database and initializes the cursor.'''
     try:
       connection = psycopg2.connect(database=database, user=user, password=password)
       cursor = connection.cursor()
@@ -25,8 +25,8 @@ def cursor_init():
       print(e)
       exit()
 
+'''Given an anime name, find the anime id for it as designated in the database's animes table'''
 def get_anime_id(anime_name):
-   '''Given an anime name, find the anime id for it as designated in the database's animes table'''
    connection, cursor = cursor_init()
    select_query = 'SELECT * FROM animes WHERE LOWER(anime_name) = LOWER(%s) LIMIT 1'
    cursor.execute(select_query, (anime_name,))
@@ -34,8 +34,8 @@ def get_anime_id(anime_name):
      anime_id = row[0] 
      return anime_id
   
+'''This function is called to query the database for animes within a user's watchlist'''
 def get_watchlist():
-  '''This function is called to query the database for animes within a user's watchlist'''
   try:
     connection, cursor = cursor_init()
     user_id = str(current_user.id)
@@ -60,10 +60,10 @@ def get_watchlist():
     print(e)
     exit()
 
+'''Route that adds an anime to user's watchlist'''
 @api.route('/add/<anime_name>', methods=['POST'])
 @login_required
 def add_to_watchlist(anime_name):
-        '''Route that adds an anime to user's watchlist'''
         connection, cursor = cursor_init()
         anime_id = get_anime_id(anime_name)
         user_id = str(current_user.id)
@@ -76,10 +76,10 @@ def add_to_watchlist(anime_name):
         anime_name = anime_name.split('/')[-1]
         return redirect('/current/' + anime_name)
 
+'''Route that removes an anime from user's watchlist'''
 @api.route('/remove/<anime_name>', methods=['POST'])
 @login_required
 def remove_from_watchlist(anime_name):
-        '''Route that removes an anime from user's watchlist'''
         connection, cursor = cursor_init()
         anime_id = get_anime_id(anime_name)
         user_id = current_user.id
@@ -91,9 +91,9 @@ def remove_from_watchlist(anime_name):
         anime_name = anime_name.split('/')[-1]
         return redirect('/current/' + anime_name)
  
+'''Returns animes that fall within the specified genre'''
 @api.route('/anime/')
 def get_anime_by_genre():
-        '''Returns animes that fall within the specified genre'''
         genre = request.args.get('genre', '')
         connection, cursor = cursor_init()
         genre = "%" + genre + "%"
@@ -114,9 +114,9 @@ def get_anime_by_genre():
                 list_of_dictionaries.append(dic)
         return json.dumps(list_of_dictionaries)
 
+'''Route that executes a query on the database to search for animes and returns the results.'''
 @api.route('/search/<search_type>/<search_string>', methods=['GET', 'POST'])
 def get_search_results(search_string, search_type):
-        '''Route that executes a query on the database to search for animes and returns the results.'''
         connection, cursor = cursor_init() 
         if search_type == 'title':
           anime_name = "%" + search_string + "%"
@@ -145,9 +145,9 @@ def get_search_results(search_string, search_type):
         elif request.method == 'GET': 
           return json.dumps(list_of_dictionaries)
 
+'''Route that handles login'''
 @api.route('/login', methods=['POST'])
 def login_post():
-    '''Route that handles login'''
     username = request.form.get('username')
     password = request.form.get('password')
     remember = True if request.form.get('remember') else False
@@ -164,12 +164,9 @@ def login_post():
     login_user(user, remember=remember)
     return redirect('/profile')
 
+''' Route that creates a user account if none with the same username already exist'''
 @api.route('/signup', methods=['POST'])
 def signup_post():
-    '''
-    Route that creates a user account if none 
-    with the same username already exist
-    '''
     username = request.form.get('username')
     password = request.form.get('password')
     
@@ -187,6 +184,7 @@ def signup_post():
     db.session.commit()
     return redirect('/login')
 
+'''Route to see help information'''
 @api.route('/help')
 def help():
         '''Route that returns help information'''
@@ -196,13 +194,14 @@ def help():
                 message += "<p>" + row + "</p>"
         return render_template('help.html', message = message)
 
+'''Route to logout the user'''
 @api.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect('/')
 
-
+'''Route to add a review'''
 @api.route('/add/review', methods=['POST'])
 @login_required
 def add_review_text():
