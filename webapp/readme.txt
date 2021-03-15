@@ -2,6 +2,9 @@ AUTHORS: Kevin Chen, James Marlin, Quoc Nguyen
 
 DATA: A dataset consisting of animes that contains the anime's rating, name, # of episodes, etc
 
+Copyright info: CC0: Public Domain
+Link for DATA: https://www.kaggle.com/CooperUnion/anime-recommendations-database?select=anime.csv
+
 STATUS:
 
 Functional Features...
