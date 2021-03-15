@@ -59,8 +59,7 @@ function on_button_right_action(){
 }
 
 function on_button_left_action(){
-    var scrollleft = document.getElementById('genre_action');
-    scrollleft.scrollLeft -= 180;
+    on_button_left("genre_action");
 } 
 
 function on_button_right_horror(){
@@ -69,8 +68,7 @@ function on_button_right_horror(){
 }
 
 function on_button_left_horror(){
-    var horror_button_left = document.getElementById('genre_horror');
-    horror_button_left.scrollLeft -= 180;
+    on_button_left("genre_horror");
 } 
 
 function on_button_right_shounen(){
@@ -79,8 +77,7 @@ function on_button_right_shounen(){
 }
 
 function on_button_left_shounen(){
-    var shounen_button_left = document.getElementById('genre_shounen');
-    shounen_button_left.scrollLeft -= 180;
+    on_button_left("genre_shounen");
 } 
 
 function on_button_right_drama(){
@@ -89,19 +86,27 @@ function on_button_right_drama(){
 }
 
 function on_button_left_drama(){
-    var drama_button_left = document.getElementById('genre_drama');
-    drama_button_left.scrollLeft -= 180;
+    on_button_left("genre_drama");
 } 
 
 function on_button_right_romance(){
-    var romance_button_right = document.getElementById("genre_romance");
-    romance_button_right.scrollLeft += 180;
+    on_button_right("genre_romance");
 }
 
+
 function on_button_left_romance(){
-    var romance_button_left = document.getElementById('genre_romance');
-    romance_button_left.scrollLeft -= 180;
+    $("#genre_romance").animate({scrollLeft: '100px'}, 5000);
 } 
+
+function on_button_left(genre) {
+    var button_left = document.getElementById(genre);
+    button_left.scrollLeft -= 250;
+}
+
+function on_button_right(genre) {
+    var button_right = document.getElementById(genre);
+    button_right.scrollLeft += 250;
+}
 
 function get_genre(genre) {
   var url = getAPIBaseURL() + "/anime?genre=" + genre;
@@ -124,8 +129,7 @@ function get_genre(genre) {
                       + "    <a href='" + anime_url + "'>"
                       + "      <img src='" + image_address + "' style='width:200px;height:300px;' alt='" + alt_text + "'/>"
                       + "    </a>"
-                      + "    <p>" + anime['anime_name'] + "</p>"
-                      + "    <p>" + anime['mal_rating'] + "</p>"
+                      + "    <p style='font-weight: bold;'>" + anime['anime_name'] + "</p>"
                       + "  </div>"
                       + "</div>";
       }

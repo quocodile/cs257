@@ -192,32 +192,49 @@ button {
   border: 5px solid black;
 }
 
-
 .rightpaddle {
-  background-color: Transparent;
-  height: 415px;
-	width: 50px;
+  background-color: black;
+  color: white;
+  height: 402px;
+  width: 50px;
   float: right;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .leftpaddle {
-  background-color: Transparent;
-  height: 420px;
-	width: 50px;
+  background-color: black;
+  color: white;
+  height: 402px;
+  font-size: 20px;
+  width: 50px;
   float: left;
+  font-weight: bold;
+}
+
+.rightpaddle:hover {
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  transition: 250ms color, 250ms background-color, 250ms font-size;
+}
+
+.leftpaddle:hover {
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  transition: 250ms color, 250ms background-color, 250ms font-size;
 }
 
 /*index.html*/
 
 .genre_container {
   margin: auto;
-  overflow: auto;
   overflow-x: hidden;
   display: flex;
   justify-content: flex-start;
+  height: 402px;
 }
-
-
 
 /*profile.html*/
 .watchlist_anime_container {
