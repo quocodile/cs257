@@ -222,32 +222,3 @@ def add_review_text():
   except Exception as e:
     return json.dumps(False);
 
-'''Returns some default anime information.'''
-@api.route('/anime/')
-def get_anime_by_genre():
-        genre = request.args.get('genre', '')
-        connection, cursor = cursor_init()
-        if genre:
-                genre = "%" + genre + "%"
-                query = "SELECT DISTINCT * FROM animes WHERE LOWER(genre) LIKE LOWER(%s) ORDER BY mal_rating DESC LIMIT 15"
-                #query = "SELECT * FROM animes WHERE genre LIKE %s ORDER BY CAST(mal_rating as DOUBLE PRECISION) DESC LIMIT 15";
-                #query = "SELECT * FROM animes WHERE genre=%s"
-                cursor.execute(query, (genre,))
-        else:
-                query = "SELECT * FROM Animes WHERE anime_name='91 Days' OR anime_name='Accel World' ORDER BY anime_name LIMIT 5"
-                cursor.execute(query)
-        list_of_dictionaries = []
-        for row in cursor:
-                dic = {}
-                dic['anime_id'] = row[0]
-                dic['anime_name'] = row[1]
-                dic['num_episodes'] = row[2]
-                dic['genre'] = row[3]
-                dic['mal_rating'] = row[4]
-                try:
-                  dic['pic'] = animes_imagepaths[row[1] + ' anime'] 
-                except Exception as e:
-                  dic['pic'] = '' 
-                list_of_dictionaries.append(dic)
-        return json.dumps(list_of_dictionaries)
-
