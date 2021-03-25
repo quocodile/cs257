@@ -8,7 +8,7 @@ How to run:
 
 4. Create a file called "config.py" within "webapp" as follows:
     
-    username = "yourUsername"
+    user = "yourUsername"
     password = "yourPassword"
     database = "yourDatabaseName"
     
