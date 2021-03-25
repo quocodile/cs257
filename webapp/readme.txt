@@ -2,9 +2,9 @@ How to run:
 
 1. Install PostgresSQL on your computer(via Homebrew or directly from website)
 
-2. Create a database in Postgres that you would like to dump the anime data into.
+2. Create a database in Postgres that you would like to dump the anime data into. Call it something like "animeCentral" or whatever you'd like.
 
-2. After cloning the repo, cd into "webapp" and run the following command: "psql -U yourUsername yourDatabaseName < data.sql". "yourDatabaseName" is the name of the Postgres database that you just created.
+2. After cloning this repository, cd into "webapp" and run the following command: "psql -U yourUsername yourDatabaseName < data.sql". "yourUsername" is your Postgres username and "yourDatabaseName" is the name of the Postgres database that you just created.
 
 3. Create a file called "config.py" within "webapp" as follows:
     
