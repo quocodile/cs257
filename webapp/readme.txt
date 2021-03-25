@@ -4,17 +4,15 @@ How to run:
 
 2. Create a database in Postgres that you would like to dump the anime data into. Call it something like "animeCentral" or whatever you'd like.
 
-2. After cloning this repository, cd into "webapp" and run the following command: "psql -U yourUsername yourDatabaseName < data.sql". "yourUsername" is your Postgres username and "yourDatabaseName" is the name of the Postgres database that you just created.
+3. After cloning this repository, cd into "webapp" and run the following command: "psql -U yourUsername yourDatabaseName < data.sql". "yourUsername" is your Postgres username and "yourDatabaseName" is the name of the Postgres database that you just created.
 
-3. Create a file called "config.py" within "webapp" as follows:
+4. Create a file called "config.py" within "webapp" as follows:
     
     username = "yourUsername"
     password = "yourPassword"
     database = "yourDatabaseName"
     
-4. Run the following command: python3 app.py localhost 5000
-
-5. Go to http://localhost:5000 to see the website!
+5. Run the following command: python3 app.py localhost 5000. Then, go to http://localhost:5000 to see the website!
 
 _______________________________________________________________________________
 
